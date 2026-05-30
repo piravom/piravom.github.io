@@ -158,42 +158,42 @@ description: Find restaurants, attractions, stores, and more near Piravom
                 </a>
             </div>
 
-            <div class="space-y-4">
+            <div class="-mx-3 space-y-0">
 
-                <div class="flex items-start justify-between border-b border-gray-100 pb-4">
-                    <div class="flex gap-4">
-                        <span class="rounded-full bg-blue-100 px-3 py-1 text-xs font-semibold text-blue-700">
+                <div class="flex items-start justify-between border-b border-gray-100 px-3 py-4 transition hover:bg-gray-50 first:rounded-t-lg last:rounded-b-lg last:border-b-0">
+                    <div class="flex items-center gap-4">
+                        <span class="rounded-full bg-blue-100 px-3 py-1 text-xs font-semibold leading-none text-blue-700">
                             BUS
                         </span>
 
                         <p>KSRTC to add more morning trips to Kochi tomorrow</p>
                     </div>
 
-                    <span class="text-sm text-gray-400">10m ago</span>
+                    <span class="shrink-0 text-sm text-gray-400">10m ago</span>
                 </div>
 
-                <div class="flex items-start justify-between border-b border-gray-100 pb-4">
-                    <div class="flex gap-4">
-                        <span class="rounded-full bg-green-100 px-3 py-1 text-xs font-semibold text-green-700">
+                <div class="flex items-start justify-between border-b border-gray-100 px-3 py-4 transition hover:bg-gray-50 first:rounded-t-lg last:rounded-b-lg last:border-b-0">
+                    <div class="flex items-center gap-4">
+                        <span class="rounded-full bg-green-100 px-3 py-1 text-xs font-semibold leading-none text-green-700">
                             NEWS
                         </span>
 
                         <p>Water supply interruption in West Hill area on May 21</p>
                     </div>
 
-                    <span class="text-sm text-gray-400">1h ago</span>
+                    <span class="shrink-0 text-sm text-gray-400">1h ago</span>
                 </div>
 
-                <div class="flex items-start justify-between">
-                    <div class="flex gap-4">
-                        <span class="rounded-full bg-orange-100 px-3 py-1 text-xs font-semibold text-orange-700">
+                <div class="flex items-start justify-between border-b border-gray-100 px-3 py-4 transition hover:bg-gray-50 first:rounded-t-lg last:rounded-b-lg last:border-b-0">
+                    <div class="flex items-center gap-4">
+                        <span class="rounded-full bg-orange-100 px-3 py-1 text-xs font-semibold leading-none text-orange-700">
                             OFFER
                         </span>
 
                         <p>20% off at Hotel Aryas this week</p>
                     </div>
 
-                    <span class="text-sm text-gray-400">3h ago</span>
+                    <span class="shrink-0 text-sm text-gray-400">3h ago</span>
                 </div>
 
             </div>
@@ -445,7 +445,7 @@ description: Find restaurants, attractions, stores, and more near Piravom
 
             const isOpen = isRestaurantOpen(openingHours, new Date());
 
-            statusElement.textContent = isOpen ? "Open" : "Close";
+            statusElement.textContent = isOpen ? "Open" : "Closed";
             statusElement.classList.remove("text-gray-500", openClass, closeClass);
             statusElement.classList.add(isOpen ? openClass : closeClass);
         });
