@@ -10,22 +10,219 @@
         <!-- Desktop Nav -->
         {% include "components/top-nav.njk" %}
 
-        <!-- Search -->
-        <div class="hidden lg:block">
-            <input
-                type="text"
-                placeholder="Search..."
-                class="w-64 rounded-2xl border border-gray-200 bg-gray-50 px-4 py-2 text-sm outline-none focus:border-black"
-            />
+        <!-- Universal Search -->
+        <div class="relative hidden lg:block" id="globalSearch">
+            <div class="relative">
+                <svg xmlns="http://www.w3.org/2000/svg" class="absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35M11 19a8 8 0 100-16 8 8 0 000 16z" />
+                </svg>
+                <input
+                    type="text"
+                    id="globalSearchInput"
+                    placeholder="Search restaurants, stores, services…"
+                    autocomplete="off"
+                    class="w-72 rounded-2xl border border-gray-200 bg-gray-50 py-2 pl-10 pr-4 text-sm outline-none transition focus:border-indigo-400 focus:bg-white focus:ring-2 focus:ring-indigo-100"
+                />
+            </div>
+            <div id="globalSearchSuggestions" class="absolute right-0 z-50 mt-1 hidden w-96 rounded-2xl border border-gray-200 bg-white shadow-lg"></div>
         </div>
 
-        <!-- Mobile Menu -->
-        <button onclick="toggleMobileMenu()" class="rounded-xl border border-gray-200 p-2 lg:hidden">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none"
-                viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round"
-                    stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        <!-- Mobile Search + Menu -->
+        <div class="flex items-center gap-2 lg:hidden">
+            <button onclick="toggleMobileSearch()" class="rounded-xl border border-gray-200 p-2" aria-label="Search">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35M11 19a8 8 0 100-16 8 8 0 000 16z" />
+                </svg>
+            </button>
+            <button onclick="toggleMobileMenu()" class="rounded-xl border border-gray-200 p-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- Mobile Search Bar (below header) -->
+    <div id="mobileSearchBar" class="hidden border-t border-gray-100 px-4 py-3">
+        <div class="relative" id="globalSearchMobile">
+            <svg xmlns="http://www.w3.org/2000/svg" class="absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35M11 19a8 8 0 100-16 8 8 0 000 16z" />
             </svg>
-        </button>
+            <input
+                type="text"
+                id="globalSearchInputMobile"
+                placeholder="Search…"
+                autocomplete="off"
+                class="w-full rounded-2xl border border-gray-200 bg-gray-50 py-2.5 pl-10 pr-4 text-base outline-none transition focus:border-indigo-400 focus:bg-white focus:ring-2 focus:ring-indigo-100"
+            />
+            <div id="globalSearchSuggestionsMobile" class="absolute left-0 right-0 z-50 mt-1 hidden rounded-2xl border border-gray-200 bg-white shadow-lg"></div>
+        </div>
     </div>
 </header>
+
+<script>
+var SEARCH_INDEX = [
+    {% for item in collections.restaurants %}
+    {
+        name: {{ item.data.name | json | safe }},
+        url: {{ item.url | json | safe }},
+        description: {{ item.data.description | json | safe }},
+        type: "Restaurant",
+        icon: "🍽️"
+    },
+    {% endfor %}
+    {% for item in collections.stores %}
+    {
+        name: {{ item.data.name | json | safe }},
+        url: {{ item.url | json | safe }},
+        description: {{ item.data.description | json | safe }},
+        type: "Store",
+        icon: "🏪"
+    },
+    {% endfor %}
+    {% for item in collections.attractions %}
+    {
+        name: {{ item.data.name | json | safe }},
+        url: {{ item.url | json | safe }},
+        description: {{ item.data.description | json | safe }},
+        type: "Attraction",
+        icon: "🏔️"
+    },
+    {% endfor %}
+    {% for item in collections.services %}
+    {
+        name: {{ item.data.name | json | safe }},
+        url: {{ item.url | json | safe }},
+        description: {{ item.data.description | json | safe }},
+        type: "Service",
+        icon: "🔧"
+    },
+    {% endfor %}
+    {% for item in collections.events %}
+    {
+        name: {{ item.data.name | json | safe }},
+        url: {{ item.url | json | safe }},
+        description: {{ item.data.description | json | safe }},
+        type: "Event",
+        icon: "📅"
+    },
+    {% endfor %}
+];
+
+(function () {
+    function slugify(str) {
+        return (str || '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/-+/g, '-').replace(/^-|-$/g, '');
+    }
+    function normalize(str) {
+        return (str || '').toLowerCase().trim();
+    }
+    function matches(query, text) {
+        return normalize(text).indexOf(normalize(query)) !== -1;
+    }
+
+    function getResults(query) {
+        if (!query || query.length < 1) return [];
+        var q = normalize(query);
+        var results = [];
+        var seen = new Set();
+
+        SEARCH_INDEX.forEach(function (item) {
+            if (matches(q, item.name) || matches(q, item.description)) {
+                if (!seen.has(item.url)) {
+                    seen.add(item.url);
+                    results.push(item);
+                }
+            }
+        });
+
+        return results.slice(0, 8);
+    }
+
+    function renderSuggestions(results, suggestionsEl) {
+        suggestionsEl.innerHTML = '';
+        if (!results.length) {
+            suggestionsEl.classList.add('hidden');
+            return;
+        }
+        suggestionsEl.classList.remove('hidden');
+
+        var list = document.createElement('div');
+        list.className = 'py-2 max-h-80 overflow-y-auto';
+
+        results.forEach(function (r) {
+            var a = document.createElement('a');
+            a.href = r.url;
+            a.className = 'flex items-start gap-3 px-4 py-2.5 transition hover:bg-indigo-50';
+
+            var icon = document.createElement('span');
+            icon.className = 'mt-0.5 shrink-0 text-base';
+            icon.textContent = r.icon;
+
+            var textDiv = document.createElement('div');
+            textDiv.className = 'min-w-0 flex-1';
+
+            var label = document.createElement('div');
+            label.className = 'text-sm font-medium text-gray-900';
+            label.textContent = r.name;
+
+            var sub = document.createElement('div');
+            sub.className = 'flex items-center gap-2 text-xs text-gray-500';
+            var typeSpan = document.createElement('span');
+            typeSpan.className = 'rounded-full bg-indigo-50 px-2 py-0.5 text-xs font-medium text-indigo-700';
+            typeSpan.textContent = r.type;
+            sub.appendChild(typeSpan);
+            if (r.description) {
+                var desc = document.createElement('span');
+                desc.className = 'truncate';
+                desc.textContent = r.description.substring(0, 50);
+                sub.appendChild(desc);
+            }
+
+            textDiv.appendChild(label);
+            textDiv.appendChild(sub);
+            a.appendChild(icon);
+            a.appendChild(textDiv);
+            list.appendChild(a);
+        });
+
+        suggestionsEl.appendChild(list);
+    }
+
+    function setupSearch(inputId, suggestionsId) {
+        var input = document.getElementById(inputId);
+        var suggestions = document.getElementById(suggestionsId);
+        if (!input || !suggestions) return;
+
+        var debounceTimer;
+        input.addEventListener('input', function () {
+            clearTimeout(debounceTimer);
+            var val = this.value;
+            debounceTimer = setTimeout(function () {
+                renderSuggestions(getResults(val), suggestions);
+            }, 150);
+        });
+
+        input.addEventListener('blur', function () {
+            setTimeout(function () { suggestions.classList.add('hidden'); }, 200);
+        });
+
+        input.addEventListener('focus', function () {
+            if (this.value) {
+                renderSuggestions(getResults(this.value), suggestions);
+            }
+        });
+    }
+
+    setupSearch('globalSearchInput', 'globalSearchSuggestions');
+    setupSearch('globalSearchInputMobile', 'globalSearchSuggestionsMobile');
+})();
+</script>
+<script>
+    function toggleMobileSearch() {
+        document.getElementById("mobileSearchBar").classList.toggle("hidden");
+        setTimeout(function () {
+            var el = document.getElementById("globalSearchInputMobile");
+            if (el) el.focus();
+        }, 100);
+    }
+</script>

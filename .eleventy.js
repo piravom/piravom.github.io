@@ -94,6 +94,25 @@ module.exports = function (eleventyConfig) {
     return new Date(str);
   });
 
+  eleventyConfig.addNunjucksFilter("dateFormat", function (date, fmt) {
+    if (typeof date === "string") date = new Date(date);
+    if (!(date instanceof Date) || isNaN(date)) return "";
+    const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    const map = {
+      "MMM": months[date.getMonth()],
+      "MMMM": ["January","February","March","April","May","June","July","August","September","October","November","December"][date.getMonth()],
+      "dd": String(date.getDate()).padStart(2, "0"),
+      "d": date.getDate(),
+      "yyyy": date.getFullYear(),
+      "yy": String(date.getFullYear()).slice(-2),
+    };
+    var result = fmt;
+    Object.keys(map).forEach(function (k) {
+      result = result.replace(k, map[k]);
+    });
+    return result;
+  });
+
   eleventyConfig.addNunjucksFilter("filterByDate", function (collection, nowStr, type) {
     const now = new Date(nowStr);
     return collection.filter(function (item) {
