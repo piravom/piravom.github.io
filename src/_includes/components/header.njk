@@ -123,19 +123,25 @@ var SEARCH_INDEX = [
     function getResults(query) {
         if (!query || query.length < 1) return [];
         var q = normalize(query);
-        var results = [];
+        var nameMatches = [];
+        var descMatches = [];
         var seen = new Set();
 
         SEARCH_INDEX.forEach(function (item) {
-            if (matches(q, item.name) || matches(q, item.description)) {
+            if (matches(q, item.name)) {
                 if (!seen.has(item.url)) {
                     seen.add(item.url);
-                    results.push(item);
+                    nameMatches.push(item);
+                }
+            } else if (matches(q, item.description)) {
+                if (!seen.has(item.url)) {
+                    seen.add(item.url);
+                    descMatches.push(item);
                 }
             }
         });
 
-        return results.slice(0, 8);
+        return nameMatches.concat(descMatches).slice(0, 8);
     }
 
     function renderSuggestions(results, suggestionsEl) {
