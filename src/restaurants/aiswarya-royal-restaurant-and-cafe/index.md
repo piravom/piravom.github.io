@@ -1,6 +1,6 @@
 ---
 layout: layouts/restaurant.njk
-name: "Aiswarya Royal Restaurant and Cafe"
+title: "Aiswarya Royal Restaurant and Cafe"
 description: "Authentic Indian cuisine with a warm and welcoming dining experience."
 cuisine:
   - "Indian"

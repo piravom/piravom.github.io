@@ -1,5 +1,5 @@
 ---
-name: Veloura Churidar Hub
+title: Veloura Churidar Hub
 section: Textiles & Apparel
 categories:
   - Clothing

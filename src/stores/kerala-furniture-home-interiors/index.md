@@ -1,5 +1,5 @@
 ---
-name: Kerala Furniture & D Home Interiors
+title: Kerala Furniture & D Home Interiors
 section: Furniture & Home Decor
 distanceFromBusStand: "6.4km"
 directionsUrl: "https://www.google.com/maps/dir/Piravom+Private+Bus+Stand/Kerala+Furniture+%26+D+Home+Interiors,+PIRAVOM"

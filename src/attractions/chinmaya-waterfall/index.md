@@ -1,5 +1,5 @@
 ---
-name: Chinmaya Waterfall
+title: Chinmaya Waterfall
 categories: 
   - Nature
 description: A small waterfall inside the nature.

@@ -1,5 +1,5 @@
 ---
-name: Taluk Hospital Piravom
+title: Taluk Hospital Piravom
 section: Health & Medical
 categories:
   - Government hospital

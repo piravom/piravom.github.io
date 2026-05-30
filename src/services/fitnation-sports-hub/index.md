@@ -1,5 +1,5 @@
 ---
-name: Fitnation Sports Hub
+title: Fitnation Sports Hub
 section: Fitness & Gym
 categories:
   - Gym

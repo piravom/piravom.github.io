@@ -1,5 +1,5 @@
 ---
-name: City Auto Garage - Royal Enfield Workshop
+title: City Auto Garage - Royal Enfield Workshop
 section: Automotive Services
 categories:
   - Motorcycle Repair

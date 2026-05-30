@@ -1,5 +1,5 @@
 ---
-name: BRK Tyres and Car Wash
+title: BRK Tyres and Car Wash
 section: Automotive Services
 categories:
   - Tyre Shop

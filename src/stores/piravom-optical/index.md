@@ -1,5 +1,5 @@
 ---
-name: Piravom Opticals
+title: Piravom Opticals
 section: Opticals
 categories:
   - Eyewear

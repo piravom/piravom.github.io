@@ -1,5 +1,5 @@
 ---
-name: Muthoot Finance Gold Loan
+title: Muthoot Finance Gold Loan
 section: Financial Services
 categories:
   - Gold Loan

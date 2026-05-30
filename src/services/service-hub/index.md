@@ -1,5 +1,5 @@
 ---
-name: Service Hub
+title: Service Hub
 section: Repairs & Maintenance
 categories:
   - Appliance Repair

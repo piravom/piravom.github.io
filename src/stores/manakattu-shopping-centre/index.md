@@ -1,5 +1,5 @@
 ---
-name: Manakattu Shopping Centre
+title: Manakattu Shopping Centre
 section: Stationery & Books
 distanceFromBusStand: "66m"
 directionsUrl: "https://www.google.com/maps/dir/Piravom+Private+Bus+Stand/Manakattu+Shopping+Centre,+PIRAVOM"

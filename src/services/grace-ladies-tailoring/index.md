@@ -1,5 +1,5 @@
 ---
-name: Grace Ladies Tailoring
+title: Grace Ladies Tailoring
 section: Tailors & Alterations
 categories:
   - Tailor

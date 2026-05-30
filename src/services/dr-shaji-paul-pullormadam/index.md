@@ -1,5 +1,5 @@
 ---
-name: Dr. Shaji Paul Pullormadam
+title: Dr. Shaji Paul Pullormadam
 section: Health & Medical
 categories:
   - Doctor

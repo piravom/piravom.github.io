@@ -1,5 +1,5 @@
 ---
-name: A P Varkey Mission Hospital Piravom
+title: A P Varkey Mission Hospital Piravom
 section: Health & Medical
 categories:
   - Hospital

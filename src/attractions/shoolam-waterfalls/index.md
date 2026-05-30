@@ -1,5 +1,5 @@
 ---
-name: Shoolam Waterfalls
+title: Shoolam Waterfalls
 categories:
   - Nature
 description: A 250-ft hidden gem waterfall in Piramadam with a natural pool at its base.

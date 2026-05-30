@@ -1,5 +1,5 @@
 ---
-name: Pulickal Furniture
+title: Pulickal Furniture
 section: Furniture & Home Decor
 categories:
   - Furniture

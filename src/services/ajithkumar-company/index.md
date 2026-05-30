@@ -1,5 +1,5 @@
 ---
-name: Ajithkumar & Company
+title: Ajithkumar & Company
 section: Financial Services
 categories:
   - Chartered Accountant

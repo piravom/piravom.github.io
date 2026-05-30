@@ -1,5 +1,5 @@
 ---
-name: SBI Branch Piravom
+title: SBI Branch Piravom
 section: Financial Services
 categories:
   - Bank

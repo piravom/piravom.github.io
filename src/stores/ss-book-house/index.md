@@ -1,5 +1,5 @@
 ---
-name: S.S. Book House
+title: S.S. Book House
 section: Stationery & Books
 categories:
   - Books

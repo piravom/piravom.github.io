@@ -1,5 +1,5 @@
 ---
-name: Padippura Ayurveda
+title: Padippura Ayurveda
 section: Health & Medical
 categories:
   - Doctor

@@ -1,5 +1,5 @@
 ---
-name: Rajeswari Stores
+title: Rajeswari Stores
 section: Stationery & Books
 categories:
   - Stationery

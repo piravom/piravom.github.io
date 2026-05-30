@@ -1,5 +1,5 @@
 ---
-name: Kaaroorkavu Paddy Vista
+title: Kaaroorkavu Paddy Vista
 categories: 
   - Nature
 description: A paddy field view from the Kaaroorkavu.

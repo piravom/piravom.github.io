@@ -1,5 +1,5 @@
 ---
-name: Tejus Homeo Clinic
+title: Tejus Homeo Clinic
 section: Health & Medical
 categories:
   - Homeopath

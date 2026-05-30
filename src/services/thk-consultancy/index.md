@@ -1,5 +1,5 @@
 ---
-name: THK Consultancy Services
+title: THK Consultancy Services
 section: Financial Services
 categories:
   - Property Consultant

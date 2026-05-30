@@ -1,5 +1,5 @@
 ---
-name: Kandathil Fashion Jewellery
+title: Kandathil Fashion Jewellery
 section: Jewellery
 categories:
   - Jewellery

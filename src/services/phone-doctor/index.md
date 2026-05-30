@@ -1,5 +1,5 @@
 ---
-name: Phone Doctor
+title: Phone Doctor
 section: Repairs & Maintenance
 categories:
   - Mobile Repair

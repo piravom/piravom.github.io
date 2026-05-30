@@ -1,5 +1,5 @@
 ---
-name: AutoLand
+title: AutoLand
 section: Automotive Services
 categories:
   - Mechanic

@@ -1,6 +1,6 @@
 ---
 layout: layouts/restaurant.njk
-name: "Honey Bee"
+title: "Honey Bee"
 description: "A cozy cafe serving refreshing beverages and light bites."
 cuisine:
   - "Cafe"

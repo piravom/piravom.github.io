@@ -1,5 +1,5 @@
 ---
-name: Manakkattu Mobiles & Electronics
+title: Manakkattu Mobiles & Electronics
 section: Electronics & Mobile
 categories:
   - Cell Phone Store

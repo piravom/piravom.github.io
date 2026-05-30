@@ -1,5 +1,5 @@
 ---
-name: Jio Airfiber Piravom
+title: Jio Airfiber Piravom
 section: Other Services
 categories:
   - Internet Service Provider

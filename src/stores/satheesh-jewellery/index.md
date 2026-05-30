@@ -1,5 +1,5 @@
 ---
-name: Satheesh Jewellery
+title: Satheesh Jewellery
 section: Jewellery
 categories:
   - Jewellery

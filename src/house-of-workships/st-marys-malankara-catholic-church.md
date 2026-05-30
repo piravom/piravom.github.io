@@ -1,5 +1,5 @@
 ---
-name: St. Mary's Malankara Catholic Church
+title: St. Mary's Malankara Catholic Church
 type: church
 description: A Malankara Catholic Church in Piravom dedicated to St. Mary. Serves the Malankara Catholic community under the Eparchy of Muvattupuzha, following the West Syriac liturgical tradition.
 distance: ~1.5 km

@@ -1,5 +1,5 @@
 ---
-name: Meenu Tyres
+title: Meenu Tyres
 section: Automotive Services
 categories:
   - Tyre Shop

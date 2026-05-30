@@ -1,5 +1,5 @@
 ---
-name: Sangeetha Electronics
+title: Sangeetha Electronics
 section: Electronics & Mobile
 categories:
   - Electronics Store

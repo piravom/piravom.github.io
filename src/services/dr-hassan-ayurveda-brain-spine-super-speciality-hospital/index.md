@@ -1,5 +1,5 @@
 ---
-name: Dr Hassan Ayurveda Brain & Spine Super Speciality Hospital
+title: Dr Hassan Ayurveda Brain & Spine Super Speciality Hospital
 section: Health & Medical
 categories:
   - Hospital

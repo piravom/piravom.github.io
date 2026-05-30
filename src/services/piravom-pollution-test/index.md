@@ -1,5 +1,5 @@
 ---
-name: Piravom Pollution Testing Centre
+title: Piravom Pollution Testing Centre
 section: Automotive Services
 categories:
   - Pollution Testing

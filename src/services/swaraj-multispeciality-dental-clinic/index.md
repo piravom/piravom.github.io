@@ -1,5 +1,5 @@
 ---
-name: Swaraj Multispeciality Dental Clinic
+title: Swaraj Multispeciality Dental Clinic
 section: Health & Medical
 categories:
   - Dental clinic

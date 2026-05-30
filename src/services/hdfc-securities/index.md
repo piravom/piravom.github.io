@@ -1,5 +1,5 @@
 ---
-name: HDFC Securities - Piravam
+title: HDFC Securities - Piravam
 section: Financial Services
 categories:
   - Stock Broker

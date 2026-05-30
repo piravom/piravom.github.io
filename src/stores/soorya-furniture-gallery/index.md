@@ -1,5 +1,5 @@
 ---
-name: Soorya Furniture Gallery
+title: Soorya Furniture Gallery
 section: Furniture & Home Decor
 distanceFromBusStand: "450m"
 directionsUrl: "https://www.google.com/maps/dir/Piravom+Private+Bus+Stand/Soorya+Furniture+Gallery,+PIRAVOM"

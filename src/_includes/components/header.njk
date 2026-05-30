@@ -3,7 +3,7 @@
 
         <!-- Logo -->
         <div>
-            <h1 class="text-2xl font-bold text-indigo-600"><a href="/">{{site.name}}</a></h1>
+            <div class="text-2xl font-bold text-indigo-600"><a href="/">{{site.name}}</a></div>
             <p class="text-sm text-gray-500">{{site.description}}</p>
         </div>
 
@@ -64,7 +64,7 @@
 var SEARCH_INDEX = [
     {% for item in collections.restaurants %}
     {
-        name: {{ item.data.name | json | safe }},
+        name: {{ item.data.title | json | safe }},
         url: {{ item.url | json | safe }},
         description: {{ item.data.description | json | safe }},
         type: "Restaurant",
@@ -73,7 +73,7 @@ var SEARCH_INDEX = [
     {% endfor %}
     {% for item in collections.stores %}
     {
-        name: {{ item.data.name | json | safe }},
+        name: {{ item.data.title | json | safe }},
         url: {{ item.url | json | safe }},
         description: {{ item.data.description | json | safe }},
         type: "Store",
@@ -82,7 +82,7 @@ var SEARCH_INDEX = [
     {% endfor %}
     {% for item in collections.attractions %}
     {
-        name: {{ item.data.name | json | safe }},
+        name: {{ item.data.title | json | safe }},
         url: {{ item.url | json | safe }},
         description: {{ item.data.description | json | safe }},
         type: "Attraction",
@@ -91,7 +91,7 @@ var SEARCH_INDEX = [
     {% endfor %}
     {% for item in collections.services %}
     {
-        name: {{ item.data.name | json | safe }},
+        name: {{ item.data.title | json | safe }},
         url: {{ item.url | json | safe }},
         description: {{ item.data.description | json | safe }},
         type: "Service",
@@ -100,7 +100,7 @@ var SEARCH_INDEX = [
     {% endfor %}
     {% for item in collections.events %}
     {
-        name: {{ item.data.name | json | safe }},
+        name: {{ item.data.title | json | safe }},
         url: {{ item.url | json | safe }},
         description: {{ item.data.description | json | safe }},
         type: "Event",

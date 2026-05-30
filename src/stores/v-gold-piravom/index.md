@@ -1,5 +1,5 @@
 ---
-name: V Gold
+title: V Gold
 section: Jewellery
 categories:
   - Jewellery

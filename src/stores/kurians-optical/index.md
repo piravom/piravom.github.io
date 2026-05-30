@@ -1,5 +1,5 @@
 ---
-name: Kurians Opticals
+title: Kurians Opticals
 section: Opticals
 distanceFromBusStand: "750m"
 directionsUrl: "https://www.google.com/maps/dir/Piravom+Private+Bus+Stand/Kurians+Opticals,+PIRAVOM"

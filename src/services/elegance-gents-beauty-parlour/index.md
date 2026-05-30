@@ -1,5 +1,5 @@
 ---
-name: Elegance Gents Beauty Parlour
+title: Elegance Gents Beauty Parlour
 section: Salons & Beauty
 categories:
   - Gents Salon

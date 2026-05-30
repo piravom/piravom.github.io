@@ -1,5 +1,5 @@
 ---
-name: Kunjamattil Textiles
+title: Kunjamattil Textiles
 section: Textiles & Apparel
 distanceFromBusStand: "190m"
 directionsUrl: "https://www.google.com/maps/dir/Piravom+Private+Bus+Stand/Kunjamattil+Textiles,+PIRAVOM"

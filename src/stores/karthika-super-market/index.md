@@ -1,5 +1,5 @@
 ---
-name: Karthika Super Market
+title: Karthika Super Market
 section: Supermarkets & Grocery
 categories:
   - Supermarket

@@ -1,5 +1,5 @@
 ---
-name: Moto Headz
+title: Moto Headz
 section: Automotive Services
 categories:
   - Two Wheeler Repair

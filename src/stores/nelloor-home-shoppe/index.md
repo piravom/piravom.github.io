@@ -1,5 +1,5 @@
 ---
-name: Nelloor Home Shoppe
+title: Nelloor Home Shoppe
 section: Hardware & Building Materials
 categories:
   - Home Appliances

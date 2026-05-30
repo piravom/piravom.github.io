@@ -1,5 +1,5 @@
 ---
-name: Life Time Unisex Gym
+title: Life Time Unisex Gym
 section: Fitness & Gym
 categories:
   - Gym

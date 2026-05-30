@@ -1,5 +1,5 @@
 ---
-name: Patanjali Store
+title: Patanjali Store
 section: Other Stores
 categories:
   - Ayurveda

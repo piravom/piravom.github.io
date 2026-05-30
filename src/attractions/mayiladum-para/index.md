@@ -1,5 +1,5 @@
 ---
-name: Mayiladum Para
+title: Mayiladum Para
 categories: 
   - Viewpoint
 description: Scenic viewpoint and the only peacock sanctuary in Kerala, located in Ooramana.

@@ -1,5 +1,5 @@
 ---
-name: Star Battery House
+title: Star Battery House
 section: Automotive Services
 categories:
   - Battery Store

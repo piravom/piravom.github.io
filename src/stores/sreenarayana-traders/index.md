@@ -1,5 +1,5 @@
 ---
-name: Sreenarayana Traders
+title: Sreenarayana Traders
 section: Hardware & Building Materials
 categories:
   - Hardware

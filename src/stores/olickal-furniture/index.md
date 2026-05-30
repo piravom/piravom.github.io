@@ -1,5 +1,5 @@
 ---
-name: Olickal Furniture Industries
+title: Olickal Furniture Industries
 section: Furniture & Home Decor
 categories:
   - Furniture

@@ -1,5 +1,5 @@
 ---
-name: Patricia Memorial Woman's Beauty Parlour
+title: Patricia Memorial Woman's Beauty Parlour
 section: Salons & Beauty
 categories:
   - Beauty Parlour

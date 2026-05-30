@@ -1,5 +1,5 @@
 ---
-name: Thottathil Tyres
+title: Thottathil Tyres
 section: Automotive Services
 categories:
   - Tyre Shop

@@ -1,5 +1,5 @@
 ---
-name: Neethi Medical Store
+title: Neethi Medical Store
 section: Pharmacy & Medical Stores
 distanceFromBusStand: "5.0km"
 directionsUrl: "https://www.google.com/maps/dir/Piravom+Private+Bus+Stand/Neethi+Medical+Store,+PIRAVOM"

@@ -1,5 +1,5 @@
 ---
-name: HDFC Bank
+title: HDFC Bank
 section: Financial Services
 categories:
   - Bank

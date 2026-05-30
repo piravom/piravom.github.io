@@ -1,5 +1,5 @@
 ---
-name: Emblassery Furniture
+title: Emblassery Furniture
 section: Furniture & Home Decor
 categories:
   - Furniture

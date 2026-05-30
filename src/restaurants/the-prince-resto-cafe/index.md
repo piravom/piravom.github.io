@@ -1,6 +1,6 @@
 ---
 layout: layouts/restaurant.njk
-name: "The Prince Resto Cafe"
+title: "The Prince Resto Cafe"
 description: "Vibrant cafe with multi-cuisine dishes, beverages, and fast food."
 cuisine:
   - "Cafe"

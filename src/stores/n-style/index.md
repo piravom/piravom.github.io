@@ -1,5 +1,5 @@
 ---
-name: N' Style
+title: N' Style
 section: Textiles & Apparel
 categories:
   - Fashion

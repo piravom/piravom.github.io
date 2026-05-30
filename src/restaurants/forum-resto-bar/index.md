@@ -1,6 +1,6 @@
 ---
 layout: layouts/restaurant.njk
-name: "Forum Resto Bar"
+title: "Forum Resto Bar"
 description: "Bar and continental dining with a lively atmosphere."
 cuisine:
   - "Bar"

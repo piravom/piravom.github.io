@@ -1,5 +1,5 @@
 ---
-name: Jacob Studio & Colour Lab
+title: Jacob Studio & Colour Lab
 section: Photography & Media
 categories:
   - Photography Studio

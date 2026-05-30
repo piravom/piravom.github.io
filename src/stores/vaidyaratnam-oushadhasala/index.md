@@ -1,5 +1,5 @@
 ---
-name: Vaidyaratnam Oushadhasala
+title: Vaidyaratnam Oushadhasala
 section: Pharmacy & Medical Stores
 categories:
   - Ayurveda

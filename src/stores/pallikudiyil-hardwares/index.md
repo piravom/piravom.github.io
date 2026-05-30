@@ -1,5 +1,5 @@
 ---
-name: Pallikudiyil Hardwares
+title: Pallikudiyil Hardwares
 section: Hardware & Building Materials
 categories:
   - Hardware

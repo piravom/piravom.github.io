@@ -1,5 +1,5 @@
 ---
-name: Veterinary Hospital Piravom
+title: Veterinary Hospital Piravom
 section: Health & Medical
 categories:
   - Animal hospital

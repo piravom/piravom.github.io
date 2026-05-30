@@ -1,5 +1,5 @@
 ---
-name: Gramin Finance
+title: Gramin Finance
 section: Financial Services
 categories:
   - Bank

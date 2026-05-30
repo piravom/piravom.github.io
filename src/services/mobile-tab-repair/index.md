@@ -1,5 +1,5 @@
 ---
-name: Mobile & Tab Repairing Shop
+title: Mobile & Tab Repairing Shop
 section: Repairs & Maintenance
 categories:
   - Mobile Repair

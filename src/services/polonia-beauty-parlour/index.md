@@ -1,5 +1,5 @@
 ---
-name: Polonia Beauty Parlour
+title: Polonia Beauty Parlour
 section: Salons & Beauty
 categories:
   - Beauty Parlour

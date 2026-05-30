@@ -1,5 +1,5 @@
 ---
-name: A. J. Stores
+title: A. J. Stores
 section: Hardware & Building Materials
 distanceFromBusStand: "270m"
 directionsUrl: "https://www.google.com/maps/dir/Piravom+Private+Bus+Stand/A.+J.+Stores,+PIRAVOM"

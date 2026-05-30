@@ -1,5 +1,5 @@
 ---
-name: More Supermarket
+title: More Supermarket
 section: Supermarkets & Grocery
 categories:
   - Supermarket

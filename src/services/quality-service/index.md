@@ -1,5 +1,5 @@
 ---
-name: Quality Service
+title: Quality Service
 section: Other Services
 categories:
   - Gas Installation

@@ -1,6 +1,6 @@
 ---
 layout: layouts/restaurant.njk
-name: "Porch Grill"
+title: "Porch Grill"
 description: "Grill house serving continental, Indian, and grilled specialties."
 cuisine:
   - "Multi-Cuisine"

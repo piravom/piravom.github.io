@@ -1,5 +1,5 @@
 ---
-name: Jio Point
+title: Jio Point
 section: Electronics & Mobile
 categories:
   - Electronics Store

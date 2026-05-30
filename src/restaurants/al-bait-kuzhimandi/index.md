@@ -1,6 +1,6 @@
 ---
 layout: layouts/restaurant.njk
-name: "Al-Bait Kuzhimandi"
+title: "Al-Bait Kuzhimandi"
 description: "Traditional Middle Eastern and Arabian dishes in a cozy setting."
 cuisine:
   - "Middle Eastern"

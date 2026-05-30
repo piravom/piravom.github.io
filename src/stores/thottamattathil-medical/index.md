@@ -1,5 +1,5 @@
 ---
-name: Thottamattathil Angadi Pachamarunnu
+title: Thottamattathil Angadi Pachamarunnu
 section: Pharmacy & Medical Stores
 categories:
   - Medical Supply

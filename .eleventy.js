@@ -134,6 +134,13 @@ module.exports = function (eleventyConfig) {
     return JSON.stringify(value ?? null);
   });
 
+  eleventyConfig.addFilter("dateToISO", function (date) {
+    if (!date) return "";
+    if (typeof date === "string") date = new Date(date);
+    if (!(date instanceof Date) || isNaN(date)) return "";
+    return date.toISOString().split("T")[0];
+  });
+
   eleventyConfig.addAsyncShortcode("image", imageShortcode);
 
   return {

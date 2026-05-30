@@ -1,5 +1,5 @@
 ---
-name: DDC Laboratory Piravom
+title: DDC Laboratory Piravom
 section: Other Services
 categories:
   - Medical Laboratory

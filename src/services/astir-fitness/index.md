@@ -1,5 +1,5 @@
 ---
-name: Astir Fitness
+title: Astir Fitness
 section: Fitness & Gym
 categories:
   - Gym

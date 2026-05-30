@@ -1,5 +1,5 @@
 ---
-name: Kalladayil Jewellery
+title: Kalladayil Jewellery
 section: Jewellery
 categories:
   - Jewellery

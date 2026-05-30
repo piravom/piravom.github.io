@@ -1,5 +1,5 @@
 ---
-name: ApplArk Service Corner
+title: ApplArk Service Corner
 section: Repairs & Maintenance
 categories:
   - Mobile Repair

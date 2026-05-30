@@ -1,5 +1,5 @@
 ---
-name: Aroma Digital Studio
+title: Aroma Digital Studio
 section: Photography & Media
 categories:
   - Photography Studio

@@ -1,5 +1,5 @@
 ---
-name: Ardra Furniture Works
+title: Ardra Furniture Works
 section: Furniture & Home Decor
 distanceFromBusStand: "9.1km"
 directionsUrl: "https://www.google.com/maps/dir/Piravom+Private+Bus+Stand/Ardra+Furniture+Works,+PIRAVOM"

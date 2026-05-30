@@ -1,5 +1,5 @@
 ---
-name: Curtain Work Piravom (S&S)
+title: Curtain Work Piravom (S&S)
 section: Other Services
 categories:
   - Curtain Supplier

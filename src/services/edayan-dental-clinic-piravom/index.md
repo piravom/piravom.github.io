@@ -1,5 +1,5 @@
 ---
-name: Edayan Dental Clinic Piravom
+title: Edayan Dental Clinic Piravom
 section: Health & Medical
 categories:
   - Dental clinic

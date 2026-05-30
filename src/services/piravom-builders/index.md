@@ -1,5 +1,5 @@
 ---
-name: Piravom Builders
+title: Piravom Builders
 section: Other Services
 categories:
   - Real Estate

@@ -1,5 +1,5 @@
 ---
-name: B well NULIFE MEDICAL CENTRE
+title: B well NULIFE MEDICAL CENTRE
 section: Health & Medical
 categories:
   - Medical Center

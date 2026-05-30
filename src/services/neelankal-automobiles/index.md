@@ -1,5 +1,5 @@
 ---
-name: Neelankal Automobiles
+title: Neelankal Automobiles
 section: Automotive Services
 categories:
   - Auto Parts

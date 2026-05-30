@@ -1,5 +1,5 @@
 ---
-name: SHE Pharmacy and Wellness Centre
+title: SHE Pharmacy and Wellness Centre
 section: Pharmacy & Medical Stores
 categories:
   - Pharmacy

@@ -1,5 +1,5 @@
 ---
-name: Piravom Battery Shoppe - Exide Authorised Dealer
+title: Piravom Battery Shoppe - Exide Authorised Dealer
 section: Automotive Services
 categories:
   - Battery Store

@@ -1,5 +1,5 @@
 ---
-name: Dr George T J
+title: Dr George T J
 section: Health & Medical
 categories:
   - Pediatrician

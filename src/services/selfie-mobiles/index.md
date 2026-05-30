@@ -1,5 +1,5 @@
 ---
-name: Selfie Mobiles
+title: Selfie Mobiles
 section: Repairs & Maintenance
 categories:
   - Mobile Repair

@@ -1,5 +1,5 @@
 ---
-name: Neethi Medical Store
+title: Neethi Medical Store
 section: Pharmacy & Medical Stores
 categories:
   - Pharmacy

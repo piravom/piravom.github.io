@@ -1,5 +1,5 @@
 ---
-name: Dr. Sara's Dental Garden
+title: Dr. Sara's Dental Garden
 section: Health & Medical
 categories:
   - Dental clinic

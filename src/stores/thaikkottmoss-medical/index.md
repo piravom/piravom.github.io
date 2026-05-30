@@ -1,5 +1,5 @@
 ---
-name: Thaikkottmoss Medical Shop
+title: Thaikkottmoss Medical Shop
 section: Pharmacy & Medical Stores
 categories:
   - Pharmacy

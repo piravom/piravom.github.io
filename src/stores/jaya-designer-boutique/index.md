@@ -1,5 +1,5 @@
 ---
-name: Jaya Designer Boutique & Kids World
+title: Jaya Designer Boutique & Kids World
 section: Textiles & Apparel
 categories:
   - Boutique

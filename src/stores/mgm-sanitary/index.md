@@ -1,5 +1,5 @@
 ---
-name: MGM Sanitary
+title: MGM Sanitary
 section: Hardware & Building Materials
 distanceFromBusStand: "850m"
 directionsUrl: "https://www.google.com/maps/dir/Piravom+Private+Bus+Stand/MGM+Sanitary,+PIRAVOM"

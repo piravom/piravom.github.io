@@ -1,5 +1,5 @@
 ---
-name: Kamala Financiers
+title: Kamala Financiers
 section: Financial Services
 categories:
   - Financial Consultant

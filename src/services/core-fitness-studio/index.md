@@ -1,5 +1,5 @@
 ---
-name: CORE Fitness Studio
+title: CORE Fitness Studio
 section: Fitness & Gym
 categories:
   - Gym

@@ -1,5 +1,5 @@
 ---
-name: Exide Battery Authorised Dealer - Ullappillil Traders
+title: Exide Battery Authorised Dealer - Ullappillil Traders
 section: Automotive Services
 categories:
   - Battery Store

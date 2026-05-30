@@ -1,5 +1,5 @@
 ---
-name: Akshaya Centre Piravom
+title: Akshaya Centre Piravom
 section: Other Services
 categories:
   - Internet Cafe

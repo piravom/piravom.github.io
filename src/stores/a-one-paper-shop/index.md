@@ -1,5 +1,5 @@
 ---
-name: A-One-The Paper Shop
+title: A-One-The Paper Shop
 section: Stationery & Books
 distanceFromBusStand: "250m"
 directionsUrl: "https://www.google.com/maps/dir/Piravom+Private+Bus+Stand/A-One-The+Paper+Shop,+PIRAVOM"

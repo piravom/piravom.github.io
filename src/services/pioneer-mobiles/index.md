@@ -1,5 +1,5 @@
 ---
-name: Pioneer Mobiles & Electronics
+title: Pioneer Mobiles & Electronics
 section: Electronics & Mobile
 categories:
   - Cell Phone Store

@@ -1,5 +1,5 @@
 ---
-name: Jet Plane View Point
+title: Jet Plane View Point
 categories: 
   - Viewpoint
   - Historical

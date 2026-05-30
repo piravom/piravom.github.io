@@ -1,5 +1,5 @@
 ---
-name: Reliance Trends
+title: Reliance Trends
 section: Textiles & Apparel
 distanceFromBusStand: "1.0km"
 directionsUrl: "https://www.google.com/maps/dir/Piravom+Private+Bus+Stand/Reliance+Trends,+PIRAVOM"

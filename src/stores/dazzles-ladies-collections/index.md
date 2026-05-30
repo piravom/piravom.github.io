@@ -1,5 +1,5 @@
 ---
-name: Dazzles Ladies Collections
+title: Dazzles Ladies Collections
 section: Jewellery
 distanceFromBusStand: "150m"
 directionsUrl: "https://www.google.com/maps/dir/Piravom+Private+Bus+Stand/Dazzles+Ladies+Collections,+PIRAVOM"

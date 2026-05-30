@@ -1,5 +1,5 @@
 ---
-name: Maruti Suzuki Genuine Parts Distributor
+title: Maruti Suzuki Genuine Parts Distributor
 section: Automotive Services
 categories:
   - Auto Parts

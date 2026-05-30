@@ -1,5 +1,5 @@
 ---
-name: Propine Autohub
+title: Propine Autohub
 section: Automotive Services
 categories:
   - Car Wash

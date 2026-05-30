@@ -1,5 +1,5 @@
 ---
-name: Archa Tailors
+title: Archa Tailors
 section: Tailors & Alterations
 categories:
   - Tailor

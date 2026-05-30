@@ -47,7 +47,7 @@ description: "Arrival and departure times for buses in Piravom"
         <!-- Content -->
         <div class="flex-1 min-w-0">
 
-    <!-- Bus Grid — Grouped by Destination -->
+    <!-- Bus Grid - Grouped by Destination -->
     <section class="grid gap-6 md:grid-cols-2">
 
         {% for dest in dests %}
@@ -58,7 +58,7 @@ description: "Arrival and departure times for buses in Piravom"
                 <div class="flex items-center gap-3">
                     <span class="flex h-10 w-10 items-center justify-center rounded-xl bg-indigo-50 text-lg">🚌</span>
                     <div>
-                        <h3 class="text-xl font-bold text-gray-900">{{ dest }}</h3>
+                        <h2 class="text-xl font-bold text-gray-900">{{ dest }}</h2>
                         <p class="text-xs text-gray-500">{{ destBuses.length }} bus{{ "es" if destBuses.length != 1 }}</p>
                     </div>
                 </div>
@@ -91,7 +91,7 @@ description: "Arrival and departure times for buses in Piravom"
     {% if not dests.length %}
     <div class="rounded-3xl border border-gray-200 bg-white p-12 text-center shadow-sm">
         <span class="text-4xl">🚌</span>
-        <h3 class="mt-4 text-xl font-bold text-gray-900">No bus schedules available</h3>
+        <h2 class="mt-4 text-xl font-bold text-gray-900">No bus schedules available</h2>
         <p class="mt-2 text-sm text-gray-500">Check back later for updates</p>
     </div>
     {% endif %}

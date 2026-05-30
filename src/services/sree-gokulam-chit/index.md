@@ -1,5 +1,5 @@
 ---
-name: Sree Gokulam Chit & Finance Co
+title: Sree Gokulam Chit & Finance Co
 section: Financial Services
 categories:
   - Chit Fund

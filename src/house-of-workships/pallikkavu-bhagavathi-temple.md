@@ -1,5 +1,5 @@
 ---
-name: Pallikkavu Bhagavathi Temple
+title: Pallikkavu Bhagavathi Temple
 type: temple
 description: A historic Bhagavathi (Goddess) temple in Piravom, known for its annual Meenabharani festival which draws large numbers of devotees. The temple holds significant cultural and religious importance in the region.
 distance: ~1.5 km

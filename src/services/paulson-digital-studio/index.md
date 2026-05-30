@@ -1,5 +1,5 @@
 ---
-name: Paulson Digital Studio
+title: Paulson Digital Studio
 section: Photography & Media
 categories:
   - Photography Studio

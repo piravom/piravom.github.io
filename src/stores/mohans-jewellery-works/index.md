@@ -1,5 +1,5 @@
 ---
-name: Mohans Jewellery Works
+title: Mohans Jewellery Works
 section: Jewellery
 categories:
   - Jewellery

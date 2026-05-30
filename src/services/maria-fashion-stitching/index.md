@@ -1,5 +1,5 @@
 ---
-name: Maria Fashion and Stitching
+title: Maria Fashion and Stitching
 section: Tailors & Alterations
 categories:
   - Tailor

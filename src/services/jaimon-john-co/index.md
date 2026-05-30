@@ -1,5 +1,5 @@
 ---
-name: Jaimon John and Co, Chartered Accountants
+title: Jaimon John and Co, Chartered Accountants
 section: Financial Services
 categories:
   - Chartered Accountant

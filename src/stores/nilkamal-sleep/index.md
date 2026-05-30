@@ -1,5 +1,5 @@
 ---
-name: Nilkamal Sleep - Piravom
+title: Nilkamal Sleep - Piravom
 section: Furniture & Home Decor
 distanceFromBusStand: "650m"
 directionsUrl: "https://www.google.com/maps/dir/Piravom+Private+Bus+Stand/Nilkamal+Sleep+-+Piravom,+PIRAVOM"

@@ -1,5 +1,5 @@
 ---
-name: JMP Medical Centre, Piravom
+title: JMP Medical Centre, Piravom
 section: Health & Medical
 categories:
   - Private hospital

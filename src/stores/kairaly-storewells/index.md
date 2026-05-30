@@ -1,5 +1,5 @@
 ---
-name: Kairaly Storewells Piravom
+title: Kairaly Storewells Piravom
 section: Furniture & Home Decor
 categories:
   - Furniture

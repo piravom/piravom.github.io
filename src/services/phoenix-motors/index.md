@@ -1,5 +1,5 @@
 ---
-name: Phoenix Motors - Yamaha Sales, Service & Spare
+title: Phoenix Motors - Yamaha Sales, Service & Spare
 section: Automotive Services
 categories:
   - Two Wheeler Dealer

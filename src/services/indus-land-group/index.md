@@ -1,5 +1,5 @@
 ---
-name: Indus Land Group
+title: Indus Land Group
 section: Financial Services
 categories:
   - Financial Institution

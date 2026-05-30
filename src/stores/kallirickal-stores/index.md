@@ -1,5 +1,5 @@
 ---
-name: Kallirickal Stores
+title: Kallirickal Stores
 section: Stationery & Books
 categories:
   - Stationery

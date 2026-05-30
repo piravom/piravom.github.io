@@ -1,5 +1,5 @@
 ---
-name: Musclecraft Fitness
+title: Musclecraft Fitness
 section: Fitness & Gym
 categories:
   - Gym

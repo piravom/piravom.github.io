@@ -1,6 +1,6 @@
 ---
 layout: layouts/restaurant.njk
-name: "Puzhayoram Resto Cafe"
+title: "Puzhayoram Resto Cafe"
 description: "Riverside cafe offering a relaxing atmosphere and refreshments."
 cuisine:
   - "Cafe"

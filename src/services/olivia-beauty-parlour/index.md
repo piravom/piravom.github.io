@@ -1,5 +1,5 @@
 ---
-name: Olivia Beauty Parlour (Ladies & Kids Only)
+title: Olivia Beauty Parlour (Ladies & Kids Only)
 section: Salons & Beauty
 categories:
   - Beauty Parlour

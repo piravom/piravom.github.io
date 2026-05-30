@@ -1,5 +1,5 @@
 ---
-name: Kalampoor Hanging Bridge
+title: Kalampoor Hanging Bridge
 categories: 
   - Viewpoint
 description: Kalampoor Hanging Bridge
@@ -9,5 +9,4 @@ credits:
   - https://www.instagram.com/p/B369i5NnfLl/
 ---
 
-# Kalampoor Hanging Bridge
 Kalampoor Hanging Bridge

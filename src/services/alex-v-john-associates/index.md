@@ -1,5 +1,5 @@
 ---
-name: Alex V John & Associates
+title: Alex V John & Associates
 section: Financial Services
 categories:
   - Chartered Accountant

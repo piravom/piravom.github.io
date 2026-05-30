@@ -1,5 +1,5 @@
 ---
-name: Karuna Medicals
+title: Karuna Medicals
 section: Pharmacy & Medical Stores
 categories:
   - Pharmacy

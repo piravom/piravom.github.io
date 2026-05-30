@@ -1,5 +1,5 @@
 ---
-name: Dr prince sleeba
+title: Dr prince sleeba
 section: Health & Medical
 categories:
   - Obstetrician-gynecologist

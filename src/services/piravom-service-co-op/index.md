@@ -1,5 +1,5 @@
 ---
-name: Piravom Service Co-operative Society
+title: Piravom Service Co-operative Society
 section: Other Services
 categories:
   - Co-operative Society

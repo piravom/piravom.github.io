@@ -1,5 +1,5 @@
 ---
-name: Saliya Beauty Lounge
+title: Saliya Beauty Lounge
 section: Salons & Beauty
 categories:
   - Beauty Parlour

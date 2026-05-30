@@ -1,5 +1,5 @@
 ---
-name: Mammalayil Motors
+title: Mammalayil Motors
 section: Automotive Services
 categories:
   - Auto Repair

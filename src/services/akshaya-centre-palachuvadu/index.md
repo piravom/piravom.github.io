@@ -1,5 +1,5 @@
 ---
-name: Akshaya E Centre Palachuvadu
+title: Akshaya E Centre Palachuvadu
 section: Other Services
 categories:
   - Internet Cafe

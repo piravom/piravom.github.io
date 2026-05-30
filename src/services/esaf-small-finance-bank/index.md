@@ -1,5 +1,5 @@
 ---
-name: ESAF Small Finance Bank
+title: ESAF Small Finance Bank
 section: Financial Services
 categories:
   - Bank

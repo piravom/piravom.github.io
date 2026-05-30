@@ -1,5 +1,5 @@
 ---
-name: Vinayaka Hardwares and Paints
+title: Vinayaka Hardwares and Paints
 section: Hardware & Building Materials
 categories:
   - Hardware

@@ -1,6 +1,6 @@
 ---
 layout: layouts/restaurant.njk
-name: "Sylvia Hotel & Restaurant"
+title: "Sylvia Hotel & Restaurant"
 description: "Multi-cuisine restaurant offering Kerala, Indian, Chinese, and Continental."
 cuisine:
   - "Kerala"

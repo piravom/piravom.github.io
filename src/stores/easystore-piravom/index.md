@@ -1,5 +1,5 @@
 ---
-name: Easystore Piravom
+title: Easystore Piravom
 section: Hardware & Building Materials
 distanceFromBusStand: "300m"
 directionsUrl: "https://www.google.com/maps/dir/Piravom+Private+Bus+Stand/Easystore+Piravom,+PIRAVOM"

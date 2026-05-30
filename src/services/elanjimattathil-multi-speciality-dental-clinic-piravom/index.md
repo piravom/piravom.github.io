@@ -1,5 +1,5 @@
 ---
-name: Elanjimattathil Multi Speciality Dental Clinic Piravom
+title: Elanjimattathil Multi Speciality Dental Clinic Piravom
 section: Health & Medical
 categories:
   - Dental clinic

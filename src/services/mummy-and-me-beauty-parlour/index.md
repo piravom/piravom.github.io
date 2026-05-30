@@ -1,5 +1,5 @@
 ---
-name: Mummy and Me Beauty Parlour
+title: Mummy and Me Beauty Parlour
 section: Salons & Beauty
 categories:
   - Beauty Parlour

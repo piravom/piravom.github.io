@@ -1,5 +1,5 @@
 ---
-name: Era Furniture
+title: Era Furniture
 section: Furniture & Home Decor
 categories:
   - Furniture

@@ -1,6 +1,6 @@
 ---
 layout: layouts/restaurant.njk
-name: "Aone Porotta"
+title: "Aone Porotta"
 description: "Famous for fresh, flaky porotta and tasty fast food."
 cuisine:
   - "Fast Food"

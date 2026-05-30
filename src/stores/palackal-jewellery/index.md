@@ -1,5 +1,5 @@
 ---
-name: Palackal Jewellery
+title: Palackal Jewellery
 section: Jewellery
 categories:
   - Jewellery

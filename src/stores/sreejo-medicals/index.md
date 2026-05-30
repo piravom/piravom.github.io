@@ -1,5 +1,5 @@
 ---
-name: Sreejo Medicals
+title: Sreejo Medicals
 section: Pharmacy & Medical Stores
 categories:
   - Pharmacy

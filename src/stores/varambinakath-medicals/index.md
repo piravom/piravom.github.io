@@ -1,5 +1,5 @@
 ---
-name: Varambinakath Medicals
+title: Varambinakath Medicals
 section: Pharmacy & Medical Stores
 categories:
   - Pharmacy

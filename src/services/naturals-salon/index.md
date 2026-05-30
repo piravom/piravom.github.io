@@ -1,5 +1,5 @@
 ---
-name: Naturals Salon
+title: Naturals Salon
 section: Salons & Beauty
 categories:
   - Salon

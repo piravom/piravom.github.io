@@ -1,5 +1,5 @@
 ---
-name: Eyemax Digital Video Lab And Studio
+title: Eyemax Digital Video Lab And Studio
 section: Photography & Media
 categories:
   - Photo Lab

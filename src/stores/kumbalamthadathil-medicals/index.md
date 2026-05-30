@@ -1,5 +1,5 @@
 ---
-name: Kumbalamthadathil Medicals
+title: Kumbalamthadathil Medicals
 section: Pharmacy & Medical Stores
 distanceFromBusStand: "56m"
 directionsUrl: "https://www.google.com/maps/dir/Piravom+Private+Bus+Stand/Kumbalamthadathil+Medicals,+PIRAVOM"

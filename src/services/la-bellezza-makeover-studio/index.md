@@ -1,5 +1,5 @@
 ---
-name: La Bellezza Makeover Studio and Ladies Beauty Salon
+title: La Bellezza Makeover Studio and Ladies Beauty Salon
 section: Salons & Beauty
 categories:
   - Beauty Parlour

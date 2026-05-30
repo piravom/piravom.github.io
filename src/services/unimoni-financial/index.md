@@ -1,5 +1,5 @@
 ---
-name: Unimoni Financial Services
+title: Unimoni Financial Services
 section: Financial Services
 categories:
   - Currency Exchange

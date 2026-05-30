@@ -1,5 +1,5 @@
 ---
-name: Car Workshop
+title: Car Workshop
 section: Automotive Services
 categories:
   - Auto Bodywork

@@ -1,5 +1,5 @@
 ---
-name: MGM Helmets
+title: MGM Helmets
 section: Automotive Services
 categories:
   - Auto Parts

@@ -1,7 +1,7 @@
 ---
 layout: layouts/base.njk
 title: About Piravom
-description: Discover Piravom — a historic town in Ernakulam district, Kerala, known for its scenic landscapes, cultural heritage, and vibrant community.
+description: Discover Piravom - a historic town in Ernakulam district, Kerala, known for its scenic landscapes, cultural heritage, and vibrant community.
 permalink: "/about/"
 ---
 
@@ -53,7 +53,7 @@ permalink: "/about/"
 
         <!-- Geography & Location -->
         <div class="mt-12 rounded-3xl border border-gray-200 bg-white p-8 shadow-sm">
-            <h3 class="text-2xl font-bold text-gray-900">📍 Geography &amp; Location</h3>
+            <h2 class="text-2xl font-bold text-gray-900">📍 Geography &amp; Location</h2>
             <p class="mt-4 text-gray-600 leading-relaxed">
                 Piravom is strategically located about 20 km southeast of Kochi (Cochin) and roughly 12 km from
                 the KSEB Nagar area. It lies at the crossroads of the Ernakulam – Kottayam district border,
@@ -82,12 +82,12 @@ permalink: "/about/"
 
         <!-- History -->
         <div class="mt-8 rounded-3xl border border-gray-200 bg-white p-8 shadow-sm">
-            <h3 class="text-2xl font-bold text-gray-900">📜 History &amp; Heritage</h3>
+            <h2 class="text-2xl font-bold text-gray-900">📜 History &amp; Heritage</h2>
             <p class="mt-4 text-gray-600 leading-relaxed">
                 Piravom has a rich history dating back centuries. The region was once part of the
                 <strong class="text-gray-900">Kingdom of Travancore</strong> and later the
                 <strong class="text-gray-900">Princely State of Cochin</strong>. Its name is believed to be
-                derived from "Piravum" meaning "that which is born" — referencing its origin as a settlement
+                derived from "Piravum" meaning "that which is born" - referencing its origin as a settlement
                 that grew around the riverbanks.
             </p>
             <p class="mt-4 text-gray-600 leading-relaxed">
@@ -100,10 +100,10 @@ permalink: "/about/"
 
         <!-- Culture & Demographics -->
         <div class="mt-8 rounded-3xl border border-gray-200 bg-white p-8 shadow-sm">
-            <h3 class="text-2xl font-bold text-gray-900">🙏 Culture &amp; Community</h3>
+            <h2 class="text-2xl font-bold text-gray-900">🙏 Culture &amp; Community</h2>
             <p class="mt-4 text-gray-600 leading-relaxed">
                 Piravom is a vibrant mosaic of cultures, with a harmonious mix of Hindu, Christian, and
-                Muslim communities. The town is known for its grand festival celebrations — the
+                Muslim communities. The town is known for its grand festival celebrations - the
                 <strong class="text-gray-900">Piravom Church Feast</strong> (Feast of St. Mary),
                 temple <em>poorams</em>, and <em>padayani</em> performances draw visitors from across
                 the district.
@@ -118,7 +118,7 @@ permalink: "/about/"
 
         <!-- Economy -->
         <div class="mt-8 rounded-3xl border border-gray-200 bg-white p-8 shadow-sm">
-            <h3 class="text-2xl font-bold text-gray-900">🏪 Economy &amp; Commerce</h3>
+            <h2 class="text-2xl font-bold text-gray-900">🏪 Economy &amp; Commerce</h2>
             <p class="mt-4 text-gray-600 leading-relaxed">
                 Piravom serves as a major commercial centre for nearby villages. The town's economy is
                 driven by:
@@ -157,7 +157,7 @@ permalink: "/about/"
 
         <!-- Tourism -->
         <div class="mt-8 rounded-3xl border border-gray-200 bg-white p-8 shadow-sm">
-            <h3 class="text-2xl font-bold text-gray-900">🏞️ Tourism &amp; Landmarks</h3>
+            <h2 class="text-2xl font-bold text-gray-900">🏞️ Tourism &amp; Landmarks</h2>
             <p class="mt-4 text-gray-600 leading-relaxed">
                 Piravom and its surroundings offer a variety of attractions for nature lovers and pilgrims alike:
             </p>
@@ -203,7 +203,7 @@ permalink: "/about/"
 
         <!-- Transportation -->
         <div class="mt-8 rounded-3xl border border-gray-200 bg-white p-8 shadow-sm">
-            <h3 class="text-2xl font-bold text-gray-900">🚌 Transportation</h3>
+            <h2 class="text-2xl font-bold text-gray-900">🚌 Transportation</h2>
             <p class="mt-4 text-gray-600 leading-relaxed">
                 Piravom is well-connected by road. The <strong class="text-gray-900">Main Central (MC) Road</strong>
                 (SH-1) passes through the town, linking it to Ernakulam, Kottayam, and beyond. Frequent
@@ -226,7 +226,7 @@ permalink: "/about/"
 
         <!-- Education -->
         <div class="mt-8 rounded-3xl border border-gray-200 bg-white p-8 shadow-sm">
-            <h3 class="text-2xl font-bold text-gray-900">🎓 Education</h3>
+            <h2 class="text-2xl font-bold text-gray-900">🎓 Education</h2>
             <p class="mt-4 text-gray-600 leading-relaxed">
                 Piravom is home to several well-regarded educational institutions, including
                 <strong class="text-gray-900">St. Joseph's Higher Secondary School</strong>,

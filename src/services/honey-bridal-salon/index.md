@@ -1,5 +1,5 @@
 ---
-name: Honey Bridal Salon
+title: Honey Bridal Salon
 section: Salons & Beauty
 categories:
   - Salon

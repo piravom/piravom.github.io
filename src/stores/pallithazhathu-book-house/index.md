@@ -1,5 +1,5 @@
 ---
-name: Pallithazhathu Book House
+title: Pallithazhathu Book House
 section: Stationery & Books
 categories:
   - Books

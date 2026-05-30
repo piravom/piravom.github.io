@@ -1,5 +1,5 @@
 ---
-name: VISION CARE OPTICALS
+title: VISION CARE OPTICALS
 section: Health & Medical
 categories:
   - Optometrist

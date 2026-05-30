@@ -1,5 +1,5 @@
 ---
-name: Kings Hardwares
+title: Kings Hardwares
 section: Hardware & Building Materials
 categories:
   - Hardware

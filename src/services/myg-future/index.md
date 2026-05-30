@@ -1,5 +1,5 @@
 ---
-name: myG Future Piravom
+title: myG Future Piravom
 section: Electronics & Mobile
 categories:
   - Cell Phone Store

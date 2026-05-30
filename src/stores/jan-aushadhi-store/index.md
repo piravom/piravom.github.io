@@ -1,5 +1,5 @@
 ---
-name: Jan Aushadhi Store
+title: Jan Aushadhi Store
 section: Pharmacy & Medical Stores
 categories:
   - Pharmacy

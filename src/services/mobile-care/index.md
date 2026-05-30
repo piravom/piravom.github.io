@@ -1,5 +1,5 @@
 ---
-name: Mobile Care
+title: Mobile Care
 section: Electronics & Mobile
 categories:
   - Cell Phone Store

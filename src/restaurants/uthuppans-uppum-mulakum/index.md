@@ -1,6 +1,6 @@
 ---
 layout: layouts/restaurant.njk
-name: "Uthuppans Uppum Mulakum"
+title: "Uthuppans Uppum Mulakum"
 description: "Family restaurant serving multi-cuisine dishes in a cozy setting."
 cuisine:
   - "Family"

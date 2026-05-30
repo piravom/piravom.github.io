@@ -1,5 +1,5 @@
 ---
-name: St.Mary's Ayurvedic Clinic & Medicare Lab
+title: St.Mary's Ayurvedic Clinic & Medicare Lab
 section: Health & Medical
 categories:
   - Ayurvedic clinic

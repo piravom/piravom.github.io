@@ -1,5 +1,5 @@
 ---
-name: Vi Mini Store Piravom
+title: Vi Mini Store Piravom
 section: Other Services
 categories:
   - Telecommunications

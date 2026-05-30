@@ -63,7 +63,7 @@ description: Important contact numbers for essential services, hospitals, and go
                 <div class="flex items-center gap-4 border-b border-red-100 bg-red-50 px-6 py-4">
                     <span class="flex h-10 w-10 items-center justify-center rounded-full bg-red-100 text-lg">🚨</span>
                     <div>
-                        <h3 class="text-lg font-bold text-red-800">Emergency Contacts</h3>
+                        <h2 class="text-lg font-bold text-red-800">Emergency Contacts</h2>
                         <p class="text-sm text-red-600">Dial these numbers in case of an emergency</p>
                     </div>
                 </div>
@@ -114,7 +114,7 @@ description: Important contact numbers for essential services, hospitals, and go
                                 {% else %}📞{% endif %}
                             </span>
                             <div>
-                                <h3 class="text-xl font-bold text-gray-900">{{ category.category }}</h3>
+                                <h2 class="text-xl font-bold text-gray-900">{{ category.category }}</h2>
                                 <p class="text-xs text-gray-500">{{ category.contacts.length }} contact{{ "s" if category.contacts.length != 1 }}</p>
                             </div>
                         </div>
@@ -146,7 +146,7 @@ description: Important contact numbers for essential services, hospitals, and go
             <div id="noResults" class="mt-8 hidden text-center">
                 <div class="rounded-3xl border border-gray-200 bg-white p-12 shadow-sm">
                     <span class="text-4xl">🔍</span>
-                    <h3 class="mt-4 text-xl font-bold text-gray-900">No contacts found</h3>
+                    <h2 class="mt-4 text-xl font-bold text-gray-900">No contacts found</h2>
                     <p class="mt-2 text-sm text-gray-500">Try a different search term</p>
                 </div>
             </div>

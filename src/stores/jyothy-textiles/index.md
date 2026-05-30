@@ -1,5 +1,5 @@
 ---
-name: Jyothy Textiles
+title: Jyothy Textiles
 section: Textiles & Apparel
 categories:
   - Textiles

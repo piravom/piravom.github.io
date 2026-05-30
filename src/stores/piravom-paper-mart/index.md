@@ -1,5 +1,5 @@
 ---
-name: Piravom Paper Mart
+title: Piravom Paper Mart
 section: Stationery & Books
 categories:
   - Stationery

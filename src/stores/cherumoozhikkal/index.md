@@ -1,5 +1,5 @@
 ---
-name: Cherumoozhikkal
+title: Cherumoozhikkal
 section: Other Stores
 categories:
   - Shopping

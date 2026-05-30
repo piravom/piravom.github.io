@@ -1,6 +1,6 @@
 ---
 layout: layouts/restaurant.njk
-name: "Pollos food court"
+title: "Pollos food court"
 description: "Fast food court with Indian, Chinese, and multi-cuisine options."
 cuisine:
   - "Fast Food"

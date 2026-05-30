@@ -1,5 +1,5 @@
 ---
-name: Supreme Home Garden
+title: Supreme Home Garden
 section: Hardware & Building Materials
 categories:
   - Home Appliances

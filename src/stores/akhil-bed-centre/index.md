@@ -1,5 +1,5 @@
 ---
-name: Akhil Bed Centre
+title: Akhil Bed Centre
 section: Furniture & Home Decor
 distanceFromBusStand: "350m"
 directionsUrl: "https://www.google.com/maps/dir/Piravom+Private+Bus+Stand/Akhil+Bed+Centre,+PIRAVOM"

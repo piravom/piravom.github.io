@@ -1,5 +1,5 @@
 ---
-name: M. G. Agencies
+title: M. G. Agencies
 section: Furniture & Home Decor
 categories:
   - Furniture

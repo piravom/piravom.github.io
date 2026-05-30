@@ -1,6 +1,6 @@
 ---
 layout: layouts/restaurant.njk
-name: "Andichira Shappu"
+title: "Andichira Shappu"
 description: "Multi-cuisine dining offering a variety of flavorful dishes."
 cuisine:
   - "Multi-Cuisine"

@@ -1,5 +1,5 @@
 ---
-name: Apollo Tyres - Rodo Tyres
+title: Apollo Tyres - Rodo Tyres
 section: Automotive Services
 categories:
   - Tyre Shop

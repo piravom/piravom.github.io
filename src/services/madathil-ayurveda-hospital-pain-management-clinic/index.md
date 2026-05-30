@@ -1,5 +1,5 @@
 ---
-name: Madathil Ayurveda Hospital & Pain Management Clinic
+title: Madathil Ayurveda Hospital & Pain Management Clinic
 section: Health & Medical
 categories:
   - Ayurvedic clinic

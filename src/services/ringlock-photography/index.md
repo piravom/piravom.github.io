@@ -1,5 +1,5 @@
 ---
-name: Ringlock Photography Studio
+title: Ringlock Photography Studio
 section: Photography & Media
 categories:
   - Photography Studio

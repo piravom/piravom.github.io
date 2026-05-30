@@ -1,5 +1,5 @@
 ---
-name: Mampurathu Dream Fashion
+title: Mampurathu Dream Fashion
 section: Tailors & Alterations
 categories:
   - Tailor

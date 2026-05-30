@@ -1,5 +1,5 @@
 ---
-name: JBG Traders
+title: JBG Traders
 section: Furniture & Home Decor
 categories:
   - Mattresses

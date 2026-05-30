@@ -1,6 +1,6 @@
 ---
 layout: layouts/restaurant.njk
-name: "Hotel Three Road"
+title: "Hotel Three Road"
 description: "Traditional Kerala and South Indian meals at affordable prices."
 cuisine:
   - "Kerala"

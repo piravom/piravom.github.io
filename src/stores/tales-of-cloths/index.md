@@ -1,5 +1,5 @@
 ---
-name: Tales of Cloths
+title: Tales of Cloths
 section: Textiles & Apparel
 categories:
   - Designer Clothing

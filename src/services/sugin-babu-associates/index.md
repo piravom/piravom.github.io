@@ -1,5 +1,5 @@
 ---
-name: Sugin Babu & Associates
+title: Sugin Babu & Associates
 section: Financial Services
 categories:
   - Chartered Accountant

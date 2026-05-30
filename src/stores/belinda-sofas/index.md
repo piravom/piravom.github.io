@@ -1,5 +1,5 @@
 ---
-name: Belinda Sofas
+title: Belinda Sofas
 section: Furniture & Home Decor
 distanceFromBusStand: "1.1km"
 directionsUrl: "https://www.google.com/maps/dir/Piravom+Private+Bus+Stand/Belinda+Sofas,+PIRAVOM"

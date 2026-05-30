@@ -1,5 +1,5 @@
 ---
-name: Attutheeram River View Park
+title: Attutheeram River View Park
 categories: 
   - Park
   - Viewpoint

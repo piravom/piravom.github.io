@@ -1,5 +1,5 @@
 ---
-name: Padiken Wedding Centre
+title: Padiken Wedding Centre
 section: Textiles & Apparel
 categories:
   - Clothing

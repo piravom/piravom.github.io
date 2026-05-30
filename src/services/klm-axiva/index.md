@@ -1,5 +1,5 @@
 ---
-name: KLM Axiva Gold Loan
+title: KLM Axiva Gold Loan
 section: Financial Services
 categories:
   - Gold Loan

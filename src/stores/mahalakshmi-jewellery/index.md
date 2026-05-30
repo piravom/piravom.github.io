@@ -1,5 +1,5 @@
 ---
-name: Mahalakshmi Jewellery - Gold & Silver Store
+title: Mahalakshmi Jewellery - Gold & Silver Store
 section: Jewellery
 distanceFromBusStand: "120m"
 directionsUrl: "https://www.google.com/maps/dir/Piravom+Private+Bus+Stand/Mahalakshmi+Jewellery+-+Gold+%26+Silver+Store,+PIRAVOM"

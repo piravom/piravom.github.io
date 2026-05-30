@@ -1,5 +1,5 @@
 ---
-name: Jaykay Interiors and Furniture
+title: Jaykay Interiors and Furniture
 section: Furniture & Home Decor
 categories:
   - Furniture

@@ -1,5 +1,5 @@
 ---
-name: Padikaparambil Medicals
+title: Padikaparambil Medicals
 section: Health & Medical
 categories:
   - Pharmacy

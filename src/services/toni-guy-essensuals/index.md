@@ -1,5 +1,5 @@
 ---
-name: Toni&Guy Essensuals Piravom
+title: Toni&Guy Essensuals Piravom
 section: Salons & Beauty
 categories:
   - Salon

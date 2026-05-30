@@ -1,5 +1,5 @@
 ---
-name: MJ Tyres Piravom
+title: MJ Tyres Piravom
 section: Automotive Services
 categories:
   - Tyre Shop

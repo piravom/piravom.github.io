@@ -1,5 +1,5 @@
 ---
-name: Elanjimattathil Watch House
+title: Elanjimattathil Watch House
 section: Other Services
 categories:
   - Watch Store

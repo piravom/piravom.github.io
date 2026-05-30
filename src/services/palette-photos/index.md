@@ -1,5 +1,5 @@
 ---
-name: Palette Photos
+title: Palette Photos
 section: Photography & Media
 categories:
   - Photography Studio

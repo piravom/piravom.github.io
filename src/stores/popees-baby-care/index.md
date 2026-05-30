@@ -1,5 +1,5 @@
 ---
-name: Popees Baby Care
+title: Popees Baby Care
 section: Textiles & Apparel
 categories:
   - Baby Store

@@ -1,6 +1,6 @@
 ---
 layout: layouts/restaurant.njk
-name: "Maharani Restaurant and Bar"
+title: "Maharani Restaurant and Bar"
 description: "Multi-cuisine restaurant and bar with Kerala, Indian, and Chinese dishes."
 cuisine:
   - "Kerala"

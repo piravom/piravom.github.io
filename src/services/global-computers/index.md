@@ -1,5 +1,5 @@
 ---
-name: Global Computers
+title: Global Computers
 section: Repairs & Maintenance
 categories:
   - Computer Repair

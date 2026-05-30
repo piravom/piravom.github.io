@@ -1,5 +1,5 @@
 ---
-name: Chakkumkuzhiyil Glass House
+title: Chakkumkuzhiyil Glass House
 section: Furniture & Home Decor
 distanceFromBusStand: "350m"
 directionsUrl: "https://www.google.com/maps/dir/Piravom+Private+Bus+Stand/Chakkumkuzhiyil+Glass+House,+PIRAVOM"

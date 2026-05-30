@@ -1,5 +1,5 @@
 ---
-name: ICICI Bank Piravom Branch & ATM
+title: ICICI Bank Piravom Branch & ATM
 section: Financial Services
 categories:
   - Bank

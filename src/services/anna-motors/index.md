@@ -1,5 +1,5 @@
 ---
-name: Anna Motors
+title: Anna Motors
 section: Automotive Services
 categories:
   - Auto Repair

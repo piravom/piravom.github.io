@@ -1,6 +1,6 @@
 ---
 layout: layouts/restaurant.njk
-name: "Octopus Bakes & Bistro"
+title: "Octopus Bakes & Bistro"
 description: "Bakery and bistro serving continental and Indian favorites."
 cuisine:
   - "Bakery"

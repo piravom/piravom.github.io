@@ -1,5 +1,5 @@
 ---
-name: Reforma Professionals Unisex Beauty Parlour
+title: Reforma Professionals Unisex Beauty Parlour
 section: Salons & Beauty
 categories:
   - Salon

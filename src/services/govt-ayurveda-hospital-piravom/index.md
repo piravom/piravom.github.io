@@ -1,5 +1,5 @@
 ---
-name: Govt. Ayurveda Hospital Piravom
+title: Govt. Ayurveda Hospital Piravom
 section: Health & Medical
 categories:
   - Hospital

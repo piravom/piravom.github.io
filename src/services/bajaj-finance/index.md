@@ -1,5 +1,5 @@
 ---
-name: Bajaj Finance Branch
+title: Bajaj Finance Branch
 section: Financial Services
 categories:
   - Financial Institution

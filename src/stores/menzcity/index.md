@@ -1,5 +1,5 @@
 ---
-name: Menzcity
+title: Menzcity
 section: Textiles & Apparel
 distanceFromBusStand: "50m"
 directionsUrl: "https://www.google.com/maps/dir/Piravom+Private+Bus+Stand/Menzcity,+PIRAVOM"

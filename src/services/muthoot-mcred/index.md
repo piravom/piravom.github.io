@@ -1,5 +1,5 @@
 ---
-name: Muthoot MCred Gold Loan
+title: Muthoot MCred Gold Loan
 section: Financial Services
 categories:
   - Gold Loan

@@ -1,5 +1,5 @@
 ---
-name: Geojit Financial Services Ltd
+title: Geojit Financial Services Ltd
 section: Financial Services
 categories:
   - Financial Institution

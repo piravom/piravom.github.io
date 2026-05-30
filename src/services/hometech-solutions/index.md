@@ -1,5 +1,5 @@
 ---
-name: HomeTech Solutions
+title: HomeTech Solutions
 section: Repairs & Maintenance
 categories:
   - Solar Installation

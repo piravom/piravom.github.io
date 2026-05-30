@@ -1,5 +1,5 @@
 ---
-name: South Indian Bank - Piravom Branch
+title: South Indian Bank - Piravom Branch
 section: Financial Services
 categories:
   - Bank

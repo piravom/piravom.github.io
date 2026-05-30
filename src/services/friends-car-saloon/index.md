@@ -1,5 +1,5 @@
 ---
-name: Friends Car Saloon
+title: Friends Car Saloon
 section: Automotive Services
 categories:
   - Car Wash

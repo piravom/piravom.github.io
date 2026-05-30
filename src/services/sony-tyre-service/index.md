@@ -1,5 +1,5 @@
 ---
-name: Sony Tyre Service
+title: Sony Tyre Service
 section: Automotive Services
 categories:
   - Tyre Shop

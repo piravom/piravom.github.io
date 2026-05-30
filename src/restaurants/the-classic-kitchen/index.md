@@ -1,6 +1,6 @@
 ---
 layout: layouts/restaurant.njk
-name: "The Classic Kitchen"
+title: "The Classic Kitchen"
 description: "Classic multi-cuisine dining with a variety of flavorful dishes."
 cuisine:
   - "Multi-Cuisine"

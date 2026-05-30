@@ -1,5 +1,5 @@
 ---
-name: Kochareekkal Caves
+title: Kochareekkal Caves
 categories: 
   - Nature
 description: Natural caves beneath giant tree roots with a scenic waterfall and pond outside.

@@ -1,5 +1,5 @@
 ---
-name: Mulakulam Mar Yohanon Ihidiyo Orthodox Syrian Church (Mulakulam Valiya Pally)
+title: Mulakulam Mar Yohanon Ihidiyo Orthodox Syrian Church (Mulakulam Valiya Pally)
 type: church
 description: Also known as Mulakulam Valiya Pally, this Orthodox Syrian church is dedicated to Mar Yohanon Ihidiyo (St. John the Baptist). Serves the Malankara Orthodox community in Mulakulam near Piravom.
 distance: ~3.5 km

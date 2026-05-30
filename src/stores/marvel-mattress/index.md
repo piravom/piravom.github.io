@@ -1,5 +1,5 @@
 ---
-name: Marvel Mattress Showroom
+title: Marvel Mattress Showroom
 section: Furniture & Home Decor
 categories:
   - Mattresses

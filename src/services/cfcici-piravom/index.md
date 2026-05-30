@@ -1,5 +1,5 @@
 ---
-name: CFCICI - Piravom Branch
+title: CFCICI - Piravom Branch
 section: Financial Services
 categories:
   - Financial Institution

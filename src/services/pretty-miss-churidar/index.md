@@ -1,5 +1,5 @@
 ---
-name: Pretty Miss Churidar & Beauty Parlour
+title: Pretty Miss Churidar & Beauty Parlour
 section: Tailors & Alterations
 categories:
   - Tailor

@@ -1,5 +1,5 @@
 ---
-name: Lenskart
+title: Lenskart
 section: Opticals
 distanceFromBusStand: "1.0km"
 directionsUrl: "https://www.google.com/maps/dir/Piravom+Private+Bus+Stand/Lenskart,+PIRAVOM"

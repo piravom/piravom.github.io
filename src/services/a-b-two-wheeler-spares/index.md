@@ -1,5 +1,5 @@
 ---
-name: A & B Two Wheeler Spare Parts
+title: A & B Two Wheeler Spare Parts
 section: Automotive Services
 categories:
   - Auto Parts

@@ -1,5 +1,5 @@
 ---
-name: SAJ Aluminium
+title: SAJ Aluminium
 section: Hardware & Building Materials
 categories:
   - Hardware

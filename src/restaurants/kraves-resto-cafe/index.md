@@ -1,6 +1,6 @@
 ---
 layout: layouts/restaurant.njk
-name: "Kraves Resto Cafe"
+title: "Kraves Resto Cafe"
 description: "Trendy cafe with multi-cuisine dishes, beverages, and fast food."
 cuisine:
   - "Cafe"

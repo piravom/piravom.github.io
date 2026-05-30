@@ -1,5 +1,5 @@
 ---
-name: Minnal Cycles Piravom
+title: Minnal Cycles Piravom
 section: Other Services
 categories:
   - Bicycle Shop

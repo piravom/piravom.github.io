@@ -18,7 +18,7 @@ module.exports = function () {
 
     items.forEach(function (item) {
       if (!item || !item.data) return;
-      var name = item.data.name || item.data.title || "";
+      var name = item.data.title || item.data.name || "";
       var desc = item.data.description || item.data.shortDescription || "";
       index.push({
         name: name,

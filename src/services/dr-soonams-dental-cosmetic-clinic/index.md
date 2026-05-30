@@ -1,5 +1,5 @@
 ---
-name: Dr. Soonam's Dental & Cosmetic Clinic
+title: Dr. Soonam's Dental & Cosmetic Clinic
 section: Health & Medical
 categories:
   - Dental clinic

@@ -1,5 +1,5 @@
 ---
-name: My Kalyan Mini Store
+title: My Kalyan Mini Store
 section: Jewellery
 categories:
   - Jewellery

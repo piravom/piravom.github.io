@@ -1,6 +1,6 @@
 ---
 layout: layouts/restaurant.njk
-name: "New Citrus"
+title: "New Citrus"
 description: "Multi-cuisine eatery offering fresh and tasty dishes."
 cuisine:
   - "Multi-Cuisine"

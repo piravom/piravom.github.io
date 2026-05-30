@@ -1,5 +1,5 @@
 ---
-name: Manappuram Finance Limited – Gold Loan
+title: Manappuram Finance Limited – Gold Loan
 section: Financial Services
 categories:
   - Gold Loan

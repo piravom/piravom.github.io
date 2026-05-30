@@ -1,5 +1,5 @@
 ---
-name: Kacys Fabrics
+title: Kacys Fabrics
 section: Textiles & Apparel
 categories:
   - Textiles

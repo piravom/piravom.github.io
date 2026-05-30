@@ -1,5 +1,5 @@
 ---
-name: Ajmal Bismi Supermart
+title: Ajmal Bismi Supermart
 section: Supermarkets & Grocery
 distanceFromBusStand: "450m"
 directionsUrl: "https://www.google.com/maps/dir/Piravom+Private+Bus+Stand/Ajmal+Bismi+Supermart,+PIRAVOM"

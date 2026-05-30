@@ -1,5 +1,5 @@
 ---
-name: Life Care Pharmacy
+title: Life Care Pharmacy
 section: Pharmacy & Medical Stores
 distanceFromBusStand: "750m"
 directionsUrl: "https://www.google.com/maps/dir/Piravom+Private+Bus+Stand/Life+Care+Pharmacy,+PIRAVOM"

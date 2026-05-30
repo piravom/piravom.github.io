@@ -1,5 +1,5 @@
 ---
-name: Dr. Gopinath Memorial Lakshmi Nursing Home
+title: Dr. Gopinath Memorial Lakshmi Nursing Home
 section: Health & Medical
 categories:
   - Hospital

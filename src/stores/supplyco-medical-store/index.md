@@ -1,5 +1,5 @@
 ---
-name: Supplyco Medical Store
+title: Supplyco Medical Store
 section: Pharmacy & Medical Stores
 categories:
   - Pharmacy

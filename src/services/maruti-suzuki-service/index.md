@@ -1,5 +1,5 @@
 ---
-name: Maruti Suzuki Service (Sai Service)
+title: Maruti Suzuki Service (Sai Service)
 section: Automotive Services
 categories:
   - Car Service

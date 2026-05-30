@@ -1,6 +1,6 @@
 ---
 layout: layouts/restaurant.njk
-name: "Mandhi Souk"
+title: "Mandhi Souk"
 description: "Multi-cuisine dining with a variety of flavorful options."
 cuisine:
   - "Multi-Cuisine"

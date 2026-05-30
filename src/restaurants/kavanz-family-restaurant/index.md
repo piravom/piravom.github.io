@@ -1,6 +1,6 @@
 ---
 layout: layouts/restaurant.njk
-name: "Kavanz Family Restaurant"
+title: "Kavanz Family Restaurant"
 description: "Family-friendly restaurant serving a wide range of cuisines."
 cuisine:
   - "Multi-Cuisine"

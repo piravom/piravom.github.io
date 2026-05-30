@@ -1,5 +1,5 @@
 ---
-name: MoneyGram
+title: MoneyGram
 section: Financial Services
 categories:
   - Money Transfer

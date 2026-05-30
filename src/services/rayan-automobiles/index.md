@@ -1,5 +1,5 @@
 ---
-name: Rayan Automobiles
+title: Rayan Automobiles
 section: Automotive Services
 categories:
   - Auto Repair

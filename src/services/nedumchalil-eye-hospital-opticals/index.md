@@ -1,5 +1,5 @@
 ---
-name: Nedumchalil Eye Hospital &Opticals
+title: Nedumchalil Eye Hospital &Opticals
 section: Health & Medical
 categories:
   - Hospital

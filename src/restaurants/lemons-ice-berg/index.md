@@ -1,6 +1,6 @@
 ---
 layout: layouts/restaurant.njk
-name: "Lemons Ice Berg"
+title: "Lemons Ice Berg"
 description: "Barbecue specialties and grilled delights in a relaxed setting."
 cuisine:
   - "Barbecue"

@@ -1,5 +1,5 @@
 ---
-name: Thottam Good Day Hyper Market
+title: Thottam Good Day Hyper Market
 section: Supermarkets & Grocery
 categories:
   - Hypermarket

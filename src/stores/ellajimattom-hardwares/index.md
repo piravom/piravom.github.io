@@ -1,5 +1,5 @@
 ---
-name: Ellajimattom Hardwares
+title: Ellajimattom Hardwares
 section: Hardware & Building Materials
 distanceFromBusStand: "62m"
 directionsUrl: "https://www.google.com/maps/dir/Piravom+Private+Bus+Stand/Ellajimattom+Hardwares,+PIRAVOM"

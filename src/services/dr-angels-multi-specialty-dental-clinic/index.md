@@ -1,5 +1,5 @@
 ---
-name: Dr. Angel's Multi Specialty Dental Clinic
+title: Dr. Angel's Multi Specialty Dental Clinic
 section: Health & Medical
 categories:
   - Dental clinic

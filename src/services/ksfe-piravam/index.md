@@ -1,5 +1,5 @@
 ---
-name: KSFE Piravam
+title: KSFE Piravam
 section: Financial Services
 categories:
   - Financial Institution

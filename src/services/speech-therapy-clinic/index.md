@@ -1,5 +1,5 @@
 ---
-name: Speech therapy Clinic
+title: Speech therapy Clinic
 section: Health & Medical
 categories:
   - Speech & Hearing Specialist

@@ -6,7 +6,7 @@ layout: layouts/base.njk
 {
   "@context": "https://schema.org",
   "@type": "Store",
-  "name": "{{ name | e }}",
+  "name": "{{ title | e }}",
   "description": "{{ description | e }}",
   "url": "{{ site.url }}{{ page.url }}",
   {% if distanceFromBusStand %}"distanceFromBusStand": "{{ distanceFromBusStand | e }}",{% endif %}
@@ -28,16 +28,16 @@ layout: layouts/base.njk
         <span>/</span>
         <a href="/stores/" class="hover:text-black">Stores</a>
         <span>/</span>
-        <span class="font-medium text-black">{{ name }}</span>
+        <span class="font-medium text-black">{{ title }}</span>
     </nav>
 
     <!-- Store Header -->
     <section class="mb-10">
         <div class="flex items-start justify-between gap-4 flex-wrap">
             <div class="max-w-2xl">
-                <h2 class="text-4xl font-bold tracking-tight md:text-6xl">
-                    {{ name }}
-                </h2>
+                <h1 class="text-4xl font-bold tracking-tight md:text-6xl">
+                    {{ title }}
+                </h1>
                 {% if section %}
                 <p class="mt-1 text-sm font-medium text-indigo-600">{{ section }}</p>
                 {% endif %}

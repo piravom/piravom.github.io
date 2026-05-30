@@ -1,5 +1,5 @@
 ---
-name: Reliance SMART Bazaar
+title: Reliance SMART Bazaar
 section: Supermarkets & Grocery
 categories:
   - Hypermarket

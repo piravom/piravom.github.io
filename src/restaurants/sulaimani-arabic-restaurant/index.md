@@ -1,6 +1,6 @@
 ---
 layout: layouts/restaurant.njk
-name: "Sulaimani Arabic Restaurant"
+title: "Sulaimani Arabic Restaurant"
 description: "Arabic and multi-cuisine dishes in a family-friendly setting."
 cuisine:
   - "Family"

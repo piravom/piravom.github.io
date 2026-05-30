@@ -1,5 +1,5 @@
 ---
-name: Level 3
+title: Level 3
 section: Textiles & Apparel
 distanceFromBusStand: "140m"
 directionsUrl: "https://www.google.com/maps/dir/Piravom+Private+Bus+Stand/Level+3,+PIRAVOM"

@@ -22,8 +22,10 @@ const args = process.argv.slice(2);
 
 if (args.length < 2) {
   console.error("❌ Please provide two place names.");
-  console.error("   Usage: node scripts/distance.js \"Place 1\" \"Place 2\"");
-  console.error("   Example: node scripts/distance.js \"Piravom, Kerala\" \"Kochi, Kerala\"");
+  console.error('   Usage: node scripts/distance.js "Place 1" "Place 2"');
+  console.error(
+    '   Example: node scripts/distance.js "Piravom, Kerala" "Kochi, Kerala"',
+  );
   process.exit(1);
 }
 
@@ -36,7 +38,9 @@ async function getRoadDistance(origin, destination) {
   const data = await response.json();
 
   if (data.status !== "OK") {
-    throw new Error(`API error: ${data.status}${data.error_message ? " — " + data.error_message : ""}`);
+    throw new Error(
+      `API error: ${data.status}${data.error_message ? " - " + data.error_message : ""}`,
+    );
   }
 
   if (!data.rows?.[0]?.elements?.[0]) {
@@ -46,7 +50,9 @@ async function getRoadDistance(origin, destination) {
   const element = data.rows[0].elements[0];
 
   if (element.status !== "OK") {
-    throw new Error(`Could not compute distance between "${origin}" and "${destination}" (${element.status}). Try being more specific (e.g. add city/state names).`);
+    throw new Error(
+      `Could not compute distance between "${origin}" and "${destination}" (${element.status}). Try being more specific (e.g. add city/state names).`,
+    );
   }
 
   return {

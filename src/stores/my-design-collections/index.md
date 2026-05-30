@@ -1,5 +1,5 @@
 ---
-name: My Design Collections
+title: My Design Collections
 section: Textiles & Apparel
 distanceFromBusStand: "200m"
 directionsUrl: "https://www.google.com/maps/dir/Piravom+Private+Bus+Stand/My+Design+Collections,+PIRAVOM"

@@ -1,5 +1,5 @@
 ---
-name: Charley & Associates
+title: Charley & Associates
 section: Financial Services
 categories:
   - Chartered Accountant

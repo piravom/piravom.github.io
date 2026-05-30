@@ -6,7 +6,7 @@ layout: layouts/base.njk
 {
   "@context": "https://schema.org",
   "@type": "TouristAttraction",
-  "name": "{{ name | e }}",
+  "name": "{{ title | e }}",
   "description": "{{ description | e }}",
   {% if image %}"image": "{{ site.url }}/attractions/{{ page.fileSlug }}/{{ image }}",{% endif %}
   "url": "{{ site.url }}{{ page.url }}",
@@ -33,16 +33,16 @@ layout: layouts/base.njk
         <span>/</span>
         <a href="/attractions/" class="hover:text-black">Attractions</a>
         <span>/</span>
-        <span class="text-black font-medium">{{ name }}</span>
+        <span class="text-black font-medium">{{ title }}</span>
     </nav>
 
     <!-- Attraction Header -->
     <section class="mb-10">
         <div class="flex items-start justify-between flex-wrap gap-4">
             <div>
-                <h2 class="text-4xl font-bold tracking-tight md:text-6xl">
-                    {{ name }}
-                </h2>
+                <h1 class="text-4xl font-bold tracking-tight md:text-6xl">
+                    {{ title }}
+                </h1>
                 <p class="mt-4 max-w-2xl text-lg text-gray-600">
                     {{ description }}
                 </p>
@@ -70,7 +70,7 @@ layout: layouts/base.njk
     {% if image %}
     <section class="mb-10">
         <div class="aspect-video w-full overflow-hidden rounded-3xl bg-gray-100">
-            <img src="/attractions/{{ page.fileSlug }}/{{ image }}" alt="{{ name }}" class="h-full w-full object-cover">
+            <img src="/attractions/{{ page.fileSlug }}/{{ image }}" alt="{{ title }}" class="h-full w-full object-cover">
         </div>
     </section>
     {% endif %}

@@ -1,5 +1,5 @@
 ---
-name: Kailas Gents Beauty Parlour
+title: Kailas Gents Beauty Parlour
 section: Salons & Beauty
 categories:
   - Salon

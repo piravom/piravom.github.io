@@ -1,6 +1,6 @@
 ---
 layout: layouts/restaurant.njk
-name: "Kunjanja Restaurant"
+title: "Kunjanja Restaurant"
 description: "Authentic Kerala, Malabar, and South Indian flavors."
 cuisine:
   - "Kerala"

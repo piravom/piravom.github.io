@@ -1,5 +1,5 @@
 ---
-name: Eva Jewellery Works
+title: Eva Jewellery Works
 section: Jewellery
 categories:
   - Jewellery

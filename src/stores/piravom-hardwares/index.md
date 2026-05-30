@@ -1,5 +1,5 @@
 ---
-name: Piravom Hardwares
+title: Piravom Hardwares
 section: Hardware & Building Materials
 categories:
   - Hardware

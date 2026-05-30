@@ -1,5 +1,5 @@
 ---
-name: Apollo Pharmacy Piravom
+title: Apollo Pharmacy Piravom
 section: Pharmacy & Medical Stores
 distanceFromBusStand: "650m"
 directionsUrl: "https://www.google.com/maps/dir/Piravom+Private+Bus+Stand/Apollo+Pharmacy+Piravom,+PIRAVOM"

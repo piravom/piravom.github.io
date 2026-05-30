@@ -1,5 +1,5 @@
 ---
-name: Carewell skin care clinic, Piravom
+title: Carewell skin care clinic, Piravom
 section: Health & Medical
 categories:
   - Hospital department

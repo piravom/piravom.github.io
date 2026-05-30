@@ -1,5 +1,5 @@
 ---
-name: Leep Associates
+title: Leep Associates
 section: Financial Services
 categories:
   - Financial Consultant

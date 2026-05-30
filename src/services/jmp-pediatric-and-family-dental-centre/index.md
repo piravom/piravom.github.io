@@ -1,5 +1,5 @@
 ---
-name: JMP Pediatric and Family Dental Centre
+title: JMP Pediatric and Family Dental Centre
 section: Health & Medical
 categories:
   - Dentist

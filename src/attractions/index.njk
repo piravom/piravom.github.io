@@ -58,7 +58,7 @@ permalink: "/attractions/"
             {% for category in categories %}
             {% set catId = category | lower %}
             <section id="{{ catId }}" class="mb-12 scroll-mt-28">
-                <h3 class="mb-6 text-2xl font-bold border-b border-gray-200 pb-2">{{ categoryIcons[category] }} {{ category }}</h3>
+                <h2 class="mb-6 text-2xl font-bold border-b border-gray-200 pb-2">{{ categoryIcons[category] }} {{ category }}</h2>
 
                 <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3 grid-flow-row-dense">
                     {% for attraction in collections.attractions | sortByDistance %}
@@ -66,13 +66,13 @@ permalink: "/attractions/"
                     <div class="group rounded-3xl border border-gray-200 bg-white shadow-sm flex flex-col overflow-hidden {% if attraction.data.image %}row-span-2{% endif %}">
                         {% if attraction.data.image %}
                         <div class="aspect-video w-full bg-gray-100 overflow-hidden">
-                            <img src="{{attraction.url}}{{ attraction.data.image }}" alt="{{ attraction.data.name }}" class="h-full w-full object-cover transition duration-500 group-hover:scale-105">
+                            <img src="{{attraction.url}}{{ attraction.data.image }}" alt="{{ attraction.data.title }}" class="h-full w-full object-cover transition duration-500 group-hover:scale-105">
                         </div>
                         {% endif %}
 
                         <div class="p-6 flex-grow flex flex-col justify-between">
                             <div>
-                                <h4 class="text-xl font-bold mb-2">{{ attraction.data.name }}</h4>
+                                <h3 class="text-xl font-bold mb-2">{{ attraction.data.title }}</h3>
                                 <p class="text-gray-600 mb-6">{{ attraction.data.description or "" }}</p>
                             </div>
 
@@ -80,7 +80,7 @@ permalink: "/attractions/"
                             <div class="grid grid-cols-3 items-center border-t border-gray-100 pt-4 mt-auto text-sm">
                                 <!-- Distance -->
                                 <span class="text-center font-medium text-indigo-600" title="Distance from Piravom Town">
-                                    {{ attraction.data.distanceFromBusStand or "—" }}
+                                    {{ attraction.data.distanceFromBusStand or "-" }}
                                 </span>
 
                                 <!-- Category Icon -->
@@ -112,7 +112,7 @@ permalink: "/attractions/"
 
                                 <!-- Navigate -->
                                 <span class="flex justify-center">
-                                    <a href="https://maps.google.com/?q={{ attraction.data.name | replace(' ', '+') }}+Piravom" target="_blank" rel="noopener noreferrer" class="rounded-lg p-1.5 text-gray-400 transition hover:bg-gray-100 hover:text-gray-700" title="Open in Maps">
+                                    <a href="https://maps.google.com/?q={{ attraction.data.title | replace(' ', '+') }}+Piravom" target="_blank" rel="noopener noreferrer" class="rounded-lg p-1.5 text-gray-400 transition hover:bg-gray-100 hover:text-gray-700" title="Open in Maps">
                                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
                                             <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                                             <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />

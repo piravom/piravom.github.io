@@ -1,5 +1,5 @@
 ---
-name: PERUMALIL SCAN & DIAGNOSTIC CENTRE
+title: PERUMALIL SCAN & DIAGNOSTIC CENTRE
 section: Health & Medical
 categories:
   - Diagnostic center

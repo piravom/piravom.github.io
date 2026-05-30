@@ -1,5 +1,5 @@
 ---
-name: Piravom Mill Stores
+title: Piravom Mill Stores
 section: Hardware & Building Materials
 categories:
   - Industrial Equipment

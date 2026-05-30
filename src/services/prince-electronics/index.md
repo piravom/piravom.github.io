@@ -1,5 +1,5 @@
 ---
-name: Prince Electronics
+title: Prince Electronics
 section: Repairs & Maintenance
 categories:
   - Electronics Repair

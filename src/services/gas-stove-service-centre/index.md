@@ -1,5 +1,5 @@
 ---
-name: Gas Stove Service Centre
+title: Gas Stove Service Centre
 section: Repairs & Maintenance
 categories:
   - Gas Stove Repair

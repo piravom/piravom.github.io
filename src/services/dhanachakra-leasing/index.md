@@ -1,5 +1,5 @@
 ---
-name: Dhanachakra Leasing and Hire Purchase
+title: Dhanachakra Leasing and Hire Purchase
 section: Financial Services
 categories:
   - Loan Agency

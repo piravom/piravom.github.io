@@ -1,5 +1,5 @@
 ---
-name: White Bright Multispeciality Dental clinic
+title: White Bright Multispeciality Dental clinic
 section: Health & Medical
 categories:
   - Dental clinic

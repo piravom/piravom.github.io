@@ -1,6 +1,6 @@
 ---
 layout: layouts/restaurant.njk
-name: "Sree Annapoorna Vegetarian Hotel"
+title: "Sree Annapoorna Vegetarian Hotel"
 description: "Pure vegetarian hotel with traditional South Indian meals."
 cuisine:
   - "Vegetarian"

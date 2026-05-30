@@ -1,5 +1,5 @@
 ---
-name: Modcloth by Jo
+title: Modcloth by Jo
 section: Textiles & Apparel
 categories:
   - Women's Clothing

@@ -1,6 +1,6 @@
 ---
 layout: layouts/restaurant.njk
-name: "KFC"
+title: "KFC"
 description: "Famous for fried chicken and fast food favorites."
 cuisine:
   - "Multi-Cuisine"

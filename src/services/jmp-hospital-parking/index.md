@@ -1,5 +1,5 @@
 ---
-name: JMP Hospital Parking
+title: JMP Hospital Parking
 section: Health & Medical
 categories:
   - Parking lot

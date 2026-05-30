@@ -1,5 +1,5 @@
 ---
-name: J. J. Communication
+title: J. J. Communication
 section: Electronics & Mobile
 categories:
   - Cell Phone Store

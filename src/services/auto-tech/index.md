@@ -1,5 +1,5 @@
 ---
-name: Auto Tech
+title: Auto Tech
 section: Electronics & Mobile
 categories:
   - Electronics Store

@@ -1,5 +1,5 @@
 ---
-name: Classic Unisex Premium Air Conditioned Gym & Fitness Studio
+title: Classic Unisex Premium Air Conditioned Gym & Fitness Studio
 section: Fitness & Gym
 categories:
   - Gym

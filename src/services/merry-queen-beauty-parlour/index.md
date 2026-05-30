@@ -1,5 +1,5 @@
 ---
-name: Bijis Merry Queen Beauty Parlour
+title: Bijis Merry Queen Beauty Parlour
 section: Salons & Beauty
 categories:
   - Beauty Parlour

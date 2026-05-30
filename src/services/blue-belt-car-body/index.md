@@ -1,5 +1,5 @@
 ---
-name: Blue Belt Car Body Shop
+title: Blue Belt Car Body Shop
 section: Automotive Services
 categories:
   - Auto Body Shop

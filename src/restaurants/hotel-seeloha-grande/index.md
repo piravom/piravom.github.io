@@ -1,6 +1,6 @@
 ---
 layout: layouts/restaurant.njk
-name: "Hotel Seeloha Grande"
+title: "Hotel Seeloha Grande"
 description: "Known for aromatic biryani and authentic Indian dishes."
 cuisine:
   - "Biryani"

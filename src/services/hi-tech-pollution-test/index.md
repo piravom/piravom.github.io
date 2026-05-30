@@ -1,5 +1,5 @@
 ---
-name: Hi-Tech Pollution Testing Centre
+title: Hi-Tech Pollution Testing Centre
 section: Automotive Services
 categories:
   - Pollution Testing

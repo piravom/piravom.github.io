@@ -1,5 +1,5 @@
 ---
-name: Piravom Medical Center and Geriatric Clinic
+title: Piravom Medical Center and Geriatric Clinic
 section: Health & Medical
 categories:
   - Medical clinic

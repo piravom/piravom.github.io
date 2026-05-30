@@ -1,5 +1,5 @@
 ---
-name: Aradhana Jewellery
+title: Aradhana Jewellery
 section: Jewellery
 distanceFromBusStand: "6.9km"
 directionsUrl: "https://www.google.com/maps/dir/Piravom+Private+Bus+Stand/Aradhana+Jewellery,+PIRAVOM"

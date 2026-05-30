@@ -1,5 +1,5 @@
 ---
-name: COSMETIC & ORTHODONTIC SPECIALITY CLINIC
+title: COSMETIC & ORTHODONTIC SPECIALITY CLINIC
 section: Health & Medical
 categories:
   - Hospital

@@ -1,5 +1,5 @@
 ---
-name: Dr Amrutha Elizabeth Varghese
+title: Dr Amrutha Elizabeth Varghese
 section: Health & Medical
 categories:
   - Dermatologist

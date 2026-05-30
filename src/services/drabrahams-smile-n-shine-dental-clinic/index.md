@@ -1,5 +1,5 @@
 ---
-name: Dr.Abraham's Smile 'N' Shine Dental Clinic
+title: Dr.Abraham's Smile 'N' Shine Dental Clinic
 section: Health & Medical
 categories:
   - Dental clinic

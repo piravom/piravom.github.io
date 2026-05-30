@@ -1,5 +1,5 @@
 ---
-name: Co-operative Department Store and Medical Store (EDWCCS No.122)
+title: Co-operative Department Store and Medical Store (EDWCCS No.122)
 section: Pharmacy & Medical Stores
 categories:
   - Pharmacy
