@@ -1,0 +1,88 @@
+{
+  "restaurant": {
+    "title": "Pollos food court",
+    "description": "A multi-cuisine food court in Piravom serving fast food, Indian, and Chinese dishes. Great for quick bites, family outings, and group dining with varied options.",
+    "logo": "https://img3.restaurantguru.com/rb0d-Pollos-food-court-design.jpg",
+    "cuisines": [
+      "Fast Food",
+      "Multi-Cuisine",
+      "Indian",
+      "Chinese"
+    ],
+    "phone": "+919778217472",
+    "instagramUrl": "https://www.instagram.com/explore/tags/pollos-food-court",
+    "locationUrl": "https://www.google.com/maps/@9.8746,76.4879,15z"
+  },
+  "menuList": [
+    {
+      "category": "Fast Food",
+      "items": [
+        {
+          "title": "Chicken Burger",
+          "subTitle": "Crispy chicken burger",
+          "price": 80
+        },
+        {
+          "title": "Veg Burger",
+          "subTitle": "Vegetable burger",
+          "price": 60
+        },
+        {
+          "title": "French Fries",
+          "subTitle": "Crispy fries",
+          "price": 50
+        },
+        {
+          "title": "Chicken Popcorn",
+          "subTitle": "Bite-sized fried chicken",
+          "price": 70
+        },
+        {
+          "title": "Fried Chicken (2 pcs)",
+          "subTitle": "Crispy fried chicken pieces",
+          "price": 100
+        }
+      ]
+    },
+    {
+      "category": "Indian",
+      "items": [
+        {
+          "title": "Chicken Biriyani",
+          "subTitle": "Spiced chicken biriyani",
+          "price": 130
+        },
+        {
+          "title": "Porotta & Chicken Curry",
+          "subTitle": "Porotta with chicken curry",
+          "price": 80
+        },
+        {
+          "title": "Fried Rice",
+          "subTitle": "Chicken/veg fried rice",
+          "price": 100
+        }
+      ]
+    },
+    {
+      "category": "Beverages",
+      "items": [
+        {
+          "title": "Soft Drinks",
+          "subTitle": "Chilled soft drinks",
+          "price": 25
+        },
+        {
+          "title": "Milkshake",
+          "subTitle": "Thick milkshake",
+          "price": 60
+        },
+        {
+          "title": "Fresh Lime",
+          "subTitle": "Fresh lime juice",
+          "price": 20
+        }
+      ]
+    }
+  ]
+}

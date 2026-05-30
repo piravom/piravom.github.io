@@ -1,0 +1,68 @@
+{
+  "restaurant": {
+    "title": "The Prince Resto Cafe",
+    "description": "A stylish resto-cafe located near the Piravom bus stand on Old Market Road. Known for its diverse menu, great coffee, fast food options, and casual dining atmosphere.",
+    "logo": "https://img3.restaurantguru.com/rb0d-Prince-Resto-Cafe-design.jpg",
+    "cuisines": ["Cafe", "Multi-Cuisine", "Beverages", "Fast Food"],
+    "phone": "+919961134611",
+    "instagramUrl": "https://www.instagram.com/explore/tags/prince-resto-cafe",
+    "locationUrl": "https://www.google.com/maps/@9.8743,76.4869,15z"
+  },
+  "menuList": [
+    {
+      "category": "Cafe Menu",
+      "items": [
+        {
+          "title": "Cold Coffee",
+          "subTitle": "Iced coffee with cream",
+          "price": 70
+        },
+        {
+          "title": "Chicken Burger",
+          "subTitle": "Crispy chicken burger with fries",
+          "price": 110
+        },
+        {
+          "title": "Veg Burger",
+          "subTitle": "Vegetable patty burger",
+          "price": 80
+        },
+        {
+          "title": "Club Sandwich",
+          "subTitle": "Grilled triple-layer club sandwich",
+          "price": 100
+        },
+        {
+          "title": "French Fries",
+          "subTitle": "Golden crispy fries",
+          "price": 60
+        }
+      ]
+    },
+    {
+      "category": "Beverages",
+      "items": [
+        {
+          "title": "Tea",
+          "subTitle": "Fresh Indian tea",
+          "price": 15
+        },
+        {
+          "title": "Coffee",
+          "subTitle": "Filter coffee",
+          "price": 20
+        },
+        {
+          "title": "Fresh Lime Juice",
+          "subTitle": "Fresh lime juice",
+          "price": 25
+        },
+        {
+          "title": "Mango Lassi",
+          "subTitle": "Sweet mango lassi",
+          "price": 50
+        }
+      ]
+    }
+  ]
+}

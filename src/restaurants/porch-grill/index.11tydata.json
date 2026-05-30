@@ -1,0 +1,73 @@
+{
+  "restaurant": {
+    "title": "Porch Grill",
+    "description": "A trendy grill restaurant in Piravom offering a mix of continental and Indian grilled specialties. Known for its barbecue dishes, casual dining experience, and vibrant atmosphere.",
+    "logo": "https://img3.restaurantguru.com/rb0d-Porch-Grill-Piravom-design.jpg",
+    "cuisines": [
+      "Multi-Cuisine",
+      "Continental",
+      "Grill",
+      "Indian"
+    ],
+    "phone": "+919778446467",
+    "instagramUrl": "https://www.instagram.com/explore/tags/porch-grill-piravom",
+    "locationUrl": "https://www.google.com/maps/@9.8715,76.4890,15z"
+  },
+  "menuList": [
+    {
+      "category": "Grill Specials",
+      "items": [
+        {
+          "title": "Grilled Chicken Platter",
+          "subTitle": "Marinated grilled chicken with vegetables and fries",
+          "price": 250
+        },
+        {
+          "title": "BBQ Chicken Wings (6 pcs)",
+          "subTitle": "Spicy BBQ chicken wings with dip",
+          "price": 180
+        },
+        {
+          "title": "Tandoori Chicken (Half)",
+          "subTitle": "Classic tandoori chicken with mint chutney",
+          "price": 200
+        },
+        {
+          "title": "Grilled Fish",
+          "subTitle": "Fresh catch marinated and grilled",
+          "price": 280
+        },
+        {
+          "title": "Paneer Tikka Platter",
+          "subTitle": "Grilled paneer with bell peppers and onions",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "category": "Continental",
+      "items": [
+        {
+          "title": "Grilled Chicken Steak",
+          "subTitle": "Chicken steak with mushroom sauce, veggies and fries",
+          "price": 280
+        },
+        {
+          "title": "Spaghetti Arabiata",
+          "subTitle": "Pasta in spicy tomato sauce",
+          "price": 180
+        },
+        {
+          "title": "Chicken Club Sandwich",
+          "subTitle": "Grilled chicken club sandwich with fries",
+          "price": 160
+        },
+        {
+          "title": "French Fries",
+          "subTitle": "Crispy golden french fries with ketchup",
+          "price": 80
+        }
+      ]
+    }
+  ]
+}

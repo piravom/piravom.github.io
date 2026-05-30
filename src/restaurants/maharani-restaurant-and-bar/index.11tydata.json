@@ -1,0 +1,68 @@
+{
+  "restaurant": {
+    "title": "Maharani Restaurant and Bar",
+    "description": "A well-established restaurant and bar on Old Market Road in Piravom. Serves a wide range of Kerala, Indian, and Chinese dishes along with a full bar. Popular for evening dining.",
+    "logo": "https://img3.restaurantguru.com/rb0d-Maharani-Restaurant-design.jpg",
+    "cuisines": [
+      "Kerala",
+      "Indian",
+      "Chinese",
+      "North Indian"
+    ],
+    "phone": "+919990000000",
+    "instagramUrl": "https://www.instagram.com/explore/tags/maharani-restaurant-bar",
+    "locationUrl": "https://www.google.com/maps/@9.8740,76.4865,15z"
+  },
+  "menuList": [
+    {
+      "category": "Bar Bites",
+      "items": [
+        {
+          "title": "Chicken 65",
+          "subTitle": "Spicy deep-fried chicken",
+          "price": 150
+        },
+        {
+          "title": "Fish Fry",
+          "subTitle": "Crispy fried fish",
+          "price": 160
+        },
+        {
+          "title": "Chicken Pakora",
+          "subTitle": "Battered and fried chicken pieces",
+          "price": 120
+        },
+        {
+          "title": "Pepper Dry Chicken",
+          "subTitle": "Dry pepper chicken",
+          "price": 160
+        }
+      ]
+    },
+    {
+      "category": "Main Course",
+      "items": [
+        {
+          "title": "Chicken Biriyani",
+          "subTitle": "Fragrant chicken biriyani with raita",
+          "price": 170
+        },
+        {
+          "title": "Kerala Meals",
+          "subTitle": "Full Kerala meals on banana leaf",
+          "price": 130
+        },
+        {
+          "title": "Beef Fry & Porotta",
+          "subTitle": "Kerala beef fry with porotta (2 pcs)",
+          "price": 120
+        },
+        {
+          "title": "Fish Curry & Rice",
+          "subTitle": "Traditional fish curry with rice",
+          "price": 140
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "restaurant": {
+    "title": "Aiswarya Royal Restaurant and Cafe",
+    "description": "A regal dining experience near the Post Office Junction in Piravom. Specializes in Kerala cuisine and traditional South Indian meals. Located opposite BSNL near the Orthodox Church.",
+    "logo": "https://img3.restaurantguru.com/rb0d-Aiswarya-Royal-Restaurant-design.jpg",
+    "cuisines": [
+      "Kerala",
+      "South Indian",
+      "Indian"
+    ],
+    "phone": "+919497224868",
+    "instagramUrl": "https://www.instagram.com/explore/tags/aiswarya-royal-restaurant",
+    "locationUrl": "https://www.google.com/maps/@9.8730,76.4870,15z"
+  },
+  "menuList": [
+    {
+      "category": "Kerala Specials",
+      "items": [
+        {
+          "title": "Kerala Sadhya",
+          "subTitle": "Traditional vegetarian feast served on banana leaf",
+          "price": 150
+        },
+        {
+          "title": "Nadan Chicken Curry",
+          "subTitle": "Traditional Kerala-style chicken curry",
+          "price": 140
+        },
+        {
+          "title": "Meen Pollichathu",
+          "subTitle": "Fish marinated and wrapped in banana leaf",
+          "price": 200
+        },
+        {
+          "title": "Erachi Curry",
+          "subTitle": "Spicy Kerala-style beef curry",
+          "price": 130
+        },
+        {
+          "title": "Chettinad Pepper Chicken",
+          "subTitle": "Spicy Chettinad-style pepper chicken",
+          "price": 160
+        }
+      ]
+    },
+    {
+      "category": "Tiffin Items",
+      "items": [
+        {
+          "title": "Masala Dosa",
+          "subTitle": "Crispy dosa with potato masala",
+          "price": 55
+        },
+        {
+          "title": "Idli (3 pcs)",
+          "subTitle": "Soft idlis with sambar and chutney",
+          "price": 35
+        },
+        {
+          "title": "Poori Masala",
+          "subTitle": "Fried poori with potato masala",
+          "price": 50
+        },
+        {
+          "title": "Vellayappam",
+          "subTitle": "Soft rice hoppers",
+          "price": 40
+        }
+      ]
+    }
+  ]
+}

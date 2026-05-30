@@ -1,0 +1,73 @@
+{
+  "restaurant": {
+    "title": "Kraves Resto Cafe",
+    "description": "A trendy resto-cafe in Piravom offering a fusion of Indian and Continental cuisine. Popular for its coffee, snacks, and relaxed cafe atmosphere. Located near the water authority office.",
+    "logo": "https://img3.restaurantguru.com/rb0d-Kraves-Resto-Cafe-design.jpg",
+    "cuisines": [
+      "Cafe",
+      "Multi-Cuisine",
+      "Beverages",
+      "Fast Food"
+    ],
+    "phone": "+919778446467",
+    "instagramUrl": "https://www.instagram.com/explore/tags/kraves-resto-cafe",
+    "locationUrl": "https://www.google.com/maps/@9.8720,76.4885,15z"
+  },
+  "menuList": [
+    {
+      "category": "Cafe Specials",
+      "items": [
+        {
+          "title": "Cold Coffee",
+          "subTitle": "Chilled coffee with ice cream",
+          "price": 80
+        },
+        {
+          "title": "Fresh Fruit Smoothie",
+          "subTitle": "Seasonal fruit smoothie",
+          "price": 90
+        },
+        {
+          "title": "Brownie with Ice Cream",
+          "subTitle": "Warm brownie with vanilla ice cream",
+          "price": 110
+        },
+        {
+          "title": "French Fries",
+          "subTitle": "Crispy french fries",
+          "price": 70
+        },
+        {
+          "title": "Chicken Wrap",
+          "subTitle": "Grilled chicken wrap with veggies",
+          "price": 120
+        }
+      ]
+    },
+    {
+      "category": "Beverages",
+      "items": [
+        {
+          "title": "Green Tea",
+          "subTitle": "Premium green tea",
+          "price": 25
+        },
+        {
+          "title": "Espresso",
+          "subTitle": "Double shot espresso",
+          "price": 50
+        },
+        {
+          "title": "Cappuccino",
+          "subTitle": "Creamy cappuccino coffee",
+          "price": 60
+        },
+        {
+          "title": "Mojito (Mocktail)",
+          "subTitle": "Fresh mint mojito",
+          "price": 70
+        }
+      ]
+    }
+  ]
+}

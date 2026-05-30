@@ -1,0 +1,5 @@
+{
+  "tags": "house-of-workships",
+  "layout": "layouts/base.njk",
+  "permalink": "/house-of-workships/{{ page.fileSlug }}/"
+}

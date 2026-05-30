@@ -1,0 +1,98 @@
+{
+  "restaurant": {
+    "title": "Octopus Bakes & Bistro",
+    "description": "A modern bistro and bakery located at Three Road Junction in Piravom near Nedumchalil Eye Hospital. Famous for its freshly baked goods, bistro-style dishes, and cozy ambiance.",
+    "logo": "https://img3.restaurantguru.com/rb0d-Octopus-Bakes-Bistro-design.jpg",
+    "cuisines": [
+      "Bakery",
+      "Bistro",
+      "Continental",
+      "Indian"
+    ],
+    "phone": "+919961000908",
+    "instagramUrl": "https://www.instagram.com/explore/tags/octopus-bakes-bistro",
+    "locationUrl": "https://www.google.com/maps/@9.8755,76.4878,15z"
+  },
+  "menuList": [
+    {
+      "category": "Bakery Items",
+      "items": [
+        {
+          "title": "Fresh Bread (Loaf)",
+          "subTitle": "Freshly baked white/brown bread loaf",
+          "price": 35
+        },
+        {
+          "title": "Croissant",
+          "subTitle": "Buttery flaky croissant",
+          "price": 40
+        },
+        {
+          "title": "Puff Pastry (Veg)",
+          "subTitle": "Flaky puff with vegetable filling",
+          "price": 30
+        },
+        {
+          "title": "Chicken Puff",
+          "subTitle": "Flaky puff with chicken filling",
+          "price": 40
+        },
+        {
+          "title": "Cup Cake",
+          "subTitle": "Assorted cupcake flavors",
+          "price": 35
+        }
+      ]
+    },
+    {
+      "category": "Cakes",
+      "items": [
+        {
+          "title": "Black Forest Cake (Slice)",
+          "subTitle": "Classic black forest pastry",
+          "price": 60
+        },
+        {
+          "title": "Pineapple Pastry",
+          "subTitle": "Pineapple cream pastry",
+          "price": 55
+        },
+        {
+          "title": "Chocolate Truffle (Slice)",
+          "subTitle": "Rich chocolate truffle cake",
+          "price": 75
+        },
+        {
+          "title": "Fruit Cake (Slice)",
+          "subTitle": "Mixed fruit cake slice",
+          "price": 50
+        }
+      ]
+    },
+    {
+      "category": "Bistro",
+      "items": [
+        {
+          "title": "Club Sandwich",
+          "subTitle": "Grilled club sandwich with fries",
+          "price": 120
+        },
+        {
+          "title": "Chicken Burger",
+          "subTitle": "Chicken patty burger with lettuce",
+          "price": 100
+        },
+        {
+          "title": "White Sauce Pasta",
+          "subTitle": "Creamy white sauce pasta",
+          "price": 130
+        },
+        {
+          "title": "Coffee",
+          "subTitle": "Freshly brewed coffee",
+          "price": 25
+        }
+      ]
+    }
+  ]
+}

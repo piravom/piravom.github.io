@@ -1,0 +1,154 @@
+const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
+const Image = require("@11ty/eleventy-img");
+
+module.exports = function (eleventyConfig) {
+  eleventyConfig.addPlugin(syntaxHighlight);
+
+  // Pass through any static assets if you add them later (e.g., images)
+  eleventyConfig.addPassthroughCopy("src/assets");
+  eleventyConfig.addPassthroughCopy("src/restaurants/**/*.{jpg,png}");
+  eleventyConfig.addPassthroughCopy("src/attractions/**/*.{jpg,png}");
+
+  // Filters
+  // Convert distance string like "350m" or "1.2km" to numeric meters
+  function parseDistance(dist) {
+    if (!dist) return Infinity;
+    const match = String(dist).match(/^([\d.]+)\s*(m|km)?$/i);
+    if (!match) return Infinity;
+    const val = parseFloat(match[1]);
+    const unit = (match[2] || "m").toLowerCase();
+    return unit === "km" ? val * 1000 : val;
+  }
+
+  // Reusable sort filter: sort collection items by distanceFromBusStand (nearest first)
+  eleventyConfig.addNunjucksFilter("sortByDistance", function (arr) {
+    if (!arr || !Array.isArray(arr)) return [];
+    var sorted = arr.slice().sort(function (a, b) {
+      var dA = parseDistance(a.data && a.data.distanceFromBusStand);
+      var dB = parseDistance(b.data && b.data.distanceFromBusStand);
+      return dA - dB;
+    });
+    return sorted;
+  });
+
+  eleventyConfig.addNunjucksFilter("split", function (str, separator) {
+    if (!str) return [];
+    if (Array.isArray(str)) return str;
+    return str.split(separator || ",").map(s => s.trim());
+  });
+
+  eleventyConfig.addNunjucksFilter("groupBy", function (arr, key) {
+    if (!arr || !key) return {};
+    return arr.reduce(function (acc, item) {
+      var group = item[key];
+      if (!acc[group]) acc[group] = [];
+      acc[group].push(item);
+      return acc;
+    }, {});
+  });
+
+  eleventyConfig.addNunjucksFilter("groupByData", function (arr, key) {
+    if (!arr || !key) return {};
+    return arr.reduce(function (acc, item) {
+      var group = item.data && item.data[key];
+      if (!group) return acc;
+      if (!acc[group]) acc[group] = [];
+      acc[group].push(item);
+      return acc;
+    }, {});
+  });
+
+  eleventyConfig.addNunjucksFilter("keys", function (obj) {
+    if (!obj) return [];
+    return Object.keys(obj).sort();
+  });
+
+  eleventyConfig.addFilter("humanDate", function (dateObj) {
+    return dateObj.toLocaleDateString("en-US", {
+      month: "short",
+      day: "numeric",
+      year: "numeric",
+    });
+  });
+
+  eleventyConfig.addNunjucksFilter("humanDateShortMonth", function (dateObj) {
+    if (!dateObj) return "";
+    const d = typeof dateObj === "string" ? new Date(dateObj) : dateObj;
+    return d.toLocaleDateString("en-US", { month: "short" });
+  });
+
+  eleventyConfig.addNunjucksFilter("humanDateDay", function (dateObj) {
+    if (!dateObj) return "";
+    const d = typeof dateObj === "string" ? new Date(dateObj) : dateObj;
+    return d.getDate();
+  });
+
+  eleventyConfig.addNunjucksFilter("withImage", function (collection) {
+    if (!collection) return [];
+    return collection.filter(function (item) {
+      return item.data && item.data.image;
+    });
+  });
+
+  eleventyConfig.addNunjucksFilter("toDate", function (str) {
+    return new Date(str);
+  });
+
+  eleventyConfig.addNunjucksFilter("filterByDate", function (collection, nowStr, type) {
+    const now = new Date(nowStr);
+    return collection.filter(function (item) {
+      if (!item.data.date) return type === "past";
+      const eventDate = typeof item.data.date === "string" ? new Date(item.data.date) : item.data.date;
+      return type === "upcoming" ? eventDate >= now : eventDate < now;
+    });
+  });
+
+  eleventyConfig.addNunjucksFilter("getCategories", function (collection) {
+    const cats = new Set();
+    collection.forEach(function (item) {
+      if (item.data.category) cats.add(item.data.category);
+    });
+    return Array.from(cats);
+  });
+
+  eleventyConfig.addFilter("json", function (value) {
+    return JSON.stringify(value ?? null);
+  });
+
+  eleventyConfig.addAsyncShortcode("image", imageShortcode);
+
+  return {
+    dir: {
+      input: "src",
+      output: "_site",
+      includes: "_includes",
+    },
+    markdownTemplateEngine: "njk",
+    htmlTemplateEngine: "njk",
+    dataTemplateEngine: "njk",
+  };
+};
+
+async function imageShortcode(src, alt, sizes = "100vw", className = "") {
+  console.log("IMAGE SRC:", src);
+  if (!alt) {
+    throw new Error(`Missing alt text for image: ${src}`);
+  }
+
+  const metadata = await Image(src, {
+    widths: [320, 640, 960, 1280],
+    formats: ["avif", "webp", "jpeg"],
+    outputDir: "_site/img/",
+    urlPath: "/img/",
+  });
+
+  const imageAttributes = {
+    alt,
+    sizes,
+    loading: "lazy",
+    decoding: "async",
+    class: className,
+  };
+
+  return Image.generateHTML(metadata, imageAttributes);
+}

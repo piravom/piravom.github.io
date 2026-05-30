@@ -1,0 +1,99 @@
+{
+  "restaurant": {
+    "title": "Lemons Ice Berg",
+    "description": "A refreshing ice cream and beverage spot near KWA Cheriya Pally Road in Piravom. Known for its variety of ice cream flavors, milkshakes, and cool treats perfect for hot days.",
+    "logo": "https://img3.restaurantguru.com/rb0d-Lemons-Ice-Berg-design.jpg",
+    "cuisines": [
+      "Ice Cream",
+      "Desserts",
+      "Shakes",
+      "Beverages"
+    ],
+    "phone": "+914852243655",
+    "instagramUrl": "https://www.instagram.com/explore/tags/lemons-ice-berg",
+    "locationUrl": "https://www.google.com/maps/@9.8735,76.4868,15z"
+  },
+  "menuList": [
+    {
+      "category": "Ice Creams",
+      "items": [
+        {
+          "title": "Vanilla",
+          "subTitle": "Classic vanilla ice cream",
+          "portions": [
+            {
+              "price": 30,
+              "portionSize": "Single"
+            },
+            {
+              "price": 50,
+              "portionSize": "Double"
+            }
+          ]
+        },
+        {
+          "title": "Chocolate",
+          "subTitle": "Rich chocolate ice cream",
+          "portions": [
+            {
+              "price": 35,
+              "portionSize": "Single"
+            },
+            {
+              "price": 55,
+              "portionSize": "Double"
+            }
+          ]
+        },
+        {
+          "title": "Strawberry",
+          "subTitle": "Fruity strawberry ice cream",
+          "portions": [
+            {
+              "price": 30,
+              "portionSize": "Single"
+            },
+            {
+              "price": 50,
+              "portionSize": "Double"
+            }
+          ]
+        },
+        {
+          "title": "Mango",
+          "subTitle": "Seasonal mango ice cream",
+          "portions": [
+            {
+              "price": 35,
+              "portionSize": "Single"
+            },
+            {
+              "price": 55,
+              "portionSize": "Double"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Shakes",
+      "items": [
+        {
+          "title": "Chocolate Shake",
+          "subTitle": "Thick chocolate milkshake",
+          "price": 60
+        },
+        {
+          "title": "Vanilla Shake",
+          "subTitle": "Classic vanilla milkshake",
+          "price": 55
+        },
+        {
+          "title": "Strawberry Shake",
+          "subTitle": "Strawberry milkshake",
+          "price": 60
+        }
+      ]
+    }
+  ]
+}

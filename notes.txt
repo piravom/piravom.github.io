@@ -1,0 +1,46 @@
+─────────────────┬──────┬──────────────────────────┐
+ │ Category        │ Icon │ Examples in Piravom      │
+ ├─────────────────┼──────┼──────────────────────────┤
+ │ Salons & Beauty │ 💇   │ Naturals Salon,          │
+ │                 │      │ Essensuals Salon, Merry  │
+ │                 │      │ Queen, La Bella Beauty   │
+ │                 │      │ Parlour                  │
+ ├─────────────────┼──────┼──────────────────────────┤
+ │ Tailors &       │ ✂️   │ Stitching studios,       │
+ │ Alterations     │      │ custom tailoring shops   │
+ ├─────────────────┼──────┼──────────────────────────┤
+ │ Photography &   │ 📷   │ Wedding photographers,   │
+ │ Media           │      │ video studios, digital   │
+ │                 │      │ printing                 │
+ ├─────────────────┼──────┼──────────────────────────┤
+ │ Travel &        │ 🚕   │ Taxi services, cab       │
+ │ Transport       │      │ operators, travel        │
+ │                 │      │ agencies                 │
+ ├─────────────────┼──────┼──────────────────────────┤
+ │ Repairs &       │ 🔧   │ Mobile repair,           │
+ │ Maintenance     │      │ TV/appliance repair,     │
+ │                 │      │ bike/car service centres │
+ ├─────────────────┼──────┼──────────────────────────┤
+ │ Healthcare      │ 🩺   │ Dentists,                │
+ │ Professionals   │      │ physiotherapists,        │
+ │                 │      │ diagnostic labs,         │
+ │                 │      │ Ayurvedic clinics        │
+ ├─────────────────┼──────┼──────────────────────────┤
+ │ Educational     │ 📖   │ Tuition centres,         │
+ │ Services        │      │ coaching classes,        │
+ │                 │      │ music/dance schools      │
+ ├─────────────────┼──────┼──────────────────────────┤
+ │ Event Services  │ 🎉   │ Wedding planners,        │
+ │                 │      │ caterers, tent houses,   │
+ │                 │      │ sound systems            │
+ ├─────────────────┼──────┼──────────────────────────┤
+ │ IT & Digital    │ 💻   │ Computer repair, web     │
+ │ Services        │      │ design, printing,        │
+ │                 │      │ photocopy shops          │
+ ├─────────────────┼──────┼──────────────────────────┤
+ │ Legal &         │ ⚖️   │ Advocates, chartered     │
+ │        │      │ accountants, insurance   │
+ │                 │      │ agents                   │
+ ├─────────────────┼──────┼──────────────────────────┤
+ │ Home Services   │ 🏠   │ Plumbers, electricians,  │
+ │                 │      │ carpenters, painters

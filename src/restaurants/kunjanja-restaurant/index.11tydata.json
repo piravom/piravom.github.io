@@ -1,0 +1,67 @@
+{
+  "restaurant": {
+    "title": "Kunjanja Restaurant",
+    "description": "A beloved local restaurant in Piravom famous for traditional Kerala porotta and beef dishes. A must-visit for authentic Malabar cuisine and local Kerala food favorites.",
+    "logo": "https://img3.restaurantguru.com/rb0d-Kunjanja-Restaurant-design.jpg",
+    "cuisines": [
+      "Kerala",
+      "South Indian",
+      "Malabar"
+    ],
+    "phone": "+919778446467",
+    "instagramUrl": "https://www.instagram.com/explore/tags/kunjanja-restaurant",
+    "locationUrl": "https://www.google.com/maps/@9.8738,76.4875,15z"
+  },
+  "menuList": [
+    {
+      "category": "Kerala Specials",
+      "items": [
+        {
+          "title": "Kerala Porotta (1 pc)",
+          "subTitle": "Signature flaky porotta",
+          "price": 12
+        },
+        {
+          "title": "Beef Fry",
+          "subTitle": "Spicy Kerala-style beef fry",
+          "price": 90
+        },
+        {
+          "title": "Beef Curry",
+          "subTitle": "Traditional Kerala beef curry",
+          "price": 80
+        },
+        {
+          "title": "Chicken Curry",
+          "subTitle": "Nadan chicken curry",
+          "price": 80
+        },
+        {
+          "title": "Kappa (Tapioca)",
+          "subTitle": "Boiled tapioca",
+          "price": 30
+        }
+      ]
+    },
+    {
+      "category": "Meals",
+      "items": [
+        {
+          "title": "Kerala Meals",
+          "subTitle": "Full meals with rice, curries and sides",
+          "price": 80
+        },
+        {
+          "title": "Fish Curry & Rice",
+          "subTitle": "Fish curry with rice",
+          "price": 100
+        },
+        {
+          "title": "Chicken Curry & Rice",
+          "subTitle": "Chicken curry with rice",
+          "price": 90
+        }
+      ]
+    }
+  ]
+}

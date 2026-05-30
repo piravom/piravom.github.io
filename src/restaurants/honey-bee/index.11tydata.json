@@ -1,0 +1,554 @@
+{
+  "restaurant": {
+    "title": "Cafe HoneyBee",
+    "description": "Fine Dining & Caterers",
+    "logo": "https://i.postimg.cc/Th8b3DRk/honey-bee.jpg",
+    "cuisines": [
+      "Chinese",
+      "Arabian",
+      "South Indian",
+      "Continental",
+      "Beverages"
+    ],
+    "phone": "+919876543210",
+    "instagramUrl": "https://instagram.com",
+    "locationUrl": "https://www.google.com/maps/@9.8750,76.4881,15z",
+    "openingHours": {
+      "sunday": {
+        "open": "09:00",
+        "close": "22:00"
+      },
+      "monday": {
+        "open": "09:00",
+        "close": "22:00"
+      },
+      "tuesday": {
+        "open": "09:00",
+        "close": "22:00"
+      },
+      "wednesday": {
+        "open": "09:00",
+        "close": "22:00"
+      },
+      "thursday": {
+        "open": "09:00",
+        "close": "22:00"
+      },
+      "friday": {
+        "open": "09:00",
+        "close": "22:00"
+      },
+      "saturday": {
+        "open": "09:00",
+        "close": "22:00"
+      }
+    }
+  },
+  "menuList": [
+    {
+      "category": "Chinese - Fried Rice",
+      "items": [
+        {
+          "title": "Veg Fried Rice",
+          "price": 100,
+          "subTitle": ""
+        },
+        {
+          "title": "Egg Fried Rice",
+          "price": 110,
+          "subTitle": ""
+        },
+        {
+          "title": "Chicken Fried Rice",
+          "price": 140,
+          "subTitle": ""
+        },
+        {
+          "title": "Mix Fried Rice",
+          "price": 150,
+          "subTitle": ""
+        },
+        {
+          "title": "Schezwan Fried Rice",
+          "price": 160,
+          "subTitle": ""
+        }
+      ]
+    },
+    {
+      "category": "Chinese - Noodles",
+      "items": [
+        {
+          "title": "Veg Noodles",
+          "price": 100,
+          "subTitle": ""
+        },
+        {
+          "title": "Egg Noodles",
+          "price": 110,
+          "subTitle": ""
+        },
+        {
+          "title": "Chicken Noodles",
+          "price": 140,
+          "subTitle": ""
+        },
+        {
+          "title": "Mix Noodles",
+          "price": 150,
+          "subTitle": ""
+        }
+      ]
+    },
+    {
+      "category": "Chinese - Non Veg",
+      "items": [
+        {
+          "title": "Chicken 65",
+          "price": 150,
+          "subTitle": ""
+        },
+        {
+          "title": "Chilly Beef",
+          "price": 180,
+          "subTitle": ""
+        },
+        {
+          "title": "BDF",
+          "price": 180,
+          "subTitle": ""
+        },
+        {
+          "title": "Chilly Chicken",
+          "portions": [
+            {
+              "price": 150,
+              "portionSize": "Dry / Small"
+            },
+            {
+              "price": 280,
+              "portionSize": "Half"
+            },
+            {
+              "price": 540,
+              "portionSize": "Full"
+            }
+          ],
+          "subTitle": ""
+        }
+      ]
+    },
+    {
+      "category": "Chinese - Veg",
+      "items": [
+        {
+          "title": "Tomatto Fry",
+          "price": 60,
+          "subTitle": ""
+        }
+      ]
+    },
+    {
+      "category": "Alfaham",
+      "items": [
+        {
+          "title": "Green Pepper",
+          "portions": [
+            {
+              "price": 120,
+              "portionSize": "Quarter"
+            },
+            {
+              "price": 230,
+              "portionSize": "Half"
+            },
+            {
+              "price": 450,
+              "portionSize": "Full"
+            }
+          ],
+          "subTitle": ""
+        },
+        {
+          "title": "Peri Peri",
+          "portions": [
+            {
+              "price": 130,
+              "portionSize": "Quarter"
+            },
+            {
+              "price": 250,
+              "portionSize": "Half"
+            },
+            {
+              "price": 480,
+              "portionSize": "Full"
+            }
+          ],
+          "subTitle": ""
+        },
+        {
+          "title": "BBQ",
+          "portions": [
+            {
+              "price": 140,
+              "portionSize": "Quarter"
+            },
+            {
+              "price": 270,
+              "portionSize": "Half"
+            },
+            {
+              "price": 520,
+              "portionSize": "Full"
+            }
+          ],
+          "subTitle": ""
+        },
+        {
+          "title": "Honey Bee Special",
+          "portions": [
+            {
+              "price": 140,
+              "portionSize": "Quarter"
+            },
+            {
+              "price": 270,
+              "portionSize": "Half"
+            },
+            {
+              "price": 520,
+              "portionSize": "Full"
+            }
+          ],
+          "subTitle": ""
+        },
+        {
+          "title": "Honeybee Plater",
+          "price": 110,
+          "subTitle": ""
+        },
+        {
+          "title": "Honeybee Roll",
+          "price": 70,
+          "subTitle": ""
+        }
+      ]
+    },
+    {
+      "category": "South Indian Flavour",
+      "items": [
+        {
+          "title": "Kalam Biriyani (C)",
+          "price": 130,
+          "subTitle": "Chicken"
+        },
+        {
+          "title": "Kalam Biriyani (B)",
+          "price": 140,
+          "subTitle": "Beef"
+        },
+        {
+          "title": "Kalam Biriyani (Egg)",
+          "price": 100,
+          "subTitle": ""
+        },
+        {
+          "title": "Chicken Curry",
+          "price": 130,
+          "subTitle": ""
+        },
+        {
+          "title": "Chicken Roast",
+          "price": 120,
+          "subTitle": ""
+        },
+        {
+          "title": "Chicken Fry",
+          "price": 120,
+          "subTitle": ""
+        },
+        {
+          "title": "Beef Curry",
+          "price": 120,
+          "subTitle": ""
+        },
+        {
+          "title": "Beef Roast",
+          "price": 130,
+          "subTitle": ""
+        },
+        {
+          "title": "Pork Fry",
+          "price": 110,
+          "subTitle": ""
+        },
+        {
+          "title": "Egg Roast",
+          "price": 50,
+          "subTitle": ""
+        },
+        {
+          "title": "Masala Dosa",
+          "price": 50,
+          "subTitle": ""
+        },
+        {
+          "title": "Ghee Roast",
+          "price": 40,
+          "subTitle": ""
+        },
+        {
+          "title": "Egg Dosa",
+          "price": 60,
+          "subTitle": ""
+        },
+        {
+          "title": "Porotta",
+          "price": 12,
+          "subTitle": ""
+        },
+        {
+          "title": "Chappathi",
+          "price": 10,
+          "subTitle": ""
+        },
+        {
+          "title": "Appam",
+          "price": 10,
+          "subTitle": ""
+        }
+      ]
+    },
+    {
+      "category": "Biriyani Specials",
+      "items": [
+        {
+          "title": "Malabari Kalam Biriyani",
+          "price": 140,
+          "subTitle": ""
+        },
+        {
+          "title": "Malabari Kalam Beef Biriyani",
+          "price": 150,
+          "subTitle": ""
+        },
+        {
+          "title": "Malabari Kalam Egg Biriyani",
+          "price": 120,
+          "subTitle": ""
+        },
+        {
+          "title": "Thalassery Dum Biriyani",
+          "price": 140,
+          "subTitle": "Chicken"
+        }
+      ]
+    },
+    {
+      "category": "Burgers",
+      "items": [
+        {
+          "title": "Mexican Cheese (B)",
+          "price": 160,
+          "subTitle": "Beef"
+        },
+        {
+          "title": "American Cheese (B)",
+          "price": 160,
+          "subTitle": "Beef"
+        },
+        {
+          "title": "Smoked Chicken",
+          "price": 160,
+          "subTitle": ""
+        },
+        {
+          "title": "Brosted Chicken",
+          "price": 170,
+          "subTitle": ""
+        },
+        {
+          "title": "Beef Burger",
+          "price": 150,
+          "subTitle": ""
+        },
+        {
+          "title": "Fried Egg",
+          "price": 10,
+          "subTitle": "Add On"
+        },
+        {
+          "title": "Cheese Slice",
+          "price": 20,
+          "subTitle": "Add On"
+        },
+        {
+          "title": "Burger Patty",
+          "price": 30,
+          "subTitle": "Add On"
+        }
+      ]
+    },
+    {
+      "category": "Sandwiches",
+      "items": [
+        {
+          "title": "Arabic Grill Chicken",
+          "price": 130,
+          "subTitle": ""
+        },
+        {
+          "title": "Honey Bee Club",
+          "price": 160,
+          "subTitle": ""
+        },
+        {
+          "title": "Grilled Veg",
+          "price": 90,
+          "subTitle": ""
+        },
+        {
+          "title": "Sour N Pepper",
+          "price": 120,
+          "subTitle": ""
+        }
+      ]
+    },
+    {
+      "category": "Wraps",
+      "items": [
+        {
+          "title": "Lebanese Wrap",
+          "price": 120,
+          "subTitle": ""
+        },
+        {
+          "title": "Porotta Chicken Wrap",
+          "price": 70,
+          "subTitle": ""
+        },
+        {
+          "title": "Porotta Beef Wrap",
+          "price": 80,
+          "subTitle": ""
+        },
+        {
+          "title": "Pork Wrap",
+          "price": 120,
+          "subTitle": ""
+        },
+        {
+          "title": "Crispy Chicken Wrap",
+          "price": 70,
+          "subTitle": ""
+        },
+        {
+          "title": "Arabic Chicken Wrap",
+          "price": 70,
+          "subTitle": ""
+        }
+      ]
+    },
+    {
+      "category": "Lemonades",
+      "items": [
+        {
+          "title": "Honey Lemonade",
+          "price": 30,
+          "subTitle": ""
+        },
+        {
+          "title": "Soda Lime",
+          "price": 20,
+          "subTitle": ""
+        },
+        {
+          "title": "Fresh Lime",
+          "price": 20,
+          "subTitle": ""
+        },
+        {
+          "title": "Mint Lime",
+          "price": 25,
+          "subTitle": ""
+        },
+        {
+          "title": "Grape Lime",
+          "price": 30,
+          "subTitle": ""
+        },
+        {
+          "title": "Chilly Lemonade",
+          "price": 25,
+          "subTitle": ""
+        }
+      ]
+    },
+    {
+      "category": "Hot Beverages",
+      "items": [
+        {
+          "title": "Normal Tea",
+          "price": 10,
+          "subTitle": ""
+        },
+        {
+          "title": "Black Tea",
+          "price": 8,
+          "subTitle": ""
+        },
+        {
+          "title": "Masala Tea",
+          "price": 20,
+          "subTitle": ""
+        },
+        {
+          "title": "Lemon Tea",
+          "price": 15,
+          "subTitle": ""
+        },
+        {
+          "title": "Ginger Tea",
+          "price": 15,
+          "subTitle": ""
+        },
+        {
+          "title": "Normal Coffee",
+          "price": 15,
+          "subTitle": ""
+        },
+        {
+          "title": "Black Coffee",
+          "price": 10,
+          "subTitle": ""
+        }
+      ]
+    },
+    {
+      "category": "Fresh Juices",
+      "items": [
+        {
+          "title": "Orange",
+          "price": 50,
+          "subTitle": ""
+        },
+        {
+          "title": "Pineapple",
+          "price": 40,
+          "subTitle": ""
+        },
+        {
+          "title": "Grape",
+          "price": 60,
+          "subTitle": ""
+        },
+        {
+          "title": "Cucumber",
+          "price": 40,
+          "subTitle": ""
+        }
+      ]
+    }
+  ]
+}

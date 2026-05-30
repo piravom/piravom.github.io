@@ -1,0 +1,5 @@
+{
+  "tags": "restaurants",
+  "layout": "layouts/restaurant.njk",
+  "permalink": "/restaurants/{{ page.fileSlug }}/"
+}

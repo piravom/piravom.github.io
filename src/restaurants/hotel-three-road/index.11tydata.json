@@ -1,0 +1,77 @@
+{
+  "restaurant": {
+    "title": "Hotel Three Road",
+    "description": "A well-known Kerala-style restaurant in the heart of Piravom, serving authentic South Indian meals and traditional Kerala dishes. Known for its peaceful atmosphere and reasonable prices.",
+    "logo": "https://img3.restaurantguru.com/rb0d-Hotel-Three-Road-design.jpg",
+    "cuisines": [
+      "Kerala",
+      "South Indian",
+      "Indian"
+    ],
+    "phone": "+918347845830",
+    "instagramUrl": "https://www.instagram.com/explore/tags/hotel-three-road",
+    "locationUrl": "https://www.google.com/maps/@9.87570970,76.48786750,15z"
+  },
+  "menuList": [
+    {
+      "category": "Kerala Meals",
+      "items": [
+        {
+          "title": "Kerala Sadhya Meal",
+          "subTitle": "Traditional Kerala feast with rice, sambar, rasam, avial, thoran, pachadi, and payasam",
+          "price": 120
+        },
+        {
+          "title": " Kerala Porotta & Beef Fry",
+          "subTitle": "Flaky layered porotta with spicy Kerala-style beef fry",
+          "price": 90
+        },
+        {
+          "title": "Appam & Stew",
+          "subTitle": "Soft lacy appams with vegetable or chicken stew",
+          "price": 100
+        },
+        {
+          "title": "Kappa & Meen Curry",
+          "subTitle": "Tapioca with traditional fish curry",
+          "price": 80
+        },
+        {
+          "title": "Malabar Biriyani",
+          "subTitle": "Fragrant Malabar-style biriyani with chicken",
+          "price": 150
+        }
+      ]
+    },
+    {
+      "category": "South Indian Breakfast",
+      "items": [
+        {
+          "title": "Masala Dosa",
+          "subTitle": "Crispy dosa filled with spiced potato filling",
+          "price": 60
+        },
+        {
+          "title": "Idli Sambar (2 pcs)",
+          "subTitle": "Soft steamed rice cakes with sambar and chutney",
+          "price": 40
+        },
+        {
+          "title": "Vada Sambar",
+          "subTitle": "Crispy lentil vada with sambar",
+          "price": 35
+        },
+        {
+          "title": "Pongal Vada",
+          "subTitle": "Savory rice and lentil pongal with vada",
+          "price": 50
+        },
+        {
+          "title": "Uttapam",
+          "subTitle": "Thick rice pancake with onions and tomatoes",
+          "price": 60
+        }
+      ]
+    }
+  ]
+}

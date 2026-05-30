@@ -1,0 +1,31 @@
+<header class="sticky top-0 z-50 border-b border-gray-200 bg-white/90 backdrop-blur">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4">
+
+        <!-- Logo -->
+        <div>
+            <h1 class="text-2xl font-bold text-indigo-600"><a href="/">{{site.name}}</a></h1>
+            <p class="text-sm text-gray-500">{{site.description}}</p>
+        </div>
+
+        <!-- Desktop Nav -->
+        {% include "components/top-nav.njk" %}
+
+        <!-- Search -->
+        <div class="hidden lg:block">
+            <input
+                type="text"
+                placeholder="Search..."
+                class="w-64 rounded-2xl border border-gray-200 bg-gray-50 px-4 py-2 text-sm outline-none focus:border-black"
+            />
+        </div>
+
+        <!-- Mobile Menu -->
+        <button onclick="toggleMobileMenu()" class="rounded-xl border border-gray-200 p-2 lg:hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none"
+                viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+        </button>
+    </div>
+</header>

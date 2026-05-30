@@ -1,0 +1,63 @@
+{
+  "restaurant": {
+    "title": "Sylvia Hotel & Restaurant",
+    "description": "A popular dining destination near the Old Market Road bus stop in Piravom. Offers multi-cuisine dining including Kerala, Indian, and Chinese specialties with a comfortable ambiance.",
+    "logo": "https://img3.restaurantguru.com/rb0d-Sylvia-Hotel-design.jpg",
+    "cuisines": [
+      "Kerala",
+      "Indian",
+      "Chinese",
+      "Continental"
+    ],
+    "phone": "+919947842701",
+    "instagramUrl": "https://www.instagram.com/explore/tags/sylvia-hotel-restaurant",
+    "locationUrl": "https://www.google.com/maps/@9.8742,76.4867,15z"
+  },
+  "menuList": [
+    {
+      "category": "Indian Main Course",
+      "items": [
+        {
+          "title": "Kerala Meals",
+          "subTitle": "Traditional Kerala meals",
+          "price": 120
+        },
+        {
+          "title": "Chicken Biriyani",
+          "subTitle": "Spiced chicken biriyani",
+          "price": 160
+        },
+        {
+          "title": "Kerala Porotta & Beef",
+          "subTitle": "Porotta with beef curry",
+          "price": 120
+        },
+        {
+          "title": "Fish Moilee & Appam",
+          "subTitle": "Fish in coconut milk with appams",
+          "price": 160
+        }
+      ]
+    },
+    {
+      "category": "Chinese",
+      "items": [
+        {
+          "title": "Chicken Fried Rice",
+          "subTitle": "Chicken fried rice",
+          "price": 130
+        },
+        {
+          "title": "Gobi Manchurian",
+          "subTitle": "Cauliflower Manchurian",
+          "price": 90
+        },
+        {
+          "title": "Noodles",
+          "subTitle": "Vegetable hakka noodles",
+          "price": 100
+        }
+      ]
+    }
+  ]
+}

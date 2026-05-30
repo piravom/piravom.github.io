@@ -1,0 +1,44 @@
+[
+  {
+    "category": "Emergency",
+    "contacts": [
+      { "name": "Police", "number": "100" },
+      { "name": "Fire & Rescue", "number": "101" },
+      { "name": "Ambulance", "number": "108" },
+      { "name": "Women Helpline", "number": "1091" },
+      { "name": "Child Helpline", "number": "1098" }
+    ]
+  },
+  {
+    "category": "Hospitals",
+    "contacts": [
+      { "name": "Taluk Hospital, Piravom", "number": "0485 2242353" },
+      { "name": "Govt. Hospital", "number": "0485 2242424" },
+      { "name": "Pampa Hospital", "number": "0485 2245000" }
+    ]
+  },
+  {
+    "category": "Police Stations",
+    "contacts": [
+      { "name": "Piravom Police Station", "number": "0485 2242222" },
+      { "name": "Cyber Cell", "number": "0484 2394068" }
+    ]
+  },
+  {
+    "category": "Public Services",
+    "contacts": [
+      { "name": "KSEB Piravom", "number": "0485 2242250" },
+      { "name": "KWA Piravom", "number": "0485 2242330" },
+      { "name": "Municipality Office", "number": "0485 2242223" },
+      { "name": "Post Office", "number": "0485 2242221" }
+    ]
+  },
+  {
+    "category": "Banks",
+    "contacts": [
+      { "name": "SBI Piravom", "number": "0485 2242230" },
+      { "name": "Federal Bank", "number": "0485 2242227" },
+      { "name": "South Indian Bank", "number": "0485 2242318" }
+    ]
+  }
+]
