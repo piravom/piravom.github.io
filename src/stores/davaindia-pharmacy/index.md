@@ -9,5 +9,4 @@ categories:
   - OTC Drugs
 description: Generic pharmacy chain offering affordable quality medicines and over-the-counter drugs at discounted prices. Part of the nationwide Davaindia network.
 address: Door No.9/357/1, near KSRTC Stand, Muvattupuzha Rd, Piravom
-mapLink: https://maps.google.com/?q=davaindia+GENERIC+PHARMACY+near+KSRTC+Stand+Piravom
 ---

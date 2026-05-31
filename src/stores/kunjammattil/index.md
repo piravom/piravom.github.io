@@ -8,5 +8,4 @@ categories:
   - Clothing
 description: Clothing store on Old Market Road offering a variety of garments and textiles for the local community.
 address: VFGQ+647, Old Market Rd, Piravom
-mapLink: https://maps.google.com/?q=Kunjamattil+Textiles+Old+Market+Rd+Piravom
 ---

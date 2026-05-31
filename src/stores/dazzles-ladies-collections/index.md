@@ -9,5 +9,4 @@ categories:
   - Accessories
 description: Jewellery and accessories store at Amminiserry Building on Ernakulam Road, offering ladies' fashion jewellery and collections.
 address: Amminiserry Building, Ernakulam Road, Piravom
-mapLink: https://maps.google.com/?q=Dazzles+Ladies+Collections+Amminiserry+Building+Ernakulam+Road+Piravom
 ---

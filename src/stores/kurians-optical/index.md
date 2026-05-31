@@ -9,5 +9,4 @@ categories:
   - Eye Care
 description: Optical store on Arakkunnam-Piravom Road offering prescription eyewear, contact lenses, and eye care services with a 4.8 rating.
 address: Arakkunnam - Piravom Rd, Piravom
-mapLink: https://maps.google.com/?q=Kurians+Opticals+Arakkunnam+Piravom+Rd
 ---

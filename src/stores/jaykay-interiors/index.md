@@ -7,5 +7,4 @@ categories:
   - Home Decor
 description: Interior design and furniture showroom at Githanjaly Tower on Arakkunnam-Piravom Road, offering modern furniture solutions and home decor.
 address: Githanjaly Tower, Arakkunnam - Piravom Rd, Devipady, Piravom
-mapLink: https://maps.google.com/?q=Jaykay+Interiors+and+furniture+Piravom
 ---

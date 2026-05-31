@@ -9,5 +9,4 @@ categories:
   - Home Furnishings
 description: Sofa manufacturers in Kerala offering custom and ready-made sofas, with a showroom on the Pazhoor road.
 address: VFHJ+R95, Pazhoor Road, Piravom
-mapLink: https://maps.google.com/?q=Belinda+Sofas+Pazhoor+Road+Piravom
 ---

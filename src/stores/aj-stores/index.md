@@ -8,5 +8,4 @@ categories:
   - Tools
 description: Tool store on Old Market Road offering a selection of tools and hardware items.
 address: Old Market Rd, Piravom
-mapLink: https://maps.google.com/?q=A+J+Stores+Old+Market+Rd+Piravom
 ---

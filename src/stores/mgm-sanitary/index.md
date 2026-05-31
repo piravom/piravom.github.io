@@ -9,5 +9,4 @@ categories:
   - Bathroom Fittings
 description: Hardware and sanitaryware store on the first floor at Devipadi, offering bathroom fittings, tiles, and plumbing supplies.
 address: 1st Floor, Devipadi, Attutheeram Rd Jn, Arakkunnam - Piravom Rd, Piravom
-mapLink: https://maps.google.com/?q=MGM+Sanitary+Devipadi+Piravom
 ---

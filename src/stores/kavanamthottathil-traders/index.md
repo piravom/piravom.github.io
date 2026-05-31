@@ -8,5 +8,4 @@ categories:
   - Building Materials
 description: Hardware store on Ernakulam-Piravom Road offering hardware supplies and construction materials.
 address: Kavanamthottathil Building, Ernakulam Piravom Road, Piravom
-mapLink: https://maps.google.com/?q=KAVANAMTHOTTATHIL+TRADERS+ERNAKULAM+PIRAVOM+ROAD
 ---

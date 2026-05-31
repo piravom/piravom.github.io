@@ -6,5 +6,4 @@ categories:
   - Stationery
 description: Local book and stationery shop serving the educational needs of the community with a range of books and school supplies.
 address: Karavattekurizu, Piravom
-mapLink: https://maps.google.com/?q=Pallithazhathu+Book+House+Piravom
 ---

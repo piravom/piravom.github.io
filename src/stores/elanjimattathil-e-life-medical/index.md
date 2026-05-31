@@ -9,5 +9,4 @@ categories:
   - Health Products
 description: Medical supermarket offering medicines, medical equipment, pet food, baby items, and health products all under one roof.
 address: Piravom
-mapLink: https://maps.google.com/?q=Elanjimattathil+E+Life+Medical+Supermarket+Piravom
 ---

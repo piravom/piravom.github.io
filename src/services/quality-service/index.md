@@ -7,5 +7,4 @@ categories:
   - Plumbing
 description: Gas stove service and pipeline installation centre near Government Hospital Junction.
 address: Government Hospital Junction, Piravom
-mapLink: https://maps.google.com/?q=Quality+Service+piravom+Govt+Hospital+jn
 ---

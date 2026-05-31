@@ -7,5 +7,4 @@ categories:
   - Photo Printing
 description: Photography studio and colour lab on Old Market Road offering quality photo printing and photography services.
 address: Old Market Rd, Piravom
-mapLink: https://maps.google.com/?q=Jacob+Studio+Colour+Lab+Old+Market+Rd+Piravom
 ---

@@ -9,5 +9,4 @@ categories:
   - Electronics
 description: Grocery and electronics store conveniently located near the IB Junction, serving the daily needs of the local community.
 address: Near HDFC Bank, IB Junction, Piravom
-mapLink: https://maps.google.com/?q=Ajmal+Bismi+Supermart+IB+Junction+Piravom
 ---

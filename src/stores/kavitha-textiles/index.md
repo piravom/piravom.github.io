@@ -8,5 +8,4 @@ categories:
   - Readymade Garments
 description: Textile showroom offering a variety of garments, dress materials, and fabrics for the whole family.
 address: Main Road, Piravom
-mapLink: https://maps.google.com/?q=Kavitha+Textiles+Piravom
 ---

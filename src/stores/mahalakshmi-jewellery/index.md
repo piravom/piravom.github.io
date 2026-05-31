@@ -9,5 +9,4 @@ categories:
   - Silver
 description: Gold and silver jewellery store on Old Market Road offering a wide selection of traditional and modern ornaments.
 address: Old Market Rd, Piravom
-mapLink: https://maps.google.com/?q=Mahalakshmi+Jewellery+Gold+Silver+Store+Old+Market+Rd+Piravom
 ---

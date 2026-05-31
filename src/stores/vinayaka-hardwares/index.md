@@ -8,5 +8,4 @@ categories:
   - Building Materials
 description: Hardware store offering tools, fittings, and construction materials for home and commercial projects.
 address: VFFW+P6M, Piravom
-mapLink: https://maps.google.com/?q=Vinayaka+Hardwares+VFFW+P6M+Piravom
 ---

@@ -8,5 +8,4 @@ categories:
   - Hardware
 description: Electrical supply store offering electrical components, wiring, switches, and related hardware items.
 address: VFHQ+85J, Piravom
-mapLink: https://maps.google.com/?q=City+Traders+VFHQ+85J+Piravom
 ---

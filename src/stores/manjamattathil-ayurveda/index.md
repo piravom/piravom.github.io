@@ -9,5 +9,4 @@ categories:
   - Pharmacy
 description: Traditional herbal medicine store offering authentic Ayurvedic formulations and natural remedies.
 address: Piravom
-mapLink: https://maps.google.com/?q=Manjamattathil+Angandi+Marunn+Ayurveda+Piravom
 ---

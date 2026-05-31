@@ -9,5 +9,4 @@ categories:
   - Pharmacy
 description: Branch of the renowned Kottakkal Arya Vaidya Sala, offering authentic Ayurvedic medicines and treatments. Located near the KSRTC Bus Stand.
 address: Old Panchayat Shopping Complex, near KSRTC Bus Stand, Piravom
-mapLink: https://maps.google.com/?q=Kottakkal+Arya+Vaidya+Sala+near+KSRTC+Busstand+Piravom
 ---

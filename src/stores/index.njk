@@ -102,7 +102,7 @@ permalink: "/stores/"
 
                             <!-- Navigate to Maps -->
                             <span class="flex justify-center">
-                                <a href="{{ store.data.directionsUrl or ("https://maps.google.com/?q=" + store.data.title | replace(" ", "+") + "+PIRAVOM") }}" target="_blank" rel="noopener noreferrer"
+                                <a href="https://maps.google.com/?q={{ store.data.title | replace(' ', '+') }}+Piravom" target="_blank" rel="noopener noreferrer"
                                    class="rounded-lg p-1.5 text-gray-400 transition hover:bg-gray-100 hover:text-gray-700"
                                    title="Open in Maps">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">

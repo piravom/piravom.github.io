@@ -8,5 +8,4 @@ categories:
   - Medicines
 description: Pharmacy on Main Road offering medicines and healthcare essentials to the local community.
 address: VFGQ+349, Main Road, Piravom
-mapLink: https://maps.google.com/?q=St+Marys+Medicals+Main+Road+Piravom
 ---

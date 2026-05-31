@@ -8,5 +8,4 @@ categories:
   - Stationery
 description: Book store offering NCERT textbooks, academic books, and stationery supplies with helpful staff.
 address: VFFV+PV3, Piravom
-mapLink: https://maps.google.com/?q=DINDELS+STORE+AND+NCERT+BOOKS+Piravom
 ---

@@ -8,5 +8,4 @@ categories:
   - Medicines
 description: Pharmacy on Arakkunnam-Piravom Road offering medicines and healthcare products with extended evening hours.
 address: VFHM+9C3, Arakkunnam - Piravom Rd, Piravom
-mapLink: https://maps.google.com/?q=Chalasseril+medicare+Arakkunnam+Piravom+Rd
 ---

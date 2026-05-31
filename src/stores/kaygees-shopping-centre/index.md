@@ -9,5 +9,4 @@ categories:
   - Gift Shop
 description: Stationery store at Three Road Junction, K.P.P. Building on Old Market Road, offering school supplies, books, and gift items.
 address: Three Road Junction, K.P.P. Building, Old Market Rd, Piravom
-mapLink: https://maps.google.com/?q=Kaygees+Shopping+Centre+Three+Road+Junction+Piravom
 ---

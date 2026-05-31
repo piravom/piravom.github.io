@@ -9,5 +9,4 @@ categories:
   - Healthcare
 description: Part of India's largest pharmacy chain, offering a wide range of medicines and healthcare products. Open until 11 PM for late-night needs.
 address: 189, Ernakulam Rd, near Bank of Baroda, Piravom
-mapLink: https://maps.google.com/?q=Apollo+Pharmacy+Piravom+Ernakulam+Rd
 ---

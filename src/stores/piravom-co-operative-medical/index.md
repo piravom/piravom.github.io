@@ -8,5 +8,4 @@ categories:
   - Medical Supply
 description: Co-operative department medical supply store offering medicines and healthcare products at reasonable rates.
 address: Piravom
-mapLink: https://maps.google.com/?q=Piravom+Co-operative+department+Medical+shop
 ---

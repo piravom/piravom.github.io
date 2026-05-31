@@ -8,5 +8,4 @@ categories:
   - Fashion
 description: Clothing store in Piravom offering a good collection of apparel at moderate prices.
 address: VFGP+GQQ, Piravom
-mapLink: https://maps.google.com/?q=UNDHUVANDI+Piravom
 ---

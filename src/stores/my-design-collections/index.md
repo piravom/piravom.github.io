@@ -8,5 +8,4 @@ categories:
   - Textiles
 description: Fabric store in Karavattekurizhu offering a variety of dress materials and design collections.
 address: Karavattekurizhu, Piravom
-mapLink: https://maps.google.com/?q=My+Design+Collections+karavattekurizhu+Piravom
 ---

@@ -7,5 +7,4 @@ categories:
   - Motorcycle Repair
 description: Two wheeler repair shop in Mulakulam (N) on Mulakulam-Mattappallikunnu Road with good service.
 address: Mulakulam - Mattappallikunnu Rd, Mulakulam (N), Piravom
-mapLink: https://maps.google.com/?q=Moto+Headz+Mulakulam+PIRAVOM
 ---

@@ -7,5 +7,4 @@ categories:
   - Photographer
 description: Photography studio near Piravom Bridge offering professional photography and digital services.
 address: Piravom Bridge, Piravom
-mapLink: https://maps.google.com/?q=Aroma+Digital+studio+Piravom+Bridge
 ---

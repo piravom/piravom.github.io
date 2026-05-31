@@ -9,5 +9,4 @@ categories:
   - Hardware
 description: Electronics and appliance store at Holy Kings Building, offering electronic goods, home appliances, and accessories.
 address: Holy Kings Building, Piravom
-mapLink: https://maps.google.com/?q=Easystore+Piravom+Holy+kings+Building
 ---

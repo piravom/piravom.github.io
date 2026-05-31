@@ -9,5 +9,4 @@ categories:
   - Accessories
 description: Jewellery and fashion store opposite the Private Bus Stand, offering fashion jewellery and accessories.
 address: Opposite Private Bus Stand, Piravom
-mapLink: https://maps.google.com/?q=Havana+Fashions+opposite+Private+Bus+stand+Piravom
 ---

@@ -8,5 +8,4 @@ categories:
   - Home Decor
 description: Glass and mirror shop at Market Junction on Piravom Market Road, offering custom glass, mirrors, and home decor solutions.
 address: Market Junction, Piravom Market Rd, Piravom
-mapLink: https://maps.google.com/?q=Chakkumkuzhiyil+Glass+House+Market+Junction+Piravom
 ---

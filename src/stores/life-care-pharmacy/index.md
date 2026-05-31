@@ -8,5 +8,4 @@ categories:
   - Medicines
 description: Pharmacy on New Bazaar To Cheriya Pally Road offering medicines and healthcare products.
 address: VFFV+82M, New Bazaar To Cheriya Pally Rd, Piravom
-mapLink: https://maps.google.com/?q=Life+Care+New+Bazaar+To+Cheriya+Pally+Rd+Piravom
 ---

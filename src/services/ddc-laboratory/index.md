@@ -7,5 +7,4 @@ categories:
   - Health Checkup
 description: Medical laboratory at Government Hospital Junction on Piravom-Muvattupuzha Road offering diagnostic tests.
 address: Piravom Muvattupuzha Road, Government Hospital Junction, Piravom
-mapLink: https://maps.google.com/?q=DDC+Laboratory+Piravom+Government+Hospital+Junction
 ---

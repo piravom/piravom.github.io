@@ -8,5 +8,4 @@ categories:
   - Books
 description: Stationery store offering school supplies, books, and general stationery items.
 address: VFQP+XRF, Piravom
-mapLink: https://maps.google.com/?q=Variyamthadathil+Stores+Piravom
 ---

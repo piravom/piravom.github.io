@@ -6,5 +6,4 @@ categories:
   - Women's Clothing
 description: Clothing store on Old Market Road near the Private Bus Stand, specialising in churidars and ethnic wear.
 address: Old Market Rd, near Private Bus Stand, Piravom
-mapLink: https://maps.google.com/?q=Veloura+Churidar+Hub+Old+Market+Rd+Piravom
 ---

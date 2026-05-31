@@ -8,5 +8,4 @@ categories:
   - Medicines
 description: Pharmacy on Piravom-Elanji Road offering quality medicines and pharmaceutical products.
 address: Piravom - Elanji Rd, Piravom
-mapLink: https://maps.google.com/?q=Neethi+Medical+Store+Piravom+Elanji+Rd
 ---

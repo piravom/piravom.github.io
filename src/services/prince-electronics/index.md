@@ -6,5 +6,4 @@ categories:
   - Electronics Store
 description: Electronics repair shop on Old Market Road offering repair services for electronic items.
 address: VFFQ+8GJ, Old Market Rd, Piravom
-mapLink: https://maps.google.com/?q=Prince+Electronics+Old+Market+Rd+Piravom
 ---

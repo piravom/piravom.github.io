@@ -7,5 +7,4 @@ categories:
   - Mobile Repair
 description: Mobile phone and electronics store at Three Junction, St. Marys Building on Ernakulam Road, also offering repairs.
 address: Three Junction, St. Marys Building, Ernakulam Road, Piravom
-mapLink: https://maps.google.com/?q=Pioneer+Mobiles+Electronics+Three+Junction+Piravom
 ---

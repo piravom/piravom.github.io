@@ -8,5 +8,4 @@ categories:
   - Dress Store
 description: Popular dress and textile store in Piravom offering a wide selection of fabrics and clothing.
 address: VFGQ+935, Piravom
-mapLink: https://maps.google.com/?q=Cherumuzhikal+Textiles+Piravom
 ---

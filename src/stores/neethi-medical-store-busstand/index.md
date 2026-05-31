@@ -6,5 +6,4 @@ categories:
   - Medical Centre
 description: Medical centre and pharmacy near the bus stand area offering healthcare services and medicines.
 address: VFFQ+83W, Piravom
-mapLink: https://maps.google.com/?q=Neethi+medical+store+VFFQ+83W+Piravom
 ---

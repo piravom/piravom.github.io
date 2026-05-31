@@ -8,5 +8,4 @@ categories:
   - Fashion
 description: Men's clothing store at Plaza Building in Piravom, offering fashionable and affordable menswear.
 address: Plaza Building, Piravom
-mapLink: https://maps.google.com/?q=MENZCITY+Plaza+Building+Piravom
 ---

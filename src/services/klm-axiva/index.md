@@ -7,5 +7,4 @@ categories:
   - Financial Services
 description: KLM Axiva Finvest gold loan branch at Matha Complex on Three Road with a 4.9 rating.
 address: Door No 54/G, Matha Complex, Three Road, Piravom
-mapLink: https://maps.google.com/?q=KLM+Axiva+Gold+Loan+Matha+Complex+Three+Road+Piravom
 ---

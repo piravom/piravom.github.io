@@ -8,5 +8,4 @@ categories:
   - Clothing
 description: Clothing store in Piravom offering a selection of apparel and fabrics.
 address: Piravom
-mapLink: https://maps.google.com/?q=Level3+Piravom
 ---

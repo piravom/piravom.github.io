@@ -6,5 +6,4 @@ categories:
   - Medical Supply
 description: Medical supply store offering pharmaceutical products and healthcare essentials.
 address: VFFP+9WJ, Piravom
-mapLink: https://maps.google.com/?q=Thaikkottmoss+Medical+Shop+Piravom
 ---

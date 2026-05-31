@@ -8,5 +8,4 @@ categories:
   - Home Furnishings
 description: Furniture gallery on Excise Kadavu Road offering a curated selection of furniture and home decor items.
 address: Excise Kadavu Rd, Piravom
-mapLink: https://maps.google.com/?q=Soorya+Furniture+Gallery+Excise+Kadavu+Rd+Piravom
 ---

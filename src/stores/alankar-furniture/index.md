@@ -8,5 +8,4 @@ categories:
   - Home Furnishings
 description: Furniture shop on Ernakulam Road offering a variety of home furnishings, wooden furniture, and decor items for every room.
 address: Ernakulam Road, near War Memorial, Mulloorpady, Piravom
-mapLink: https://maps.google.com/?q=Alankar+Furniture+Shops+in+Kochi+Kerala+Ernakulam+Road+Piravom
 ---

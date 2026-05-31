@@ -6,5 +6,4 @@ categories:
   - Building Materials
 description: Hardware store in Kalamboor offering tools, fittings, and building materials.
 address: Kalamboor, Piravom
-mapLink: https://maps.google.com/?q=Pallikudiyil+hardwares+Kalamboor+Piravom
 ---

@@ -8,5 +8,4 @@ categories:
   - Dress Store
 description: Dress store in Piravom offering fashionable apparel and fabrics.
 address: Piravom
-mapLink: https://maps.google.com/?q=Bombay+Fashion+House+Piravom
 ---

@@ -8,5 +8,4 @@ categories:
   - Medicines
 description: Pharmacy at Cherupushpam Building on Market Road, offering medicines and pharmaceutical products.
 address: Cherupushpam Building, Market Road, Piravom
-mapLink: https://maps.google.com/?q=Leo+Medicals+Market+Road+Piravom
 ---

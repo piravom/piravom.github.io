@@ -9,5 +9,4 @@ categories:
   - Accessories
 description: Reliance Trends offers a wide range of branded apparel, fashion accessories, and lifestyle products for men, women, and children.
 address: Piravom
-mapLink: https://maps.google.com/?q=Reliance+Trends+Piravom
 ---

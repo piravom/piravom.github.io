@@ -7,5 +7,4 @@ categories:
   - Maruti Suzuki Service
 description: Authorised Maruti Suzuki service centre near Government Hospital offering car service and repairs.
 address: Near Government Hospital, Piravom
-mapLink: https://maps.google.com/?q=Maruti+Suzuki+Service+Sai+Service+near+Govt+Hospital+Piravom
 ---

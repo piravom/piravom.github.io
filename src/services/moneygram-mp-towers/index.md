@@ -6,5 +6,4 @@ categories:
   - Remittance
 description: MoneyGram money transfer service at Muthoot Finance Ltd, MP Towers.
 address: MP Towers, Piravom
-mapLink: https://maps.google.com/?q=MoneyGram+MUTHOOT+FINANCE+LTD+MP+TOWERS+Piravom
 ---
