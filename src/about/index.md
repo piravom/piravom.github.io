@@ -194,9 +194,7 @@ permalink: "/about/"
             <div class="mt-6">
                 <a href="/attractions/" class="inline-flex items-center gap-2 rounded-xl bg-indigo-600 px-5 py-3 text-sm font-semibold text-white transition hover:bg-indigo-700">
                     Explore All Attractions
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                    </svg>
+                    {% lucide "arrow-right", "h-4 w-4" %}
                 </a>
             </div>
         </div>
@@ -217,9 +215,7 @@ permalink: "/about/"
             <div class="mt-6">
                 <a href="/bus-timing/" class="inline-flex items-center gap-2 rounded-xl border border-gray-200 bg-white px-5 py-3 text-sm font-semibold text-gray-700 transition hover:bg-gray-50">
                     View Bus Timings
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                    </svg>
+                    {% lucide "arrow-right", "h-4 w-4" %}
                 </a>
             </div>
         </div>

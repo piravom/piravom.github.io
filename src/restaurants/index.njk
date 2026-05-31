@@ -20,9 +20,7 @@ permalink: "/restaurants/{% if pagination.pageNumber > 0 %}page/{{ pagination.pa
     <!-- Search -->
     <div class="relative mb-8" id="restaurantSearch">
         <div class="relative">
-            <svg xmlns="http://www.w3.org/2000/svg" class="absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35M11 19a8 8 0 100-16 8 8 0 000 16z" />
-            </svg>
+            {% lucide "search", "absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-gray-400" %}
             <input
                 type="text"
                 id="restaurantSearchInput"
@@ -98,9 +96,7 @@ permalink: "/restaurants/{% if pagination.pageNumber > 0 %}page/{{ pagination.pa
                             <a href="tel:{{ restaurant.data.contact | replace(' ', '') }}"
                                class="rounded-lg p-1.5 text-gray-400 transition hover:bg-green-50 hover:text-green-700"
                                title="{{ restaurant.data.contact }}">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" />
-                                </svg>
+                                {% lucide "phone", "h-5 w-5" %}
                             </a>
                             {% else %}
                             <span class="text-gray-300"></span>
@@ -110,9 +106,7 @@ permalink: "/restaurants/{% if pagination.pageNumber > 0 %}page/{{ pagination.pa
                         <!-- Star Rating -->
                         <span class="flex items-center justify-center" title="Rating: {{ restaurant.data.rating }} out of 5">
                             {% if restaurant.data.rating %}
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-yellow-400 shrink-0" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2z" />
-                            </svg>
+                            {% lucide "star", "h-5 w-5 text-yellow-400 shrink-0" %}
                             <span class="ml-1 text-sm font-semibold text-gray-800">{{ restaurant.data.rating }}</span>
                             {% else %}
                             <span class="text-sm text-gray-300">-</span>
@@ -124,10 +118,7 @@ permalink: "/restaurants/{% if pagination.pageNumber > 0 %}page/{{ pagination.pa
                             <a href="https://maps.google.com/?q={{ restaurant.data.title | replace(' ', '+') }}+Piravom" target="_blank" rel="noopener noreferrer"
                                class="rounded-lg p-1.5 text-gray-400 transition hover:bg-gray-100 hover:text-gray-700"
                                title="Open in Maps">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                                </svg>
+                                {% lucide "map-pin", "h-5 w-5" %}
                             </a>
                         </span>
                     </div>

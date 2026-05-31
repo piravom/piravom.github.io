@@ -13,9 +13,7 @@
         <!-- Universal Search -->
         <div class="relative hidden lg:block" id="globalSearch">
             <div class="relative">
-                <svg xmlns="http://www.w3.org/2000/svg" class="absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35M11 19a8 8 0 100-16 8 8 0 000 16z" />
-                </svg>
+                {% lucide "search", "absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-gray-400" %}
                 <input
                     type="text"
                     id="globalSearchInput"
@@ -30,14 +28,10 @@
         <!-- Mobile Search + Menu -->
         <div class="flex items-center gap-2 lg:hidden">
             <button onclick="toggleMobileSearch()" class="rounded-xl border border-gray-200 p-2" aria-label="Search">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35M11 19a8 8 0 100-16 8 8 0 000 16z" />
-                </svg>
+                {% lucide "search", "h-5 w-5 text-gray-600" %}
             </button>
             <button onclick="toggleMobileMenu()" class="rounded-xl border border-gray-200 p-2">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
+                {% lucide "menu", "h-5 w-5 text-gray-600" %}
             </button>
         </div>
     </div>
@@ -45,9 +39,7 @@
     <!-- Mobile Search Bar (below header) -->
     <div id="mobileSearchBar" class="hidden border-t border-gray-100 px-4 py-3">
         <div class="relative" id="globalSearchMobile">
-            <svg xmlns="http://www.w3.org/2000/svg" class="absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35M11 19a8 8 0 100-16 8 8 0 000 16z" />
-            </svg>
+            {% lucide "search", "absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-gray-400" %}
             <input
                 type="text"
                 id="globalSearchInputMobile"

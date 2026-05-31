@@ -18,16 +18,24 @@ permalink: "/events/"
 
     {% set categories = collections.events | getCategories %}
 
+    {% set categoryEmojis = {
+        "Cultural": "🎭",
+        "Religious": "🛐",
+        "Community": "🤝",
+        "Social": "🎉",
+        "All": "📋"
+    } %}
+
     <!-- Mobile Category Filter Strip (horizontal scroll) -->
     <div class="lg:hidden -mx-4 px-4 mb-6 overflow-x-auto scrollbar-hide">
         <nav class="flex gap-2 whitespace-nowrap pb-2">
             <button class="filter-btn flex items-center gap-1.5 rounded-full border border-indigo-200 bg-indigo-50 px-4 py-2 text-sm font-medium text-indigo-700 shadow-sm transition" data-filter="all">
-                <span>📋</span>
+                <span>{{ categoryEmojis["All"] or "📋" }}</span>
                 <span>All</span>
             </button>
             {% for cat in categories %}
             <button class="filter-btn flex items-center gap-1.5 rounded-full border border-gray-200 bg-white px-4 py-2 text-sm font-medium text-gray-600 shadow-sm transition hover:border-indigo-200 hover:bg-indigo-50 hover:text-indigo-700" data-filter="{{ cat | lower }}">
-                <span>📌</span>
+                <span>{{ categoryEmojis[cat] or "📌" }}</span>
                 <span>{{ cat }}</span>
             </button>
             {% endfor %}
@@ -41,12 +49,12 @@ permalink: "/events/"
             <nav class="sticky top-28 space-y-1">
                 <p class="text-xs font-semibold uppercase tracking-wide text-gray-400 mb-3">Filter by Category</p>
                 <button class="filter-btn flex w-full items-center gap-2 rounded-xl px-3 py-2 text-sm font-medium text-indigo-700 bg-indigo-50 transition hover:bg-indigo-50 hover:text-indigo-700" data-filter="all">
-                    <span>📋</span>
+                    <span>{{ categoryEmojis["All"] or "📋" }}</span>
                     <span>All</span>
                 </button>
                 {% for cat in categories %}
                 <button class="filter-btn flex w-full items-center gap-2 rounded-xl px-3 py-2 text-sm font-medium text-gray-600 transition hover:bg-indigo-50 hover:text-indigo-700" data-filter="{{ cat | lower }}">
-                    <span>📌</span>
+                    <span>{{ categoryEmojis[cat] or "📌" }}</span>
                     <span>{{ cat }}</span>
                 </button>
                 {% endfor %}
@@ -61,9 +69,7 @@ permalink: "/events/"
     <section class="mb-12">
         <div class="mb-6 flex items-center gap-3">
             <span class="flex h-8 w-8 items-center justify-center rounded-lg bg-green-100">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-                </svg>
+                {% lucide "calendar-check", "h-4 w-4 text-green-600" %}
             </span>
             <h2 class="text-2xl font-bold text-gray-900">Upcoming Events</h2>
         </div>
@@ -87,16 +93,11 @@ permalink: "/events/"
                 <div class="flex-1 px-6 py-4 space-y-3">
                     <p class="text-sm text-gray-600 line-clamp-2">{{ event.data.description }}</p>
                     <div class="flex items-center gap-2 text-xs text-gray-500">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                        </svg>
+                        {% lucide "map-pin", "h-3.5 w-3.5 flex-shrink-0" %}
                         <span class="truncate">{{ event.data.location }}</span>
                     </div>
                     <div class="flex items-center gap-2 text-xs text-gray-500">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
+                        {% lucide "clock", "h-3.5 w-3.5 flex-shrink-0" %}
                         <span>{{ event.data.time }}</span>
                     </div>
                 </div>
@@ -110,9 +111,7 @@ permalink: "/events/"
                     {% endif %}
                     {% if event.data.mapLink %}
                     <a href="{{ event.data.mapLink }}" target="_blank" rel="noopener noreferrer" class="flex items-center gap-1 rounded-lg px-3 py-1.5 text-xs font-medium text-gray-500 transition hover:bg-gray-100 hover:text-gray-700">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                        </svg>
+                        {% lucide "external-link", "h-3.5 w-3.5" %}
                         View Map
                     </a>
                     {% endif %}
@@ -128,9 +127,7 @@ permalink: "/events/"
     <section>
         <div class="mb-6 flex items-center gap-3">
             <span class="flex h-8 w-8 items-center justify-center rounded-lg bg-gray-100">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
+                {% lucide "clock", "h-4 w-4 text-gray-500" %}
             </span>
             <h2 class="text-2xl font-bold text-gray-900">Past Events</h2>
         </div>
@@ -154,10 +151,7 @@ permalink: "/events/"
                 <div class="flex-1 px-6 py-4 space-y-3">
                     <p class="text-sm text-gray-500 line-clamp-2">{{ event.data.description }}</p>
                     <div class="flex items-center gap-2 text-xs text-gray-400">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                        </svg>
+                        {% lucide "map-pin", "h-3.5 w-3.5 flex-shrink-0" %}
                         <span class="truncate">{{ event.data.location }}</span>
                     </div>
                 </div>

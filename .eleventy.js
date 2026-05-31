@@ -143,6 +143,24 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addAsyncShortcode("image", imageShortcode);
 
+  // Lucide icon shortcode - renders Lucide icons as inline SVGs
+  const fs = require("fs");
+  const path = require("path");
+  eleventyConfig.addShortcode("lucide", function (name, className = "h-5 w-5") {
+    try {
+      var iconFile = path.join(__dirname, "node_modules", "lucide-static", "icons", name + ".svg");
+      var src = fs.readFileSync(iconFile, "utf8");
+      // Extract everything between <svg ...> and </svg>
+      var innerMatch = src.match(/<svg[^>]*>([\s\S]*)<\/svg>/);
+      if (!innerMatch) return "";
+      var inner = innerMatch[1].trim();
+      return '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="' + className + '" aria-hidden="true">' + inner + '</svg>';
+    } catch (e) {
+      console.warn("Lucide icon not found:", name, e.message);
+      return "";
+    }
+  });
+
   return {
     dir: {
       input: "src",

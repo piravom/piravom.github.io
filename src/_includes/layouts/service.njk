@@ -52,9 +52,7 @@ layout: layouts/base.njk
             {% if rating %}
             <div class="shrink-0 rounded-2xl border border-gray-200 bg-white p-4">
                 <div class="flex items-center gap-1.5">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-yellow-400" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2z" />
-                    </svg>
+                    {% lucide "star", "h-5 w-5 text-yellow-400" %}
                     <p class="text-xl font-bold text-gray-800">{{ rating }}</p>
                 </div>
                 <p class="text-xs text-gray-500 mt-0.5">Rating</p>
@@ -89,10 +87,7 @@ layout: layouts/base.njk
             <p class="mb-3 text-sm font-semibold text-gray-500 uppercase tracking-wide">Directions</p>
             <a href="{{ mapLink }}" target="_blank" rel="noopener noreferrer"
                class="inline-flex items-center gap-2 rounded-xl bg-indigo-600 px-5 py-2.5 text-sm font-medium text-white transition hover:bg-indigo-700">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                </svg>
+                {% lucide "map-pin", "h-4 w-4" %}
                 <span>Open in Google Maps</span>
             </a>
         </div>
