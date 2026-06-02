@@ -8,6 +8,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/assets");
   eleventyConfig.addPassthroughCopy("src/restaurants/**/*.{jpg,png}");
   eleventyConfig.addPassthroughCopy("src/attractions/**/*.{jpg,png}");
+  eleventyConfig.addPassthroughCopy("src/about/**/*.{jpg,png}");
 
   // Filters
   // Convert distance string like "350m" or "1.2km" to numeric meters
@@ -34,7 +35,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addNunjucksFilter("split", function (str, separator) {
     if (!str) return [];
     if (Array.isArray(str)) return str;
-    return str.split(separator || ",").map(s => s.trim());
+    return str.split(separator || ",").map((s) => s.trim());
   });
 
   eleventyConfig.addNunjucksFilter("groupBy", function (arr, key) {
@@ -97,14 +98,40 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addNunjucksFilter("dateFormat", function (date, fmt) {
     if (typeof date === "string") date = new Date(date);
     if (!(date instanceof Date) || isNaN(date)) return "";
-    const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    const months = [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec",
+    ];
     const map = {
-      "MMM": months[date.getMonth()],
-      "MMMM": ["January","February","March","April","May","June","July","August","September","October","November","December"][date.getMonth()],
-      "dd": String(date.getDate()).padStart(2, "0"),
-      "d": date.getDate(),
-      "yyyy": date.getFullYear(),
-      "yy": String(date.getFullYear()).slice(-2),
+      MMM: months[date.getMonth()],
+      MMMM: [
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December",
+      ][date.getMonth()],
+      dd: String(date.getDate()).padStart(2, "0"),
+      d: date.getDate(),
+      yyyy: date.getFullYear(),
+      yy: String(date.getFullYear()).slice(-2),
     };
     var result = fmt;
     Object.keys(map).forEach(function (k) {
@@ -113,14 +140,20 @@ module.exports = function (eleventyConfig) {
     return result;
   });
 
-  eleventyConfig.addNunjucksFilter("filterByDate", function (collection, nowStr, type) {
-    const now = new Date(nowStr);
-    return collection.filter(function (item) {
-      if (!item.data.date) return type === "past";
-      const eventDate = typeof item.data.date === "string" ? new Date(item.data.date) : item.data.date;
-      return type === "upcoming" ? eventDate >= now : eventDate < now;
-    });
-  });
+  eleventyConfig.addNunjucksFilter(
+    "filterByDate",
+    function (collection, nowStr, type) {
+      const now = new Date(nowStr);
+      return collection.filter(function (item) {
+        if (!item.data.date) return type === "past";
+        const eventDate =
+          typeof item.data.date === "string"
+            ? new Date(item.data.date)
+            : item.data.date;
+        return type === "upcoming" ? eventDate >= now : eventDate < now;
+      });
+    },
+  );
 
   eleventyConfig.addNunjucksFilter("getCategories", function (collection) {
     const cats = new Set();
@@ -148,13 +181,25 @@ module.exports = function (eleventyConfig) {
   const path = require("path");
   eleventyConfig.addShortcode("lucide", function (name, className = "h-5 w-5") {
     try {
-      var iconFile = path.join(__dirname, "node_modules", "lucide-static", "icons", name + ".svg");
+      var iconFile = path.join(
+        __dirname,
+        "node_modules",
+        "lucide-static",
+        "icons",
+        name + ".svg",
+      );
       var src = fs.readFileSync(iconFile, "utf8");
       // Extract everything between <svg ...> and </svg>
       var innerMatch = src.match(/<svg[^>]*>([\s\S]*)<\/svg>/);
       if (!innerMatch) return "";
       var inner = innerMatch[1].trim();
-      return '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="' + className + '" aria-hidden="true">' + inner + '</svg>';
+      return (
+        '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="' +
+        className +
+        '" aria-hidden="true">' +
+        inner +
+        "</svg>"
+      );
     } catch (e) {
       console.warn("Lucide icon not found:", name, e.message);
       return "";
