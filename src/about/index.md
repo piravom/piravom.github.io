@@ -17,7 +17,7 @@ permalink: "/about/"
         <div class="rounded-3xl border border-gray-200 bg-white overflow-hidden shadow-sm">
             <div class="aspect-[21/9] w-full bg-gradient-to-br from-indigo-100 to-blue-200 overflow-hidden">
                 <img
-                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Piravom_Kerala_Town.jpg/1280px-Piravom_Kerala_Town.jpg"
+                    src="./piravom-river-view.jpg"
                     alt="Piravom town view"
                     class="h-full w-full object-cover"
                     onerror="this.style.display='none'"
