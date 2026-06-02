@@ -6,39 +6,66 @@
       { "name": "Fire & Rescue", "number": "101" },
       { "name": "Ambulance", "number": "108" },
       { "name": "Women Helpline", "number": "1091" },
-      { "name": "Child Helpline", "number": "1098" }
+      { "name": "Child Helpline", "number": "1098" },
+      { "name": "National Emergency Hotline", "number": "112" },
+      { "name": "Disaster Management", "number": "1077" }
     ]
   },
   {
     "category": "Hospitals",
     "contacts": [
-      { "name": "Taluk Hospital, Piravom", "number": "0485 2242353" },
-      { "name": "Govt. Hospital", "number": "0485 2242424" },
-      { "name": "Pampa Hospital", "number": "0485 2245000" }
+      { "name": "Taluk Hospital Piravom", "number": "0485 2243923" },
+      { "name": "JMP Medical Centre (24/7)", "number": "0485 2241274" },
+      { "name": "JMP Ambulance", "number": "9947621789" },
+      { "name": "JMP General Inquiries", "number": "0485 2243443" },
+      { "name": "A P Varkey Mission Hospital", "number": "0485 2245300" },
+      { "name": "Dr. Gopinath Memorial Nursing Home", "number": "0485 2242260" }
     ]
   },
   {
-    "category": "Police Stations",
+    "category": "Police & Safety",
     "contacts": [
-      { "name": "Piravom Police Station", "number": "0485 2242222" },
-      { "name": "Cyber Cell", "number": "0484 2394068" }
+      { "name": "Piravom Police Station", "number": "0485 2242158" },
+      { "name": "SHO Piravom (Mobile)", "number": "9497987126" },
+      { "name": "Cyber Crime Cell", "number": "0484 2394068" }
     ]
   },
   {
     "category": "Public Services",
     "contacts": [
-      { "name": "KSEB Piravom", "number": "0485 2242250" },
+      { "name": "Piravom Municipality", "number": "0485 2242669" },
+      { "name": "Piravom Village Office", "number": "8547613511" },
+      { "name": "KSEB Piravom Section", "number": "0485 2242350" },
       { "name": "KWA Piravom", "number": "0485 2242330" },
-      { "name": "Municipality Office", "number": "0485 2242223" },
-      { "name": "Post Office", "number": "0485 2242221" }
+      { "name": "Post Office Piravom", "number": "0485 2242221" },
+      { "name": "KSRTC Bus Stand Piravom", "number": "0485 2242245" }
     ]
   },
   {
     "category": "Banks",
     "contacts": [
       { "name": "SBI Piravom", "number": "0485 2242230" },
-      { "name": "Federal Bank", "number": "0485 2242227" },
-      { "name": "South Indian Bank", "number": "0485 2242318" }
+      { "name": "Federal Bank Piravom", "number": "0485 2243551" },
+      { "name": "South Indian Bank Piravom", "number": "0485 2242318" },
+      { "name": "HDFC Bank Piravom", "number": "0485 2244400" },
+      { "name": "Axis Bank Piravom", "number": "0485 2245500" },
+      { "name": "Canara Bank Piravom", "number": "0485 2245250" }
+    ]
+  },
+  {
+    "category": "Taxi & Transport",
+    "contacts": [
+      { "name": "Piravom Taxi Stand", "number": "0485 2242444" },
+      { "name": "City Taxi Service", "number": "9446000225" },
+      { "name": "Piravom Travels", "number": "9447000447" }
+    ]
+  },
+  {
+    "category": "Petrol Pumps",
+    "contacts": [
+      { "name": "Bharat Petroleum Piravom", "number": "0485 2245220" },
+      { "name": "Indian Oil Piravom", "number": "0485 2244220" },
+      { "name": "HP Petrol Pump Piravom", "number": "0485 2243220" }
     ]
   }
 ]
