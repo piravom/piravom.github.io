@@ -160,7 +160,7 @@ permalink: "/restaurants/{% if pagination.pageNumber > 0 %}page/{{ pagination.pa
 
         index.forEach(function (r, idx) {
             // Match restaurant name
-            if (matches(q, r.title)) {
+            if (matches(q, r.name)) {
                 if (!seen.has(r.url)) {
                     seen.add(r.url);
                     results.push({ type: 'restaurant', label: r.name, sub: (r.cuisine || []).join(', '), url: r.url, idx: idx });
