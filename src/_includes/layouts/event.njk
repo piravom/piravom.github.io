@@ -3,121 +3,115 @@ layout: layouts/base.njk
 ---
 
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Event",
-  "name": "{{ name | e }}",
-  "description": "{{ description | e }}",
-  "url": "{{ site.url }}{{ page.url }}",
-  {% if date %}"startDate": "{{ date | e }}",{% endif %}
-  {% if time %}"eventSchedule": {
-    "@type": "Schedule",
-    "startDate": "{{ date | e }}",
-    {% if time %}"duration": "{{ time | e }}"{% endif %}
-  },{% endif %}
-  {% if location %}"location": {
-    "@type": "Place",
-    "name": "{{ location | e }}",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Piravom",
-      "addressRegion": "Kerala",
-      "addressCountry": "IN"
-    }
-  },{% endif %}
-  {% if organizer %}"organizer": {
-    "@type": "Organization",
-    "name": "{{ organizer | e }}"
-  },{% endif %}
-  "eventStatus": "https://schema.org/EventScheduled",
-  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode"
-}
+  {
+   "@context": "https://schema.org",
+   "@type": "Event",
+   "name": "{{ name | e }}",
+   "description": "{{ description | e }}",
+   "url": "{{ site.url }}{{ page.url }}",
+   {% if date %}"startDate": "{{ date | e }}",{% endif %}
+   {% if time %}"eventSchedule": {
+   "@type": "Schedule",
+   "startDate": "{{ date | e }}",
+   {% if time %}"duration": "{{ time | e }}"{% endif %}
+   },{% endif %}
+   {% if location %}"location": {
+   "@type": "Place",
+   "name": "{{ location | e }}",
+   "address": {
+   "@type": "PostalAddress",
+   "addressLocality": "Piravom",
+   "addressRegion": "Kerala",
+   "addressCountry": "IN"
+   }
+   },{% endif %}
+   {% if organizer %}"organizer": {
+   "@type": "Organization",
+   "name": "{{ organizer | e }}"
+   },{% endif %}
+   "eventStatus": "https://schema.org/EventScheduled",
+   "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode"
+  }
 </script>
 
 <main class="mx-auto max-w-7xl px-4 py-8">
+  <!-- Breadcrumbs -->
+  <nav class="mb-8 flex items-center gap-2 text-sm text-gray-500">
+    <a href="/" class="hover:text-black">Piravom</a>
+    <span>/</span>
+    <a href="/events/" class="hover:text-black">Events</a>
+    <span>/</span>
+    <span class="font-medium text-black">{{ name }}</span>
+  </nav>
 
-    <!-- Breadcrumbs -->
-    <nav class="mb-8 flex items-center gap-2 text-sm text-gray-500">
-        <a href="/" class="hover:text-black">Piravom</a>
-        <span>/</span>
-        <a href="/events/" class="hover:text-black">Events</a>
-        <span>/</span>
-        <span class="font-medium text-black">{{ name }}</span>
-    </nav>
+  <!-- Event Header -->
+  <section class="mb-10">
+    <div class="flex items-start justify-between gap-4 flex-wrap">
+      <div class="max-w-2xl">
+        <h1 class="text-4xl font-bold tracking-tight md:text-6xl">{{ title }}</h1>
+        <p class="mt-4 text-lg leading-relaxed text-gray-600">{{ description }}</p>
+      </div>
+      {% if category %}
+      <span
+        class="shrink-0 rounded-full bg-indigo-50 px-4 py-2 text-sm font-semibold text-indigo-700"
+      >
+        {{ category }}
+      </span>
+      {% endif %}
+    </div>
+  </section>
 
-    <!-- Event Header -->
-    <section class="mb-10">
-        <div class="flex items-start justify-between gap-4 flex-wrap">
-            <div class="max-w-2xl">
-                <h1 class="text-4xl font-bold tracking-tight md:text-6xl">
-                    {{ title }}
-                </h1>
-                <p class="mt-4 text-lg leading-relaxed text-gray-600">
-                    {{ description }}
-                </p>
-            </div>
-            {% if category %}
-            <span class="shrink-0 rounded-full bg-indigo-50 px-4 py-2 text-sm font-semibold text-indigo-700">
-                {{ category }}
-            </span>
-            {% endif %}
-        </div>
-    </section>
-
-    <!-- Details Cards -->
-    <section class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-        {% if date %}
-        <div class="rounded-2xl border border-gray-200 bg-white p-4 shadow-sm">
-            <p class="text-xs font-semibold text-gray-500 uppercase tracking-wide">Date</p>
-            <p class="mt-1 text-lg font-bold text-gray-800">{{ date | toDate | dateFormat("MMM d, yyyy") }}</p>
-        </div>
-        {% endif %}
-
-        {% if time %}
-        <div class="rounded-2xl border border-gray-200 bg-white p-4 shadow-sm">
-            <p class="text-xs font-semibold text-gray-500 uppercase tracking-wide">Time</p>
-            <p class="mt-1 text-lg font-bold text-gray-800">{{ time }}</p>
-        </div>
-        {% endif %}
-
-        {% if location %}
-        <div class="rounded-2xl border border-gray-200 bg-white p-4 shadow-sm">
-            <p class="text-xs font-semibold text-gray-500 uppercase tracking-wide">Location</p>
-            <p class="mt-1 text-lg font-bold text-gray-800">{{ location }}</p>
-        </div>
-        {% endif %}
-
-        {% if organizer %}
-        <div class="rounded-2xl border border-gray-200 bg-white p-4 shadow-sm">
-            <p class="text-xs font-semibold text-gray-500 uppercase tracking-wide">Organizer</p>
-            <p class="mt-1 text-lg font-bold text-gray-800">{{ organizer }}</p>
-        </div>
-        {% endif %}
-    </section>
-
-    <!-- Map Link -->
-    {% if mapLink %}
-    <div class="mt-6">
-        <a href="{{ mapLink }}" target="_blank" rel="noopener noreferrer"
-           class="inline-flex items-center gap-2 rounded-xl bg-indigo-600 px-5 py-2.5 text-sm font-medium text-white transition hover:bg-indigo-700">
-            {% lucide "map-pin", "h-4 w-4" %}
-            <span>View on Google Maps</span>
-        </a>
+  <!-- Details Cards -->
+  <section class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+    {% if date %}
+    <div class="rounded-2xl border border-gray-200 bg-white p-4 shadow-sm">
+      <p class="text-xs font-semibold text-gray-500 uppercase tracking-wide">Date</p>
+      <p class="mt-1 text-lg font-bold text-gray-800">
+        {{ date | toDate | dateFormat("MMM d, yyyy") }}
+      </p>
+    </div>
+    {% endif %} {% if time %}
+    <div class="rounded-2xl border border-gray-200 bg-white p-4 shadow-sm">
+      <p class="text-xs font-semibold text-gray-500 uppercase tracking-wide">Time</p>
+      <p class="mt-1 text-lg font-bold text-gray-800">{{ time }}</p>
+    </div>
+    {% endif %} {% if location %}
+    <div class="rounded-2xl border border-gray-200 bg-white p-4 shadow-sm">
+      <p class="text-xs font-semibold text-gray-500 uppercase tracking-wide">Location</p>
+      <p class="mt-1 text-lg font-bold text-gray-800">{{ location }}</p>
+    </div>
+    {% endif %} {% if organizer %}
+    <div class="rounded-2xl border border-gray-200 bg-white p-4 shadow-sm">
+      <p class="text-xs font-semibold text-gray-500 uppercase tracking-wide">Organizer</p>
+      <p class="mt-1 text-lg font-bold text-gray-800">{{ organizer }}</p>
     </div>
     {% endif %}
+  </section>
 
-    <!-- Body Content -->
-    {% if content %}
-    <section class="mt-10 prose prose-gray max-w-none">
-        {{ content | safe }}
-    </section>
-    {% endif %}
+  <!-- Map Link -->
+  {% if mapLink %}
+  <div class="mt-6">
+    <a
+      href="{{ mapLink }}"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="inline-flex items-center gap-2 rounded-xl bg-indigo-600 px-5 py-2.5 text-sm font-medium text-white transition hover:bg-indigo-700"
+    >
+      {% lucide "map-pin", "h-4 w-4" %}
+      <span>View on Google Maps</span>
+    </a>
+  </div>
+  {% endif %}
 
-    <!-- Back link -->
-    <div class="mt-12">
-        <a href="/events/" class="text-sm font-semibold text-gray-500 hover:text-black">
-            &larr; Back to all events
-        </a>
-    </div>
+  <!-- Body Content -->
+  {% if content %}
+  <section class="mt-10 prose prose-gray max-w-none">{{ content | safe }}</section>
+  {% endif %}
 
+  <!-- Back link -->
+  <div class="mt-12">
+    <a href="/events/" class="text-sm font-semibold text-gray-500 hover:text-black">
+      &larr; Back to all events
+    </a>
+  </div>
 </main>

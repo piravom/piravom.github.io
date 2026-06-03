@@ -3,218 +3,153 @@ layout: layouts/base.njk
 title: Stores
 description: Explore shops, supermarkets, and local businesses in and around Piravom.
 eleventyExcludeFromCollections: true
-permalink: "/stores/"
+permalink: '/stores/'
 ---
 
 <main class="mx-auto max-w-7xl px-4 py-8">
+  <!-- Hero -->
+  {% from "components/page-hero.njk" import pageHero %} {{ pageHero(title, description) }} {% set
+  sectionIcons = { "Supermarkets & Grocery": "🛒", "Textiles & Apparel": "👕", "Jewellery": "💎",
+  "Opticals": "👓", "Hardware & Building Materials": "🔧", "Furniture & Home Decor": "🛋️",
+  "Stationery & Books": "📚", "Pharmacy & Medical Stores": "💊", "Other Stores": "🛍️" } %} {% set
+  grouped = collections.stores | groupByData("section") %} {% set sectionKeys = grouped | keys %}
 
-    <!-- Hero -->
-    {% from "components/page-hero.njk" import pageHero %}
-    {{ pageHero(title, description) }}
+  <!-- Mobile Category Strip (horizontal scroll) -->
+  <div class="lg:hidden -mx-4 px-4 mb-6 overflow-x-auto scrollbar-hide">
+    <nav class="flex gap-2 whitespace-nowrap pb-2">
+      {% for section in sectionKeys %} {% set sectionId = section | lower | replace(" ", "-") |
+      replace("&", "and") %}
+      <a
+        href="#{{ sectionId }}"
+        class="flex items-center gap-1.5 rounded-full border border-gray-200 bg-white px-4 py-2 text-sm font-medium text-gray-600 shadow-sm transition hover:border-indigo-200 hover:bg-indigo-50 hover:text-indigo-700"
+      >
+        <span>{{ sectionIcons[section] or "🛍️" }}</span>
+        <span>{{ section }}</span>
+      </a>
+      {% endfor %}
+    </nav>
+  </div>
 
-    {% set sectionIcons = {
-        "Supermarkets & Grocery": "🛒",
-        "Textiles & Apparel": "👕",
-        "Jewellery": "💎",
-        "Opticals": "👓",
-        "Hardware & Building Materials": "🔧",
-        "Furniture & Home Decor": "🛋️",
-        "Stationery & Books": "📚",
-        "Pharmacy & Medical Stores": "💊",
-        "Other Stores": "🛍️"
-    } %}
+  <div class="flex gap-8">
+    <!-- Desktop Sidebar Navigation -->
+    <aside class="hidden lg:block w-64 shrink-0">
+      <nav class="sticky top-28 space-y-1">
+        <p class="text-xs font-semibold uppercase tracking-wide text-gray-400 mb-3">Categories</p>
+        {% for section in sectionKeys %} {% set sectionId = section | lower | replace(" ", "-") |
+        replace("&", "and") %}
+        <a
+          href="#{{ sectionId }}"
+          class="flex items-center gap-2 rounded-xl px-3 py-2 text-sm font-medium text-gray-600 transition hover:bg-indigo-50 hover:text-indigo-700"
+        >
+          <span>{{ sectionIcons[section] or "🛍️" }}</span>
+          <span>{{ section }}</span>
+        </a>
+        {% endfor %}
+      </nav>
+    </aside>
 
-    {% set grouped = collections.stores | groupByData("section") %}
-    {% set sectionKeys = grouped | keys %}
+    <!-- Content -->
+    <div class="flex-1 min-w-0">
+      {% for section in sectionKeys %} {% set sectionId = section | lower | replace(" ", "-") |
+      replace("&", "and") %}
+      <section id="{{ sectionId }}" class="mb-12 scroll-mt-28">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-2">
+          <span>{{ sectionIcons[section] or "🛍️" }}</span> {{ section }}
+        </h2>
+        <div class="columns-1 sm:columns-2 lg:columns-3 gap-x-6 space-y-6">
+          {% for store in grouped[section] %}
+          <div
+            class="group rounded-3xl border border-gray-200 bg-white p-6 shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md flex flex-col justify-between break-inside-avoid"
+          >
+            <div>
+              <h3 class="text-lg font-bold leading-tight mb-3">{{ store.data.title }}</h3>
 
-    <!-- Mobile Category Strip (horizontal scroll) -->
-    <div class="lg:hidden -mx-4 px-4 mb-6 overflow-x-auto scrollbar-hide">
-        <nav class="flex gap-2 whitespace-nowrap pb-2">
-            {% for section in sectionKeys %}
-            {% set sectionId = section | lower | replace(" ", "-") | replace("&", "and") %}
-            <a href="#{{ sectionId }}"
-               class="flex items-center gap-1.5 rounded-full border border-gray-200 bg-white px-4 py-2 text-sm font-medium text-gray-600 shadow-sm transition hover:border-indigo-200 hover:bg-indigo-50 hover:text-indigo-700">
-                <span>{{ sectionIcons[section] or "🛍️" }}</span>
-                <span>{{ section }}</span>
-            </a>
-            {% endfor %}
-        </nav>
-    </div>
-
-    <div class="flex gap-8">
-
-        <!-- Desktop Sidebar Navigation -->
-        <aside class="hidden lg:block w-64 shrink-0">
-            <nav class="sticky top-28 space-y-1">
-                <p class="text-xs font-semibold uppercase tracking-wide text-gray-400 mb-3">Categories</p>
-                {% for section in sectionKeys %}
-                {% set sectionId = section | lower | replace(" ", "-") | replace("&", "and") %}
-                <a href="#{{ sectionId }}"
-                   class="flex items-center gap-2 rounded-xl px-3 py-2 text-sm font-medium text-gray-600 transition hover:bg-indigo-50 hover:text-indigo-700">
-                    <span>{{ sectionIcons[section] or "🛍️" }}</span>
-                    <span>{{ section }}</span>
-                </a>
+              {% if store.data.categories %}
+              <div class="flex flex-wrap gap-1.5 mb-3">
+                {% for cat in store.data.categories %}
+                <span
+                  class="rounded-full bg-indigo-50 px-2.5 py-0.5 text-xs font-medium text-indigo-700"
+                  >{{ cat }}</span
+                >
                 {% endfor %}
-            </nav>
-        </aside>
-
-        <!-- Content -->
-        <div class="flex-1 min-w-0">
-
-            {% for section in sectionKeys %}
-            {% set sectionId = section | lower | replace(" ", "-") | replace("&", "and") %}
-            <section id="{{ sectionId }}" class="mb-12 scroll-mt-28">
-                <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-2">
-                    <span>{{ sectionIcons[section] or "🛍️" }}</span> {{ section }}
-                </h2>
-                <div class="columns-1 sm:columns-2 lg:columns-3 gap-x-6 space-y-6">
-                    {% for store in grouped[section] %}
-                    <div class="group rounded-3xl border border-gray-200 bg-white p-6 shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md flex flex-col justify-between break-inside-avoid">
-                        <div>
-                            <h3 class="text-lg font-bold leading-tight mb-3">{{ store.data.title }}</h3>
-
-                            {% if store.data.categories %}
-                            <div class="flex flex-wrap gap-1.5 mb-3">
-                                {% for cat in store.data.categories %}
-                                <span class="rounded-full bg-indigo-50 px-2.5 py-0.5 text-xs font-medium text-indigo-700">{{ cat }}</span>
-                                {% endfor %}
-                            </div>
-                            {% endif %}
-
-                            {% if store.data.description %}
-                            <p class="text-sm leading-relaxed text-gray-600">{{ store.data.description }}</p>
-                            {% endif %}
-                        </div>
-
-                        <!-- Info Row (attractions style) -->
-                        <div class="grid grid-cols-3 items-center border-t border-gray-100 pt-4 mt-4 text-sm">
-                            <!-- Distance from Bus Stand -->
-                            <span class="text-center font-medium text-indigo-600" title="Distance from Piravom Bus Stand">
-                                {{ store.data.distanceFromBusStand or "-" }}
-                            </span>
-
-                            <!-- Store Icon by category -->
-                            {% set categoryIcons = {
-                                "Supermarket": "shopping-cart",
-                                "Groceries": "shopping-cart",
-                                "Hypermarket": "shopping-cart",
-                                "Pharmacy": "beaker",
-                                "Medicines": "beaker",
-                                "Healthcare": "heart",
-                                "Medical Supply": "beaker",
-                                "Health Products": "heart",
-                                "Medical Equipment": "beaker",
-                                "OTC Drugs": "beaker",
-                                "Generic Medicines": "beaker",
-                                "Affordable Medicines": "beaker",
-                                "Jewellery": "gem",
-                                "Gold": "gem",
-                                "Silver": "gem",
-                                "Ornaments": "gem",
-                                "Fashion Jewellery": "gem",
-                                "Custom Jewellery": "gem",
-                                "Furniture": "sofa",
-                                "Home Furnishings": "sofa",
-                                "Home Decor": "home",
-                                "Mattresses": "sofa",
-                                "Sofas": "sofa",
-                                "Bedroom": "home",
-                                "Bedroom Furniture": "sofa",
-                                "Furniture Wholesaler": "sofa",
-                                "Furniture Maker": "sofa",
-                                "Furniture Manufacturer": "sofa",
-                                "Hardware": "wrench",
-                                "Tools": "wrench",
-                                "Building Materials": "truck",
-                                "Building Supplies": "truck",
-                                "Electrical": "bolt",
-                                "Electrical Supplies": "bolt",
-                                "Industrial Equipment": "cog",
-                                "Paints": "paintbrush",
-                                "Sanitaryware": "droplet",
-                                "Bathroom Fittings": "droplet",
-                                "Glass \u0026 Mirror": "sofa",
-                                "Aluminium Fabrication": "wrench",
-                                "Electronics": "cpu",
-                                "Home Appliances": "smartphone",
-                                "Eyewear": "glasses",
-                                "Eye Care": "glasses",
-                                "Optician": "glasses",
-                                "Optometrist": "glasses",
-                                "Contact Lenses": "glasses",
-                                "Sunglasses": "glasses",
-                                "Stationery": "book-open",
-                                "Books": "book-open",
-                                "Study Materials": "book-open",
-                                "Paper Products": "book-open",
-                                "Office Supplies": "book-open",
-                                "Gift Shop": "gift",
-                                "Textiles": "palette",
-                                "Clothing": "shirt",
-                                "Fashion": "shirt",
-                                "Readymade Garments": "shirt",
-                                "Dress Materials": "palette",
-                                "Dress Store": "shirt",
-                                "Accessories": "tag",
-                                "Women's Clothing": "shirt",
-                                "Men's Clothing": "shirt",
-                                "Kids Clothing": "baby",
-                                "Boutique": "shirt",
-                                "Designer Clothing": "shirt",
-                                "Wedding Wear": "shirt",
-                                "Ayurveda": "leaf",
-                                "Herbal Medicine": "leaf",
-                                "Organic": "leaf",
-                                "Wellness": "heart",
-                                "Sportswear": "flame",
-                                "Baby Store": "baby",
-                                "Homeware": "home",
-                                "Household": "home",
-                                "Home Interiors": "home",
-                                "Interiors": "home",
-                                "Utilities": "home",
-                                "Shopping": "shopping-bag",
-                                "General Store": "store",
-                                "Co-operative Store": "store",
-                                "Fabric Store": "palette"
-                            } %}
-                            {% set storeIcon = "store" %}
-                            {% for cat in store.data.categories %}
-                                {% if categoryIcons[cat] %}
-                                    {% set storeIcon = categoryIcons[cat] %}
-                                {% endif %}
-                            {% endfor %}
-                            <span class="flex justify-center text-gray-400" title="Store">
-                                {% lucide storeIcon, "h-5 w-5" %}
-                            </span>
-
-                            <!-- Navigate to Maps -->
-                            <span class="flex justify-center">
-                                <a href="https://maps.google.com/?q={{ store.data.title | replace(' ', '+') }}+Piravom" target="_blank" rel="noopener noreferrer"
-                                   class="rounded-lg p-1.5 text-gray-400 transition hover:bg-gray-100 hover:text-gray-700"
-                                   title="Open in Maps">
-                                    {% lucide "map-pin", "h-5 w-5" %}
-                                </a>
-                            </span>
-                        </div>
-                    </div>
-                    {% endfor %}
-                </div>
-            </section>
-            {% endfor %}
-
-            <!-- Empty State -->
-            {% if not sectionKeys.length %}
-            <div class="text-center">
-                <div class="rounded-3xl border border-gray-200 bg-white p-12 shadow-sm">
-                    <span class="text-4xl">🏪</span>
-                    <h2 class="mt-4 text-xl font-bold text-gray-900">No stores listed yet</h2>
-                    <p class="mt-2 text-sm text-gray-500">Check back soon for store listings in Piravom.</p>
-                </div>
+              </div>
+              {% endif %} {% if store.data.description %}
+              <p class="text-sm leading-relaxed text-gray-600">{{ store.data.description }}</p>
+              {% endif %}
             </div>
-            {% endif %}
 
+            <!-- Info Row (attractions style) -->
+            <div class="grid grid-cols-3 items-center border-t border-gray-100 pt-4 mt-4 text-sm">
+              <!-- Distance from Bus Stand -->
+              <span
+                class="text-center font-medium text-indigo-600"
+                title="Distance from Piravom Bus Stand"
+              >
+                {{ store.data.distanceFromBusStand or "-" }}
+              </span>
+
+              <!-- Store Icon by category -->
+              {% set categoryIcons = { "Supermarket": "shopping-cart", "Groceries": "shopping-cart",
+              "Hypermarket": "shopping-cart", "Pharmacy": "beaker", "Medicines": "beaker",
+              "Healthcare": "heart", "Medical Supply": "beaker", "Health Products": "heart",
+              "Medical Equipment": "beaker", "OTC Drugs": "beaker", "Generic Medicines": "beaker",
+              "Affordable Medicines": "beaker", "Jewellery": "gem", "Gold": "gem", "Silver": "gem",
+              "Ornaments": "gem", "Fashion Jewellery": "gem", "Custom Jewellery": "gem",
+              "Furniture": "sofa", "Home Furnishings": "sofa", "Home Decor": "home", "Mattresses":
+              "sofa", "Sofas": "sofa", "Bedroom": "home", "Bedroom Furniture": "sofa", "Furniture
+              Wholesaler": "sofa", "Furniture Maker": "sofa", "Furniture Manufacturer": "sofa",
+              "Hardware": "wrench", "Tools": "wrench", "Building Materials": "truck", "Building
+              Supplies": "truck", "Electrical": "bolt", "Electrical Supplies": "bolt", "Industrial
+              Equipment": "cog", "Paints": "paintbrush", "Sanitaryware": "droplet", "Bathroom
+              Fittings": "droplet", "Glass \u0026 Mirror": "sofa", "Aluminium Fabrication":
+              "wrench", "Electronics": "cpu", "Home Appliances": "smartphone", "Eyewear": "glasses",
+              "Eye Care": "glasses", "Optician": "glasses", "Optometrist": "glasses", "Contact
+              Lenses": "glasses", "Sunglasses": "glasses", "Stationery": "book-open", "Books":
+              "book-open", "Study Materials": "book-open", "Paper Products": "book-open", "Office
+              Supplies": "book-open", "Gift Shop": "gift", "Textiles": "palette", "Clothing":
+              "shirt", "Fashion": "shirt", "Readymade Garments": "shirt", "Dress Materials":
+              "palette", "Dress Store": "shirt", "Accessories": "tag", "Women's Clothing": "shirt",
+              "Men's Clothing": "shirt", "Kids Clothing": "baby", "Boutique": "shirt", "Designer
+              Clothing": "shirt", "Wedding Wear": "shirt", "Ayurveda": "leaf", "Herbal Medicine":
+              "leaf", "Organic": "leaf", "Wellness": "heart", "Sportswear": "flame", "Baby Store":
+              "baby", "Homeware": "home", "Household": "home", "Home Interiors": "home",
+              "Interiors": "home", "Utilities": "home", "Shopping": "shopping-bag", "General Store":
+              "store", "Co-operative Store": "store", "Fabric Store": "palette" } %} {% set
+              storeIcon = "store" %} {% for cat in store.data.categories %} {% if categoryIcons[cat]
+              %} {% set storeIcon = categoryIcons[cat] %} {% endif %} {% endfor %}
+              <span class="flex justify-center text-gray-400" title="Store">
+                {% lucide storeIcon, "h-5 w-5" %}
+              </span>
+
+              <!-- Navigate to Maps -->
+              <span class="flex justify-center">
+                <a
+                  href="https://maps.google.com/?q={{ store.data.title | replace(' ', '+') }}+Piravom"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="rounded-lg p-1.5 text-gray-400 transition hover:bg-gray-100 hover:text-gray-700"
+                  title="Open in Maps"
+                >
+                  {% lucide "map-pin", "h-5 w-5" %}
+                </a>
+              </span>
+            </div>
+          </div>
+          {% endfor %}
         </div>
-    </div>
+      </section>
+      {% endfor %}
 
+      <!-- Empty State -->
+      {% if not sectionKeys.length %}
+      <div class="text-center">
+        <div class="rounded-3xl border border-gray-200 bg-white p-12 shadow-sm">
+          <span class="text-4xl">🏪</span>
+          <h2 class="mt-4 text-xl font-bold text-gray-900">No stores listed yet</h2>
+          <p class="mt-2 text-sm text-gray-500">Check back soon for store listings in Piravom.</p>
+        </div>
+      </div>
+      {% endif %}
+    </div>
+  </div>
 </main>

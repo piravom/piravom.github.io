@@ -5,429 +5,461 @@ description: Find restaurants, attractions, stores, and more near Piravom
 ---
 
 <main>
-    <!-- Jumbo Hero -->
-    <section class="hero-jumbo mx-auto mt-8 max-w-7xl flex items-center justify-center overflow-hidden rounded-[2.5rem] border border-gray-200 bg-white shadow-sm">
-      <div class="mx-auto max-w-4xl px-6 py-16 sm:px-8 sm:py-20 text-center">
-        <h1 class="text-4xl font-bold text-gray-900 sm:text-5xl">
-          Welcome to&nbsp;<span class="text-indigo-600">{{ site.name }}</span>
-        </h1>
-        <p class="mx-auto mt-4 max-w-2xl text-base text-gray-700 sm:text-lg/relaxed">
-          {{ description }}
-        </p>
-        <div class="mt-10 flex items-center justify-center">
-          <button onclick="document.querySelector('.hero-jumbo').nextElementSibling.scrollIntoView({ behavior: 'smooth' })" class="rounded-full bg-indigo-600 px-10 py-3.5 text-sm font-semibold text-white shadow-sm transition hover:bg-indigo-700 hover:shadow-md cursor-pointer">
-            Explore
-          </button>
-        </div>
+  <!-- Jumbo Hero -->
+  <section
+    class="hero-jumbo mx-auto mt-8 max-w-7xl flex items-center justify-center overflow-hidden rounded-[2.5rem] border border-gray-200 bg-white shadow-sm"
+  >
+    <div class="mx-auto max-w-4xl px-6 py-16 sm:px-8 sm:py-20 text-center">
+      <h1 class="text-4xl font-bold text-gray-900 sm:text-5xl">
+        Welcome to&nbsp;<span class="text-indigo-600">{{ site.name }}</span>
+      </h1>
+      <p class="mx-auto mt-4 max-w-2xl text-base text-gray-700 sm:text-lg/relaxed">
+        {{ description }}
+      </p>
+      <div class="mt-10 flex items-center justify-center">
+        <button
+          onclick="
+            document
+              .querySelector('.hero-jumbo')
+              .nextElementSibling.scrollIntoView({ behavior: 'smooth' })
+          "
+          class="rounded-full bg-indigo-600 px-10 py-3.5 text-sm font-semibold text-white shadow-sm transition hover:bg-indigo-700 hover:shadow-md cursor-pointer"
+        >
+          Explore
+        </button>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <div class="mx-auto max-w-7xl px-4 py-8">
-
+  <div class="mx-auto max-w-7xl px-4 py-8">
     <!-- Status Cards -->
     <section class="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+      <a
+        href="/stores/"
+        class="rounded-3xl border border-gray-200 bg-white p-6 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
+      >
+        <div class="flex items-start gap-4">
+          {% lucide "store", "w-10 h-10 text-indigo-500 shrink-0" %}
+          <div>
+            <h3 class="text-2xl font-bold text-indigo-600">{{ collections.stores.length }}</h3>
+            <p class="mt-1 text-sm text-gray-500">Shops &amp; businesses in town</p>
+          </div>
+        </div>
+      </a>
 
-        <a href="/stores/" class="rounded-3xl border border-gray-200 bg-white p-6 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md">
-            <div class="flex items-start gap-4">
-                {% lucide "store", "w-10 h-10 text-indigo-500 shrink-0" %}
-                <div>
-                    <h3 class="text-2xl font-bold text-indigo-600">{{ collections.stores.length }}</h3>
-                    <p class="mt-1 text-sm text-gray-500">Shops &amp; businesses in town</p>
-                </div>
-            </div>
-        </a>
+      <a
+        href="/attractions/"
+        class="rounded-3xl border border-gray-200 bg-white p-6 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
+      >
+        <div class="flex items-start gap-4">
+          {% lucide "mountain", "w-10 h-10 text-green-500 shrink-0" %}
+          <div>
+            <h3 class="text-2xl font-bold text-green-600">{{ collections.attractions.length }}</h3>
+            <p class="mt-1 text-sm text-gray-500">Places to visit nearby</p>
+          </div>
+        </div>
+      </a>
 
-        <a href="/attractions/" class="rounded-3xl border border-gray-200 bg-white p-6 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md">
-            <div class="flex items-start gap-4">
-                {% lucide "mountain", "w-10 h-10 text-green-500 shrink-0" %}
-                <div>
-                    <h3 class="text-2xl font-bold text-green-600">{{ collections.attractions.length }}</h3>
-                    <p class="mt-1 text-sm text-gray-500">Places to visit nearby</p>
-                </div>
-            </div>
-        </a>
+      <a
+        href="/restaurants/"
+        class="rounded-3xl border border-gray-200 bg-white p-6 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
+      >
+        <div class="flex items-start gap-4">
+          {% lucide "utensils", "w-10 h-10 text-orange-500 shrink-0" %}
+          <div>
+            <h3 class="text-2xl font-bold text-orange-600">{{ collections.restaurants.length }}</h3>
+            <p class="mt-1 text-sm text-gray-500">Dining &amp; food spots</p>
+          </div>
+        </div>
+      </a>
 
-        <a href="/restaurants/" class="rounded-3xl border border-gray-200 bg-white p-6 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md">
-            <div class="flex items-start gap-4">
-                {% lucide "utensils", "w-10 h-10 text-orange-500 shrink-0" %}
-                <div>
-                    <h3 class="text-2xl font-bold text-orange-600">{{ collections.restaurants.length }}</h3>
-                    <p class="mt-1 text-sm text-gray-500">Dining &amp; food spots</p>
-                </div>
-            </div>
-        </a>
-
-        <a href="/services/" class="rounded-3xl border border-gray-200 bg-white p-6 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md">
-            <div class="flex items-start gap-4">
-                {% lucide "wrench", "w-10 h-10 text-blue-500 shrink-0" %}
-                <div>
-                    <h3 class="text-2xl font-bold text-blue-600">{{ collections.services.length }}</h3>
-                    <p class="mt-1 text-sm text-gray-500">Local service providers</p>
-                </div>
-            </div>
-        </a>
+      <a
+        href="/services/"
+        class="rounded-3xl border border-gray-200 bg-white p-6 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
+      >
+        <div class="flex items-start gap-4">
+          {% lucide "wrench", "w-10 h-10 text-blue-500 shrink-0" %}
+          <div>
+            <h3 class="text-2xl font-bold text-blue-600">{{ collections.services.length }}</h3>
+            <p class="mt-1 text-sm text-gray-500">Local service providers</p>
+          </div>
+        </div>
+      </a>
     </section>
 
     <!-- Attractions -->
     <section class="mt-8">
-        <div class="mb-6 flex items-center justify-between">
-            <h2 class="text-2xl font-bold">Attractions</h2>
-            <a href="/attractions/" class="text-sm text-gray-500 hover:text-black">
-                View all
-            </a>
+      <div class="mb-6 flex items-center justify-between">
+        <h2 class="text-2xl font-bold">Attractions</h2>
+        <a href="/attractions/" class="text-sm text-gray-500 hover:text-black"> View all </a>
+      </div>
+
+      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        {% set shownAttractions = collections.attractions | withImage %} {% for attraction in
+        shownAttractions.slice(0, 4) %}
+        <div
+          class="rounded-3xl border border-gray-200 bg-white shadow-sm flex flex-col overflow-hidden group"
+        >
+          {% if attraction.data.image %}
+          <div class="aspect-video w-full bg-gray-100 overflow-hidden">
+            <img
+              src="{{attraction.url}}{{ attraction.data.image }}"
+              alt="{{ attraction.data.title }}"
+              class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+            />
+          </div>
+          {% endif %}
+
+          <div class="p-6 flex-grow flex flex-col justify-between">
+            <div>
+              <h3 class="text-xl font-bold mb-2">{{ attraction.data.title }}</h3>
+              <p class="text-gray-600 mb-6 line-clamp-2 text-sm">
+                {{ attraction.data.description }}
+              </p>
+            </div>
+
+            <!-- Info Row -->
+            <div class="grid grid-cols-3 items-center border-t border-gray-100 pt-4 mt-auto">
+              <!-- Column 1: Distance -->
+              <div
+                class="text-sm font-medium text-indigo-600 cursor-help text-center"
+                title="Distance from Piravom Town"
+              >
+                {{ attraction.data.distanceFromBusStand or "-" }}
+              </div>
+
+              <!-- Column 2: Category Icon -->
+              <div class="flex justify-center text-gray-400">
+                {% if "Nature" in attraction.data.categories or "Viewpoint" in
+                attraction.data.categories %} {% lucide "tree-pine", "h-6 w-6" %} {% elif "Park" in
+                attraction.data.categories %} {% lucide "sun", "h-6 w-6" %} {% elif "Historical" in
+                attraction.data.categories or "Religious" in attraction.data.categories %} {% lucide
+                "landmark", "h-6 w-6" %} {% endif %}
+              </div>
+
+              <!-- Column 3: Navigation -->
+              <div class="flex justify-center">
+                <a
+                  href="https://www.google.com/maps?q={{ attraction.data.title | replace(' ', '+') }}+Piravom"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="rounded-lg p-1.5 text-gray-400 transition hover:bg-gray-100 hover:text-gray-700"
+                  title="Open in Maps"
+                >
+                  {% lucide "map-pin", "h-5 w-5" %}
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
-
-        <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {% set shownAttractions = collections.attractions | withImage %}
-            {% for attraction in shownAttractions.slice(0, 4) %}
-                <div class="rounded-3xl border border-gray-200 bg-white shadow-sm flex flex-col overflow-hidden group">
-                    {% if attraction.data.image %}
-                    <div class="aspect-video w-full bg-gray-100 overflow-hidden">
-                        <img src="{{attraction.url}}{{ attraction.data.image }}" alt="{{ attraction.data.title }}" class="h-full w-full object-cover transition duration-500 group-hover:scale-105">
-                    </div>
-                    {% endif %}
-
-                    <div class="p-6 flex-grow flex flex-col justify-between">
-                        <div>
-                            <h3 class="text-xl font-bold mb-2">{{ attraction.data.title }}</h3>
-                            <p class="text-gray-600 mb-6 line-clamp-2 text-sm">{{ attraction.data.description }}</p>
-                        </div>
-
-                        <!-- Info Row -->
-                        <div class="grid grid-cols-3 items-center border-t border-gray-100 pt-4 mt-auto">
-                            <!-- Column 1: Distance -->
-                            <div class="text-sm font-medium text-indigo-600 cursor-help text-center" title="Distance from Piravom Town">
-                                {{ attraction.data.distanceFromBusStand or "-" }}
-                            </div>
-
-                            <!-- Column 2: Category Icon -->
-                            <div class="flex justify-center text-gray-400">
-                                {% if "Nature" in attraction.data.categories or "Viewpoint" in attraction.data.categories %}
-                                {% lucide "tree-pine", "h-6 w-6" %}
-                                {% elif "Park" in attraction.data.categories %}
-                                {% lucide "sun", "h-6 w-6" %}
-                                {% elif "Historical" in attraction.data.categories or "Religious" in attraction.data.categories %}
-                                {% lucide "landmark", "h-6 w-6" %}
-                                {% endif %}
-                            </div>
-
-                            <!-- Column 3: Navigation -->
-                            <div class="flex justify-center">
-                                <a href="https://www.google.com/maps?q={{ attraction.data.title | replace(' ', '+') }}+Piravom" target="_blank" rel="noopener noreferrer" class="rounded-lg p-1.5 text-gray-400 transition hover:bg-gray-100 hover:text-gray-700" title="Open in Maps">
-                                    {% lucide "map-pin", "h-5 w-5" %}
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            {% endfor %}
-        </div>
+        {% endfor %}
+      </div>
     </section>
 
     <!-- Main Grid -->
     <section class="mt-8 grid gap-6 xl:grid-cols-3">
-
-        <!-- Updates -->
-        <div class="rounded-3xl border border-gray-200 bg-white p-6 shadow-sm xl:col-span-2">
-
-            <div class="mb-6 flex items-center justify-between">
-                <h2 class="text-2xl font-bold">Latest Updates</h2>
-                <a href="/events/" class="text-sm text-gray-500 hover:text-black transition">
-                    View all
-                </a>
-            </div>
-
-            <div class="-mx-3 space-y-0">
-
-                <div class="flex items-start justify-between border-b border-gray-100 px-3 py-4 transition hover:bg-gray-50 first:rounded-t-lg last:rounded-b-lg last:border-b-0">
-                    <div class="flex items-center gap-4">
-                        <span class="rounded-full bg-blue-100 px-3 py-1 text-xs font-semibold leading-none text-blue-700">
-                            BUS
-                        </span>
-
-                        <p>KSRTC to add more morning trips to Kochi tomorrow</p>
-                    </div>
-
-                    <span class="shrink-0 text-sm text-gray-400">10m ago</span>
-                </div>
-
-                <div class="flex items-start justify-between border-b border-gray-100 px-3 py-4 transition hover:bg-gray-50 first:rounded-t-lg last:rounded-b-lg last:border-b-0">
-                    <div class="flex items-center gap-4">
-                        <span class="rounded-full bg-green-100 px-3 py-1 text-xs font-semibold leading-none text-green-700">
-                            NEWS
-                        </span>
-
-                        <p>Water supply interruption in West Hill area on May 21</p>
-                    </div>
-
-                    <span class="shrink-0 text-sm text-gray-400">1h ago</span>
-                </div>
-
-                <div class="flex items-start justify-between border-b border-gray-100 px-3 py-4 transition hover:bg-gray-50 first:rounded-t-lg last:rounded-b-lg last:border-b-0">
-                    <div class="flex items-center gap-4">
-                        <span class="rounded-full bg-orange-100 px-3 py-1 text-xs font-semibold leading-none text-orange-700">
-                            OFFER
-                        </span>
-
-                        <p>20% off at Hotel Aryas this week</p>
-                    </div>
-
-                    <span class="shrink-0 text-sm text-gray-400">3h ago</span>
-                </div>
-
-            </div>
+      <!-- Updates -->
+      <div class="rounded-3xl border border-gray-200 bg-white p-6 shadow-sm xl:col-span-2">
+        <div class="mb-6 flex items-center justify-between">
+          <h2 class="text-2xl font-bold">Latest Updates</h2>
+          <a href="/events/" class="text-sm text-gray-500 hover:text-black transition">
+            View all
+          </a>
         </div>
 
-        <!-- Emergency -->
-        <div class="rounded-3xl border border-gray-200 bg-white p-6 shadow-sm">
+        <div class="-mx-3 space-y-0">
+          <div
+            class="flex items-start justify-between border-b border-gray-100 px-3 py-4 transition hover:bg-gray-50 first:rounded-t-lg last:rounded-b-lg last:border-b-0"
+          >
+            <div class="flex items-center gap-4">
+              <span
+                class="rounded-full bg-blue-100 px-3 py-1 text-xs font-semibold leading-none text-blue-700"
+              >
+                BUS
+              </span>
 
-            <div class="mb-6 flex items-center justify-between">
-                <h2 class="text-2xl font-bold">Emergency</h2>
-
-                <a href="/phonebook/" class="text-sm text-gray-500 hover:text-black transition">
-                    View all
-                </a>
+              <p>KSRTC to add more morning trips to Kochi tomorrow</p>
             </div>
 
-            <div class="space-y-4">
+            <span class="shrink-0 text-sm text-gray-400">10m ago</span>
+          </div>
 
-                <div class="flex items-center justify-between border-b border-gray-100 pb-4">
-                    <span>Police</span>
-                    <span class="font-semibold">100</span>
-                </div>
+          <div
+            class="flex items-start justify-between border-b border-gray-100 px-3 py-4 transition hover:bg-gray-50 first:rounded-t-lg last:rounded-b-lg last:border-b-0"
+          >
+            <div class="flex items-center gap-4">
+              <span
+                class="rounded-full bg-green-100 px-3 py-1 text-xs font-semibold leading-none text-green-700"
+              >
+                NEWS
+              </span>
 
-                <div class="flex items-center justify-between border-b border-gray-100 pb-4">
-                    <span>Ambulance</span>
-                    <span class="font-semibold">108</span>
-                </div>
-
-                <div class="flex items-center justify-between border-b border-gray-100 pb-4">
-                    <span>Fire & Rescue</span>
-                    <span class="font-semibold">101</span>
-                </div>
-
-                <div class="flex items-center justify-between">
-                    <span>Women Helpline</span>
-                    <span class="font-semibold">1091</span>
-                </div>
-
+              <p>Water supply interruption in West Hill area on May 21</p>
             </div>
+
+            <span class="shrink-0 text-sm text-gray-400">1h ago</span>
+          </div>
+
+          <div
+            class="flex items-start justify-between border-b border-gray-100 px-3 py-4 transition hover:bg-gray-50 first:rounded-t-lg last:rounded-b-lg last:border-b-0"
+          >
+            <div class="flex items-center gap-4">
+              <span
+                class="rounded-full bg-orange-100 px-3 py-1 text-xs font-semibold leading-none text-orange-700"
+              >
+                OFFER
+              </span>
+
+              <p>20% off at Hotel Aryas this week</p>
+            </div>
+
+            <span class="shrink-0 text-sm text-gray-400">3h ago</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Emergency -->
+      <div class="rounded-3xl border border-gray-200 bg-white p-6 shadow-sm">
+        <div class="mb-6 flex items-center justify-between">
+          <h2 class="text-2xl font-bold">Emergency</h2>
+
+          <a href="/phonebook/" class="text-sm text-gray-500 hover:text-black transition">
+            View all
+          </a>
         </div>
 
+        <div class="space-y-4">
+          <div class="flex items-center justify-between border-b border-gray-100 pb-4">
+            <span>Police</span>
+            <span class="font-semibold">100</span>
+          </div>
+
+          <div class="flex items-center justify-between border-b border-gray-100 pb-4">
+            <span>Ambulance</span>
+            <span class="font-semibold">108</span>
+          </div>
+
+          <div class="flex items-center justify-between border-b border-gray-100 pb-4">
+            <span>Fire & Rescue</span>
+            <span class="font-semibold">101</span>
+          </div>
+
+          <div class="flex items-center justify-between">
+            <span>Women Helpline</span>
+            <span class="font-semibold">1091</span>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Lower Grid -->
     <section class="mt-8 grid gap-6 lg:grid-cols-2">
+      <!-- Bus Timings -->
+      <div class="rounded-3xl border border-gray-200 bg-white p-6 shadow-sm">
+        <div class="mb-6 flex items-center justify-between">
+          <h2 class="text-2xl font-bold">Next Bus Timings</h2>
 
-        <!-- Bus Timings -->
-        <div class="rounded-3xl border border-gray-200 bg-white p-6 shadow-sm">
-
-            <div class="mb-6 flex items-center justify-between">
-                <h2 class="text-2xl font-bold">Next Bus Timings</h2>
-
-                <a href="/bus-timing/" class="text-sm text-gray-500 hover:text-black transition">
-                    View all
-                </a>
-            </div>
-
-            <div class="overflow-x-auto">
-
-                <table class="w-full text-left">
-
-                    <thead class="border-b border-gray-100 text-sm text-gray-500">
-                        <tr>
-                            <th class="pb-3">Time</th>
-                            <th class="pb-3">From</th>
-                            <th class="pb-3">To</th>
-                        </tr>
-                    </thead>
-
-                    <tbody class="divide-y divide-gray-100 text-sm">
-
-                        {% for bus in buses.slice(0, 3) %}
-                        <tr>
-                            <td class="py-4 font-mono">{{ bus.time }}</td>
-                            <td>{{ bus.from }}</td>
-                            <td>{{ bus.to }}</td>
-                        </tr>
-                        {% endfor %}
-
-                    </tbody>
-
-                </table>
-            </div>
+          <a href="/bus-timing/" class="text-sm text-gray-500 hover:text-black transition">
+            View all
+          </a>
         </div>
 
-        <!-- Restaurants -->
-        <div class="rounded-3xl border border-gray-200 bg-white p-6">
+        <div class="overflow-x-auto">
+          <table class="w-full text-left">
+            <thead class="border-b border-gray-100 text-sm text-gray-500">
+              <tr>
+                <th class="pb-3">Time</th>
+                <th class="pb-3">From</th>
+                <th class="pb-3">To</th>
+              </tr>
+            </thead>
 
-            <div class="mb-6 flex items-center justify-between">
-                <h2 class="text-2xl font-bold">Popular Restaurants</h2>
+            <tbody class="divide-y divide-gray-100 text-sm">
+              {% for bus in buses.slice(0, 3) %}
+              <tr>
+                <td class="py-4 font-mono">{{ bus.time }}</td>
+                <td>{{ bus.from }}</td>
+                <td>{{ bus.to }}</td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      </div>
 
-                <a href="/restaurants/" class="text-sm text-gray-500 hover:text-black">
-                    View all
-                </a>
-            </div>
+      <!-- Restaurants -->
+      <div class="rounded-3xl border border-gray-200 bg-white p-6">
+        <div class="mb-6 flex items-center justify-between">
+          <h2 class="text-2xl font-bold">Popular Restaurants</h2>
 
-            <div class="space-y-4">
+          <a href="/restaurants/" class="text-sm text-gray-500 hover:text-black"> View all </a>
+        </div>
 
-                {% for restaurant in collections.restaurants.slice(0, 3) %}
-                <a href="{{ restaurant.url }}" class="flex items-center justify-between rounded-2xl border border-gray-100 p-4 transition hover:bg-gray-50">
-                    <div>
-                        <h3 class="font-semibold">{{ restaurant.data.title }}</h3>
-                        {% set cuisineList = restaurant.data.cuisine | split %}
-                        <div class="flex flex-wrap gap-1 mt-0.5">
-                            {% for c in cuisineList %}
-                            <span class="rounded-full bg-indigo-50 px-2 py-0.5 text-xs font-medium text-indigo-700">{{ c }}</span>
-                            {% endfor %}
-                        </div>
-                    </div>
-
-                    <span
-                        class="restaurant-status text-sm font-medium text-gray-500"
-                        data-opening-hours='{{ restaurant.data.restaurant.openingHours | json | safe }}'
-                    >
-                        Checking...
-                    </span>
-                </a>
+        <div class="space-y-4">
+          {% for restaurant in collections.restaurants.slice(0, 3) %}
+          <a
+            href="{{ restaurant.url }}"
+            class="flex items-center justify-between rounded-2xl border border-gray-100 p-4 transition hover:bg-gray-50"
+          >
+            <div>
+              <h3 class="font-semibold">{{ restaurant.data.title }}</h3>
+              {% set cuisineList = restaurant.data.cuisine | split %}
+              <div class="flex flex-wrap gap-1 mt-0.5">
+                {% for c in cuisineList %}
+                <span
+                  class="rounded-full bg-indigo-50 px-2 py-0.5 text-xs font-medium text-indigo-700"
+                  >{{ c }}</span
+                >
                 {% endfor %}
-
+              </div>
             </div>
-        </div>
 
+            <span
+              class="restaurant-status text-sm font-medium text-gray-500"
+              data-opening-hours="{{ restaurant.data.restaurant.openingHours | json | safe }}"
+            >
+              Checking...
+            </span>
+          </a>
+          {% endfor %}
+        </div>
+      </div>
     </section>
 
     <!-- Explore -->
     <section class="mt-8 rounded-3xl border border-gray-200 bg-white p-6">
+      <div class="mb-6 flex items-center justify-between">
+        <h2 class="text-2xl font-bold">Explore Your Town</h2>
 
-        <div class="mb-6 flex items-center justify-between">
-            <h2 class="text-2xl font-bold">Explore Your Town</h2>
+        <a href="/attractions/" class="text-sm text-gray-500 hover:text-black transition">
+          View all
+        </a>
+      </div>
 
-            <a href="/attractions/" class="text-sm text-gray-500 hover:text-black transition">
-                View all
-            </a>
-        </div>
+      <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <a
+          href="/attractions/"
+          class="rounded-2xl border border-gray-100 p-6 transition hover:bg-gray-50 group"
+        >
+          <h3 class="font-semibold group-hover:text-indigo-600">Attractions</h3>
+          <p class="mt-2 text-sm text-gray-500">Tourist spots & places</p>
+        </a>
 
-        <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <a
+          href="/phonebook/"
+          class="rounded-2xl border border-gray-100 p-6 transition hover:bg-gray-50 group"
+        >
+          <h3 class="font-semibold group-hover:text-indigo-600">Hospitals</h3>
+          <p class="mt-2 text-sm text-gray-500">Hospitals & Clinics</p>
+        </a>
 
-            <a href="/attractions/" class="rounded-2xl border border-gray-100 p-6 transition hover:bg-gray-50 group">
-                <h3 class="font-semibold group-hover:text-indigo-600">Attractions</h3>
-                <p class="mt-2 text-sm text-gray-500">
-                    Tourist spots & places
-                </p>
-            </a>
+        <a
+          href="/about/"
+          class="rounded-2xl border border-gray-100 p-6 transition hover:bg-gray-50 group"
+        >
+          <h3 class="font-semibold group-hover:text-indigo-600">Schools</h3>
+          <p class="mt-2 text-sm text-gray-500">Schools & Colleges</p>
+        </a>
 
-            <a href="/phonebook/" class="rounded-2xl border border-gray-100 p-6 transition hover:bg-gray-50 group">
-                <h3 class="font-semibold group-hover:text-indigo-600">Hospitals</h3>
-                <p class="mt-2 text-sm text-gray-500">
-                    Hospitals & Clinics
-                </p>
-            </a>
-
-            <a href="/about/" class="rounded-2xl border border-gray-100 p-6 transition hover:bg-gray-50 group">
-                <h3 class="font-semibold group-hover:text-indigo-600">Schools</h3>
-                <p class="mt-2 text-sm text-gray-500">
-                    Schools & Colleges
-                </p>
-            </a>
-
-            <a href="/house-of-workships/" class="rounded-2xl border border-gray-100 p-6 transition hover:bg-gray-50 group">
-                <h3 class="font-semibold group-hover:text-indigo-600">Houses of Worship</h3>
-                <p class="mt-2 text-sm text-gray-500">
-                    Temples and Churches
-                </p>
-            </a>
-
-        </div>
+        <a
+          href="/house-of-workships/"
+          class="rounded-2xl border border-gray-100 p-6 transition hover:bg-gray-50 group"
+        >
+          <h3 class="font-semibold group-hover:text-indigo-600">Houses of Worship</h3>
+          <p class="mt-2 text-sm text-gray-500">Temples and Churches</p>
+        </a>
+      </div>
     </section>
-
-</div><!-- /constrained content -->
+  </div>
+  <!-- /constrained content -->
 </main>
 
 <script>
-    (function () {
-        const dayNames = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"];
-        const openClass = "text-green-600";
-        const closeClass = "text-red-600";
+  (function () {
+    const dayNames = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'];
+    const openClass = 'text-green-600';
+    const closeClass = 'text-red-600';
 
-        function timeToMinutes(time) {
-            if (!time || !time.includes(":")) {
-                return null;
-            }
+    function timeToMinutes(time) {
+      if (!time || !time.includes(':')) {
+        return null;
+      }
 
-            const [hours, minutes] = time.split(":").map(Number);
+      const [hours, minutes] = time.split(':').map(Number);
 
-            if (Number.isNaN(hours) || Number.isNaN(minutes)) {
-                return null;
-            }
+      if (Number.isNaN(hours) || Number.isNaN(minutes)) {
+        return null;
+      }
 
-            return hours * 60 + minutes;
-        }
+      return hours * 60 + minutes;
+    }
 
-        function isOpenToday(hours, currentMinutes) {
-            if (!hours || hours.closed) {
-                return false;
-            }
+    function isOpenToday(hours, currentMinutes) {
+      if (!hours || hours.closed) {
+        return false;
+      }
 
-            const openMinutes = timeToMinutes(hours.open);
-            const closeMinutes = timeToMinutes(hours.close);
+      const openMinutes = timeToMinutes(hours.open);
+      const closeMinutes = timeToMinutes(hours.close);
 
-            if (openMinutes === null || closeMinutes === null) {
-                return false;
-            }
+      if (openMinutes === null || closeMinutes === null) {
+        return false;
+      }
 
-            if (openMinutes === closeMinutes) {
-                return true;
-            }
+      if (openMinutes === closeMinutes) {
+        return true;
+      }
 
-            if (closeMinutes > openMinutes) {
-                return currentMinutes >= openMinutes && currentMinutes < closeMinutes;
-            }
+      if (closeMinutes > openMinutes) {
+        return currentMinutes >= openMinutes && currentMinutes < closeMinutes;
+      }
 
-            return currentMinutes >= openMinutes;
-        }
+      return currentMinutes >= openMinutes;
+    }
 
-        function isRestaurantOpen(openingHours, now) {
-            if (!openingHours) {
-                return false;
-            }
+    function isRestaurantOpen(openingHours, now) {
+      if (!openingHours) {
+        return false;
+      }
 
-            const todayIndex = now.getDay();
-            const currentMinutes = now.getHours() * 60 + now.getMinutes();
-            const today = openingHours[dayNames[todayIndex]];
-            const yesterday = openingHours[dayNames[(todayIndex + 6) % 7]];
+      const todayIndex = now.getDay();
+      const currentMinutes = now.getHours() * 60 + now.getMinutes();
+      const today = openingHours[dayNames[todayIndex]];
+      const yesterday = openingHours[dayNames[(todayIndex + 6) % 7]];
 
-            if (isOpenToday(today, currentMinutes)) {
-                return true;
-            }
+      if (isOpenToday(today, currentMinutes)) {
+        return true;
+      }
 
-            if (!yesterday || yesterday.closed) {
-                return false;
-            }
+      if (!yesterday || yesterday.closed) {
+        return false;
+      }
 
-            const yesterdayOpen = timeToMinutes(yesterday.open);
-            const yesterdayClose = timeToMinutes(yesterday.close);
+      const yesterdayOpen = timeToMinutes(yesterday.open);
+      const yesterdayClose = timeToMinutes(yesterday.close);
 
-            return yesterdayOpen !== null
-                && yesterdayClose !== null
-                && yesterdayClose <= yesterdayOpen
-                && currentMinutes < yesterdayClose;
-        }
+      return (
+        yesterdayOpen !== null &&
+        yesterdayClose !== null &&
+        yesterdayClose <= yesterdayOpen &&
+        currentMinutes < yesterdayClose
+      );
+    }
 
-        document.querySelectorAll(".restaurant-status").forEach(function (statusElement) {
-            let openingHours = null;
+    document.querySelectorAll('.restaurant-status').forEach(function (statusElement) {
+      let openingHours = null;
 
-            try {
-                openingHours = JSON.parse(statusElement.dataset.openingHours || "null");
-            } catch (error) {
-                openingHours = null;
-            }
+      try {
+        openingHours = JSON.parse(statusElement.dataset.openingHours || 'null');
+      } catch (error) {
+        openingHours = null;
+      }
 
-            const isOpen = isRestaurantOpen(openingHours, new Date());
+      const isOpen = isRestaurantOpen(openingHours, new Date());
 
-            statusElement.textContent = isOpen ? "Open" : "Closed";
-            statusElement.classList.remove("text-gray-500", openClass, closeClass);
-            statusElement.classList.add(isOpen ? openClass : closeClass);
-        });
-    })();
+      statusElement.textContent = isOpen ? 'Open' : 'Closed';
+      statusElement.classList.remove('text-gray-500', openClass, closeClass);
+      statusElement.classList.add(isOpen ? openClass : closeClass);
+    });
+  })();
 </script>

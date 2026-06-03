@@ -3,12 +3,7 @@
     "title": "Pollos food court",
     "description": "A multi-cuisine food court in Piravom serving fast food, Indian, and Chinese dishes. Great for quick bites, family outings, and group dining with varied options.",
     "logo": "https://img3.restaurantguru.com/rb0d-Pollos-food-court-design.jpg",
-    "cuisines": [
-      "Fast Food",
-      "Multi-Cuisine",
-      "Indian",
-      "Chinese"
-    ],
+    "cuisines": ["Fast Food", "Multi-Cuisine", "Indian", "Chinese"],
     "phone": "+919778217472",
     "instagramUrl": "https://www.instagram.com/explore/tags/pollos-food-court",
     "locationUrl": "https://www.google.com/maps/@9.8746,76.4879,15z"

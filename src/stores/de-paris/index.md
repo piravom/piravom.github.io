@@ -1,8 +1,8 @@
 ---
 title: De Paris
 section: Textiles & Apparel
-distanceFromBusStand: "350m"
-directionsUrl: "https://www.google.com/maps/dir/Piravom+Private+Bus+Stand/De+Paris,+PIRAVOM"
+distanceFromBusStand: '350m'
+directionsUrl: 'https://www.google.com/maps/dir/Piravom+Private+Bus+Stand/De+Paris,+PIRAVOM'
 categories:
   - Boutique
   - Fashion

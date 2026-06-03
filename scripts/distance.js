@@ -13,19 +13,17 @@
 const GOOGLE_MAPS_API_KEY = process.env.GOOGLE_MAPS_API_KEY;
 
 if (!GOOGLE_MAPS_API_KEY) {
-  console.error("❌ GOOGLE_MAPS_API_KEY environment variable is not set.");
-  console.error("   Set it with: export GOOGLE_MAPS_API_KEY=your_api_key");
+  console.error('❌ GOOGLE_MAPS_API_KEY environment variable is not set.');
+  console.error('   Set it with: export GOOGLE_MAPS_API_KEY=your_api_key');
   process.exit(1);
 }
 
 const args = process.argv.slice(2);
 
 if (args.length < 2) {
-  console.error("❌ Please provide two place names.");
+  console.error('❌ Please provide two place names.');
   console.error('   Usage: node scripts/distance.js "Place 1" "Place 2"');
-  console.error(
-    '   Example: node scripts/distance.js "Piravom, Kerala" "Kochi, Kerala"',
-  );
+  console.error('   Example: node scripts/distance.js "Piravom, Kerala" "Kochi, Kerala"');
   process.exit(1);
 }
 
@@ -37,19 +35,19 @@ async function getRoadDistance(origin, destination) {
   const response = await fetch(url);
   const data = await response.json();
 
-  if (data.status !== "OK") {
+  if (data.status !== 'OK') {
     throw new Error(
-      `API error: ${data.status}${data.error_message ? " - " + data.error_message : ""}`,
+      `API error: ${data.status}${data.error_message ? ' - ' + data.error_message : ''}`,
     );
   }
 
   if (!data.rows?.[0]?.elements?.[0]) {
-    throw new Error("No results returned from the API.");
+    throw new Error('No results returned from the API.');
   }
 
   const element = data.rows[0].elements[0];
 
-  if (element.status !== "OK") {
+  if (element.status !== 'OK') {
     throw new Error(
       `Could not compute distance between "${origin}" and "${destination}" (${element.status}). Try being more specific (e.g. add city/state names).`,
     );
@@ -67,15 +65,15 @@ async function getRoadDistance(origin, destination) {
 
 getRoadDistance(origin, destination)
   .then((result) => {
-    console.log("");
-    console.log("  📍 From:        " + result.origin);
-    console.log("  🎯 To:          " + result.destination);
-    console.log("  ─────────────────────────────");
-    console.log("  📏 Distance:    " + result.distanceText);
-    console.log("  ⏱  Duration:    " + result.durationText);
-    console.log("");
+    console.log('');
+    console.log('  📍 From:        ' + result.origin);
+    console.log('  🎯 To:          ' + result.destination);
+    console.log('  ─────────────────────────────');
+    console.log('  📏 Distance:    ' + result.distanceText);
+    console.log('  ⏱  Duration:    ' + result.durationText);
+    console.log('');
   })
   .catch((err) => {
-    console.error("❌ " + err.message);
+    console.error('❌ ' + err.message);
     process.exit(1);
   });

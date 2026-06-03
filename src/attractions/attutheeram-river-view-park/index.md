@@ -1,6 +1,6 @@
 ---
 title: Attutheeram River View Park
-categories: 
+categories:
   - Park
   - Viewpoint
 description: A serene riverside destination ideal for morning or evening visits.

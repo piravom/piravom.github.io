@@ -1,6 +1,6 @@
 ---
 title: Koorumala
-categories: 
+categories:
   - Viewpoint
 description: The second highest peak in Ernakulam district offering panoramic sunset views and scenic trails.
 image: koorumala.jpg

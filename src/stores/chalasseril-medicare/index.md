@@ -1,8 +1,8 @@
 ---
 title: Chalasseril Medicare
 section: Pharmacy & Medical Stores
-distanceFromBusStand: "750m"
-directionsUrl: "https://www.google.com/maps/dir/Piravom+Private+Bus+Stand/Chalasseril+Medicare,+PIRAVOM"
+distanceFromBusStand: '750m'
+directionsUrl: 'https://www.google.com/maps/dir/Piravom+Private+Bus+Stand/Chalasseril+Medicare,+PIRAVOM'
 categories:
   - Pharmacy
   - Medicines

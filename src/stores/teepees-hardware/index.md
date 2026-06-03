@@ -1,8 +1,8 @@
 ---
 title: Teepees Hardware
 section: Hardware & Building Materials
-distanceFromBusStand: "63m"
-directionsUrl: "https://www.google.com/maps/dir/Piravom+Private+Bus+Stand/Teepees+Hardware,+PIRAVOM"
+distanceFromBusStand: '63m'
+directionsUrl: 'https://www.google.com/maps/dir/Piravom+Private+Bus+Stand/Teepees+Hardware,+PIRAVOM'
 categories:
   - Hardware
   - Building Materials

@@ -3,11 +3,7 @@
     "title": "Kunjanja Restaurant",
     "description": "A beloved local restaurant in Piravom famous for traditional Kerala porotta and beef dishes. A must-visit for authentic Malabar cuisine and local Kerala food favorites.",
     "logo": "https://img3.restaurantguru.com/rb0d-Kunjanja-Restaurant-design.jpg",
-    "cuisines": [
-      "Kerala",
-      "South Indian",
-      "Malabar"
-    ],
+    "cuisines": ["Kerala", "South Indian", "Malabar"],
     "phone": "+919778446467",
     "instagramUrl": "https://www.instagram.com/explore/tags/kunjanja-restaurant",
     "locationUrl": "https://www.google.com/maps/@9.8738,76.4875,15z"

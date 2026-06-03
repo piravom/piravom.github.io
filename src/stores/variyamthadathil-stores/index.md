@@ -1,8 +1,8 @@
 ---
 title: Variyamthadathil Stores
 section: Stationery & Books
-distanceFromBusStand: "1.9km"
-directionsUrl: "https://www.google.com/maps/dir/Piravom+Private+Bus+Stand/Variyamthadathil+Stores,+PIRAVOM"
+distanceFromBusStand: '1.9km'
+directionsUrl: 'https://www.google.com/maps/dir/Piravom+Private+Bus+Stand/Variyamthadathil+Stores,+PIRAVOM'
 categories:
   - Stationery
   - Books

@@ -1,8 +1,8 @@
 ---
 title: Alankar Furniture Shop
 section: Furniture & Home Decor
-distanceFromBusStand: "1.3km"
-directionsUrl: "https://www.google.com/maps/dir/Piravom+Private+Bus+Stand/Alankar+Furniture+Shop,+PIRAVOM"
+distanceFromBusStand: '1.3km'
+directionsUrl: 'https://www.google.com/maps/dir/Piravom+Private+Bus+Stand/Alankar+Furniture+Shop,+PIRAVOM'
 categories:
   - Furniture
   - Home Furnishings

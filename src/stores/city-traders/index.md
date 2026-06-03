@@ -1,8 +1,8 @@
 ---
 title: City Traders
 section: Hardware & Building Materials
-distanceFromBusStand: "500m"
-directionsUrl: "https://www.google.com/maps/dir/Piravom+Private+Bus+Stand/City+Traders,+PIRAVOM"
+distanceFromBusStand: '500m'
+directionsUrl: 'https://www.google.com/maps/dir/Piravom+Private+Bus+Stand/City+Traders,+PIRAVOM'
 categories:
   - Electrical Supplies
   - Hardware

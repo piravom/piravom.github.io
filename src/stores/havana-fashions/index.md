@@ -1,8 +1,8 @@
 ---
 title: Havana Fashions
 section: Jewellery
-distanceFromBusStand: "400m"
-directionsUrl: "https://www.google.com/maps/dir/Piravom+Private+Bus+Stand/Havana+Fashions,+PIRAVOM"
+distanceFromBusStand: '400m'
+directionsUrl: 'https://www.google.com/maps/dir/Piravom+Private+Bus+Stand/Havana+Fashions,+PIRAVOM'
 categories:
   - Jewellery
   - Fashion Jewellery

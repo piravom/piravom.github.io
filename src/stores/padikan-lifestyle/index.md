@@ -1,8 +1,8 @@
 ---
 title: Padikan Lifestyle
 section: Supermarkets & Grocery
-distanceFromBusStand: "700m"
-directionsUrl: "https://www.google.com/maps/dir/Piravom+Private+Bus+Stand/Padikan+Lifestyle,+PIRAVOM"
+distanceFromBusStand: '700m'
+directionsUrl: 'https://www.google.com/maps/dir/Piravom+Private+Bus+Stand/Padikan+Lifestyle,+PIRAVOM'
 categories:
   - Supermarket
   - Groceries

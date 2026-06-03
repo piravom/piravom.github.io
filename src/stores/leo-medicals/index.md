@@ -1,8 +1,8 @@
 ---
 title: Leo Medicals
 section: Pharmacy & Medical Stores
-distanceFromBusStand: "220m"
-directionsUrl: "https://www.google.com/maps/dir/Piravom+Private+Bus+Stand/Leo+Medicals,+PIRAVOM"
+distanceFromBusStand: '220m'
+directionsUrl: 'https://www.google.com/maps/dir/Piravom+Private+Bus+Stand/Leo+Medicals,+PIRAVOM'
 categories:
   - Pharmacy
   - Medicines

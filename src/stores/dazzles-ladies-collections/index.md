@@ -1,8 +1,8 @@
 ---
 title: Dazzles Ladies Collections
 section: Jewellery
-distanceFromBusStand: "150m"
-directionsUrl: "https://www.google.com/maps/dir/Piravom+Private+Bus+Stand/Dazzles+Ladies+Collections,+PIRAVOM"
+distanceFromBusStand: '150m'
+directionsUrl: 'https://www.google.com/maps/dir/Piravom+Private+Bus+Stand/Dazzles+Ladies+Collections,+PIRAVOM'
 categories:
   - Jewellery
   - Fashion Jewellery

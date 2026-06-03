@@ -1,8 +1,8 @@
 ---
 title: M G Hardware
 section: Hardware & Building Materials
-distanceFromBusStand: "6.7km"
-directionsUrl: "https://www.google.com/maps/dir/Piravom+Private+Bus+Stand/M+G+Hardware,+PIRAVOM"
+distanceFromBusStand: '6.7km'
+directionsUrl: 'https://www.google.com/maps/dir/Piravom+Private+Bus+Stand/M+G+Hardware,+PIRAVOM'
 categories:
   - Hardware
   - Building Materials

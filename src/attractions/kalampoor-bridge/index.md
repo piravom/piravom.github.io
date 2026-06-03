@@ -1,6 +1,6 @@
 ---
 title: Kalampoor Hanging Bridge
-categories: 
+categories:
   - Viewpoint
 description: Kalampoor Hanging Bridge
 image: kalampoor-bridge.jpg

@@ -1,8 +1,8 @@
 ---
 title: Eye Care Opticals
 section: Opticals
-distanceFromBusStand: "160m"
-directionsUrl: "https://www.google.com/maps/dir/Piravom+Private+Bus+Stand/Eye+Care+Opticals,+PIRAVOM"
+distanceFromBusStand: '160m'
+directionsUrl: 'https://www.google.com/maps/dir/Piravom+Private+Bus+Stand/Eye+Care+Opticals,+PIRAVOM'
 categories:
   - Eyewear
   - Optician

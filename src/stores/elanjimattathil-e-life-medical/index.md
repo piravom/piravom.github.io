@@ -1,8 +1,8 @@
 ---
 title: Elanjimattathil E Life Medical Supermarket
 section: Pharmacy & Medical Stores
-distanceFromBusStand: "800m"
-directionsUrl: "https://www.google.com/maps/dir/Piravom+Private+Bus+Stand/Elanjimattathil+E+Life+Medical+Supermarket,+PIRAVOM"
+distanceFromBusStand: '800m'
+directionsUrl: 'https://www.google.com/maps/dir/Piravom+Private+Bus+Stand/Elanjimattathil+E+Life+Medical+Supermarket,+PIRAVOM'
 categories:
   - Pharmacy
   - Medical Equipment

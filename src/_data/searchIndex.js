@@ -4,26 +4,26 @@ module.exports = function () {
   if (!collections) return index;
 
   var config = [
-    { collection: "restaurants", label: "Restaurant", icon: "🍽️" },
-    { collection: "stores", label: "Store", icon: "🏪" },
-    { collection: "attractions", label: "Attraction", icon: "🏔️" },
-    { collection: "services", label: "Service", icon: "🔧" },
-    { collection: "events", label: "Event", icon: "📅" },
+    { collection: 'restaurants', label: 'Restaurant', icon: '🍽️' },
+    { collection: 'stores', label: 'Store', icon: '🏪' },
+    { collection: 'attractions', label: 'Attraction', icon: '🏔️' },
+    { collection: 'services', label: 'Service', icon: '🔧' },
+    { collection: 'events', label: 'Event', icon: '📅' },
   ];
 
   config.forEach(function (cfg) {
     var items = collections[cfg.collection];
     if (!items) return;
-    if (typeof items.forEach !== "function") return;
+    if (typeof items.forEach !== 'function') return;
 
     items.forEach(function (item) {
       if (!item || !item.data) return;
-      var name = item.data.title || item.data.name || "";
-      var desc = item.data.description || item.data.shortDescription || "";
+      var name = item.data.title || item.data.name || '';
+      var desc = item.data.description || item.data.shortDescription || '';
       index.push({
         name: name,
         description: desc,
-        url: item.url || "",
+        url: item.url || '',
         type: cfg.label,
         icon: cfg.icon,
         collection: cfg.collection,

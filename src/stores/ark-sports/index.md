@@ -1,8 +1,8 @@
 ---
 title: ARK Sports
 section: Textiles & Apparel
-distanceFromBusStand: "4.3km"
-directionsUrl: "https://www.google.com/maps/dir/Piravom+Private+Bus+Stand/ARK+Sports,+PIRAVOM"
+distanceFromBusStand: '4.3km'
+directionsUrl: 'https://www.google.com/maps/dir/Piravom+Private+Bus+Stand/ARK+Sports,+PIRAVOM'
 categories:
   - Sportswear
   - Clothing

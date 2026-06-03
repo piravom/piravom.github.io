@@ -3,11 +3,7 @@
     "title": "Hotel Three Road",
     "description": "A well-known Kerala-style restaurant in the heart of Piravom, serving authentic South Indian meals and traditional Kerala dishes. Known for its peaceful atmosphere and reasonable prices.",
     "logo": "https://img3.restaurantguru.com/rb0d-Hotel-Three-Road-design.jpg",
-    "cuisines": [
-      "Kerala",
-      "South Indian",
-      "Indian"
-    ],
+    "cuisines": ["Kerala", "South Indian", "Indian"],
     "phone": "+918347845830",
     "instagramUrl": "https://www.instagram.com/explore/tags/hotel-three-road",
     "locationUrl": "https://www.google.com/maps/@9.87570970,76.48786750,15z"

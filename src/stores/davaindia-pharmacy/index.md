@@ -1,8 +1,8 @@
 ---
 title: Davaindia Generic Pharmacy
 section: Pharmacy & Medical Stores
-distanceFromBusStand: "280m"
-directionsUrl: "https://www.google.com/maps/dir/Piravom+Private+Bus+Stand/Davaindia+Generic+Pharmacy,+PIRAVOM"
+distanceFromBusStand: '280m'
+directionsUrl: 'https://www.google.com/maps/dir/Piravom+Private+Bus+Stand/Davaindia+Generic+Pharmacy,+PIRAVOM'
 categories:
   - Pharmacy
   - Generic Medicines

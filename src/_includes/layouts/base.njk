@@ -1,56 +1,234 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{% if title %}{{ title }} - {{site.name}}{% else %}{{site.name}}{% endif %}</title>
     {% if description %}
-    <meta name="description" content="{{ description }}">
+    <meta name="description" content="{{ description }}" />
     {% endif %}
 
     <!-- Canonical URL -->
-    <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+    <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
 
     <!-- Open Graph -->
-    <meta property="og:title" content="{% if title %}{{ title }}{% else %}{{ site.name }}{% endif %}">
-    <meta property="og:description" content="{{ description or site.description }}">
-    <meta property="og:url" content="{{ site.url }}{{ page.url }}">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="{{ site.name }}">
-    <meta property="og:locale" content="en_IN">
+    <meta
+      property="og:title"
+      content="{% if title %}{{ title }}{% else %}{{ site.name }}{% endif %}"
+    />
+    <meta property="og:description" content="{{ description or site.description }}" />
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="{{ site.name }}" />
+    <meta property="og:locale" content="en_IN" />
 
     <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="{% if title %}{{ title }}{% else %}{{ site.name }}{% endif %}">
-    <meta name="twitter:description" content="{{ description or site.description }}">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="{% if title %}{{ title }}{% else %}{{ site.name }}{% endif %}"
+    />
+    <meta name="twitter:description" content="{{ description or site.description }}" />
 
     <!-- Theme -->
-    <meta name="theme-color" content="#4f46e5">
+    <meta name="theme-color" content="#4f46e5" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
 
     <script src="https://cdn.tailwindcss.com"></script>
 
     <!-- MS Analytics -->
     <script type="text/javascript">
-        (function(c,l,a,r,i,t,y){
-            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-        })(window, document, "clarity", "script", "wztvhq10cn");
+      (function (c, l, a, r, i, t, y) {
+        c[a] =
+          c[a] ||
+          function () {
+            (c[a].q = c[a].q || []).push(arguments);
+          };
+        t = l.createElement(r);
+        t.async = 1;
+        t.src = 'https://www.clarity.ms/tag/' + i;
+        y = l.getElementsByTagName(r)[0];
+        y.parentNode.insertBefore(t, y);
+      })(window, document, 'clarity', 'script', 'wztvhq10cn');
     </script>
 
     <style>
-        body {
-            font-family: Inter, ui-sans-serif, system-ui, sans-serif;
-        }
+      body {
+        font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+      }
+
+      /* Dark mode overrides */
+      .dark {
+        --page-bg: #030712;
+        --card-bg: #111827;
+        --card-border: #1f2937;
+        --text-primary: #f3f4f6;
+        --text-secondary: #d1d5db;
+        --text-tertiary: #9ca3af;
+        --text-muted: #6b7280;
+      }
+
+      .dark body {
+        background-color: var(--page-bg) !important;
+        color: var(--text-primary) !important;
+      }
+
+      .dark .bg-white {
+        background-color: var(--card-bg) !important;
+      }
+      .dark .bg-white\/90 {
+        background-color: rgba(17, 24, 39, 0.9) !important;
+      }
+      .dark .bg-white\/95 {
+        background-color: rgba(17, 24, 39, 0.95) !important;
+      }
+      .dark .bg-\[\#fafafa\] {
+        background-color: var(--page-bg) !important;
+      }
+      .dark .border-gray-200 {
+        border-color: var(--card-border) !important;
+      }
+      .dark .border-gray-100 {
+        border-color: var(--card-border) !important;
+      }
+      .dark .text-gray-900 {
+        color: var(--text-primary) !important;
+      }
+      .dark .text-gray-800 {
+        color: var(--text-secondary) !important;
+      }
+      .dark .text-gray-700 {
+        color: var(--text-secondary) !important;
+      }
+      .dark .text-gray-600 {
+        color: var(--text-tertiary) !important;
+      }
+      .dark .text-gray-500 {
+        color: var(--text-tertiary) !important;
+      }
+      .dark .text-gray-400 {
+        color: var(--text-muted) !important;
+      }
+      .dark .text-gray-300 {
+        color: #6b7280 !important;
+      }
+      .dark .bg-gray-50 {
+        background-color: rgba(31, 41, 55, 0.5) !important;
+      }
+      .dark .hover\:bg-gray-50:hover {
+        background-color: rgba(31, 41, 55, 0.7) !important;
+      }
+      .dark .hover\:text-black:hover {
+        color: var(--text-primary) !important;
+      }
+      .dark .hover\:bg-indigo-50:hover {
+        background-color: rgba(30, 27, 75, 0.6) !important;
+      }
+      .dark .bg-indigo-50 {
+        background-color: rgba(30, 27, 75, 0.4) !important;
+      }
+      .dark .text-indigo-700 {
+        color: #a5b4fc !important;
+      }
+      .dark .text-indigo-600 {
+        color: #818cf8 !important;
+      }
+      .dark .divide-gray-100 > * + * {
+        border-color: var(--card-border) !important;
+      }
+      .dark .focus\:border-indigo-400:focus {
+        border-color: #818cf8 !important;
+      }
+      .dark .focus\:ring-indigo-100:focus {
+        --tw-ring-color: rgba(30, 27, 75, 0.6) !important;
+      }
+      .dark .focus\:ring-1:focus {
+        --tw-ring-color: rgba(30, 27, 75, 0.6) !important;
+      }
+
+      .dark .bg-red-50 {
+        background-color: rgba(69, 10, 10, 0.5) !important;
+      }
+      .dark .border-red-200 {
+        border-color: rgba(127, 29, 29, 0.5) !important;
+      }
+      .dark .bg-red-100 {
+        background-color: rgba(69, 10, 10, 0.5) !important;
+      }
+      .dark .hover\:bg-red-50:hover {
+        background-color: rgba(69, 10, 10, 0.7) !important;
+      }
+      .dark .text-red-800 {
+        color: #fca5a5 !important;
+      }
+      .dark .text-red-600 {
+        color: #f87171 !important;
+      }
+      .dark .bg-green-100 {
+        background-color: rgba(6, 78, 59, 0.4) !important;
+      }
+      .dark .text-green-700 {
+        color: #6ee7b7 !important;
+      }
+      .dark .bg-orange-100 {
+        background-color: rgba(120, 53, 15, 0.4) !important;
+      }
+      .dark .text-orange-700 {
+        color: #fdba74 !important;
+      }
+      /* Gradient overrides for dark mode (keep gradient, just darken the colors) */
+      .dark .from-red-50 {
+        --tw-gradient-from: #450a0a !important;
+      }
+      .dark .to-orange-50 {
+        --tw-gradient-to: #431407 !important;
+      }
+      .dark .shadow-sm {
+        box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.3) !important;
+      }
+      .dark .shadow-md {
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.4) !important;
+      }
+      .dark .shadow-lg {
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5) !important;
+      }
+      .dark .from-indigo-100 {
+        --tw-gradient-from: rgba(30, 27, 75, 0.6) !important;
+      }
+      .dark .to-blue-200 {
+        --tw-gradient-to: rgba(30, 58, 138, 0.4) !important;
+      }
+      .dark .bg-gray-100 {
+        background-color: rgba(31, 41, 55, 0.6) !important;
+      }
+      .dark .dark-toggle {
+        border-color: var(--card-border) !important;
+      }
+      .dark .dark-toggle:hover {
+        background-color: rgba(31, 41, 55, 0.7) !important;
+      }
+      .dark .dark-hide {
+        display: none !important;
+      }
+      .dark .dark-show {
+        display: inline !important;
+      }
+      .dark-show {
+        display: none !important;
+      }
+      .dark-hide {
+        display: inline !important;
+      }
     </style>
-</head>
+  </head>
 
-<body class="bg-[#fafafa] text-[#111111]">
-
+  <body class="bg-[#fafafa] text-[#111111]">
     <!-- Header -->
     {% include "components/header.njk" %}
 
@@ -59,41 +237,98 @@
 
     <!-- Mobile Menu Overlay -->
     <div id="mobileMenu" class="fixed inset-0 z-50 hidden bg-white/95 backdrop-blur-sm">
-        <div class="flex h-full flex-col items-center justify-center gap-8 text-lg font-medium">
-            <a href="/about" class="nav-mobile-link text-gray-600 hover:text-black" onclick="toggleMobileMenu()">About</a>
-            <a href="/bus-timing" class="nav-mobile-link text-gray-600 hover:text-black" onclick="toggleMobileMenu()">Bus Timings</a>
-            <a href="/restaurants" class="nav-mobile-link text-gray-600 hover:text-black" onclick="toggleMobileMenu()">Restaurants</a>
-            <a href="/attractions" class="nav-mobile-link text-gray-600 hover:text-black" onclick="toggleMobileMenu()">Attractions</a>
-            <a href="/events" class="nav-mobile-link text-gray-600 hover:text-black" onclick="toggleMobileMenu()">Events</a>
-            <a href="/phonebook" class="nav-mobile-link text-gray-600 hover:text-black" onclick="toggleMobileMenu()">Phonebook</a>
-            <a href="/stores" class="nav-mobile-link text-gray-600 hover:text-black" onclick="toggleMobileMenu()">Stores</a>
-            <a href="/services" class="nav-mobile-link text-gray-600 hover:text-black" onclick="toggleMobileMenu()">Services</a>
-            <button onclick="toggleMobileMenu()" class="mt-4 rounded-xl border border-gray-200 px-8 py-3 text-sm text-gray-500 hover:text-black">
-                Close
-            </button>
-        </div>
+      <div class="flex h-full flex-col items-center justify-center gap-8 text-lg font-medium">
+        <a
+          href="/about"
+          class="nav-mobile-link text-gray-600 hover:text-black"
+          onclick="toggleMobileMenu()"
+          >About</a
+        >
+        <a
+          href="/bus-timing"
+          class="nav-mobile-link text-gray-600 hover:text-black"
+          onclick="toggleMobileMenu()"
+          >Bus Timings</a
+        >
+        <a
+          href="/restaurants"
+          class="nav-mobile-link text-gray-600 hover:text-black"
+          onclick="toggleMobileMenu()"
+          >Restaurants</a
+        >
+        <a
+          href="/attractions"
+          class="nav-mobile-link text-gray-600 hover:text-black"
+          onclick="toggleMobileMenu()"
+          >Attractions</a
+        >
+        <a
+          href="/events"
+          class="nav-mobile-link text-gray-600 hover:text-black"
+          onclick="toggleMobileMenu()"
+          >Events</a
+        >
+        <a
+          href="/phonebook"
+          class="nav-mobile-link text-gray-600 hover:text-black"
+          onclick="toggleMobileMenu()"
+          >Phonebook</a
+        >
+        <a
+          href="/stores"
+          class="nav-mobile-link text-gray-600 hover:text-black"
+          onclick="toggleMobileMenu()"
+          >Stores</a
+        >
+        <a
+          href="/services"
+          class="nav-mobile-link text-gray-600 hover:text-black"
+          onclick="toggleMobileMenu()"
+          >Services</a
+        >
+        <button
+          onclick="toggleMobileMenu()"
+          class="mt-4 rounded-xl border border-gray-200 px-8 py-3 text-sm text-gray-500 hover:text-black"
+        >
+          Close
+        </button>
+      </div>
     </div>
 
     <!-- Footer -->
     {% include "components/footer.njk" %}
 
     <script>
-        function toggleMobileMenu() {
-            document.getElementById("mobileMenu").classList.toggle("hidden");
-        }
+      function toggleMobileMenu() {
+        document.getElementById('mobileMenu').classList.toggle('hidden');
+      }
 
-        // Highlight the current page in desktop nav
-        document.addEventListener("DOMContentLoaded", function () {
-            var path = window.location.pathname.replace(/\/$/, "");
-            document.querySelectorAll(".nav-link").forEach(function (link) {
-                var href = link.getAttribute("href").replace(/\/$/, "");
-                if (href && path.startsWith(href)) {
-                    link.classList.add("text-indigo-600", "bg-indigo-50");
-                    link.classList.remove("text-gray-600");
-                }
-            });
+      // Highlight the current page in desktop nav
+      document.addEventListener('DOMContentLoaded', function () {
+        var path = window.location.pathname.replace(/\/$/, '');
+        document.querySelectorAll('.nav-link').forEach(function (link) {
+          var href = link.getAttribute('href').replace(/\/$/, '');
+          if (href && path.startsWith(href)) {
+            link.classList.add('text-indigo-600', 'bg-indigo-50');
+            link.classList.remove('text-gray-600');
+          }
         });
-    </script>
 
-</body>
+        // Apply dark mode on load based on saved preference
+        var saved = localStorage.getItem('darkMode');
+        if (
+          saved === 'true' ||
+          (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)
+        ) {
+          document.documentElement.classList.add('dark');
+        }
+      });
+
+      window.toggleDarkMode = function () {
+        var html = document.documentElement;
+        html.classList.toggle('dark');
+        localStorage.setItem('darkMode', html.classList.contains('dark'));
+      };
+    </script>
+  </body>
 </html>

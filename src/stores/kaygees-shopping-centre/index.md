@@ -1,8 +1,8 @@
 ---
 title: Kaygees Shopping Centre
 section: Stationery & Books
-distanceFromBusStand: "230m"
-directionsUrl: "https://www.google.com/maps/dir/Piravom+Private+Bus+Stand/Kaygees+Shopping+Centre,+PIRAVOM"
+distanceFromBusStand: '230m'
+directionsUrl: 'https://www.google.com/maps/dir/Piravom+Private+Bus+Stand/Kaygees+Shopping+Centre,+PIRAVOM'
 categories:
   - Stationery
   - Books

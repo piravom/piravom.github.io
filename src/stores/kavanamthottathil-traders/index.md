@@ -1,8 +1,8 @@
 ---
 title: Kavanamthottathil Traders
 section: Hardware & Building Materials
-distanceFromBusStand: "4.1km"
-directionsUrl: "https://www.google.com/maps/dir/Piravom+Private+Bus+Stand/Kavanamthottathil+Traders,+PIRAVOM"
+distanceFromBusStand: '4.1km'
+directionsUrl: 'https://www.google.com/maps/dir/Piravom+Private+Bus+Stand/Kavanamthottathil+Traders,+PIRAVOM'
 categories:
   - Hardware
   - Building Materials

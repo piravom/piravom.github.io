@@ -1,102 +1,105 @@
 ---
 layout: layouts/base.njk
 title: Bus Timings
-description: "Arrival and departure times for buses in Piravom"
+description: 'Arrival and departure times for buses in Piravom'
 ---
 
 <main class="mx-auto max-w-7xl px-4 py-8">
+  <!-- Hero -->
+  {% from "components/page-hero.njk" import pageHero %} {{ pageHero(title, description) }} {% set
+  groups = buses | groupBy("to") %} {% set dests = groups | keys %}
 
-    <!-- Hero -->
-    {% from "components/page-hero.njk" import pageHero %}
-    {{ pageHero(title, description) }}
+  <!-- Mobile Destination Strip (horizontal scroll) -->
+  <div class="lg:hidden -mx-4 px-4 mb-6 overflow-x-auto scrollbar-hide">
+    <nav class="flex gap-2 whitespace-nowrap pb-2">
+      {% for dest in dests %}
+      <a
+        href="#{{ dest | slug }}"
+        class="flex items-center gap-1.5 rounded-full border border-gray-200 bg-white px-4 py-2 text-sm font-medium text-gray-600 shadow-sm transition hover:border-indigo-200 hover:bg-indigo-50 hover:text-indigo-700"
+      >
+        <span>🚌</span>
+        <span>{{ dest }}</span>
+        <span class="text-xs text-gray-400 ml-1">{{ groups[dest].length }}</span>
+      </a>
+      {% endfor %}
+    </nav>
+  </div>
 
-    {% set groups = buses | groupBy("to") %}
-    {% set dests = groups | keys %}
-
-    <!-- Mobile Destination Strip (horizontal scroll) -->
-    <div class="lg:hidden -mx-4 px-4 mb-6 overflow-x-auto scrollbar-hide">
-        <nav class="flex gap-2 whitespace-nowrap pb-2">
-            {% for dest in dests %}
-            <a href="#{{ dest | slug }}"
-               class="flex items-center gap-1.5 rounded-full border border-gray-200 bg-white px-4 py-2 text-sm font-medium text-gray-600 shadow-sm transition hover:border-indigo-200 hover:bg-indigo-50 hover:text-indigo-700">
-                <span>🚌</span>
-                <span>{{ dest }}</span>
-                <span class="text-xs text-gray-400 ml-1">{{ groups[dest].length }}</span>
-            </a>
-            {% endfor %}
-        </nav>
-    </div>
-
-    <div class="flex gap-8">
-
-        <!-- Sidebar Navigation -->
-        <aside class="hidden lg:block w-64 shrink-0">
-            <nav class="sticky top-28 space-y-1">
-                <p class="text-xs font-semibold uppercase tracking-wide text-gray-400 mb-3">Destinations</p>
-                {% for dest in dests %}
-                <a href="#{{ dest | slug }}"
-                   class="flex items-center gap-2 rounded-xl px-3 py-2 text-sm font-medium text-gray-600 transition hover:bg-indigo-50 hover:text-indigo-700">
-                    <span>🚌</span>
-                    <span>{{ dest }}</span>
-                    <span class="ml-auto text-xs text-gray-400">{{ groups[dest].length }}</span>
-                </a>
-                {% endfor %}
-            </nav>
-        </aside>
-
-        <!-- Content -->
-        <div class="flex-1 min-w-0">
-
-    <!-- Bus Grid - Grouped by Destination -->
-    <section class="grid gap-6 md:grid-cols-2">
-
+  <div class="flex gap-8">
+    <!-- Sidebar Navigation -->
+    <aside class="hidden lg:block w-64 shrink-0">
+      <nav class="sticky top-28 space-y-1">
+        <p class="text-xs font-semibold uppercase tracking-wide text-gray-400 mb-3">Destinations</p>
         {% for dest in dests %}
-        {% set destBuses = groups[dest] %}
-        <div class="rounded-3xl border border-gray-200 bg-white shadow-sm" id="{{ dest | slug }}">
-            <!-- Card Header -->
-            <div class="border-b border-gray-100 px-6 py-5">
-                <div class="flex items-center gap-3">
-                    <span class="flex h-10 w-10 items-center justify-center rounded-xl bg-indigo-50 text-lg">🚌</span>
-                    <div>
-                        <h2 class="text-xl font-bold text-gray-900">{{ dest }}</h2>
-                        <p class="text-xs text-gray-500">{{ destBuses.length }} bus{{ "es" if destBuses.length != 1 }}</p>
-                    </div>
-                </div>
-            </div>
+        <a
+          href="#{{ dest | slug }}"
+          class="flex items-center gap-2 rounded-xl px-3 py-2 text-sm font-medium text-gray-600 transition hover:bg-indigo-50 hover:text-indigo-700"
+        >
+          <span>🚌</span>
+          <span>{{ dest }}</span>
+          <span class="ml-auto text-xs text-gray-400">{{ groups[dest].length }}</span>
+        </a>
+        {% endfor %}
+      </nav>
+    </aside>
 
-            <!-- Bus Rows -->
-            <div class="divide-y divide-gray-100">
-                {% for bus in destBuses %}
-                <div class="flex items-center justify-between px-6 py-4 transition hover:bg-gray-50">
-                    <div class="flex items-center gap-3">
-                        <span class="text-lg font-bold font-mono tracking-tight text-gray-900">{{ bus.time }}</span>
-                        <span class="text-xs text-gray-300">→</span>
-                        <span class="text-sm text-gray-500">{{ bus.from }}</span>
-                    </div>
-                    <span class="rounded-full {% if bus.type == 'KSRTC' %}bg-indigo-50 text-indigo-700{% else %}bg-green-50 text-green-700{% endif %} px-3 py-1 text-xs font-semibold">
-                        {{ bus.type }}
-                    </span>
-                </div>
-                {% endfor %}
+    <!-- Content -->
+    <div class="flex-1 min-w-0">
+      <!-- Bus Grid - Grouped by Destination -->
+      <section class="grid gap-6 md:grid-cols-2">
+        {% for dest in dests %} {% set destBuses = groups[dest] %}
+        <div class="rounded-3xl border border-gray-200 bg-white shadow-sm" id="{{ dest | slug }}">
+          <!-- Card Header -->
+          <div class="border-b border-gray-100 px-6 py-5">
+            <div class="flex items-center gap-3">
+              <span
+                class="flex h-10 w-10 items-center justify-center rounded-xl bg-indigo-50 text-lg"
+                >🚌</span
+              >
+              <div>
+                <h2 class="text-xl font-bold text-gray-900">{{ dest }}</h2>
+                <p class="text-xs text-gray-500">
+                  {{ destBuses.length }} bus{{ "es" if destBuses.length != 1 }}
+                </p>
+              </div>
             </div>
+          </div>
+
+          <!-- Bus Rows -->
+          <div class="divide-y divide-gray-100">
+            {% for bus in destBuses %}
+            <div
+              class="flex items-center justify-between px-6 py-4 transition hover:bg-gray-50:bg-gray-800/50"
+            >
+              <div class="flex items-center gap-3">
+                <span class="text-lg font-bold font-mono tracking-tight text-gray-900"
+                  >{{ bus.time }}</span
+                >
+                <span class="text-xs text-gray-300">→</span>
+                <span class="text-sm text-gray-500">{{ bus.from }}</span>
+              </div>
+              <span
+                class="rounded-full {% if bus.type == 'KSRTC' %}bg-indigo-50 text-indigo-700{% else %}bg-green-50 text-green-700{% endif %} px-3 py-1 text-xs font-semibold"
+              >
+                {{ bus.type }}
+              </span>
+            </div>
+            {% endfor %}
+          </div>
         </div>
         {% endfor %}
-
-    </section>
-
-        </div>
+      </section>
     </div>
+  </div>
 
-    <!-- Empty State -->
-    {% if not dests.length %}
-    <div class="rounded-3xl border border-gray-200 bg-white p-12 text-center shadow-sm">
-        <span class="text-4xl">🚌</span>
-        <h2 class="mt-4 text-xl font-bold text-gray-900">No bus schedules available</h2>
-        <p class="mt-2 text-sm text-gray-500">Check back later for updates</p>
-    </div>
-    {% endif %}
+  <!-- Empty State -->
+  {% if not dests.length %}
+  <div class="rounded-3xl border border-gray-200 bg-white p-12 text-center shadow-sm">
+    <span class="text-4xl">🚌</span>
+    <h2 class="mt-4 text-xl font-bold text-gray-900">No bus schedules available</h2>
+    <p class="mt-2 text-sm text-gray-500">Check back later for updates</p>
+  </div>
+  {% endif %}
 
-    <!-- Bottom Navigation -->
-
-
+  <!-- Bottom Navigation -->
 </main>

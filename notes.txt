@@ -44,3 +44,73 @@
  ├─────────────────┼──────┼──────────────────────────┤
  │ Home Services   │ 🏠   │ Plumbers, electricians,  │
  │                 │      │ carpenters, painters
+
+
+
+
+Suggestions for improvements:
+
+ 1. Map Integration - Currently all map
+    links go to generic Google Maps search
+    URLs. Could embed an actual map view,
+    or generate a proper directions link
+    with coordinates.
+ 2. Weather Widget - A small weather
+    widget on the homepage showing current
+    Piravom weather would be useful for
+    locals and visitors.
+ 3. Local News / Announcements - The
+    homepage has "Latest Updates" but it's
+    hardcoded. Could make it dynamic from
+    a _data file or markdown collection.
+ 4. Filtering/Sorting on listing pages -
+    Stores and Services have
+    category-based grouping but no
+    real-time filtering. Could add
+    JavaScript filtering.
+ 5. Missing Pages that are linked - The
+    homepage "Explore" section links to
+    "Schools & Colleges" (/about/) but
+    there's no dedicated schools page.
+    Could add an Education page.
+ 6. Contact/Feedback Form - No way for
+    users to submit corrections or suggest
+    additions to the directory.
+ 7. Ratings & Reviews - Some entities have
+    ratings but they're hardcoded. No user
+    review functionality.
+ 8. WhatsApp / Social Sharing - No share
+    buttons on individual pages.
+ 9. Image Gallery - Restaurant and
+    attraction pages could benefit from
+    image galleries showcasing the venue.
+ 10. PWA / Offline Support - Could make
+     this a Progressive Web App with
+     service worker for offline access.
+ 11. Job Board / Classifieds - A community
+     bulletin board for local jobs,
+     rentals, etc.
+ 12. Dark Mode - Toggle for dark mode.
+ 13. Language Switch - Malayalam/English
+     toggle would be great for a Kerala
+     town portal.
+ 14. A11y Improvements - Could add
+     skip-to-content links, better ARIA
+     labels, keyboard navigation.
+ 15. Print CSS - A print stylesheet for
+     directory listings.
+ 16. Nearest Railway / Airport Info - The
+     About page has this but could be more
+     prominent.
+ 17. Police Station / Emergency Map - A
+     visual map showing locations of
+     emergency services.
+ 18. Festival Calendar - A dedicated
+     calendar view for events.
+ 19. Business Claim - A way for business
+     owners to claim and update their
+     listings.
+ 20. Performance - Could use Eleventy's
+     image optimization more extensively
+     (already partially used), add lazy
+     loading, etc.

@@ -3,12 +3,7 @@
     "title": "Porch Grill",
     "description": "A trendy grill restaurant in Piravom offering a mix of continental and Indian grilled specialties. Known for its barbecue dishes, casual dining experience, and vibrant atmosphere.",
     "logo": "https://img3.restaurantguru.com/rb0d-Porch-Grill-Piravom-design.jpg",
-    "cuisines": [
-      "Multi-Cuisine",
-      "Continental",
-      "Grill",
-      "Indian"
-    ],
+    "cuisines": ["Multi-Cuisine", "Continental", "Grill", "Indian"],
     "phone": "+919778446467",
     "instagramUrl": "https://www.instagram.com/explore/tags/porch-grill-piravom",
     "locationUrl": "https://www.google.com/maps/@9.8715,76.4890,15z"

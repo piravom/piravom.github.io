@@ -3,11 +3,7 @@
     "title": "Aiswarya Royal Restaurant and Cafe",
     "description": "A regal dining experience near the Post Office Junction in Piravom. Specializes in Kerala cuisine and traditional South Indian meals. Located opposite BSNL near the Orthodox Church.",
     "logo": "https://img3.restaurantguru.com/rb0d-Aiswarya-Royal-Restaurant-design.jpg",
-    "cuisines": [
-      "Kerala",
-      "South Indian",
-      "Indian"
-    ],
+    "cuisines": ["Kerala", "South Indian", "Indian"],
     "phone": "+919497224868",
     "instagramUrl": "https://www.instagram.com/explore/tags/aiswarya-royal-restaurant",
     "locationUrl": "https://www.google.com/maps/@9.8730,76.4870,15z"

@@ -1,226 +1,247 @@
 <header class="sticky top-0 z-50 border-b border-gray-200 bg-white/90 backdrop-blur">
-    <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4">
-
-        <!-- Logo -->
-        <div>
-            <div class="text-2xl font-bold text-indigo-600"><a href="/">{{site.name}}</a></div>
-            <p class="text-sm text-gray-500">{{site.description}}</p>
-        </div>
-
-        <!-- Desktop Nav -->
-        {% include "components/top-nav.njk" %}
-
-        <!-- Universal Search -->
-        <div class="relative hidden lg:block" id="globalSearch">
-            <div class="relative">
-                {% lucide "search", "absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-gray-400" %}
-                <input
-                    type="text"
-                    id="globalSearchInput"
-                    placeholder="Search restaurants, stores, services…"
-                    autocomplete="off"
-                    class="w-72 rounded-2xl border border-gray-200 bg-gray-50 py-2 pl-10 pr-4 text-sm outline-none transition focus:border-indigo-400 focus:bg-white focus:ring-2 focus:ring-indigo-100"
-                />
-            </div>
-            <div id="globalSearchSuggestions" class="absolute right-0 z-50 mt-1 hidden w-96 rounded-2xl border border-gray-200 bg-white shadow-lg"></div>
-        </div>
-
-        <!-- Mobile Search + Menu -->
-        <div class="flex items-center gap-2 lg:hidden">
-            <button onclick="toggleMobileSearch()" class="rounded-xl border border-gray-200 p-2" aria-label="Search">
-                {% lucide "search", "h-5 w-5 text-gray-600" %}
-            </button>
-            <button onclick="toggleMobileMenu()" class="rounded-xl border border-gray-200 p-2">
-                {% lucide "menu", "h-5 w-5 text-gray-600" %}
-            </button>
-        </div>
+  <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4">
+    <!-- Logo -->
+    <div>
+      <div class="text-2xl font-bold text-indigo-600"><a href="/">{{site.name}}</a></div>
+      <p class="text-sm text-gray-500">{{site.description}}</p>
     </div>
 
-    <!-- Mobile Search Bar (below header) -->
-    <div id="mobileSearchBar" class="hidden border-t border-gray-100 px-4 py-3">
-        <div class="relative" id="globalSearchMobile">
-            {% lucide "search", "absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-gray-400" %}
-            <input
-                type="text"
-                id="globalSearchInputMobile"
-                placeholder="Search…"
-                autocomplete="off"
-                class="w-full rounded-2xl border border-gray-200 bg-gray-50 py-2.5 pl-10 pr-4 text-base outline-none transition focus:border-indigo-400 focus:bg-white focus:ring-2 focus:ring-indigo-100"
-            />
-            <div id="globalSearchSuggestionsMobile" class="absolute left-0 right-0 z-50 mt-1 hidden rounded-2xl border border-gray-200 bg-white shadow-lg"></div>
+    <!-- Desktop Nav -->
+    {% include "components/top-nav.njk" %}
+
+    <div class="flex items-center gap-2">
+      <!-- Dark Mode Toggle -->
+      <button
+        onclick="toggleDarkMode()"
+        class="dark-toggle rounded-xl border border-gray-200 p-2 hover:bg-gray-100 transition"
+        aria-label="Toggle dark mode"
+      >
+        <span class="dark-hide">{% lucide "moon", "h-5 w-5 text-gray-600" %}</span>
+        <span class="dark-show hidden">{% lucide "sun", "h-5 w-5 text-gray-600" %}</span>
+      </button>
+
+      <!-- Universal Search -->
+      <div class="relative hidden lg:block" id="globalSearch">
+        <div class="relative">
+          {% lucide "search", "absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-gray-400" %}
+          <input
+            type="text"
+            id="globalSearchInput"
+            placeholder="Search restaurants, stores, services…"
+            autocomplete="off"
+            class="w-72 rounded-2xl border border-gray-200 bg-gray-50 py-2 pl-10 pr-4 text-sm text-gray-900 outline-none transition focus:border-indigo-400 focus:bg-white focus:ring-2 focus:ring-indigo-100"
+          />
         </div>
+        <div
+          id="globalSearchSuggestions"
+          class="absolute right-0 z-50 mt-1 hidden w-96 rounded-2xl border border-gray-200 bg-white shadow-lg"
+        ></div>
+      </div>
+
+      <!-- Mobile Search + Menu -->
+      <div class="flex items-center gap-2 lg:hidden">
+        <button
+          onclick="toggleMobileSearch()"
+          class="rounded-xl border border-gray-200 p-2"
+          aria-label="Search"
+        >
+          {% lucide "search", "h-5 w-5 text-gray-600" %}
+        </button>
+        <button onclick="toggleMobileMenu()" class="rounded-xl border border-gray-200 p-2">
+          {% lucide "menu", "h-5 w-5 text-gray-600" %}
+        </button>
+      </div>
     </div>
+  </div>
+
+  <!-- Mobile Search Bar (below header) -->
+  <div id="mobileSearchBar" class="hidden border-t border-gray-100 px-4 py-3">
+    <div class="relative" id="globalSearchMobile">
+      {% lucide "search", "absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-gray-400" %}
+      <input
+        type="text"
+        id="globalSearchInputMobile"
+        placeholder="Search…"
+        autocomplete="off"
+        class="w-full rounded-2xl border border-gray-200 bg-gray-50 py-2.5 pl-10 pr-4 text-base text-gray-900 outline-none transition focus:border-indigo-400 focus:bg-white focus:ring-2 focus:ring-indigo-100"
+      />
+      <div
+        id="globalSearchSuggestionsMobile"
+        class="absolute left-0 right-0 z-50 mt-1 hidden rounded-2xl border border-gray-200 bg-white shadow-lg"
+      ></div>
+    </div>
+  </div>
 </header>
 
 <script>
-var SEARCH_INDEX = [
-    {% for item in collections.restaurants %}
-    {
-        name: {{ item.data.title | json | safe }},
-        url: {{ item.url | json | safe }},
-        description: {{ item.data.description | json | safe }},
-        type: "Restaurant",
-        icon: "🍽️"
-    },
-    {% endfor %}
-    {% for item in collections.stores %}
-    {
-        name: {{ item.data.title | json | safe }},
-        url: {{ item.url | json | safe }},
-        description: {{ item.data.description | json | safe }},
-        type: "Store",
-        icon: "🏪"
-    },
-    {% endfor %}
-    {% for item in collections.attractions %}
-    {
-        name: {{ item.data.title | json | safe }},
-        url: {{ item.url | json | safe }},
-        description: {{ item.data.description | json | safe }},
-        type: "Attraction",
-        icon: "🏔️"
-    },
-    {% endfor %}
-    {% for item in collections.services %}
-    {
-        name: {{ item.data.title | json | safe }},
-        url: {{ item.url | json | safe }},
-        description: {{ item.data.description | json | safe }},
-        type: "Service",
-        icon: "🔧"
-    },
-    {% endfor %}
-    {% for item in collections.events %}
-    {
-        name: {{ item.data.title | json | safe }},
-        url: {{ item.url | json | safe }},
-        description: {{ item.data.description | json | safe }},
-        type: "Event",
-        icon: "📅"
-    },
-    {% endfor %}
-];
+  var SEARCH_INDEX = [
+   {% for item in collections.restaurants %}
+   {
+   name: {{ item.data.title | json | safe }},
+   url: {{ item.url | json | safe }},
+   description: {{ item.data.description | json | safe }},
+   type: "Restaurant",
+   icon: "🍽️"
+   },
+   {% endfor %}
+   {% for item in collections.stores %}
+   {
+   name: {{ item.data.title | json | safe }},
+   url: {{ item.url | json | safe }},
+   description: {{ item.data.description | json | safe }},
+   type: "Store",
+   icon: "🏪"
+   },
+   {% endfor %}
+   {% for item in collections.attractions %}
+   {
+   name: {{ item.data.title | json | safe }},
+   url: {{ item.url | json | safe }},
+   description: {{ item.data.description | json | safe }},
+   type: "Attraction",
+   icon: "🏔️"
+   },
+   {% endfor %}
+   {% for item in collections.services %}
+   {
+   name: {{ item.data.title | json | safe }},
+   url: {{ item.url | json | safe }},
+   description: {{ item.data.description | json | safe }},
+   type: "Service",
+   icon: "🔧"
+   },
+   {% endfor %}
+   {% for item in collections.events %}
+   {
+   name: {{ item.data.title | json | safe }},
+   url: {{ item.url | json | safe }},
+   description: {{ item.data.description | json | safe }},
+   type: "Event",
+   icon: "📅"
+   },
+   {% endfor %}
+  ];
 
-(function () {
-    function slugify(str) {
-        return (str || '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/-+/g, '-').replace(/^-|-$/g, '');
-    }
-    function normalize(str) {
-        return (str || '').toLowerCase().trim();
-    }
-    function matches(query, text) {
-        return normalize(text).indexOf(normalize(query)) !== -1;
-    }
+  (function () {
+   function slugify(str) {
+   return (str || '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/-+/g, '-').replace(/^-|-$/g, '');
+   }
+   function normalize(str) {
+   return (str || '').toLowerCase().trim();
+   }
+   function matches(query, text) {
+   return normalize(text).indexOf(normalize(query)) !== -1;
+   }
 
-    function getResults(query) {
-        if (!query || query.length < 1) return [];
-        var q = normalize(query);
-        var nameMatches = [];
-        var descMatches = [];
-        var seen = new Set();
+   function getResults(query) {
+   if (!query || query.length < 1) return [];
+   var q = normalize(query);
+   var nameMatches = [];
+   var descMatches = [];
+   var seen = new Set();
 
-        SEARCH_INDEX.forEach(function (item) {
-            if (matches(q, item.name)) {
-                if (!seen.has(item.url)) {
-                    seen.add(item.url);
-                    nameMatches.push(item);
-                }
-            } else if (matches(q, item.description)) {
-                if (!seen.has(item.url)) {
-                    seen.add(item.url);
-                    descMatches.push(item);
-                }
-            }
-        });
+   SEARCH_INDEX.forEach(function (item) {
+   if (matches(q, item.name)) {
+   if (!seen.has(item.url)) {
+   seen.add(item.url);
+   nameMatches.push(item);
+   }
+   } else if (matches(q, item.description)) {
+   if (!seen.has(item.url)) {
+   seen.add(item.url);
+   descMatches.push(item);
+   }
+   }
+   });
 
-        return nameMatches.concat(descMatches).slice(0, 8);
-    }
+   return nameMatches.concat(descMatches).slice(0, 8);
+   }
 
-    function renderSuggestions(results, suggestionsEl) {
-        suggestionsEl.innerHTML = '';
-        if (!results.length) {
-            suggestionsEl.classList.add('hidden');
-            return;
-        }
-        suggestionsEl.classList.remove('hidden');
+   function renderSuggestions(results, suggestionsEl) {
+   suggestionsEl.innerHTML = '';
+   if (!results.length) {
+   suggestionsEl.classList.add('hidden');
+   return;
+   }
+   suggestionsEl.classList.remove('hidden');
 
-        var list = document.createElement('div');
-        list.className = 'py-2 max-h-80 overflow-y-auto';
+   var list = document.createElement('div');
+   list.className = 'py-2 max-h-80 overflow-y-auto';
 
-        results.forEach(function (r) {
-            var a = document.createElement('a');
-            a.href = r.url;
-            a.className = 'flex items-start gap-3 px-4 py-2.5 transition hover:bg-indigo-50';
+   results.forEach(function (r) {
+   var a = document.createElement('a');
+   a.href = r.url;
+   a.className = 'flex items-start gap-3 px-4 py-2.5 transition hover:bg-indigo-50';
 
-            var icon = document.createElement('span');
-            icon.className = 'mt-0.5 shrink-0 text-base';
-            icon.textContent = r.icon;
+   var icon = document.createElement('span');
+   icon.className = 'mt-0.5 shrink-0 text-base';
+   icon.textContent = r.icon;
 
-            var textDiv = document.createElement('div');
-            textDiv.className = 'min-w-0 flex-1';
+   var textDiv = document.createElement('div');
+   textDiv.className = 'min-w-0 flex-1';
 
-            var label = document.createElement('div');
-            label.className = 'text-sm font-medium text-gray-900';
-            label.textContent = r.name;
+   var label = document.createElement('div');
+   label.className = 'text-sm font-medium text-gray-900';
+   label.textContent = r.name;
 
-            var sub = document.createElement('div');
-            sub.className = 'flex items-center gap-2 text-xs text-gray-500';
-            var typeSpan = document.createElement('span');
-            typeSpan.className = 'rounded-full bg-indigo-50 px-2 py-0.5 text-xs font-medium text-indigo-700';
-            typeSpan.textContent = r.type;
-            sub.appendChild(typeSpan);
-            if (r.description) {
-                var desc = document.createElement('span');
-                desc.className = 'truncate';
-                desc.textContent = r.description.substring(0, 50);
-                sub.appendChild(desc);
-            }
+   var sub = document.createElement('div');
+   sub.className = 'flex items-center gap-2 text-xs text-gray-500';
+   var typeSpan = document.createElement('span');
+   typeSpan.className = 'rounded-full bg-indigo-50 px-2 py-0.5 text-xs font-medium text-indigo-700';
+   typeSpan.textContent = r.type;
+   sub.appendChild(typeSpan);
+   if (r.description) {
+   var desc = document.createElement('span');
+   desc.className = 'truncate';
+   desc.textContent = r.description.substring(0, 50);
+   sub.appendChild(desc);
+   }
 
-            textDiv.appendChild(label);
-            textDiv.appendChild(sub);
-            a.appendChild(icon);
-            a.appendChild(textDiv);
-            list.appendChild(a);
-        });
+   textDiv.appendChild(label);
+   textDiv.appendChild(sub);
+   a.appendChild(icon);
+   a.appendChild(textDiv);
+   list.appendChild(a);
+   });
 
-        suggestionsEl.appendChild(list);
-    }
+   suggestionsEl.appendChild(list);
+   }
 
-    function setupSearch(inputId, suggestionsId) {
-        var input = document.getElementById(inputId);
-        var suggestions = document.getElementById(suggestionsId);
-        if (!input || !suggestions) return;
+   function setupSearch(inputId, suggestionsId) {
+   var input = document.getElementById(inputId);
+   var suggestions = document.getElementById(suggestionsId);
+   if (!input || !suggestions) return;
 
-        var debounceTimer;
-        input.addEventListener('input', function () {
-            clearTimeout(debounceTimer);
-            var val = this.value;
-            debounceTimer = setTimeout(function () {
-                renderSuggestions(getResults(val), suggestions);
-            }, 150);
-        });
+   var debounceTimer;
+   input.addEventListener('input', function () {
+   clearTimeout(debounceTimer);
+   var val = this.value;
+   debounceTimer = setTimeout(function () {
+   renderSuggestions(getResults(val), suggestions);
+   }, 150);
+   });
 
-        input.addEventListener('blur', function () {
-            setTimeout(function () { suggestions.classList.add('hidden'); }, 200);
-        });
+   input.addEventListener('blur', function () {
+   setTimeout(function () { suggestions.classList.add('hidden'); }, 200);
+   });
 
-        input.addEventListener('focus', function () {
-            if (this.value) {
-                renderSuggestions(getResults(this.value), suggestions);
-            }
-        });
-    }
+   input.addEventListener('focus', function () {
+   if (this.value) {
+   renderSuggestions(getResults(this.value), suggestions);
+   }
+   });
+   }
 
-    setupSearch('globalSearchInput', 'globalSearchSuggestions');
-    setupSearch('globalSearchInputMobile', 'globalSearchSuggestionsMobile');
-})();
+   setupSearch('globalSearchInput', 'globalSearchSuggestions');
+   setupSearch('globalSearchInputMobile', 'globalSearchSuggestionsMobile');
+  })();
 </script>
 <script>
-    function toggleMobileSearch() {
-        document.getElementById("mobileSearchBar").classList.toggle("hidden");
-        setTimeout(function () {
-            var el = document.getElementById("globalSearchInputMobile");
-            if (el) el.focus();
-        }, 100);
-    }
+  function toggleMobileSearch() {
+    document.getElementById('mobileSearchBar').classList.toggle('hidden');
+    setTimeout(function () {
+      var el = document.getElementById('globalSearchInputMobile');
+      if (el) el.focus();
+    }, 100);
+  }
 </script>

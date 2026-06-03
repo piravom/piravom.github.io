@@ -3,6 +3,6 @@ title: Dr. Shaji Paul Pullormadam
 section: Health & Medical
 categories:
   - Doctor
-description: "Medical consultation services in Piravom."
-rating: "4.9"
+description: 'Medical consultation services in Piravom.'
+rating: '4.9'
 ---

@@ -1,8 +1,8 @@
 ---
 title: Kizhakkel Hardwares
 section: Hardware & Building Materials
-distanceFromBusStand: "750m"
-directionsUrl: "https://www.google.com/maps/dir/Piravom+Private+Bus+Stand/Kizhakkel+Hardwares,+PIRAVOM"
+distanceFromBusStand: '750m'
+directionsUrl: 'https://www.google.com/maps/dir/Piravom+Private+Bus+Stand/Kizhakkel+Hardwares,+PIRAVOM'
 categories:
   - Hardware
   - Building Materials

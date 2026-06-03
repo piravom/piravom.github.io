@@ -1,15 +1,13 @@
 <!-- Hero -->
 {% macro pageHero(title, description) %}
 <section class="lg:grid lg:place-content-center">
-    <div class="mx-auto w-full px-4 py-16">
+  <div class="mx-auto w-full px-4 py-16">
     <div class="mx-auto max-w-prose text-center">
-        <h1 class="text-4xl font-bold text-gray-900 sm:text-5xl">
-            {{ title | safe }}
-        </h1>
-        <p class="mt-4 text-base text-pretty text-gray-700 sm:text-lg/relaxed">
-            {{ description | safe }}
-        </p>
+      <h1 class="text-4xl font-bold text-gray-900 sm:text-5xl">{{ title | safe }}</h1>
+      <p class="mt-4 text-base text-pretty text-gray-700 sm:text-lg/relaxed">
+        {{ description | safe }}
+      </p>
     </div>
-    </div>
+  </div>
 </section>
 {% endmacro %}

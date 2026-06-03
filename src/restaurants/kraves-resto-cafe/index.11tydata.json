@@ -3,12 +3,7 @@
     "title": "Kraves Resto Cafe",
     "description": "A trendy resto-cafe in Piravom offering a fusion of Indian and Continental cuisine. Popular for its coffee, snacks, and relaxed cafe atmosphere. Located near the water authority office.",
     "logo": "https://img3.restaurantguru.com/rb0d-Kraves-Resto-Cafe-design.jpg",
-    "cuisines": [
-      "Cafe",
-      "Multi-Cuisine",
-      "Beverages",
-      "Fast Food"
-    ],
+    "cuisines": ["Cafe", "Multi-Cuisine", "Beverages", "Fast Food"],
     "phone": "+919778446467",
     "instagramUrl": "https://www.instagram.com/explore/tags/kraves-resto-cafe",
     "locationUrl": "https://www.google.com/maps/@9.8720,76.4885,15z"

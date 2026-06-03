@@ -3,117 +3,117 @@ layout: layouts/base.njk
 title: Attractions
 description: Explore major viewpoints, parks, and historic sites.
 eleventyExcludeFromCollections: true
-permalink: "/attractions/"
+permalink: '/attractions/'
 ---
 
 <main class="mx-auto max-w-7xl px-4 py-8">
-    <!-- Hero -->
-    {% from "components/page-hero.njk" import pageHero %}
-    {{ pageHero(title, description) }}
+  <!-- Hero -->
+  {% from "components/page-hero.njk" import pageHero %} {{ pageHero(title, description) }} {% set
+  categories = ["Nature", "Viewpoint", "Park", "Historical", "Religious"] %} {% set categoryIcons =
+  { "Nature": "🌿", "Viewpoint": "👁️", "Park": "🌳", "Historical": "🏛️", "Religious": "⛪" } %}
 
-    {% set categories = ["Nature", "Viewpoint", "Park", "Historical", "Religious"] %}
+  <!-- Mobile Category Strip (horizontal scroll) -->
+  <div class="lg:hidden -mx-4 px-4 mb-6 overflow-x-auto scrollbar-hide">
+    <nav class="flex gap-2 whitespace-nowrap pb-2">
+      {% for category in categories %} {% set catId = category | lower %}
+      <a
+        href="#{{ catId }}"
+        class="flex items-center gap-1.5 rounded-full border border-gray-200 bg-white px-4 py-2 text-sm font-medium text-gray-600 shadow-sm transition hover:border-indigo-200 hover:bg-indigo-50 hover:text-indigo-700"
+      >
+        <span>{{ categoryIcons[category] }}</span>
+        <span>{{ category }}</span>
+      </a>
+      {% endfor %}
+    </nav>
+  </div>
 
-    {% set categoryIcons = {
-        "Nature": "🌿",
-        "Viewpoint": "👁️",
-        "Park": "🌳",
-        "Historical": "🏛️",
-        "Religious": "⛪"
-    } %}
+  <div class="flex gap-8">
+    <!-- Desktop Sidebar Navigation -->
+    <aside class="hidden lg:block w-64 shrink-0">
+      <nav class="sticky top-28 space-y-1">
+        <p class="text-xs font-semibold uppercase tracking-wide text-gray-400 mb-3">Categories</p>
+        {% for category in categories %} {% set catId = category | lower %}
+        <a
+          href="#{{ catId }}"
+          class="flex items-center gap-2 rounded-xl px-3 py-2 text-sm font-medium text-gray-600 transition hover:bg-indigo-50 hover:text-indigo-700"
+        >
+          <span>{{ categoryIcons[category] }}</span>
+          <span>{{ category }}</span>
+        </a>
+        {% endfor %}
+      </nav>
+    </aside>
 
-    <!-- Mobile Category Strip (horizontal scroll) -->
-    <div class="lg:hidden -mx-4 px-4 mb-6 overflow-x-auto scrollbar-hide">
-        <nav class="flex gap-2 whitespace-nowrap pb-2">
-            {% for category in categories %}
-            {% set catId = category | lower %}
-            <a href="#{{ catId }}"
-               class="flex items-center gap-1.5 rounded-full border border-gray-200 bg-white px-4 py-2 text-sm font-medium text-gray-600 shadow-sm transition hover:border-indigo-200 hover:bg-indigo-50 hover:text-indigo-700">
-                <span>{{ categoryIcons[category] }}</span>
-                <span>{{ category }}</span>
-            </a>
-            {% endfor %}
-        </nav>
-    </div>
+    <!-- Content -->
+    <div class="flex-1 min-w-0">
+      {% for category in categories %} {% set catId = category | lower %}
+      <section id="{{ catId }}" class="mb-12 scroll-mt-28">
+        <h2 class="mb-6 text-2xl font-bold border-b border-gray-200 pb-2">
+          {{ categoryIcons[category] }} {{ category }}
+        </h2>
 
-    <div class="flex gap-8">
+        <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3 grid-flow-row-dense">
+          {% for attraction in collections.attractions | sortByDistance %} {% if category in
+          attraction.data.categories %}
+          <div
+            class="group rounded-3xl border border-gray-200 bg-white shadow-sm flex flex-col overflow-hidden {% if attraction.data.image %}row-span-2{% endif %}"
+          >
+            {% if attraction.data.image %}
+            <div class="aspect-video w-full bg-gray-100 overflow-hidden">
+              <img
+                src="{{attraction.url}}{{ attraction.data.image }}"
+                alt="{{ attraction.data.title }}"
+                class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+              />
+            </div>
+            {% endif %}
 
-        <!-- Desktop Sidebar Navigation -->
-        <aside class="hidden lg:block w-64 shrink-0">
-            <nav class="sticky top-28 space-y-1">
-                <p class="text-xs font-semibold uppercase tracking-wide text-gray-400 mb-3">Categories</p>
-                {% for category in categories %}
-                {% set catId = category | lower %}
-                <a href="#{{ catId }}"
-                   class="flex items-center gap-2 rounded-xl px-3 py-2 text-sm font-medium text-gray-600 transition hover:bg-indigo-50 hover:text-indigo-700">
-                    <span>{{ categoryIcons[category] }}</span>
-                    <span>{{ category }}</span>
-                </a>
-                {% endfor %}
-            </nav>
-        </aside>
+            <div class="p-6 flex-grow flex flex-col justify-between">
+              <div>
+                <h3 class="text-xl font-bold mb-2">{{ attraction.data.title }}</h3>
+                <p class="text-gray-600 mb-6">{{ attraction.data.description or "" }}</p>
+              </div>
 
-        <!-- Content -->
-        <div class="flex-1 min-w-0">
+              <!-- Info Row -->
+              <div
+                class="grid grid-cols-3 items-center border-t border-gray-100 pt-4 mt-auto text-sm"
+              >
+                <!-- Distance -->
+                <span
+                  class="text-center font-medium text-indigo-600"
+                  title="Distance from Piravom Town"
+                >
+                  {{ attraction.data.distanceFromBusStand or "-" }}
+                </span>
 
-            {% for category in categories %}
-            {% set catId = category | lower %}
-            <section id="{{ catId }}" class="mb-12 scroll-mt-28">
-                <h2 class="mb-6 text-2xl font-bold border-b border-gray-200 pb-2">{{ categoryIcons[category] }} {{ category }}</h2>
+                <!-- Category Icon -->
+                <span class="flex justify-center text-gray-400">
+                  {% if category == "Nature" %} {% lucide "tree-pine", "h-5 w-5" %} {% elif category
+                  == "Viewpoint" %} {% lucide "binoculars", "h-5 w-5" %} {% elif category == "Park"
+                  %} {% lucide "sun", "h-5 w-5" %} {% elif category == "Historical" %} {% lucide
+                  "landmark", "h-5 w-5" %} {% elif category == "Religious" %} {% lucide "church",
+                  "h-5 w-5" %} {% endif %}
+                </span>
 
-                <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3 grid-flow-row-dense">
-                    {% for attraction in collections.attractions | sortByDistance %}
-                    {% if category in attraction.data.categories %}
-                    <div class="group rounded-3xl border border-gray-200 bg-white shadow-sm flex flex-col overflow-hidden {% if attraction.data.image %}row-span-2{% endif %}">
-                        {% if attraction.data.image %}
-                        <div class="aspect-video w-full bg-gray-100 overflow-hidden">
-                            <img src="{{attraction.url}}{{ attraction.data.image }}" alt="{{ attraction.data.title }}" class="h-full w-full object-cover transition duration-500 group-hover:scale-105">
-                        </div>
-                        {% endif %}
-
-                        <div class="p-6 flex-grow flex flex-col justify-between">
-                            <div>
-                                <h3 class="text-xl font-bold mb-2">{{ attraction.data.title }}</h3>
-                                <p class="text-gray-600 mb-6">{{ attraction.data.description or "" }}</p>
-                            </div>
-
-                            <!-- Info Row -->
-                            <div class="grid grid-cols-3 items-center border-t border-gray-100 pt-4 mt-auto text-sm">
-                                <!-- Distance -->
-                                <span class="text-center font-medium text-indigo-600" title="Distance from Piravom Town">
-                                    {{ attraction.data.distanceFromBusStand or "-" }}
-                                </span>
-
-                                <!-- Category Icon -->
-                                <span class="flex justify-center text-gray-400">
-                                    {% if category == "Nature" %}
-                                    {% lucide "tree-pine", "h-5 w-5" %}
-                                    {% elif category == "Viewpoint" %}
-                                    {% lucide "binoculars", "h-5 w-5" %}
-                                    {% elif category == "Park" %}
-                                    {% lucide "sun", "h-5 w-5" %}
-                                    {% elif category == "Historical" %}
-                                    {% lucide "landmark", "h-5 w-5" %}
-                                    {% elif category == "Religious" %}
-                                    {% lucide "church", "h-5 w-5" %}
-                                    {% endif %}
-                                </span>
-
-                                <!-- Navigate -->
-                                <span class="flex justify-center">
-                                    <a href="https://maps.google.com/?q={{ attraction.data.title | replace(' ', '+') }}+Piravom" target="_blank" rel="noopener noreferrer" class="rounded-lg p-1.5 text-gray-400 transition hover:bg-gray-100 hover:text-gray-700" title="Open in Maps">
-                                        {% lucide "map-pin", "h-5 w-5" %}
-                                    </a>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                    {% endif %}
-                    {% endfor %}
-                </div>
-            </section>
-            {% endfor %}
-
+                <!-- Navigate -->
+                <span class="flex justify-center">
+                  <a
+                    href="https://maps.google.com/?q={{ attraction.data.title | replace(' ', '+') }}+Piravom"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="rounded-lg p-1.5 text-gray-400 transition hover:bg-gray-100 hover:text-gray-700"
+                    title="Open in Maps"
+                  >
+                    {% lucide "map-pin", "h-5 w-5" %}
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+          {% endif %} {% endfor %}
         </div>
+      </section>
+      {% endfor %}
     </div>
-
+  </div>
 </main>

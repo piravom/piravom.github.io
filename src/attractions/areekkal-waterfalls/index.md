@@ -1,6 +1,6 @@
 ---
 title: Areekkal Waterfalls
-categories: 
+categories:
   - Nature
 description: A scenic waterfall amidst lush greenery, popular with nature lovers and families.
 distanceFromBusStand: 7 km

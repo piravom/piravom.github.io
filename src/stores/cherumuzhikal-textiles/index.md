@@ -1,8 +1,8 @@
 ---
 title: Cherumuzhikal Textiles
 section: Textiles & Apparel
-distanceFromBusStand: "220m"
-directionsUrl: "https://www.google.com/maps/dir/Piravom+Private+Bus+Stand/Cherumuzhikal+Textiles,+PIRAVOM"
+distanceFromBusStand: '220m'
+directionsUrl: 'https://www.google.com/maps/dir/Piravom+Private+Bus+Stand/Cherumuzhikal+Textiles,+PIRAVOM'
 categories:
   - Textiles
   - Dress Store

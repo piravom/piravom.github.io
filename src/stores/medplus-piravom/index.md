@@ -1,8 +1,8 @@
 ---
 title: MedPlus Piravom
 section: Pharmacy & Medical Stores
-distanceFromBusStand: "1.0km"
-directionsUrl: "https://www.google.com/maps/dir/Piravom+Private+Bus+Stand/MedPlus+Piravom,+PIRAVOM"
+distanceFromBusStand: '1.0km'
+directionsUrl: 'https://www.google.com/maps/dir/Piravom+Private+Bus+Stand/MedPlus+Piravom,+PIRAVOM'
 categories:
   - Pharmacy
   - Medicines

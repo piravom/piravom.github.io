@@ -3,13 +3,7 @@
     "title": "Cafe HoneyBee",
     "description": "Fine Dining & Caterers",
     "logo": "https://i.postimg.cc/Th8b3DRk/honey-bee.jpg",
-    "cuisines": [
-      "Chinese",
-      "Arabian",
-      "South Indian",
-      "Continental",
-      "Beverages"
-    ],
+    "cuisines": ["Chinese", "Arabian", "South Indian", "Continental", "Beverages"],
     "phone": "+919876543210",
     "instagramUrl": "https://instagram.com",
     "locationUrl": "https://www.google.com/maps/@9.8750,76.4881,15z",

@@ -1,8 +1,8 @@
 ---
 title: Easystore Piravom
 section: Hardware & Building Materials
-distanceFromBusStand: "300m"
-directionsUrl: "https://www.google.com/maps/dir/Piravom+Private+Bus+Stand/Easystore+Piravom,+PIRAVOM"
+distanceFromBusStand: '300m'
+directionsUrl: 'https://www.google.com/maps/dir/Piravom+Private+Bus+Stand/Easystore+Piravom,+PIRAVOM'
 categories:
   - Electronics
   - Home Appliances

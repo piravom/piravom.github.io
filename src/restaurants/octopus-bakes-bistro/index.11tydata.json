@@ -3,12 +3,7 @@
     "title": "Octopus Bakes & Bistro",
     "description": "A modern bistro and bakery located at Three Road Junction in Piravom near Nedumchalil Eye Hospital. Famous for its freshly baked goods, bistro-style dishes, and cozy ambiance.",
     "logo": "https://img3.restaurantguru.com/rb0d-Octopus-Bakes-Bistro-design.jpg",
-    "cuisines": [
-      "Bakery",
-      "Bistro",
-      "Continental",
-      "Indian"
-    ],
+    "cuisines": ["Bakery", "Bistro", "Continental", "Indian"],
     "phone": "+919961000908",
     "instagramUrl": "https://www.instagram.com/explore/tags/octopus-bakes-bistro",
     "locationUrl": "https://www.google.com/maps/@9.8755,76.4878,15z"

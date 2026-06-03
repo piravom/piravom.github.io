@@ -1,114 +1,72 @@
 ---
-permalink: "/llms.txt"
+permalink: '/llms.txt'
 eleventyExcludeFromCollections: true
 ---
-# Piravom - Town Portal
 
-> Piravom is a municipal town in Ernakulam district, Kerala, India, situated on the banks of the Muvattupuzha River. This portal is a comprehensive directory of local businesses, services, restaurants, attractions, events, houses of worship, emergency contacts, and transport information for Piravom and the surrounding area.
-
-Important notes:
-- All distances are measured from Piravom Town Bus Stand.
-- Phone numbers listed are local Kerala numbers with STD code 0485 or mobile prefixes.
-- Restaurant opening hours vary by day (weekday/weekend). Check individual pages for full schedules.
-- Attractions marked with a distance are within or near Piravom town limits.
-- The site is published at https://piravom.in.
-
-## Restaurants
-
-- [All Restaurants](https://piravom.in/restaurants/): Browse all restaurants in Piravom
-{% for restaurant in collections.restaurants | sortByDistance %}{% if loop.index0 < 10 %}
-- [{{ restaurant.data.title }}](https://piravom.in{{ restaurant.url }}){% if restaurant.data.description %}: {{ restaurant.data.description }}{% endif %}{% if restaurant.data.rating %} Rated {{ restaurant.data.rating }}{% endif %}{% if restaurant.data.distanceFromBusStand %}. {{ restaurant.data.distanceFromBusStand }} from bus stand{% endif %}{% if restaurant.data.cuisine %}. Cuisine: {{ restaurant.data.cuisine | join(", ") }}{% endif %}{% endif %}{% endfor %}
-{% if collections.restaurants.length > 10 -%}
-- [View all {{ collections.restaurants.length }} restaurants](https://piravom.in/restaurants/)
-{% endif %}
-
-## Attractions
-
-- [All Attractions](https://piravom.in/attractions/): Browse all attractions near Piravom
-{% for attraction in collections.attractions | sortByDistance %}{% if loop.index0 < 10 %}
-- [{{ attraction.data.title }}](https://piravom.in{{ attraction.url }}){% if attraction.data.description %}: {{ attraction.data.description }}{% endif %}{% if attraction.data.distanceFromBusStand %} ({{ attraction.data.distanceFromBusStand }}){% endif %}{% endif %}{% endfor %}
-{% if collections.attractions.length > 10 -%}
-- [View all {{ collections.attractions.length }} attractions](https://piravom.in/attractions/)
-{% endif %}
-
-## Stores
-
-- [All Stores](https://piravom.in/stores/): Browse all stores and shops in Piravom
-{% set storeSections = collections.stores | groupByData("section") | keys %}
-{% if storeSections.length %}
-- Categories include: {{ storeSections | join(", ") }}.
-{% endif %}
-- Major stores include ({{ collections.stores.length }} total):
-{% for store in collections.stores %}{% if loop.index0 < 10 %}
-  - [{{ store.data.title }}](https://piravom.in{{ store.url }}){% if store.data.categories and store.data.categories.length %} -- {{ store.data.categories | join(", ") }}{% endif %}{% if store.data.description %}: {{ store.data.description }}{% endif %}{% endif %}{% endfor %}
-{% if collections.stores.length > 10 -%}
-- [View all {{ collections.stores.length }} stores](https://piravom.in/stores/)
-{% endif %}
-
-## Services
-
-- [All Services](https://piravom.in/services/): Browse all local service providers
-{% set serviceSections = collections.services | groupByData("section") | keys %}
-{% if serviceSections.length %}
-- Categories include: {{ serviceSections | join(", ") }}.
-{% endif %}
-- Key services ({{ collections.services.length }} total):
-{% for service in collections.services %}{% if loop.index0 < 10 %}
-  - [{{ service.data.title }}](https://piravom.in{{ service.url }}){% if service.data.categories and service.data.categories.length %} -- {{ service.data.categories | join(", ") }}{% endif %}{% if service.data.description %}: {{ service.data.description }}{% endif %}{% endif %}{% endfor %}
-{% if collections.services.length > 10 -%}
-- [View all {{ collections.services.length }} services](https://piravom.in/services/)
-{% endif %}
-
-## Houses of Worship
-
-- [All Houses of Worship](https://piravom.in/house-of-workships/): Browse temples, churches, and other religious sites
-{% for place in collections["house-of-workships"] %}{% if loop.index0 < 10 %}
-- [{{ place.data.title }}](https://piravom.in{{ place.url }}){% if place.data.description %}: {{ place.data.description }}{% endif %}{% endif %}{% endfor %}
-{% if collections["house-of-workships"].length > 10 -%}
-- [View all {{ collections["house-of-workships"].length }} houses of worship](https://piravom.in/house-of-workships/)
-{% endif %}
-
-## Events
-
-- [All Events](https://piravom.in/events/): Browse upcoming and past events
-{% for event in collections.events %}
-- [{{ event.data.title }}](https://piravom.in{{ event.url }}){% if event.data.description %}: {{ event.data.description }}{% endif %}{% if event.data.date %} ({{ event.data.date | dateToISO }}){% endif %}{% if event.data.category %} - {{ event.data.category }}{% endif %}
-{% endfor %}
-{% if not collections.events.length %}
-None listed yet.
-{% endif %}
-
-## Phonebook
-
-- [Full Phonebook](https://piravom.in/phonebook/)
-{% for category in phone_numbers %}
-{% if loop.first %}
-{% for contact in category.contacts %}
-- {{ contact.name }}: {{ contact.number }}
-{% endfor %}
-{% else %}
-- {{ category.category }}:
-{% for contact in category.contacts %}
-  - {{ contact.name }} - {{ contact.number }}
-{% endfor %}
-{% endif %}
-{% endfor %}
-
-## Bus Timings
-
-- [Full Bus Schedule](https://piravom.in/bus-timing/): Regular bus services from Piravom to nearby towns. Services operated by KSRTC and private operators.
-{% set routes = buses | groupby("to") %}
-{% for destination, services in routes %}
-- {{ destination }}: {% for bus in services %}{{ bus.time }} ({{ bus.type }}){% if not loop.last %}, {% endif %}{% endfor %}
-{% endfor %}
-
-## About
-
-- [About Piravom](https://piravom.in/about/): Overview of Piravom town - history, geography, culture, and community.
-
-## Optional
-
-- [Piravom on Wikipedia](https://en.wikipedia.org/wiki/Piravom): Wikipedia entry for Piravom
-- [Google Maps - Piravom](https://www.google.com/maps/place/Piravom,+Kerala): Geographic location and map
-- [Instagram - @piravom](https://instagram.com/piravom): Social media presence
-- [Facebook - Piravom](https://facebook.com/piravom): Social media presence
+# Piravom - Town Portal > Piravom is a municipal town in Ernakulam district, Kerala, India, situated
+on the banks of the Muvattupuzha River. This portal is a comprehensive directory of local
+businesses, services, restaurants, attractions, events, houses of worship, emergency contacts, and
+transport information for Piravom and the surrounding area. Important notes: - All distances are
+measured from Piravom Town Bus Stand. - Phone numbers listed are local Kerala numbers with STD code
+0485 or mobile prefixes. - Restaurant opening hours vary by day (weekday/weekend). Check individual
+pages for full schedules. - Attractions marked with a distance are within or near Piravom town
+limits. - The site is published at https://piravom.in. ## Restaurants - [All
+Restaurants](https://piravom.in/restaurants/): Browse all restaurants in Piravom {% for restaurant
+in collections.restaurants | sortByDistance %}{% if loop.index0 < 10 %} - [{{ restaurant.data.title
+}}](https://piravom.in{{ restaurant.url }}){% if restaurant.data.description %}: {{
+restaurant.data.description }}{% endif %}{% if restaurant.data.rating %} Rated {{
+restaurant.data.rating }}{% endif %}{% if restaurant.data.distanceFromBusStand %}. {{
+restaurant.data.distanceFromBusStand }} from bus stand{% endif %}{% if restaurant.data.cuisine %}.
+Cuisine: {{ restaurant.data.cuisine | join(", ") }}{% endif %}{% endif %}{% endfor %} {% if
+collections.restaurants.length > 10 -%} - [View all {{ collections.restaurants.length }}
+restaurants](https://piravom.in/restaurants/) {% endif %} ## Attractions - [All
+Attractions](https://piravom.in/attractions/): Browse all attractions near Piravom {% for attraction
+in collections.attractions | sortByDistance %}{% if loop.index0 < 10 %} - [{{ attraction.data.title
+}}](https://piravom.in{{ attraction.url }}){% if attraction.data.description %}: {{
+attraction.data.description }}{% endif %}{% if attraction.data.distanceFromBusStand %} ({{
+attraction.data.distanceFromBusStand }}){% endif %}{% endif %}{% endfor %} {% if
+collections.attractions.length > 10 -%} - [View all {{ collections.attractions.length }}
+attractions](https://piravom.in/attractions/) {% endif %} ## Stores - [All
+Stores](https://piravom.in/stores/): Browse all stores and shops in Piravom {% set storeSections =
+collections.stores | groupByData("section") | keys %} {% if storeSections.length %} - Categories
+include: {{ storeSections | join(", ") }}. {% endif %} - Major stores include ({{
+collections.stores.length }} total): {% for store in collections.stores %}{% if loop.index0 < 10 %}
+- [{{ store.data.title }}](https://piravom.in{{ store.url }}){% if store.data.categories and
+store.data.categories.length %} -- {{ store.data.categories | join(", ") }}{% endif %}{% if
+store.data.description %}: {{ store.data.description }}{% endif %}{% endif %}{% endfor %} {% if
+collections.stores.length > 10 -%} - [View all {{ collections.stores.length }}
+stores](https://piravom.in/stores/) {% endif %} ## Services - [All
+Services](https://piravom.in/services/): Browse all local service providers {% set serviceSections =
+collections.services | groupByData("section") | keys %} {% if serviceSections.length %} - Categories
+include: {{ serviceSections | join(", ") }}. {% endif %} - Key services ({{
+collections.services.length }} total): {% for service in collections.services %}{% if loop.index0 <
+10 %} - [{{ service.data.title }}](https://piravom.in{{ service.url }}){% if service.data.categories
+and service.data.categories.length %} -- {{ service.data.categories | join(", ") }}{% endif %}{% if
+service.data.description %}: {{ service.data.description }}{% endif %}{% endif %}{% endfor %} {% if
+collections.services.length > 10 -%} - [View all {{ collections.services.length }}
+services](https://piravom.in/services/) {% endif %} ## Houses of Worship - [All Houses of
+Worship](https://piravom.in/house-of-workships/): Browse temples, churches, and other religious
+sites {% for place in collections["house-of-workships"] %}{% if loop.index0 < 10 %} - [{{
+place.data.title }}](https://piravom.in{{ place.url }}){% if place.data.description %}: {{
+place.data.description }}{% endif %}{% endif %}{% endfor %} {% if
+collections["house-of-workships"].length > 10 -%} - [View all {{
+collections["house-of-workships"].length }} houses of
+worship](https://piravom.in/house-of-workships/) {% endif %} ## Events - [All
+Events](https://piravom.in/events/): Browse upcoming and past events {% for event in
+collections.events %} - [{{ event.data.title }}](https://piravom.in{{ event.url }}){% if
+event.data.description %}: {{ event.data.description }}{% endif %}{% if event.data.date %} ({{
+event.data.date | dateToISO }}){% endif %}{% if event.data.category %} - {{ event.data.category }}{%
+endif %} {% endfor %} {% if not collections.events.length %} None listed yet. {% endif %} ##
+Phonebook - [Full Phonebook](https://piravom.in/phonebook/) {% for category in phone_numbers %} {%
+if loop.first %} {% for contact in category.contacts %} - {{ contact.name }}: {{ contact.number }}
+{% endfor %} {% else %} - {{ category.category }}: {% for contact in category.contacts %} - {{
+contact.name }} - {{ contact.number }} {% endfor %} {% endif %} {% endfor %} ## Bus Timings - [Full
+Bus Schedule](https://piravom.in/bus-timing/): Regular bus services from Piravom to nearby towns.
+Services operated by KSRTC and private operators. {% set routes = buses | groupby("to") %} {% for
+destination, services in routes %} - {{ destination }}: {% for bus in services %}{{ bus.time }} ({{
+bus.type }}){% if not loop.last %}, {% endif %}{% endfor %} {% endfor %} ## About - [About
+Piravom](https://piravom.in/about/): Overview of Piravom town - history, geography, culture, and
+community. ## Optional - [Piravom on Wikipedia](https://en.wikipedia.org/wiki/Piravom): Wikipedia
+entry for Piravom - [Google Maps - Piravom](https://www.google.com/maps/place/Piravom,+Kerala):
+Geographic location and map - [Instagram - @piravom](https://instagram.com/piravom): Social media
+presence - [Facebook - Piravom](https://facebook.com/piravom): Social media presence

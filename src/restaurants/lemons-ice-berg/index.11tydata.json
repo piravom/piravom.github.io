@@ -3,12 +3,7 @@
     "title": "Lemons Ice Berg",
     "description": "A refreshing ice cream and beverage spot near KWA Cheriya Pally Road in Piravom. Known for its variety of ice cream flavors, milkshakes, and cool treats perfect for hot days.",
     "logo": "https://img3.restaurantguru.com/rb0d-Lemons-Ice-Berg-design.jpg",
-    "cuisines": [
-      "Ice Cream",
-      "Desserts",
-      "Shakes",
-      "Beverages"
-    ],
+    "cuisines": ["Ice Cream", "Desserts", "Shakes", "Beverages"],
     "phone": "+914852243655",
     "instagramUrl": "https://www.instagram.com/explore/tags/lemons-ice-berg",
     "locationUrl": "https://www.google.com/maps/@9.8735,76.4868,15z"

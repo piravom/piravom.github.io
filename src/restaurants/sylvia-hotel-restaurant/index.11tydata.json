@@ -3,12 +3,7 @@
     "title": "Sylvia Hotel & Restaurant",
     "description": "A popular dining destination near the Old Market Road bus stop in Piravom. Offers multi-cuisine dining including Kerala, Indian, and Chinese specialties with a comfortable ambiance.",
     "logo": "https://img3.restaurantguru.com/rb0d-Sylvia-Hotel-design.jpg",
-    "cuisines": [
-      "Kerala",
-      "Indian",
-      "Chinese",
-      "Continental"
-    ],
+    "cuisines": ["Kerala", "Indian", "Chinese", "Continental"],
     "phone": "+919947842701",
     "instagramUrl": "https://www.instagram.com/explore/tags/sylvia-hotel-restaurant",
     "locationUrl": "https://www.google.com/maps/@9.8742,76.4867,15z"

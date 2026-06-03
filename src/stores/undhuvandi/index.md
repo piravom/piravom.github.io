@@ -1,8 +1,8 @@
 ---
 title: Undhuvandi
 section: Textiles & Apparel
-distanceFromBusStand: "450m"
-directionsUrl: "https://www.google.com/maps/dir/Piravom+Private+Bus+Stand/Undhuvandi,+PIRAVOM"
+distanceFromBusStand: '450m'
+directionsUrl: 'https://www.google.com/maps/dir/Piravom+Private+Bus+Stand/Undhuvandi,+PIRAVOM'
 categories:
   - Clothing
   - Fashion

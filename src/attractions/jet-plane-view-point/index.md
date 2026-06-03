@@ -1,6 +1,6 @@
 ---
 title: Jet Plane View Point
-categories: 
+categories:
   - Viewpoint
   - Historical
 description: HJT-16 tainer jet on a pedestal, overlooking the river.
