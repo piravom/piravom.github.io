@@ -1,0 +1,567 @@
+---
+layout: layouts/base.njk
+title: Weather in Piravom
+description: Get the current weather conditions and 3-day forecast for Piravom, Kerala — temperature, humidity, wind speed, and precipitation updates.
+permalink: '/weather/'
+---
+
+<!-- JSON-LD Structured Data -->
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "{{ site.url }}/weather/#webpage",
+        "url": "{{ site.url }}/weather/",
+        "name": "Weather in Piravom — Current Conditions & 3-Day Forecast",
+        "description": "Current weather and 3-day forecast for Piravom, Kerala. Temperature, humidity, wind speed, and precipitation data updated in real-time.",
+        "isPartOf": {
+          "@id": "{{ site.url }}/#website"
+        },
+        "about": {
+          "@id": "{{ site.url }}/weather/#place"
+        },
+        "breadcrumb": {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "{{ site.url }}/" },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Weather",
+              "item": "{{ site.url }}/weather/"
+            }
+          ]
+        },
+        "primaryImageOfPage": {
+          "@type": "ImageObject",
+          "url": "{{ site.url }}/android-chrome-512x512.png"
+        }
+      },
+      {
+        "@type": "Place",
+        "@id": "{{ site.url }}/weather/#place",
+        "name": "Piravom",
+        "description": "A municipal town in Ernakulam district, Kerala, India.",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Piravom",
+          "addressRegion": "Kerala",
+          "addressCountry": "IN"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 9.87,
+          "longitude": 76.49
+        },
+        "containedInPlace": {
+          "@type": "Place",
+          "name": "Ernakulam district",
+          "containedInPlace": {
+            "@type": "Place",
+            "name": "Kerala"
+          }
+        }
+      }
+    ]
+  }
+</script>
+
+<!-- Dynamic JSON-LD injected after API fetch -->
+<script id="weatherSchema" type="application/ld+json"></script>
+
+<main class="mx-auto max-w-7xl px-4 py-8">
+  <!-- Hero -->
+  {% from "components/page-hero.njk" import pageHero %} {{ pageHero(title, description) }}
+
+  <!-- Weather Content (client-side rendered) -->
+  <div class="mx-auto max-w-4xl">
+    <!-- Loading State -->
+    <div id="weatherLoading" role="status" aria-live="polite" class="text-center py-16">
+      <div
+        class="inline-block h-10 w-10 animate-spin rounded-full border-4 border-indigo-200 border-t-indigo-600"
+        aria-hidden="true"
+      ></div>
+      <p class="mt-4 text-gray-500 dark:text-gray-400">Loading weather data...</p>
+    </div>
+
+    <!-- Error State -->
+    <div id="weatherError" class="hidden text-center py-16" role="alert">
+      <span class="text-5xl" aria-hidden="true">🌧️</span>
+      <h2 class="mt-4 text-xl font-bold text-gray-900 dark:text-gray-100">
+        Unable to load weather
+      </h2>
+      <p class="mt-2 text-sm text-gray-500 dark:text-gray-400">
+        Please check your connection and try again.
+      </p>
+      <button
+        onclick="fetchWeather()"
+        class="mt-4 rounded-xl bg-indigo-600 px-6 py-2 text-sm font-semibold text-white transition hover:bg-indigo-700"
+      >
+        Retry
+      </button>
+    </div>
+
+    <!-- Weather Content -->
+    <div
+      id="weatherContent"
+      class="hidden space-y-8"
+      itemscope
+      itemtype="https://schema.org/WeatherForecast"
+    >
+      <meta itemprop="name" content="Weather forecast for Piravom, Kerala" />
+      <meta itemprop="dateIssued" content="" id="metaDateIssued" />
+
+      <!-- Current Weather -->
+      <section aria-label="Current weather conditions">
+        <div
+          class="rounded-3xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 p-8 shadow-sm"
+        >
+          <div class="flex flex-col sm:flex-row items-center gap-6">
+            <!-- Weather Icon (Lucide SVG injected by JS) -->
+            <div
+              id="currentIcon"
+              class="w-20 h-20 shrink-0 text-indigo-500 dark:text-indigo-400"
+              aria-hidden="true"
+            ></div>
+
+            <!-- Temp & Details -->
+            <div class="flex-1 text-center sm:text-left">
+              <div class="flex items-baseline justify-center sm:justify-start gap-3">
+                <span
+                  id="currentTemp"
+                  class="text-6xl font-bold text-gray-900 dark:text-gray-100"
+                  itemprop="temperature"
+                  >--</span
+                >
+                <span class="text-2xl text-gray-400 dark:text-gray-500" aria-label="degrees Celsius"
+                  >°C</span
+                >
+              </div>
+              <p id="currentDesc" class="mt-1 text-lg text-gray-600 dark:text-gray-400 capitalize">
+                --
+              </p>
+              <p id="currentLocation" class="text-sm text-gray-400 dark:text-gray-500">
+                Piravom, Kerala
+              </p>
+            </div>
+
+            <!-- Extra Stats -->
+            <div class="grid grid-cols-2 gap-x-8 gap-y-3 text-sm">
+              <div class="text-center sm:text-left">
+                <p class="text-gray-400 dark:text-gray-500 text-xs uppercase tracking-wide">
+                  Feels Like
+                </p>
+                <p
+                  id="feelsLike"
+                  class="font-semibold text-gray-900 dark:text-gray-100"
+                  itemprop="feelsLikeTemperature"
+                >
+                  --°C
+                </p>
+              </div>
+              <div class="text-center sm:text-left">
+                <p class="text-gray-400 dark:text-gray-500 text-xs uppercase tracking-wide">
+                  Humidity
+                </p>
+                <p
+                  id="humidity"
+                  class="font-semibold text-gray-900 dark:text-gray-100"
+                  itemprop="humidity"
+                >
+                  --%
+                </p>
+              </div>
+              <div class="text-center sm:text-left">
+                <p class="text-gray-400 dark:text-gray-500 text-xs uppercase tracking-wide">Wind</p>
+                <p
+                  id="windSpeed"
+                  class="font-semibold text-gray-900 dark:text-gray-100"
+                  itemprop="windSpeed"
+                >
+                  -- km/h
+                </p>
+              </div>
+              <div class="text-center sm:text-left">
+                <p class="text-gray-400 dark:text-gray-500 text-xs uppercase tracking-wide">
+                  Precipitation
+                </p>
+                <p id="precipitation" class="font-semibold text-gray-900 dark:text-gray-100">
+                  -- mm
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3-Day Forecast -->
+      <section aria-label="3-day weather forecast">
+        <h2 class="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-6">3-Day Forecast</h2>
+        <div id="forecastGrid" class="grid gap-4 sm:grid-cols-3">
+          <!-- Cards injected by JS -->
+        </div>
+      </section>
+    </div>
+  </div>
+</main>
+
+<script>
+  // Piravom coordinates
+  var LAT = 9.87;
+  var LON = 76.49;
+
+  // ── Lucide SVG paths for weather icons ──
+  var WEATHER_ICONS = {
+    sun: [
+      '<circle cx="12" cy="12" r="4"/>',
+      '<path d="M12 2v2"/>',
+      '<path d="M12 20v2"/>',
+      '<path d="m4.93 4.93 1.41 1.41"/>',
+      '<path d="m17.66 17.66 1.41 1.41"/>',
+      '<path d="M2 12h2"/>',
+      '<path d="M20 12h2"/>',
+      '<path d="m6.34 17.66-1.41 1.41"/>',
+      '<path d="m19.07 4.93-1.41 1.41"/>',
+    ],
+    'cloud-sun': [
+      '<path d="M12 2v2"/>',
+      '<path d="m4.93 4.93 1.41 1.41"/>',
+      '<path d="M20 12h2"/>',
+      '<path d="m19.07 4.93-1.41 1.41"/>',
+      '<path d="M15.947 12.65a4 4 0 0 0-5.925-4.128"/>',
+      '<path d="M13 22H7a5 5 0 1 1 4.9-6H13a3 3 0 0 1 0 6Z"/>',
+    ],
+    cloud: ['<path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/>'],
+    'cloud-fog': [
+      '<path d="M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242"/>',
+      '<path d="M16 17H7"/>',
+      '<path d="M17 21H9"/>',
+    ],
+    'cloud-drizzle': [
+      '<path d="M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242"/>',
+      '<path d="M8 19v1"/>',
+      '<path d="M8 14v1"/>',
+      '<path d="M16 19v1"/>',
+      '<path d="M16 14v1"/>',
+      '<path d="M12 21v1"/>',
+      '<path d="M12 16v1"/>',
+    ],
+    'cloud-rain': [
+      '<path d="M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242"/>',
+      '<path d="M16 14v6"/>',
+      '<path d="M8 14v6"/>',
+      '<path d="M12 16v6"/>',
+    ],
+    'cloud-lightning': [
+      '<path d="M6 16.326A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 .5 8.973"/>',
+      '<path d="m13 12-3 5h4l-3 5"/>',
+    ],
+    'cloud-snow': [
+      '<path d="M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242"/>',
+      '<path d="M8 15h.01"/>',
+      '<path d="M8 19h.01"/>',
+      '<path d="M12 17h.01"/>',
+      '<path d="M12 21h.01"/>',
+      '<path d="M16 15h.01"/>',
+      '<path d="M16 19h.01"/>',
+    ],
+  };
+
+  // Map WMO weather codes to Lucide icon names
+  var CODE_TO_ICON = {
+    0: 'sun',
+    1: 'sun',
+    2: 'cloud-sun',
+    3: 'cloud',
+    45: 'cloud-fog',
+    48: 'cloud-fog',
+    51: 'cloud-drizzle',
+    53: 'cloud-drizzle',
+    55: 'cloud-drizzle',
+    56: 'cloud-drizzle',
+    57: 'cloud-drizzle',
+    61: 'cloud-rain',
+    63: 'cloud-rain',
+    65: 'cloud-rain',
+    66: 'cloud-rain',
+    67: 'cloud-rain',
+    71: 'cloud-snow',
+    73: 'cloud-snow',
+    75: 'cloud-snow',
+    77: 'cloud-snow',
+    80: 'cloud-rain',
+    81: 'cloud-rain',
+    82: 'cloud-rain',
+    85: 'cloud-snow',
+    86: 'cloud-snow',
+    95: 'cloud-lightning',
+    96: 'cloud-lightning',
+    99: 'cloud-lightning',
+  };
+
+  var WEATHER_LABELS = {
+    0: 'Clear sky',
+    1: 'Mainly clear',
+    2: 'Partly cloudy',
+    3: 'Overcast',
+    45: 'Foggy',
+    48: 'Depositing rime fog',
+    51: 'Light drizzle',
+    53: 'Moderate drizzle',
+    55: 'Dense drizzle',
+    56: 'Freezing drizzle',
+    57: 'Freezing drizzle',
+    61: 'Slight rain',
+    63: 'Moderate rain',
+    65: 'Heavy rain',
+    66: 'Freezing rain',
+    67: 'Freezing rain',
+    71: 'Light snow',
+    73: 'Moderate snow',
+    75: 'Heavy snow',
+    77: 'Snow grains',
+    80: 'Slight rain showers',
+    81: 'Moderate rain showers',
+    82: 'Violent rain showers',
+    85: 'Slight snow showers',
+    86: 'Heavy snow showers',
+    95: 'Thunderstorm',
+    96: 'Thunderstorm with hail',
+    99: 'Thunderstorm with hail',
+  };
+
+  function getIconName(code) {
+    return CODE_TO_ICON[code] || 'cloud';
+  }
+
+  function getLabel(code) {
+    return WEATHER_LABELS[code] || 'Unknown';
+  }
+
+  function createLucideIcon(iconName, className) {
+    var paths = WEATHER_ICONS[iconName] || WEATHER_ICONS.cloud;
+    var ns = 'http://www.w3.org/2000/svg';
+    var svg = document.createElementNS(ns, 'svg');
+    svg.setAttribute('xmlns', ns);
+    svg.setAttribute('width', '100%');
+    svg.setAttribute('height', '100%');
+    svg.setAttribute('viewBox', '0 0 24 24');
+    svg.setAttribute('fill', 'none');
+    svg.setAttribute('stroke', 'currentColor');
+    svg.setAttribute('stroke-width', '2');
+    svg.setAttribute('stroke-linecap', 'round');
+    svg.setAttribute('stroke-linejoin', 'round');
+    if (className) svg.setAttribute('class', className);
+    paths.forEach(function (d) {
+      var temp = document.createElementNS(ns, 'g');
+      temp.innerHTML = d;
+      while (temp.firstChild) svg.appendChild(temp.firstChild);
+    });
+    return svg;
+  }
+
+  function formatDate(dateStr) {
+    var date = new Date(dateStr + 'T12:00:00');
+    var today = new Date();
+    var tomorrow = new Date(today);
+    tomorrow.setDate(tomorrow.getDate() + 1);
+    if (date.toDateString() === today.toDateString()) return 'Today';
+    if (date.toDateString() === tomorrow.toDateString()) return 'Tomorrow';
+    return date.toLocaleDateString('en-IN', { weekday: 'long', day: 'numeric', month: 'short' });
+  }
+
+  function updateJSONLD(data) {
+    var current = data.current;
+    var daily = data.daily;
+
+    var result = [];
+    for (var i = 0; i < daily.time.length; i++) {
+      result.push({
+        '@type': 'WeatherForecast',
+        name: 'Forecast for ' + daily.time[i],
+        date: daily.time[i],
+        description: getLabel(daily.weather_code[i]),
+        temperatureHigh: {
+          '@type': 'QuantitativeValue',
+          value: Math.round(daily.temperature_2m_max[i]),
+          unitCode: 'CEL',
+        },
+        temperatureLow: {
+          '@type': 'QuantitativeValue',
+          value: Math.round(daily.temperature_2m_min[i]),
+          unitCode: 'CEL',
+        },
+        windSpeed: {
+          '@type': 'QuantitativeValue',
+          value: Math.round(daily.wind_speed_10m_max[i]),
+          unitCode: 'KMH',
+        },
+        precipitation: {
+          '@type': 'QuantitativeValue',
+          value: daily.precipitation_sum[i],
+          unitCode: 'MMT',
+        },
+      });
+    }
+
+    var schema = {
+      '@context': 'https://schema.org',
+      '@type': 'WeatherForecast',
+      name: 'Weather forecast for Piravom, Kerala',
+      dateIssued: new Date().toISOString(),
+      location: {
+        '@type': 'Place',
+        name: 'Piravom',
+        address: {
+          '@type': 'PostalAddress',
+          addressLocality: 'Piravom',
+          addressRegion: 'Kerala',
+          addressCountry: 'IN',
+        },
+        geo: { '@type': 'GeoCoordinates', latitude: 9.87, longitude: 76.49 },
+      },
+      result: result,
+    };
+
+    var script = document.getElementById('weatherSchema');
+    if (script) script.textContent = JSON.stringify(schema);
+  }
+
+  function renderWeather(data) {
+    var current = data.current;
+    var daily = data.daily;
+    var iconName = getIconName(current.weather_code);
+
+    var iconContainer = document.getElementById('currentIcon');
+    iconContainer.innerHTML = '';
+    iconContainer.appendChild(createLucideIcon(iconName, 'w-full h-full'));
+
+    document.getElementById('currentTemp').textContent = Math.round(current.temperature_2m);
+    document.getElementById('currentDesc').textContent = getLabel(current.weather_code);
+    document.getElementById('feelsLike').textContent =
+      Math.round(current.apparent_temperature) + '°C';
+    document.getElementById('humidity').textContent = current.relative_humidity_2m + '%';
+    document.getElementById('windSpeed').textContent = current.wind_speed_10m + ' km/h';
+    document.getElementById('precipitation').textContent = current.precipitation + ' mm';
+    document.getElementById('metaDateIssued').setAttribute('content', new Date().toISOString());
+
+    var grid = document.getElementById('forecastGrid');
+    grid.innerHTML = '';
+
+    for (var i = 0; i < daily.time.length; i++) {
+      var dayIconName = getIconName(daily.weather_code[i]);
+      var card = document.createElement('div');
+      card.className =
+        'rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 p-6 shadow-sm text-center';
+      card.setAttribute('itemscope', '');
+      card.setAttribute('itemprop', 'result');
+      card.setAttribute('itemtype', 'https://schema.org/WeatherForecast');
+
+      var iconWrap = document.createElement('div');
+      iconWrap.className = 'w-12 h-12 mx-auto mb-3 text-indigo-500 dark:text-indigo-400';
+      iconWrap.setAttribute('aria-hidden', 'true');
+      iconWrap.appendChild(createLucideIcon(dayIconName, 'w-full h-full'));
+
+      card.innerHTML =
+        '<p class="text-sm font-semibold text-gray-500 dark:text-gray-400 mb-2">' +
+        formatDate(daily.time[i]) +
+        '</p>' +
+        '<meta itemprop="date" content="' +
+        daily.time[i] +
+        '">';
+      card.appendChild(iconWrap);
+
+      var info = document.createElement('div');
+      info.innerHTML =
+        '<p class="text-sm text-gray-600 dark:text-gray-400 capitalize mb-3" itemprop="description">' +
+        getLabel(daily.weather_code[i]) +
+        '</p>' +
+        '<div class="flex items-center justify-center gap-3 text-sm">' +
+        '<span class="font-bold text-gray-900 dark:text-gray-100" itemprop="temperatureHigh">' +
+        Math.round(daily.temperature_2m_max[i]) +
+        '°</span>' +
+        '<span class="text-gray-300 dark:text-gray-600" aria-hidden="true">|</span>' +
+        '<span class="text-gray-500 dark:text-gray-400" itemprop="temperatureLow">' +
+        Math.round(daily.temperature_2m_min[i]) +
+        '°</span>' +
+        '</div>' +
+        '<div class="mt-3 flex items-center justify-center gap-4 text-xs text-gray-400 dark:text-gray-500">' +
+        '<span>💧 <span itemprop="precipitation">' +
+        daily.precipitation_sum[i] +
+        '</span> mm</span>' +
+        '<span>💨 <span itemprop="windSpeed">' +
+        Math.round(daily.wind_speed_10m_max[i]) +
+        '</span> km/h</span>' +
+        '</div>';
+      card.appendChild(info);
+      grid.appendChild(card);
+    }
+
+    updateJSONLD(data);
+  }
+
+  function getTodayKey() {
+    return new Date().toISOString().slice(0, 10);
+  }
+
+  async function fetchWeather() {
+    var loading = document.getElementById('weatherLoading');
+    var error = document.getElementById('weatherError');
+    var content = document.getElementById('weatherContent');
+    var today = getTodayKey();
+
+    // Check localStorage cache
+    try {
+      var cached = localStorage.getItem('piravom_weather');
+      if (cached) {
+        var parsed = JSON.parse(cached);
+        if (parsed.cachedAt === today) {
+          renderWeather(parsed.data);
+          loading.classList.add('hidden');
+          content.classList.remove('hidden');
+          return; // Use cache, skip API call
+        }
+      }
+    } catch (e) {
+      /* ignore cache errors */
+    }
+
+    loading.classList.remove('hidden');
+    error.classList.add('hidden');
+    content.classList.add('hidden');
+
+    try {
+      var url =
+        'https://api.open-meteo.com/v1/forecast?' +
+        'latitude=' +
+        LAT +
+        '&longitude=' +
+        LON +
+        '&current=temperature_2m,relative_humidity_2m,apparent_temperature,precipitation,weather_code,wind_speed_10m' +
+        '&daily=temperature_2m_max,temperature_2m_min,weather_code,precipitation_sum,wind_speed_10m_max' +
+        '&timezone=auto&forecast_days=3';
+
+      var response = await fetch(url);
+      if (!response.ok) throw new Error('API error');
+      var data = await response.json();
+
+      // Cache in localStorage
+      try {
+        localStorage.setItem('piravom_weather', JSON.stringify({ cachedAt: today, data: data }));
+      } catch (e) {
+        /* ignore storage errors */
+      }
+
+      renderWeather(data);
+      loading.classList.add('hidden');
+      content.classList.remove('hidden');
+    } catch (e) {
+      loading.classList.add('hidden');
+      error.classList.remove('hidden');
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', fetchWeather);
+</script>

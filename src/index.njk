@@ -179,7 +179,7 @@ description: Find restaurants, attractions, stores, and more near Piravom
     <section class="mt-8 grid gap-6 xl:grid-cols-3">
       <!-- Updates -->
       <div
-        class="rounded-3xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 p-6 shadow-sm xl:col-span-2"
+        class="rounded-3xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 p-6 shadow-sm"
       >
         <div class="mb-6 flex items-center justify-between">
           <h2 class="text-2xl font-bold dark:text-gray-100">Latest Updates</h2>
@@ -244,6 +244,70 @@ description: Find restaurants, attractions, stores, and more near Piravom
         </div>
       </div>
 
+      <!-- Weather Widget -->
+      <div
+        class="rounded-3xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 p-6 shadow-sm"
+      >
+        <div class="flex items-center justify-between mb-6">
+          <h2 class="text-2xl font-bold text-gray-900 dark:text-gray-100">Weather</h2>
+          <a
+            href="/weather/"
+            class="text-sm text-gray-500 dark:text-gray-400 hover:text-black dark:hover:text-gray-100 transition"
+            >View all</a
+          >
+        </div>
+
+        <!-- Loading -->
+        <div id="weatherWidgetLoading" class="flex flex-col items-center gap-2 py-6">
+          <div class="h-8 w-8 animate-pulse rounded-lg bg-gray-200 dark:bg-gray-700"></div>
+          <div class="h-4 w-20 animate-pulse rounded bg-gray-200 dark:bg-gray-700"></div>
+          <div class="h-3 w-36 animate-pulse rounded bg-gray-200 dark:bg-gray-700"></div>
+        </div>
+
+        <!-- Loaded content (hidden initially) -->
+        <div id="weatherWidgetContent" class="hidden">
+          <!-- Current (clickable) -->
+          <a href="/weather/" class="flex items-center gap-3 mb-5 no-underline">
+            <div
+              id="weatherWidgetIcon"
+              class="flex items-center justify-center w-12 h-12 text-indigo-500 dark:text-indigo-400 shrink-0"
+              aria-hidden="true"
+            ></div>
+            <div class="flex-1 min-w-0">
+              <div class="flex items-baseline gap-1">
+                <span
+                  id="weatherWidgetTemp"
+                  class="text-2xl font-bold text-gray-900 dark:text-gray-100"
+                  >--</span
+                >
+                <span class="text-xs text-gray-400 dark:text-gray-500">°C</span>
+              </div>
+              <p
+                id="weatherWidgetDesc"
+                class="text-xs text-gray-600 dark:text-gray-400 capitalize truncate"
+              >
+                --
+              </p>
+              <p class="text-[11px] text-gray-400 dark:text-gray-500" aria-hidden="true">
+                💧<span id="weatherWidgetHumidity">--</span>% · 💨<span id="weatherWidgetWind"
+                  >--</span
+                >
+              </p>
+            </div>
+          </a>
+
+          <!-- 3-Day Forecast -->
+          <table
+            id="weatherWidgetForecast"
+            class="w-full pt-4 border-t border-gray-100 dark:border-gray-700 text-sm"
+          >
+            <tbody>
+              <!-- Injected by JS -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
       <!-- Emergency -->
       <div
         class="rounded-3xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 p-6 shadow-sm"
@@ -287,6 +351,8 @@ description: Find restaurants, attractions, stores, and more near Piravom
           </div>
         </div>
       </div>
+
+      <!-- Emergency -->
     </section>
 
     <!-- Lower Grid -->
@@ -418,15 +484,15 @@ description: Find restaurants, attractions, stores, and more near Piravom
         </a>
 
         <a
-          href="/about/"
+          href="/weather/"
           class="rounded-2xl border border-gray-100 dark:border-gray-700 p-6 transition hover:bg-gray-50 dark:hover:bg-gray-800/50 group"
         >
           <h3
             class="font-semibold dark:text-gray-100 group-hover:text-indigo-600 dark:group-hover:text-indigo-400"
           >
-            Schools
+            Weather
           </h3>
-          <p class="mt-2 text-sm text-gray-500 dark:text-gray-400">Schools & Colleges</p>
+          <p class="mt-2 text-sm text-gray-500 dark:text-gray-400">Current & 3-day forecast</p>
         </a>
 
         <a
@@ -533,5 +599,284 @@ description: Find restaurants, attractions, stores, and more near Piravom
       statusElement.classList.remove('text-gray-500', openClass, closeClass);
       statusElement.classList.add(isOpen ? openClass : closeClass);
     });
+
+    // Weather Widget
+    (function () {
+      var loading = document.getElementById('weatherWidgetLoading');
+      var content = document.getElementById('weatherWidgetContent');
+
+      if (!loading || !content) return;
+
+      // ── Lucide SVG paths for weather icons ──
+      var WEATHER_ICONS = {
+        sun: [
+          '<circle cx="12" cy="12" r="4"/>',
+          '<path d="M12 2v2"/>',
+          '<path d="M12 20v2"/>',
+          '<path d="m4.93 4.93 1.41 1.41"/>',
+          '<path d="m17.66 17.66 1.41 1.41"/>',
+          '<path d="M2 12h2"/>',
+          '<path d="M20 12h2"/>',
+          '<path d="m6.34 17.66-1.41 1.41"/>',
+          '<path d="m19.07 4.93-1.41 1.41"/>',
+        ],
+        'cloud-sun': [
+          '<path d="M12 2v2"/>',
+          '<path d="m4.93 4.93 1.41 1.41"/>',
+          '<path d="M20 12h2"/>',
+          '<path d="m19.07 4.93-1.41 1.41"/>',
+          '<path d="M15.947 12.65a4 4 0 0 0-5.925-4.128"/>',
+          '<path d="M13 22H7a5 5 0 1 1 4.9-6H13a3 3 0 0 1 0 6Z"/>',
+        ],
+        cloud: ['<path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/>'],
+        'cloud-fog': [
+          '<path d="M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242"/>',
+          '<path d="M16 17H7"/>',
+          '<path d="M17 21H9"/>',
+        ],
+        'cloud-drizzle': [
+          '<path d="M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242"/>',
+          '<path d="M8 19v1"/>',
+          '<path d="M8 14v1"/>',
+          '<path d="M16 19v1"/>',
+          '<path d="M16 14v1"/>',
+          '<path d="M12 21v1"/>',
+          '<path d="M12 16v1"/>',
+        ],
+        'cloud-rain': [
+          '<path d="M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242"/>',
+          '<path d="M16 14v6"/>',
+          '<path d="M8 14v6"/>',
+          '<path d="M12 16v6"/>',
+        ],
+        'cloud-lightning': [
+          '<path d="M6 16.326A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 .5 8.973"/>',
+          '<path d="m13 12-3 5h4l-3 5"/>',
+        ],
+        'cloud-snow': [
+          '<path d="M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242"/>',
+          '<path d="M8 15h.01"/>',
+          '<path d="M8 19h.01"/>',
+          '<path d="M12 17h.01"/>',
+          '<path d="M12 21h.01"/>',
+          '<path d="M16 15h.01"/>',
+          '<path d="M16 19h.01"/>',
+        ],
+      };
+
+      var CODE_TO_ICON = {
+        0: 'sun',
+        1: 'sun',
+        2: 'cloud-sun',
+        3: 'cloud',
+        45: 'cloud-fog',
+        48: 'cloud-fog',
+        51: 'cloud-drizzle',
+        53: 'cloud-drizzle',
+        55: 'cloud-drizzle',
+        56: 'cloud-drizzle',
+        57: 'cloud-drizzle',
+        61: 'cloud-rain',
+        63: 'cloud-rain',
+        65: 'cloud-rain',
+        66: 'cloud-rain',
+        67: 'cloud-rain',
+        71: 'cloud-snow',
+        73: 'cloud-snow',
+        75: 'cloud-snow',
+        77: 'cloud-snow',
+        80: 'cloud-rain',
+        81: 'cloud-rain',
+        82: 'cloud-rain',
+        85: 'cloud-snow',
+        86: 'cloud-snow',
+        95: 'cloud-lightning',
+        96: 'cloud-lightning',
+        99: 'cloud-lightning',
+      };
+
+      var LABELS = {
+        0: 'Clear',
+        1: 'Mostly clear',
+        2: 'Partly cloudy',
+        3: 'Overcast',
+        45: 'Foggy',
+        48: 'Foggy',
+        51: 'Drizzle',
+        53: 'Drizzle',
+        55: 'Drizzle',
+        56: 'Freezing drizzle',
+        57: 'Freezing drizzle',
+        61: 'Light rain',
+        63: 'Moderate rain',
+        65: 'Heavy rain',
+        66: 'Freezing rain',
+        67: 'Freezing rain',
+        71: 'Light snow',
+        73: 'Moderate snow',
+        75: 'Heavy snow',
+        77: 'Snow grains',
+        80: 'Rain showers',
+        81: 'Rain showers',
+        82: 'Rain showers',
+        85: 'Snow showers',
+        86: 'Snow showers',
+        95: 'Thunderstorm',
+        96: 'Thunderstorm',
+        99: 'Thunderstorm',
+      };
+
+      function makeIcon(iconName) {
+        var paths = WEATHER_ICONS[iconName] || WEATHER_ICONS.cloud;
+        var ns = 'http://www.w3.org/2000/svg';
+        var svg = document.createElementNS(ns, 'svg');
+        svg.setAttribute('xmlns', ns);
+        svg.setAttribute('width', '100%');
+        svg.setAttribute('height', '100%');
+        svg.setAttribute('viewBox', '0 0 24 24');
+        svg.setAttribute('fill', 'none');
+        svg.setAttribute('stroke', 'currentColor');
+        svg.setAttribute('stroke-width', '2');
+        svg.setAttribute('stroke-linecap', 'round');
+        svg.setAttribute('stroke-linejoin', 'round');
+        paths.forEach(function (d) {
+          var temp = document.createElementNS(ns, 'g');
+          temp.innerHTML = d;
+          while (temp.firstChild) svg.appendChild(temp.firstChild);
+        });
+        return svg;
+      }
+
+      function formatDay(dateStr) {
+        var date = new Date(dateStr + 'T12:00:00');
+        var today = new Date();
+        var tomorrow = new Date(today);
+        tomorrow.setDate(tomorrow.getDate() + 1);
+        if (date.toDateString() === today.toDateString()) return 'Today';
+        if (date.toDateString() === tomorrow.toDateString()) return 'Tomorrow';
+        return date.toLocaleDateString('en-IN', { weekday: 'long' });
+      }
+
+      function renderWidget(data) {
+        var c = data.current;
+        var daily = data.daily;
+        var iconName = CODE_TO_ICON[c.weather_code] || 'cloud';
+        var label = LABELS[c.weather_code] || 'Unknown';
+
+        var iconContainer = document.getElementById('weatherWidgetIcon');
+        iconContainer.innerHTML = '';
+        iconContainer.appendChild(makeIcon(iconName));
+
+        document.getElementById('weatherWidgetTemp').textContent = Math.round(c.temperature_2m);
+        document.getElementById('weatherWidgetDesc').textContent = label;
+        document.getElementById('weatherWidgetHumidity').textContent = c.relative_humidity_2m;
+        document.getElementById('weatherWidgetWind').textContent = Math.round(c.wind_speed_10m);
+
+        // Render 3-day forecast as table rows
+        var table = document.getElementById('weatherWidgetForecast');
+        var tbody =
+          table &&
+          (table.querySelector('tbody') ||
+            (function () {
+              var tb = document.createElement('tbody');
+              table.appendChild(tb);
+              return tb;
+            })());
+        tbody.innerHTML = '';
+        if (daily && daily.time) {
+          for (var i = 0; i < daily.time.length; i++) {
+            var dayIcon = CODE_TO_ICON[daily.weather_code[i]] || 'cloud';
+            var row = document.createElement('tr');
+            row.className = 'border-b border-gray-100 dark:border-gray-700 last:border-b-0';
+
+            // Day name
+            var dayTd = document.createElement('td');
+            dayTd.className = 'py-1.5 text-gray-500 dark:text-gray-400 font-medium';
+            dayTd.textContent = formatDay(daily.time[i]);
+            row.appendChild(dayTd);
+
+            // Icon
+            var iconTd = document.createElement('td');
+            iconTd.className = 'py-1.5 text-center w-6';
+            iconTd.setAttribute('aria-hidden', 'true');
+            var iconWrap = document.createElement('div');
+            iconWrap.className = 'w-4 h-4 mx-auto text-indigo-400 dark:text-indigo-400';
+            iconWrap.appendChild(makeIcon(dayIcon));
+            iconTd.appendChild(iconWrap);
+            row.appendChild(iconTd);
+
+            // High temp
+            var highTd = document.createElement('td');
+            highTd.className = 'py-1.5 text-right font-bold text-gray-900 dark:text-gray-100';
+            highTd.textContent = Math.round(daily.temperature_2m_max[i]) + '°';
+            row.appendChild(highTd);
+
+            // Low temp
+            var lowTd = document.createElement('td');
+            lowTd.className = 'py-1.5 text-right text-gray-400 dark:text-gray-500';
+            lowTd.textContent = Math.round(daily.temperature_2m_min[i]) + '°';
+            row.appendChild(lowTd);
+
+            tbody.appendChild(row);
+          }
+        }
+
+        loading.classList.add('hidden');
+        content.classList.remove('hidden');
+      }
+
+      function getTodayKey() {
+        return new Date().toISOString().slice(0, 10);
+      }
+
+      // Check localStorage cache first
+      var today = getTodayKey();
+      var cached = null;
+      try {
+        var raw = localStorage.getItem('piravom_weather');
+        if (raw) {
+          var parsed = JSON.parse(raw);
+          if (parsed.cachedAt === today) cached = parsed.data;
+        }
+      } catch (e) {
+        /* ignore */
+      }
+
+      if (cached && cached.current) {
+        renderWidget(cached);
+      } else {
+        fetch(
+          'https://api.open-meteo.com/v1/forecast?' +
+            'latitude=9.87&longitude=76.49' +
+            '&current=temperature_2m,relative_humidity_2m,weather_code,wind_speed_10m' +
+            '&daily=temperature_2m_max,temperature_2m_min,weather_code' +
+            '&timezone=auto&forecast_days=3',
+        )
+          .then(function (r) {
+            return r.ok ? r.json() : Promise.reject();
+          })
+          .then(function (data) {
+            // Cache in localStorage
+            try {
+              localStorage.setItem(
+                'piravom_weather',
+                JSON.stringify({ cachedAt: today, data: data }),
+              );
+            } catch (e) {
+              /* ignore */
+            }
+            renderWidget(data);
+          })
+          .catch(function () {
+            loading.classList.add('hidden');
+            content.classList.remove('hidden');
+            var iconContainer = document.getElementById('weatherWidgetIcon');
+            iconContainer.innerHTML = '';
+            iconContainer.appendChild(makeIcon('cloud'));
+            document.getElementById('weatherWidgetTemp').textContent = '--';
+            document.getElementById('weatherWidgetDesc').textContent = 'Unavailable';
+          });
+      }
+    })();
   })();
 </script>
