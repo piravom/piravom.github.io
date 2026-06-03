@@ -19,19 +19,20 @@ permalink: '/restaurants/{% if pagination.pageNumber > 0 %}page/{{ pagination.pa
   <!-- Search -->
   <div class="relative mb-8" id="restaurantSearch">
     <div class="relative">
-      {% lucide "search", "absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-gray-400" %}
+      {% lucide "search", "absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-gray-400
+      dark:text-gray-500" %}
       <input
         type="text"
         id="restaurantSearchInput"
         placeholder="Search restaurants or menu items…"
         autocomplete="off"
-        class="w-full rounded-2xl border border-gray-200 bg-white py-3.5 pl-12 pr-4 text-base sm:text-sm shadow-sm outline-none transition focus:border-indigo-400 focus:ring-2 focus:ring-indigo-100"
+        class="w-full rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 py-3.5 pl-12 pr-4 text-base sm:text-sm text-gray-900 dark:text-gray-100 shadow-sm outline-none transition focus:border-indigo-400 dark:focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100 dark:focus:ring-indigo-900/50"
       />
     </div>
     <!-- Suggestions dropdown -->
     <div
       id="searchSuggestions"
-      class="absolute z-50 mt-1 hidden w-full rounded-2xl border border-gray-200 bg-white shadow-lg"
+      class="absolute z-50 mt-1 hidden w-full rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 shadow-lg"
     ></div>
   </div>
 
@@ -72,13 +73,13 @@ permalink: '/restaurants/{% if pagination.pageNumber > 0 %}page/{{ pagination.pa
       <section class="columns-1 sm:columns-2 lg:columns-3 gap-x-6 space-y-6" id="restaurantGrid">
         {% for restaurant in pagination.items | sortByDistance %}
         <div
-          class="group rounded-3xl border border-gray-200 bg-white p-6 shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md flex flex-col justify-between break-inside-avoid"
+          class="group rounded-3xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 p-6 shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md flex flex-col justify-between break-inside-avoid"
         >
           <div>
             <div class="flex items-start justify-between gap-4 mb-3">
               <a
                 href="{{ restaurant.url }}"
-                class="text-xl font-bold leading-tight text-gray-900 hover:text-indigo-600 transition-colors"
+                class="text-xl font-bold leading-tight text-gray-900 dark:text-gray-100 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
                 >{{ restaurant.data.title }}</a
               >
             </div>
@@ -86,21 +87,23 @@ permalink: '/restaurants/{% if pagination.pageNumber > 0 %}page/{{ pagination.pa
             <div class="flex flex-wrap gap-1.5 mb-3">
               {% for c in cuisineList %}
               <span
-                class="rounded-full bg-indigo-50 px-2.5 py-0.5 text-xs font-medium text-indigo-700"
+                class="rounded-full bg-indigo-50 dark:bg-indigo-900/30 px-2.5 py-0.5 text-xs font-medium text-indigo-700 dark:text-indigo-300"
                 >{{ c }}</span
               >
               {% endfor %}
             </div>
-            <p class="text-sm leading-relaxed text-gray-600 mb-6">
+            <p class="text-sm leading-relaxed text-gray-600 dark:text-gray-400 mb-6">
               {{ restaurant.data.description }}
             </p>
           </div>
 
           <!-- Info Row (attractions style) -->
-          <div class="grid grid-cols-4 items-center border-t border-gray-100 pt-4 mt-auto text-sm">
+          <div
+            class="grid grid-cols-4 items-center border-t border-gray-100 dark:border-gray-700 pt-4 mt-auto text-sm"
+          >
             <!-- Distance from Bus Stand -->
             <span
-              class="text-center font-medium text-indigo-600"
+              class="text-center font-medium text-indigo-600 dark:text-indigo-400"
               title="Distance from Piravom Bus Stand"
             >
               {{ restaurant.data.distanceFromBusStand or "-" }}
@@ -111,13 +114,13 @@ permalink: '/restaurants/{% if pagination.pageNumber > 0 %}page/{{ pagination.pa
               {% if restaurant.data.contact %}
               <a
                 href="tel:{{ restaurant.data.contact | replace(' ', '') }}"
-                class="rounded-lg p-1.5 text-gray-400 transition hover:bg-green-50 hover:text-green-700"
+                class="rounded-lg p-1.5 text-gray-400 dark:text-gray-500 transition hover:bg-green-50 dark:hover:bg-green-900/30 hover:text-green-700 dark:hover:text-green-400"
                 title="{{ restaurant.data.contact }}"
               >
                 {% lucide "phone", "h-5 w-5" %}
               </a>
               {% else %}
-              <span class="text-gray-300"></span>
+              <span class="text-gray-300 dark:text-gray-600"></span>
               {% endif %}
             </span>
 
@@ -128,11 +131,11 @@ permalink: '/restaurants/{% if pagination.pageNumber > 0 %}page/{{ pagination.pa
             >
               {% if restaurant.data.rating %} {% lucide "star", "h-5 w-5 text-yellow-400 shrink-0"
               %}
-              <span class="ml-1 text-sm font-semibold text-gray-800"
+              <span class="ml-1 text-sm font-semibold text-gray-800 dark:text-gray-200"
                 >{{ restaurant.data.rating }}</span
               >
               {% else %}
-              <span class="text-sm text-gray-300">-</span>
+              <span class="text-sm text-gray-300 dark:text-gray-600">-</span>
               {% endif %}
             </span>
 
@@ -142,7 +145,7 @@ permalink: '/restaurants/{% if pagination.pageNumber > 0 %}page/{{ pagination.pa
                 href="https://maps.google.com/?q={{ restaurant.data.title | replace(' ', '+') }}+Piravom"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="rounded-lg p-1.5 text-gray-400 transition hover:bg-gray-100 hover:text-gray-700"
+                class="rounded-lg p-1.5 text-gray-400 dark:text-gray-500 transition hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-gray-700 dark:hover:text-gray-300"
                 title="Open in Maps"
               >
                 {% lucide "map-pin", "h-5 w-5" %}
@@ -295,7 +298,8 @@ permalink: '/restaurants/{% if pagination.pageNumber > 0 %}page/{{ pagination.pa
       results.forEach(function (r) {
         var a = document.createElement('a');
         a.href = r.url;
-        a.className = 'flex items-start gap-3 px-4 py-2.5 transition hover:bg-indigo-50';
+        a.className =
+          'flex items-start gap-3 px-4 py-2.5 transition hover:bg-indigo-50 dark:hover:bg-indigo-900/40';
 
         var icon = document.createElement('span');
         icon.className = 'mt-0.5 shrink-0';
@@ -305,11 +309,11 @@ permalink: '/restaurants/{% if pagination.pageNumber > 0 %}page/{{ pagination.pa
         textDiv.className = 'min-w-0';
 
         var label = document.createElement('div');
-        label.className = 'text-sm font-medium text-gray-900';
+        label.className = 'text-sm font-medium text-gray-900 dark:text-gray-100';
         label.textContent = r.label;
 
         var sub = document.createElement('div');
-        sub.className = 'text-xs text-gray-500 truncate';
+        sub.className = 'text-xs text-gray-500 dark:text-gray-400 truncate';
         sub.textContent = r.sub || '';
 
         textDiv.appendChild(label);

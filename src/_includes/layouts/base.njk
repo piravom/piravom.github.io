@@ -30,8 +30,22 @@
     />
     <meta name="twitter:description" content="{{ description or site.description }}" />
 
-    <!-- Theme -->
+    <!-- Theme / Dark Mode -->
     <meta name="theme-color" content="#4f46e5" />
+    <meta name="color-scheme" content="light dark" />
+
+    <!-- Apply dark mode BEFORE first paint to prevent white flash -->
+    <script>
+      (function () {
+        var saved = localStorage.getItem('darkMode');
+        if (
+          saved === 'true' ||
+          (saved !== 'false' && window.matchMedia('(prefers-color-scheme: dark)').matches)
+        ) {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -41,6 +55,11 @@
     />
 
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+      };
+    </script>
 
     <!-- MS Analytics -->
     <script type="text/javascript">
@@ -63,172 +82,11 @@
         font-family: Inter, ui-sans-serif, system-ui, sans-serif;
       }
 
-      /* Dark mode overrides */
-      .dark {
-        --page-bg: #030712;
-        --card-bg: #111827;
-        --card-border: #1f2937;
-        --text-primary: #f3f4f6;
-        --text-secondary: #d1d5db;
-        --text-tertiary: #9ca3af;
-        --text-muted: #6b7280;
-      }
-
-      .dark body {
-        background-color: var(--page-bg) !important;
-        color: var(--text-primary) !important;
-      }
-
-      .dark .bg-white {
-        background-color: var(--card-bg) !important;
-      }
-      .dark .bg-white\/90 {
-        background-color: rgba(17, 24, 39, 0.9) !important;
-      }
-      .dark .bg-white\/95 {
-        background-color: rgba(17, 24, 39, 0.95) !important;
-      }
-      .dark .bg-\[\#fafafa\] {
-        background-color: var(--page-bg) !important;
-      }
-      .dark .border-gray-200 {
-        border-color: var(--card-border) !important;
-      }
-      .dark .border-gray-100 {
-        border-color: var(--card-border) !important;
-      }
-      .dark .text-gray-900 {
-        color: var(--text-primary) !important;
-      }
-      .dark .text-gray-800 {
-        color: var(--text-secondary) !important;
-      }
-      .dark .text-gray-700 {
-        color: var(--text-secondary) !important;
-      }
-      .dark .text-gray-600 {
-        color: var(--text-tertiary) !important;
-      }
-      .dark .text-gray-500 {
-        color: var(--text-tertiary) !important;
-      }
-      .dark .text-gray-400 {
-        color: var(--text-muted) !important;
-      }
-      .dark .text-gray-300 {
-        color: #6b7280 !important;
-      }
-      .dark .bg-gray-50 {
-        background-color: rgba(31, 41, 55, 0.5) !important;
-      }
-      .dark .hover\:bg-gray-50:hover {
-        background-color: rgba(31, 41, 55, 0.7) !important;
-      }
-      .dark .hover\:text-black:hover {
-        color: var(--text-primary) !important;
-      }
-      .dark .hover\:bg-indigo-50:hover {
-        background-color: rgba(30, 27, 75, 0.6) !important;
-      }
-      .dark .bg-indigo-50 {
-        background-color: rgba(30, 27, 75, 0.4) !important;
-      }
-      .dark .text-indigo-700 {
-        color: #a5b4fc !important;
-      }
-      .dark .text-indigo-600 {
-        color: #818cf8 !important;
-      }
-      .dark .divide-gray-100 > * + * {
-        border-color: var(--card-border) !important;
-      }
-      .dark .focus\:border-indigo-400:focus {
-        border-color: #818cf8 !important;
-      }
-      .dark .focus\:ring-indigo-100:focus {
-        --tw-ring-color: rgba(30, 27, 75, 0.6) !important;
-      }
-      .dark .focus\:ring-1:focus {
-        --tw-ring-color: rgba(30, 27, 75, 0.6) !important;
-      }
-
-      .dark .bg-red-50 {
-        background-color: rgba(69, 10, 10, 0.5) !important;
-      }
-      .dark .border-red-200 {
-        border-color: rgba(127, 29, 29, 0.5) !important;
-      }
-      .dark .bg-red-100 {
-        background-color: rgba(69, 10, 10, 0.5) !important;
-      }
-      .dark .hover\:bg-red-50:hover {
-        background-color: rgba(69, 10, 10, 0.7) !important;
-      }
-      .dark .text-red-800 {
-        color: #fca5a5 !important;
-      }
-      .dark .text-red-600 {
-        color: #f87171 !important;
-      }
-      .dark .bg-green-100 {
-        background-color: rgba(6, 78, 59, 0.4) !important;
-      }
-      .dark .text-green-700 {
-        color: #6ee7b7 !important;
-      }
-      .dark .bg-orange-100 {
-        background-color: rgba(120, 53, 15, 0.4) !important;
-      }
-      .dark .text-orange-700 {
-        color: #fdba74 !important;
-      }
-      /* Gradient overrides for dark mode (keep gradient, just darken the colors) */
-      .dark .from-red-50 {
-        --tw-gradient-from: #450a0a !important;
-      }
-      .dark .to-orange-50 {
-        --tw-gradient-to: #431407 !important;
-      }
-      .dark .shadow-sm {
-        box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.3) !important;
-      }
-      .dark .shadow-md {
-        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.4) !important;
-      }
-      .dark .shadow-lg {
-        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5) !important;
-      }
-      .dark .from-indigo-100 {
-        --tw-gradient-from: rgba(30, 27, 75, 0.6) !important;
-      }
-      .dark .to-blue-200 {
-        --tw-gradient-to: rgba(30, 58, 138, 0.4) !important;
-      }
-      .dark .bg-gray-100 {
-        background-color: rgba(31, 41, 55, 0.6) !important;
-      }
-      .dark .dark-toggle {
-        border-color: var(--card-border) !important;
-      }
-      .dark .dark-toggle:hover {
-        background-color: rgba(31, 41, 55, 0.7) !important;
-      }
-      .dark .dark-hide {
-        display: none !important;
-      }
-      .dark .dark-show {
-        display: inline !important;
-      }
-      .dark-show {
-        display: none !important;
-      }
-      .dark-hide {
-        display: inline !important;
-      }
+      /* Dark mode is handled via Tailwind `dark:` classes in HTML */
     </style>
   </head>
 
-  <body class="bg-[#fafafa] text-[#111111]">
+  <body class="bg-[#fafafa] dark:bg-gray-950 text-[#111111] dark:text-gray-100">
     <!-- Header -->
     {% include "components/header.njk" %}
 
@@ -236,59 +94,62 @@
     {{ content | safe }}
 
     <!-- Mobile Menu Overlay -->
-    <div id="mobileMenu" class="fixed inset-0 z-50 hidden bg-white/95 backdrop-blur-sm">
+    <div
+      id="mobileMenu"
+      class="fixed inset-0 z-50 hidden bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm"
+    >
       <div class="flex h-full flex-col items-center justify-center gap-8 text-lg font-medium">
         <a
           href="/about"
-          class="nav-mobile-link text-gray-600 hover:text-black"
+          class="nav-mobile-link text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-gray-100"
           onclick="toggleMobileMenu()"
           >About</a
         >
         <a
           href="/bus-timing"
-          class="nav-mobile-link text-gray-600 hover:text-black"
+          class="nav-mobile-link text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-gray-100"
           onclick="toggleMobileMenu()"
           >Bus Timings</a
         >
         <a
           href="/restaurants"
-          class="nav-mobile-link text-gray-600 hover:text-black"
+          class="nav-mobile-link text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-gray-100"
           onclick="toggleMobileMenu()"
           >Restaurants</a
         >
         <a
           href="/attractions"
-          class="nav-mobile-link text-gray-600 hover:text-black"
+          class="nav-mobile-link text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-gray-100"
           onclick="toggleMobileMenu()"
           >Attractions</a
         >
         <a
           href="/events"
-          class="nav-mobile-link text-gray-600 hover:text-black"
+          class="nav-mobile-link text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-gray-100"
           onclick="toggleMobileMenu()"
           >Events</a
         >
         <a
           href="/phonebook"
-          class="nav-mobile-link text-gray-600 hover:text-black"
+          class="nav-mobile-link text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-gray-100"
           onclick="toggleMobileMenu()"
           >Phonebook</a
         >
         <a
           href="/stores"
-          class="nav-mobile-link text-gray-600 hover:text-black"
+          class="nav-mobile-link text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-gray-100"
           onclick="toggleMobileMenu()"
           >Stores</a
         >
         <a
           href="/services"
-          class="nav-mobile-link text-gray-600 hover:text-black"
+          class="nav-mobile-link text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-gray-100"
           onclick="toggleMobileMenu()"
           >Services</a
         >
         <button
           onclick="toggleMobileMenu()"
-          class="mt-4 rounded-xl border border-gray-200 px-8 py-3 text-sm text-gray-500 hover:text-black"
+          class="mt-4 rounded-xl border border-gray-200 dark:border-gray-700 px-8 py-3 text-sm text-gray-500 dark:text-gray-400 hover:text-black dark:hover:text-gray-100"
         >
           Close
         </button>
@@ -313,15 +174,6 @@
             link.classList.remove('text-gray-600');
           }
         });
-
-        // Apply dark mode on load based on saved preference
-        var saved = localStorage.getItem('darkMode');
-        if (
-          saved === 'true' ||
-          (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)
-        ) {
-          document.documentElement.classList.add('dark');
-        }
       });
 
       window.toggleDarkMode = function () {

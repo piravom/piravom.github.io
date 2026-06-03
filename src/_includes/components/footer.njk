@@ -1,20 +1,28 @@
-<footer class="mt-16 border-t border-gray-200 bg-white">
+<footer class="mt-16 border-t border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900">
   <div
     class="mx-auto flex max-w-7xl flex-col gap-6 px-4 py-10 md:flex-row md:items-center md:justify-between"
   >
     <div>
-      <div class="text-xl font-bold text-indigo-600"><a href="/">{{site.name}}</a></div>
-      <p class="mt-2 text-sm text-gray-500">{{site.description}}</p>
+      <div class="text-xl font-bold text-indigo-600 dark:text-indigo-400">
+        <a href="/">{{site.name}}</a>
+      </div>
+      <p class="mt-2 text-sm text-gray-500 dark:text-gray-400">{{site.description}}</p>
     </div>
 
-    <div class="flex flex-wrap gap-6 text-sm text-gray-500">
-      <a href="/about" class="hover:text-black transition">About</a>
-      <a href="/restaurants" class="hover:text-black transition">Restaurants</a>
-      <a href="/attractions" class="hover:text-black transition">Attractions</a>
-      <a href="/services" class="hover:text-black transition">Services</a>
-      <a href="/phonebook" class="hover:text-black transition">Contact</a>
+    <div class="flex flex-wrap gap-6 text-sm text-gray-500 dark:text-gray-400">
+      <a href="/about" class="hover:text-black dark:hover:text-gray-100 transition">About</a>
+      <a href="/restaurants" class="hover:text-black dark:hover:text-gray-100 transition"
+        >Restaurants</a
+      >
+      <a href="/attractions" class="hover:text-black dark:hover:text-gray-100 transition"
+        >Attractions</a
+      >
+      <a href="/services" class="hover:text-black dark:hover:text-gray-100 transition">Services</a>
+      <a href="/phonebook" class="hover:text-black dark:hover:text-gray-100 transition">Contact</a>
     </div>
 
-    <p class="text-xs text-gray-400">&copy; {{ site.name }} - {{ site.author }}</p>
+    <p class="text-xs text-gray-400 dark:text-gray-500">
+      &copy; {{ site.name }} - {{ site.author }}
+    </p>
   </div>
 </footer>

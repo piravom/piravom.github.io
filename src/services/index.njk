@@ -21,7 +21,7 @@ permalink: '/services/'
       replace("&", "and") %}
       <a
         href="#{{ sectionId }}"
-        class="flex items-center gap-1.5 rounded-full border border-gray-200 bg-white px-4 py-2 text-sm font-medium text-gray-600 shadow-sm transition hover:border-indigo-200 hover:bg-indigo-50 hover:text-indigo-700"
+        class="flex items-center gap-1.5 rounded-full border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 px-4 py-2 text-sm font-medium text-gray-600 dark:text-gray-400 shadow-sm transition hover:border-indigo-200 dark:hover:border-indigo-700 hover:bg-indigo-50 dark:hover:bg-indigo-900/30 hover:text-indigo-700 dark:hover:text-indigo-300"
       >
         <span>{{ sectionIcons[section] or "🛠️" }}</span>
         <span>{{ section }}</span>
@@ -39,7 +39,7 @@ permalink: '/services/'
         replace("&", "and") %}
         <a
           href="#{{ sectionId }}"
-          class="flex items-center gap-2 rounded-xl px-3 py-2 text-sm font-medium text-gray-600 transition hover:bg-indigo-50 hover:text-indigo-700"
+          class="flex items-center gap-2 rounded-xl px-3 py-2 text-sm font-medium text-gray-600 dark:text-gray-400 transition hover:bg-indigo-50 dark:hover:bg-indigo-900/30 hover:text-indigo-700 dark:hover:text-indigo-300"
         >
           <span>{{ sectionIcons[section] or "🛠️" }}</span>
           <span>{{ section }}</span>
@@ -53,40 +53,51 @@ permalink: '/services/'
       {% for section in sectionKeys %} {% set sectionId = section | lower | replace(" ", "-") |
       replace("&", "and") %}
       <section id="{{ sectionId }}" class="mb-12 scroll-mt-28">
-        <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-2">
+        <h2
+          class="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-6 flex items-center gap-2"
+        >
           <span>{{ sectionIcons[section] or "🛠️" }}</span> {{ section }}
         </h2>
         <div class="columns-1 sm:columns-2 lg:columns-3 gap-x-6 space-y-6">
           {% for service in grouped[section] %}
           <div
-            class="group rounded-3xl border border-gray-200 bg-white p-6 shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md flex flex-col justify-between break-inside-avoid"
+            class="group rounded-3xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 p-6 shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md flex flex-col justify-between break-inside-avoid"
           >
             <div>
-              <h3 class="text-lg font-bold leading-tight mb-3">{{ service.data.title }}</h3>
+              <h3 class="text-lg font-bold leading-tight mb-3 dark:text-gray-100">
+                {{ service.data.title }}
+              </h3>
 
               {% if service.data.categories %}
               <div class="flex flex-wrap gap-1.5 mb-3">
                 {% for cat in service.data.categories %}
                 <span
-                  class="rounded-full bg-indigo-50 px-2.5 py-0.5 text-xs font-medium text-indigo-700"
+                  class="rounded-full bg-indigo-50 dark:bg-indigo-900/30 px-2.5 py-0.5 text-xs font-medium text-indigo-700 dark:text-indigo-300"
                   >{{ cat }}</span
                 >
                 {% endfor %}
               </div>
               {% endif %} {% if service.data.description %}
-              <p class="text-sm leading-relaxed text-gray-600">{{ service.data.description }}</p>
+              <p class="text-sm leading-relaxed text-gray-600 dark:text-gray-400">
+                {{ service.data.description }}
+              </p>
               {% endif %}
             </div>
 
             <!-- Info Row -->
-            <div class="grid grid-cols-3 items-center border-t border-gray-100 pt-4 mt-4 text-sm">
+            <div
+              class="grid grid-cols-3 items-center border-t border-gray-100 dark:border-gray-700 pt-4 mt-4 text-sm"
+            >
               <!-- Service Icon by section -->
               {% set sectionLucide = { "Health & Medical": "heart-pulse", "Financial Services":
               "wallet", "Automotive Services": "car", "Salons & Beauty": "sparkles", "Other
               Services": "toolbox", "Repairs \u0026 Maintenance": "wrench", "Electronics \u0026
               Mobile": "smartphone", "Photography \u0026 Media": "camera", "Fitness \u0026 Gym":
               "dumbbell", "Tailors \u0026 Alterations": "scissors" } %}
-              <span class="flex justify-center text-gray-400" title="{{ section }}">
+              <span
+                class="flex justify-center text-gray-400 dark:text-gray-500"
+                title="{{ section }}"
+              >
                 {% lucide sectionLucide[section] or "toolbox", "h-5 w-5" %}
               </span>
 
@@ -105,7 +116,7 @@ permalink: '/services/'
                   href="https://maps.google.com/?q={{ service.data.title | replace(' ', '+') }}+Piravom"
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="rounded-lg p-1.5 text-gray-400 transition hover:bg-gray-100 hover:text-gray-700"
+                  class="rounded-lg p-1.5 text-gray-400 dark:text-gray-500 transition hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-gray-700 dark:hover:text-gray-300"
                   title="Open in Maps"
                 >
                   {% lucide "map-pin", "h-5 w-5" %}
@@ -121,10 +132,16 @@ permalink: '/services/'
       <!-- Empty State -->
       {% if not sectionKeys.length %}
       <div class="text-center">
-        <div class="rounded-3xl border border-gray-200 bg-white p-12 shadow-sm">
+        <div
+          class="rounded-3xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 p-12 shadow-sm"
+        >
           <span class="text-4xl">🛠️</span>
-          <h2 class="mt-4 text-xl font-bold text-gray-900">No services listed yet</h2>
-          <p class="mt-2 text-sm text-gray-500">Check back soon for service listings in Piravom.</p>
+          <h2 class="mt-4 text-xl font-bold text-gray-900 dark:text-gray-100">
+            No services listed yet
+          </h2>
+          <p class="mt-2 text-sm text-gray-500 dark:text-gray-400">
+            Check back soon for service listings in Piravom.
+          </p>
         </div>
       </div>
       {% endif %}

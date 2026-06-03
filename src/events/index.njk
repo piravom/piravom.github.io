@@ -77,16 +77,22 @@ permalink: '/events/'
         <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3" id="eventsGrid">
           {% for event in upcoming %}
           <div
-            class="event-card rounded-3xl border border-gray-200 bg-white shadow-sm flex flex-col"
+            class="event-card rounded-3xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 shadow-sm flex flex-col"
             data-category="{{ event.data.category | lower }}"
           >
             <!-- Date Badge -->
-            <div class="flex items-center gap-4 border-b border-gray-100 px-6 py-4">
-              <div class="flex w-14 flex-col items-center rounded-xl bg-indigo-50 py-2">
-                <span class="text-xs font-bold uppercase tracking-wide text-indigo-600"
+            <div
+              class="flex items-center gap-4 border-b border-gray-100 dark:border-gray-700 px-6 py-4"
+            >
+              <div
+                class="flex w-14 flex-col items-center rounded-xl bg-indigo-50 dark:bg-indigo-900/30 py-2"
+              >
+                <span
+                  class="text-xs font-bold uppercase tracking-wide text-indigo-600 dark:text-indigo-400"
                   >{{ event.data.date | humanDateShortMonth }}</span
                 >
-                <span class="text-2xl font-bold text-indigo-700 leading-none mt-0.5"
+                <span
+                  class="text-2xl font-bold text-indigo-700 dark:text-indigo-300 leading-none mt-0.5"
                   >{{ event.data.date | humanDateDay }}</span
                 >
               </div>
@@ -148,12 +154,16 @@ permalink: '/events/'
         <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3" id="pastEventsGrid">
           {% for event in past %}
           <div
-            class="event-card rounded-3xl border border-gray-200 bg-white shadow-sm flex flex-col opacity-75"
+            class="event-card rounded-3xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 shadow-sm flex flex-col opacity-75"
             data-category="{{ event.data.category | lower }}"
           >
             <!-- Date Badge -->
-            <div class="flex items-center gap-4 border-b border-gray-100 px-6 py-4">
-              <div class="flex w-14 flex-col items-center rounded-xl bg-gray-100 py-2">
+            <div
+              class="flex items-center gap-4 border-b border-gray-100 dark:border-gray-700 px-6 py-4"
+            >
+              <div
+                class="flex w-14 flex-col items-center rounded-xl bg-gray-100 dark:bg-gray-800 py-2"
+              >
                 <span class="text-xs font-bold uppercase tracking-wide text-gray-500"
                   >{{ event.data.date | humanDateShortMonth }}</span
                 >
