@@ -167,11 +167,16 @@
       // Highlight the current page in desktop nav
       document.addEventListener('DOMContentLoaded', function () {
         var path = window.location.pathname.replace(/\/$/, '');
+        var isDark = document.documentElement.classList.contains('dark');
         document.querySelectorAll('.nav-link').forEach(function (link) {
           var href = link.getAttribute('href').replace(/\/$/, '');
           if (href && path.startsWith(href)) {
-            link.classList.add('text-indigo-600', 'bg-indigo-50');
-            link.classList.remove('text-gray-600');
+            link.classList.remove('text-gray-600', 'dark:text-gray-400');
+            if (isDark) {
+              link.classList.add('text-indigo-400', 'bg-indigo-900/30');
+            } else {
+              link.classList.add('text-indigo-600', 'bg-indigo-50');
+            }
           }
         });
       });
