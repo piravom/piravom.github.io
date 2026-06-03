@@ -1,0 +1,580 @@
+{
+  "restaurant": {
+    "title": "KFC Piravom",
+    "description": "Finger Lickin' Good chicken, burgers, rice bowls, and shawarma specials served fresh in Piravom, Ernakulam.",
+    "logo": "https://cdn4.singleinterface.com/files/banner_images/34404/4351_1762835411_WednesdaySpecials15pcBucketkk.jpg",
+    "cuisines": ["Fast Food", "Fried Chicken", "Burgers"],
+    "instagramUrl": "https://www.instagram.com/kfcindia_official",
+    "openingHours": {
+      "sunday": { "open": "11:00", "close": "23:00" },
+      "monday": { "open": "11:00", "close": "23:00" },
+      "tuesday": { "open": "11:00", "close": "23:00" },
+      "wednesday": { "open": "11:00", "close": "23:00" },
+      "thursday": { "open": "11:00", "close": "23:00" },
+      "friday": { "open": "11:00", "close": "23:00" },
+      "saturday": { "open": "11:00", "close": "23:00" }
+    }
+  },
+  "menuList": [
+    {
+      "category": "Wednesday Specials",
+      "items": [
+        {
+          "title": "Wednesday Specials 15 pc Bucket Meal",
+          "subTitle": "Enjoy upto 42% off on a delicious combo of 7 Strips,...",
+          "price": 699
+        },
+        {
+          "title": "Wednesday Special 10 pc Hot & Crispy",
+          "subTitle": "Save upto 36% on 10 juicy pieces of Hot & Crispy –...",
+          "price": 649
+        },
+        {
+          "title": "Wednesday Specials 15 pc Bucket",
+          "subTitle": "Relish upto 48% savings on 7 Strips, 6 Wings, and 2 ...",
+          "price": 399
+        }
+      ]
+    },
+    {
+      "category": "ShaWOWrma Specials",
+      "items": [
+        {
+          "title": "Shawarma",
+          "subTitle": "Soft wrap loaded with juicy, flavour-packed shawarma...",
+          "price": 169
+        },
+        {
+          "title": "Shawarma & Pepsi Combo",
+          "subTitle": "Our juicy shawarma wrap paired with a chilled regula...",
+          "price": 209
+        },
+        {
+          "title": "Shawarma Regular Meal",
+          "subTitle": "Shawarma served with regular fries and a refreshing ...",
+          "price": 268
+        },
+        {
+          "title": "Shawarma Snackbox",
+          "subTitle": "Shawarma with popcorn chicken and a regular Pepsi - ...",
+          "price": 299
+        },
+        {
+          "title": "Shawarma Box Meal",
+          "subTitle": "Shawarma served with 2 hot wings, regular fries and ...",
+          "price": 299
+        },
+        {
+          "title": "Shawarma Big Box",
+          "subTitle": "Loaded box with shawarma, 2 hot wings, 2 strips & Pe...",
+          "price": 329
+        }
+      ]
+    },
+    {
+      "category": "Buckets",
+      "items": [
+        {
+          "title": "Ultimate Savings Bucket",
+          "subTitle": "Mega meal, mega value! Loaded with chicken, wings, s...",
+          "price": 659
+        },
+        {
+          "title": "8 pc Hot & Crispy Bucket",
+          "subTitle": "The perfect bucket for 2 with your favourite Hot & C...",
+          "price": 649
+        },
+        {
+          "title": "Big 8 Bucket",
+          "subTitle": "Double the flavour – crispy meets grilled in one i...",
+          "price": 599
+        },
+        {
+          "title": "All in One Bucket",
+          "subTitle": "With upto 33%, go all in, with the All In One Bucket...",
+          "price": 519
+        },
+        {
+          "title": "10pc Dips Bucket",
+          "subTitle": "10 spicy boneless strips with dips – made to share...",
+          "price": 469
+        },
+        {
+          "title": "5 Peri Peri Leg piece Bucket",
+          "subTitle": "Grilled, juicy and bold – just the chicken, just r...",
+          "price": 459
+        },
+        {
+          "title": "5pc Smoky Red Grilled Bucket",
+          "subTitle": "Tender, smoky, grilled chicken with zero extras – ...",
+          "price": 429
+        },
+        {
+          "title": "4pc Hot & Crispy Bucket",
+          "subTitle": "Classic solo crisp – all chicken, no distractions....",
+          "price": 379
+        },
+        {
+          "title": "8 pc Boneless Strips & 2 Dips",
+          "subTitle": "Bigger bite of boneless bliss – 8 spicy strips + d...",
+          "price": 379
+        }
+      ]
+    },
+    {
+      "category": "Gold Edition",
+      "items": [
+        {
+          "title": "Gold Zinger and Popcorn Meal",
+          "subTitle": "Rich golden cheese meets crispy perfection, paired w...",
+          "price": 329
+        },
+        {
+          "title": "Gold Edition – Chicken Zinger, Fries & Pepsi Meal",
+          "subTitle": "New chicken Zinger dunked in a silky cheesy sauce be...",
+          "price": 348
+        },
+        {
+          "title": "Gold Edition – Chicken Zinger",
+          "subTitle": "New chicken Zinger dunked in a silky cheesy sauce be...",
+          "price": 259
+        },
+        {
+          "title": "Gold Edition – Veg Zinger, Fries & Pepsi Meal",
+          "subTitle": "A creamy cheesy Veg Zinger with golden Fries and chi...",
+          "price": 308
+        },
+        {
+          "title": "Gold Edition – Veg Zinger",
+          "subTitle": "Crispy Veg Patty crowned with warm golden cheese ins...",
+          "price": 209
+        },
+        {
+          "title": "Gold Edition – 3pc Boneless Strips",
+          "subTitle": "Tender Boneless Chicken Strips smothered in silky ch...",
+          "price": 209
+        },
+        {
+          "title": "Gold Edition – Cheesy Fries",
+          "subTitle": "Crispy fries generously drenched in gooey golden che...",
+          "price": 129
+        }
+      ]
+    },
+    {
+      "category": "Burgers",
+      "items": [
+        {
+          "title": "2 Chicken Krisper Burgers",
+          "subTitle": "2 delicious chicken value burgers - at only 109 each...",
+          "price": 228
+        },
+        {
+          "title": "2 Veg Krisper Burgers",
+          "subTitle": "2 delicious veg value burgers - at only 69 each...",
+          "price": 158
+        },
+        {
+          "title": "Chicken & Krispers Combo",
+          "subTitle": "Save Rs. 50 - Combo of 2 chicken value burgers, 2 pc...",
+          "price": 519
+        },
+        {
+          "title": "Tandoori Zinger Burger",
+          "subTitle": "Chicken zinger with a delicious tandoori sauce...",
+          "price": 199
+        },
+        {
+          "title": "Tandoori Zinger Box",
+          "subTitle": "This one's for the Zinger lovers : you get 1 Tandoor...",
+          "price": 313
+        },
+        {
+          "title": "Mixed Zinger Doubles",
+          "subTitle": "Best-seller combo of classic chicken zinger & tandoo...",
+          "price": 348
+        },
+        {
+          "title": "Classic Zinger Burger",
+          "subTitle": "Signature chicken burger made with a crunchy chicken...",
+          "price": 189
+        },
+        {
+          "title": "Classic Zinger Box",
+          "subTitle": "This one's for the Zinger lovers : you get 1 Classic...",
+          "price": 313
+        },
+        {
+          "title": "Buddy Meal",
+          "subTitle": "Share 2 Classic Chicken Zingers & a Medium Popcorn i...",
+          "price": 499
+        },
+        {
+          "title": "Veg Zinger Burger",
+          "subTitle": "Signature veg burger with crispy patties, veggies & ...",
+          "price": 179
+        },
+        {
+          "title": "Veg Zinger Box",
+          "subTitle": "Veg lovers unite! You get 1 Veg Zinger, 2 Veg Pattie...",
+          "price": 313
+        },
+        {
+          "title": "2 Veg Krispers Meal",
+          "subTitle": "2 veg value burgers, crispy medium fries & 2 delicio...",
+          "price": 268
+        },
+        {
+          "title": "Mexican Zinger Pro",
+          "subTitle": "A fiery fiesta of crunch and flavor with lettuce,tom...",
+          "price": 229
+        },
+        {
+          "title": "Caribbean Spicy Zinger",
+          "subTitle": "A tropical twist on spice—Zinger meets Caribbean z...",
+          "price": 199
+        },
+        {
+          "title": "Chatpata Chana Burger",
+          "subTitle": "A crunchy, spicy chana patty packed with desi zing i...",
+          "price": 69
+        },
+        {
+          "title": "Indian Tandoori Zinger",
+          "subTitle": "Tandoori-spiced Zinger bursting with bold Indian fla...",
+          "price": 189
+        },
+        {
+          "title": "American Classic Zinger",
+          "subTitle": "All-American vibes with the crispy Zinger perfection...",
+          "price": 179
+        },
+        {
+          "title": "Indian Paneer Zinger",
+          "subTitle": "Spiced paneer with Indian masala magic in every bite...",
+          "price": 189
+        },
+        {
+          "title": "Veg Zinger",
+          "subTitle": "Crispy veg patty with the signature Zinger zing....",
+          "price": 169
+        },
+        {
+          "title": "Spicy Chicken Krisper",
+          "subTitle": "Big spice, bold bite—crispy chicken with a spicy p...",
+          "price": 99
+        },
+        {
+          "title": "Classic Chicken Krisper",
+          "subTitle": "Crispy chicken joy in a classic no-fuss build....",
+          "price": 99
+        },
+        {
+          "title": "Classic Veg Krisper",
+          "subTitle": "A light veg crisp with a creamy touch....",
+          "price": 89
+        },
+        {
+          "title": "Spicy Veg Krisper",
+          "subTitle": "Veggie heat done right with spice-loaded crunch....",
+          "price": 89
+        },
+        {
+          "title": "Longer Chicken Burger",
+          "subTitle": "Extra long, extra crispy—more chicken, more fun!...",
+          "price": 89
+        },
+        {
+          "title": "Longer Veg Burger",
+          "subTitle": "Long, crunchy veg treat that hits the spot....",
+          "price": 89
+        }
+      ]
+    },
+    {
+      "category": "Rice Bowlz",
+      "items": [
+        {
+          "title": "Classic Chicken Rice Bowlz",
+          "subTitle": "Rice Bowlz Attack!- Grab this aromatic Rice Bowlz ri...",
+          "price": 199
+        },
+        {
+          "title": "Popcorn Chicken Rice Bowlz",
+          "subTitle": "Rice Bowlz Attack!- Grab this aromatic Rice Bowlz wi...",
+          "price": 199
+        },
+        {
+          "title": "Grilled Chicken Rice Bowlz",
+          "subTitle": "Rice Bowlz Attack!- Grab this aromatic Rice Bowlz wi...",
+          "price": 199
+        },
+        {
+          "title": "Veg Rice Bowlz",
+          "subTitle": "Rice Bowlz Attack!- Grab this aromatic Rice Bowlz no...",
+          "price": 179
+        }
+      ]
+    },
+    {
+      "category": "Box-Meals",
+      "items": [
+        {
+          "title": "Tandoori Zinger Box Meal",
+          "subTitle": "Tandoori Zinger + 2 Hot wings + Reg Pepsi + Reg Frie...",
+          "price": 319
+        },
+        {
+          "title": "Classic Zinger Box Meal",
+          "subTitle": "Classic Zinger + 2 Leg Pcs + Reg Pepsi...",
+          "price": 299
+        },
+        {
+          "title": "Popcorn Rice Box Meal",
+          "subTitle": "Popcorn Rice Bowl + 2 Hot Wings + Regular Pepsi...",
+          "price": 289
+        },
+        {
+          "title": "Veg Rice Box Meal",
+          "subTitle": "Veg Rice Bowl + ½ Veg Patty + Regular Pepsi...",
+          "price": 269
+        },
+        {
+          "title": "All Chicken Box",
+          "subTitle": "The best of KFC in one box – crispy leg, boneless ...",
+          "price": 179
+        }
+      ]
+    },
+    {
+      "category": "Rolls",
+      "items": [
+        {
+          "title": "Double Chicken Roll",
+          "subTitle": "Juicy double chicken strips wrapped in a soft tortil...",
+          "price": 149
+        },
+        {
+          "title": "Thai Spicy Chicken Roll",
+          "subTitle": "Bold Thai flavors with spicy chicken, crunchy veggie...",
+          "price": 119
+        },
+        {
+          "title": "Korean Tangy Chicken Roll",
+          "subTitle": "Zingy Korean-style chicken with gochujang-inspired s...",
+          "price": 119
+        },
+        {
+          "title": "Indian Tandoori Chicken Roll",
+          "subTitle": "Tandoori-marinated chicken with desi spices, mint ma...",
+          "price": 119
+        },
+        {
+          "title": "American Nashville Roll",
+          "subTitle": "Crispy chicken tossed in bold Nashville hot sauce, p...",
+          "price": 99
+        },
+        {
+          "title": "Indian Spicy Veg Roll",
+          "subTitle": "Crispy veg patty with Indian-style spices, wrapped w...",
+          "price": 99
+        }
+      ]
+    },
+    {
+      "category": "Snacks",
+      "items": [
+        {
+          "title": "6pc Peri Peri Strips",
+          "subTitle": "Double the strips, double the spice – snack or sha...",
+          "price": 269
+        },
+        {
+          "title": "3pc Peri Peri Strips",
+          "subTitle": "Spicy and crisp chicken strips – a fiery treat....",
+          "price": 149
+        },
+        {
+          "title": "Large Popcorn",
+          "subTitle": "Extra popcorn, extra joy – share it or not!...",
+          "price": 199
+        },
+        {
+          "title": "Medium Popcorn",
+          "subTitle": "Perfect-sized portion of crispy chicken popcorn....",
+          "price": 139
+        },
+        {
+          "title": "Regular Popcorn",
+          "subTitle": "Golden, crunchy popcorn chicken – a KFC classic....",
+          "price": 99
+        },
+        {
+          "title": "2pc Hot & Crispy",
+          "subTitle": "Two crunchy chicken pieces for a satisfying munch....",
+          "price": 185
+        },
+        {
+          "title": "1pc Hot & Crispy",
+          "subTitle": "One iconic piece, endless satisfaction....",
+          "price": 99
+        },
+        {
+          "title": "2pc Smoky Red",
+          "subTitle": "Grilled chicken with a punch of smoky and spicy flav...",
+          "price": 195
+        },
+        {
+          "title": "1pc Smoky Red",
+          "subTitle": "A grilled desi twist for guilt-free indulgence....",
+          "price": 99
+        },
+        {
+          "title": "Large Fries & Large Pepsi",
+          "subTitle": "A generous combo of crispy fries and a big sip of Pe...",
+          "price": 139
+        },
+        {
+          "title": "Med Fries & Med Pepsi",
+          "subTitle": "Perfectly portioned fries and Pepsi combo for one....",
+          "price": 119
+        },
+        {
+          "title": "Reg Fries & Reg Pepsi",
+          "subTitle": "A light snack combo of golden fries and cool Pepsi....",
+          "price": 99
+        },
+        {
+          "title": "4pc Hot wings",
+          "subTitle": "Crispy, spicy, and ready to fire up your meal....",
+          "price": 149
+        },
+        {
+          "title": "2pc Hot Wings",
+          "subTitle": "Just enough spice to make your taste buds dance....",
+          "price": 79
+        },
+        {
+          "title": "Large Fries",
+          "subTitle": "Plenty of golden fries to munch or share....",
+          "price": 89
+        },
+        {
+          "title": "Medium Fries",
+          "subTitle": "The ideal size of crispy, seasoned fries....",
+          "price": 79
+        },
+        {
+          "title": "Regular Fries",
+          "subTitle": "Your perfect small fix of crunchy fries....",
+          "price": 69
+        }
+      ]
+    },
+    {
+      "category": "Beverages & Deserts",
+      "items": [
+        {
+          "title": "KFC X Snickers Choco Mousse Cake",
+          "subTitle": "Layers of smooth, gooey, nutty, chocolatey delight ...",
+          "price": 129
+        },
+        {
+          "title": "Choco Lava Cake",
+          "subTitle": "Warm chocolate cake with a molten chocolate center ...",
+          "price": 99
+        },
+        {
+          "title": "Iced Cappuccino",
+          "subTitle": "A classic cold coffee with smooth frothy richness....",
+          "price": 149
+        },
+        {
+          "title": "Mountain Dew",
+          "subTitle": "One-serve mountain chill....",
+          "price": 69
+        },
+        {
+          "title": "Iced Americano",
+          "subTitle": "Bold espresso poured over ice – clean, crisp, and ...",
+          "price": 129
+        },
+        {
+          "title": "Mojito",
+          "subTitle": "A zesty cooler with a minty lime punch....",
+          "price": 69
+        },
+        {
+          "title": "Dew Mojito",
+          "subTitle": "Limey, fizzy and mint-kissed – Mountain Dew meets ...",
+          "price": 69
+        },
+        {
+          "title": "Krush Lime",
+          "subTitle": "Tangy and refreshing – a citrusy lime cooler you...",
+          "price": 59
+        },
+        {
+          "title": "Hazelnut Latte",
+          "subTitle": "Rich espresso blended with creamy milk and a smooth ...",
+          "price": 129
+        },
+        {
+          "title": "Hazelnut Cappuccino",
+          "subTitle": "Nutty aroma meets bold espresso in a frothy delight....",
+          "price": 109
+        },
+        {
+          "title": "Latte",
+          "subTitle": "Creamy and mellow – a balanced shot of espresso wi...",
+          "price": 119
+        },
+        {
+          "title": "Cappuccino",
+          "subTitle": "Bold espresso topped with thick froth – the ultima...",
+          "price": 99
+        },
+        {
+          "title": "Americano",
+          "subTitle": "Strong, black and smooth – a no-frills coffee clas...",
+          "price": 89
+        },
+        {
+          "title": "Pepsi",
+          "subTitle": "Cola just right – perfect for one....",
+          "price": 69
+        },
+        {
+          "title": "Coolberg Cranberry",
+          "subTitle": "Fruity and fizzy – cranberry with a twist....",
+          "portions": [
+            {
+              "portionSize": "Regular",
+              "price": 0
+            }
+          ]
+        },
+        {
+          "title": "Coolberg Peach",
+          "subTitle": "Sweet and subtle peachy fizz – zero alcohol, pure ...",
+          "portions": [
+            {
+              "portionSize": "Regular",
+              "price": 0
+            }
+          ]
+        },
+        {
+          "title": "Mirinda",
+          "subTitle": "Fizzy orange refreshment for one....",
+          "price": 69
+        },
+        {
+          "title": "7UP",
+          "subTitle": "Single-serve lemon-lime cooler...",
+          "price": 69
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,248 @@
+{
+  "restaurant": {
+    "title": "Puzhayoram",
+    "description": "A riverside dining experience offering a variety of Momos, Burgers, Shakes, Mojitos, and local Tea varieties.",
+    "logo": "https://example.com/puzhayoram-logo.png",
+    "cuisines": ["Fast Food", "Beverages", "Snacks"],
+    "phone": "+910000000000",
+    "instagramUrl": "https://www.instagram.com/puzhayoram",
+    "locationUrl": "https://maps.google.com/?q=Puzhayoram",
+    "openingHours": {
+      "sunday": { "open": "11:00", "close": "23:00" },
+      "monday": { "open": "11:00", "close": "23:00" },
+      "tuesday": { "open": "11:00", "close": "23:00" },
+      "wednesday": { "open": "11:00", "close": "23:00" },
+      "thursday": { "open": "11:00", "close": "23:00" },
+      "friday": { "open": "11:00", "close": "23:00" },
+      "saturday": { "open": "11:00", "close": "23:00" }
+    }
+  },
+  "menuList": [
+    {
+      "category": "Momos Chicken",
+      "items": [
+        { "title": "Normal", "subTitle": "Normal steamed chicken momos", "price": 120 },
+        { "title": "Fried", "subTitle": "Crispy fried chicken momos", "price": 90 },
+        {
+          "title": "Peri peri",
+          "subTitle": "Spicy peri peri seasoned chicken momos",
+          "price": 100
+        },
+        { "title": "BBQ", "subTitle": "Tossed in barbecue sauce", "price": 110 },
+        {
+          "title": "Indian masala",
+          "subTitle": "Flavored with traditional Indian spices",
+          "price": 100
+        },
+        { "title": "Honey chilli", "subTitle": "Sweet and spicy honey chilli glaze", "price": 120 },
+        { "title": "Creamy", "subTitle": "Rich and creamy texture coating", "price": 140 },
+        { "title": "Green chilly", "subTitle": "Spiced with sharp green chillies", "price": 110 }
+      ]
+    },
+    {
+      "category": "Momos Veg",
+      "items": [
+        { "title": "Fried", "subTitle": "Crispy fried vegetarian momos", "price": 80 },
+        { "title": "Peri", "subTitle": "Spicy peri peri seasoned veg momos", "price": 90 },
+        { "title": "Honey", "subTitle": "Sweet honey glazed veg momos", "price": 90 },
+        {
+          "title": "Indian Masala",
+          "subTitle": "Veg momos with classic Indian masala",
+          "price": 90
+        }
+      ]
+    },
+    {
+      "category": "French Fries",
+      "items": [
+        { "title": "Normal Salted", "subTitle": "Classic salted french fries", "price": 80 },
+        {
+          "title": "Mexican peri",
+          "subTitle": "Fries tossed in spicy Mexican peri peri seasoned mix",
+          "price": 100
+        },
+        {
+          "title": "Salt & Pepper",
+          "subTitle": "Seasoned simply with salt and crushed pepper",
+          "price": 110
+        }
+      ]
+    },
+    {
+      "category": "Burger",
+      "items": [
+        { "title": "Classic Burger", "subTitle": "Traditional style burger build", "price": 110 },
+        { "title": "Jumbo Burger", "subTitle": "Extra large sized satisfaction", "price": 150 },
+        {
+          "title": "Extra Cheesy",
+          "subTitle": "Loaded with extra melted cheese goodness",
+          "price": 20
+        }
+      ]
+    },
+    {
+      "category": "Tea",
+      "items": [
+        { "title": "Black Tea", "subTitle": "Classic black tea blend", "price": 10 },
+        { "title": "Black Coffee", "subTitle": "Strong unsweetened black coffee", "price": 10 },
+        { "title": "Lemon Tea", "subTitle": "Refreshing lemon infused tea", "price": 15 },
+        { "title": "Sulaimani", "subTitle": "Traditional spiced black tea", "price": 20 },
+        { "title": "Normal Tea", "subTitle": "Standard milk tea structure", "price": 15 },
+        { "title": "Boost", "subTitle": "Hot malted chocolate beverage", "price": 25 },
+        { "title": "Horlicks", "subTitle": "Nutritious hot malted milk drink", "price": 25 },
+        {
+          "title": "Cardomon Tea",
+          "subTitle": "Aromatic tea infused with fresh cardamom pods",
+          "price": 25
+        },
+        { "title": "Cinnamon Tea", "subTitle": "Warmly spiced cinnamon flavored tea", "price": 20 },
+        { "title": "Milk Coffee", "subTitle": "Classic brewed coffee with hot milk", "price": 20 },
+        {
+          "title": "Masala Tea",
+          "subTitle": "Rich blend of Indian spices in milk tea",
+          "price": 25
+        },
+        {
+          "title": "Ginger LemonTea",
+          "subTitle": "Zesty pairing of warm ginger and fresh lemon",
+          "price": 30
+        },
+        {
+          "title": "Munthiri Kattan",
+          "subTitle": "Unique local black tea variation with sweet grape undertones",
+          "price": 30
+        }
+      ]
+    },
+    {
+      "category": "Lime",
+      "items": [
+        { "title": "Soda Lime", "subTitle": "Fizzy sparkling lime cooler", "price": 20 },
+        { "title": "Fresh Lime", "subTitle": "Classic still fresh lime juice setup", "price": 35 },
+        {
+          "title": "Mint Lime",
+          "subTitle": "Cool fresh mint leaves muddled with lime",
+          "price": 40
+        },
+        {
+          "title": "Grape Lime",
+          "subTitle": "Sweet grape juice mixed with citrus lime zest",
+          "price": 50
+        },
+        { "title": "Grape Soda", "subTitle": "Effervescent sweet grape fizzy blend", "price": 50 },
+        {
+          "title": "Watermelon Lime",
+          "subTitle": "Hydrating fresh watermelon mash with sharp lime",
+          "price": 50
+        }
+      ]
+    },
+    {
+      "category": "Shakes",
+      "items": [
+        {
+          "title": "Sharja",
+          "subTitle": "Classic rich banana and milk based local favorite shake",
+          "price": 80
+        },
+        {
+          "title": "Strawberry",
+          "subTitle": "Sweet fruity strawberry milkshake build",
+          "price": 90
+        },
+        {
+          "title": "Chocolate",
+          "subTitle": "Deep premium cocoa profile milkshake blend",
+          "price": 90
+        },
+        {
+          "title": "Butterscotch",
+          "subTitle": "Buttery sweet caramelized toffee crunch milkshake flavor",
+          "price": 100
+        }
+      ]
+    },
+    {
+      "category": "Mojito",
+      "items": [
+        {
+          "title": "Blue Corco",
+          "subTitle": "Vibrant blue curacao citrus mocktail mix",
+          "price": 90
+        },
+        {
+          "title": "Passion Fruit",
+          "subTitle": "Tropical exotic passion fruit muddled freshness",
+          "price": 90
+        },
+        {
+          "title": "Green Apple",
+          "subTitle": "Crisp tart green apple flavored refresher",
+          "price": 90
+        },
+        {
+          "title": "Strawberry",
+          "subTitle": "Muddled sweet strawberry mojito composition",
+          "price": 90
+        },
+        { "title": "Orange", "subTitle": "Bright zesty citrus orange muddled base", "price": 80 },
+        { "title": "Mango", "subTitle": "Rich luscious seasonal mango mojito setup", "price": 80 }
+      ]
+    },
+    {
+      "category": "Fresh Juice",
+      "items": [
+        {
+          "title": "Watermelon",
+          "subTitle": "Pure freshly extracted refreshing watermelon juice",
+          "price": 70
+        },
+        {
+          "title": "Mango",
+          "subTitle": "Luscious thick pure pulp mango seasonal extract",
+          "price": 90
+        },
+        {
+          "title": "Grape",
+          "subTitle": "Freshly pressed sweet rich dark grape juice base",
+          "price": 90
+        }
+      ]
+    },
+    {
+      "category": "Cold Items",
+      "items": [
+        {
+          "title": "Naruneendi",
+          "subTitle": "Traditional refreshing sarsaparilla root syrup drink structure",
+          "price": 60
+        },
+        {
+          "title": "Ice Cream Lime",
+          "subTitle": "Decadent cream scoop nested inside an icy lime cooler float",
+          "price": 90
+        },
+        {
+          "title": "Cold Boost",
+          "subTitle": "Chilled chocolate malt refreshment blend over ice",
+          "price": 70
+        },
+        {
+          "title": "Cold Horlicks",
+          "subTitle": "Chilled malty smooth cream beverage base configuration",
+          "price": 70
+        },
+        {
+          "title": "Cold Coffee",
+          "subTitle": "Perfectly balanced sweet blended iced coffee shake configuration",
+          "price": 70
+        },
+        {
+          "title": "Mohabbat Ka Sharbat",
+          "subTitle": "Fragrant romantic old delhi style rose milk watermelon street drink mashup",
+          "price": 90
+        }
+      ]
+    }
+  ]
+}

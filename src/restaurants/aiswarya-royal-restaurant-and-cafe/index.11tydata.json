@@ -1,66 +1,929 @@
 {
   "restaurant": {
-    "title": "Aiswarya Royal Restaurant and Cafe",
-    "description": "A regal dining experience near the Post Office Junction in Piravom. Specializes in Kerala cuisine and traditional South Indian meals. Located opposite BSNL near the Orthodox Church.",
-    "logo": "https://img3.restaurantguru.com/rb0d-Aiswarya-Royal-Restaurant-design.jpg",
-    "cuisines": ["Kerala", "South Indian", "Indian"],
-    "phone": "+919497224868",
-    "instagramUrl": "https://www.instagram.com/explore/tags/aiswarya-royal-restaurant",
-    "locationUrl": "https://www.google.com/maps/@9.8730,76.4870,15z"
+    "title": "Aiswarya Royal Cafe",
+    "description": "Authentic multi-cuisine family restaurant serving Mandhi, Barbeque, Biryani, Chinese dishes, juices, and premium shakes in Piravom. Established since 1985.",
+    "cuisines": ["Indian", "Arabian", "Chinese", "South Indian", "Juices & Shakes"],
+    "openingHours": {
+      "sunday": { "open": "11:00", "close": "23:00" },
+      "monday": { "open": "11:00", "close": "23:00" },
+      "tuesday": { "open": "11:00", "close": "23:00" },
+      "wednesday": { "open": "11:00", "close": "23:00" },
+      "thursday": { "open": "11:00", "close": "23:00" },
+      "friday": { "open": "11:00", "close": "23:00" },
+      "saturday": { "open": "11:00", "close": "23:00" }
+    }
   },
   "menuList": [
     {
-      "category": "Kerala Specials",
+      "category": "Barbeque Grills",
       "items": [
         {
-          "title": "Kerala Sadhya",
-          "subTitle": "Traditional vegetarian feast served on banana leaf",
+          "title": "Shawarma",
+          "subTitle": "Classic grilled shawarma meat preparation",
+          "portions": [
+            { "portionSize": "Normal", "price": 110 },
+            { "portionSize": "Plate", "price": 180 }
+          ]
+        },
+        {
+          "title": "Classic Roll",
+          "subTitle": "Shawarma meat tightly wrapped in bread",
+          "price": 120
+        },
+        {
+          "title": "Plate Roll",
+          "subTitle": "Deconstructed shawarma served with bread",
+          "price": 120
+        },
+        {
+          "title": "Full Meat Roll",
+          "subTitle": "Loaded wrap completely stuffed with pure meat",
           "price": 150
+        }
+      ]
+    },
+    {
+      "category": "Mandhi",
+      "items": [
+        {
+          "title": "Alfam Mandhi",
+          "subTitle": "Traditional mandi rice topped with smoky alfam grilled chicken",
+          "portions": [
+            { "portionSize": "Quarter", "price": 210 },
+            { "portionSize": "Half", "price": 420 },
+            { "portionSize": "Full", "price": 800 }
+          ]
         },
         {
-          "title": "Nadan Chicken Curry",
-          "subTitle": "Traditional Kerala-style chicken curry",
-          "price": 140
+          "title": "Peri Peri Mandhi",
+          "subTitle": "Spicy peri-peri seasoned chicken paired with aromatic rice",
+          "portions": [
+            { "portionSize": "Quarter", "price": 220 },
+            { "portionSize": "Half", "price": 440 },
+            { "portionSize": "Full", "price": 890 }
+          ]
         },
         {
-          "title": "Meen Pollichathu",
-          "subTitle": "Fish marinated and wrapped in banana leaf",
-          "price": 200
+          "title": "Pepper Mandhi",
+          "subTitle": "Mandi rice served with robust black pepper crusted chicken",
+          "portions": [
+            { "portionSize": "Quarter", "price": 250 },
+            { "portionSize": "Half", "price": 480 },
+            { "portionSize": "Full", "price": 980 }
+          ]
         },
         {
-          "title": "Erachi Curry",
-          "subTitle": "Spicy Kerala-style beef curry",
-          "price": 130
+          "title": "Honey Chilly Mandhi",
+          "subTitle": "Unique sweet and hot glazed chicken over mandi rice",
+          "portions": [
+            { "portionSize": "Quarter", "price": 260 },
+            { "portionSize": "Half", "price": 500 },
+            { "portionSize": "Full", "price": 960 }
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Shawai",
+      "items": [
+        {
+          "title": "Shawai",
+          "subTitle": "Traditional Arabian spit-roasted chicken",
+          "portions": [
+            { "portionSize": "Quarter", "price": 160 },
+            { "portionSize": "Half", "price": 300 },
+            { "portionSize": "Full", "price": 600 }
+          ]
         },
         {
-          "title": "Chettinad Pepper Chicken",
-          "subTitle": "Spicy Chettinad-style pepper chicken",
+          "title": "Masala Shawai",
+          "subTitle": "Spit-roasted chicken coated in rich spicy local masala",
+          "portions": [
+            { "portionSize": "Quarter", "price": 180 },
+            { "portionSize": "Half", "price": 350 },
+            { "portionSize": "Full", "price": 700 }
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Alfam",
+      "items": [
+        {
+          "title": "Pepper Alfam",
+          "subTitle": "Charcoal grilled chicken marinated with crushed black pepper",
+          "portions": [
+            { "portionSize": "Quarter", "price": 150 },
+            { "portionSize": "Half", "price": 280 },
+            { "portionSize": "Full", "price": 530 }
+          ]
+        },
+        {
+          "title": "Peri Peri Alfam",
+          "subTitle": "Fiery hot African bird's eye chili spiced grilled chicken",
+          "portions": [
+            { "portionSize": "Quarter", "price": 170 },
+            { "portionSize": "Half", "price": 330 },
+            { "portionSize": "Full", "price": 640 }
+          ]
+        },
+        {
+          "title": "Honey Chilly Alfam",
+          "subTitle": "Sweet honey combined with fiery red chili grilled glaze",
+          "portions": [
+            { "portionSize": "Quarter", "price": 180 },
+            { "portionSize": "Half", "price": 340 },
+            { "portionSize": "Full", "price": 640 }
+          ]
+        },
+        {
+          "title": "BBQ Alfam",
+          "subTitle": "Smoky sweet American style barbecue sauce grilled chicken",
+          "portions": [
+            { "portionSize": "Quarter", "price": 190 },
+            { "portionSize": "Half", "price": 360 },
+            { "portionSize": "Full", "price": 680 }
+          ]
+        },
+        {
+          "title": "Regular Alfam",
+          "subTitle": "Classic Arabian herb and spice marinated charcoal grilled chicken",
+          "portions": [
+            { "portionSize": "Quarter", "price": 160 },
+            { "portionSize": "Half", "price": 310 },
+            { "portionSize": "Full", "price": 600 }
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Chinese Cuisines (Sides)",
+      "items": [
+        {
+          "title": "Chilly Chicken",
+          "subTitle": "Wok-tossed chicken in sweet and spicy chili sauce",
+          "price": 160
+        },
+        {
+          "title": "Garlic Chicken",
+          "subTitle": "Chicken cooked with heavy aromatic minced garlic notes",
+          "price": 180
+        },
+        {
+          "title": "Ginger Chicken",
+          "subTitle": "Savory chicken preparation highlighted by warm fresh ginger",
+          "price": 160
+        },
+        {
+          "title": "Lemon Chicken",
+          "subTitle": "Zesty and slightly sweet tangy lemon glazed chicken",
+          "price": 170
+        },
+        {
+          "title": "Shezwan Chicken",
+          "subTitle": "Fiery hot chicken prepared in classic Schezwan peppercorn sauce",
+          "price": 160
+        },
+        {
+          "title": "Chicken Mart",
+          "subTitle": "Chef's special dry or semi-gravy wok chicken dish",
+          "price": 170
+        },
+        {
+          "title": "Chilly Beef",
+          "subTitle": "Crispy beef strips tossed with onions and green chilies",
+          "price": 180
+        },
+        {
+          "title": "Garlic Beef",
+          "subTitle": "Stir-fried beef infused with roasted garlic slices",
+          "price": 170
+        },
+        {
+          "title": "Shezwan Beef",
+          "subTitle": "Spicy sliced beef cooked in bold Schezwan sauce",
+          "price": 180
+        },
+        { "title": "Beef", "subTitle": "Classic Chinese style stir-fried beef dish", "price": 190 },
+        {
+          "title": "Chilly Gobi",
+          "subTitle": "Crispy fried cauliflower florets in spicy chili sauce",
+          "portions": [
+            { "portionSize": "Half", "price": 130 },
+            { "portionSize": "Full", "price": 140 }
+          ]
+        },
+        {
+          "title": "Manchurian Gobi",
+          "subTitle": "Fried cauliflower tossed in dark sweet, tangy, and savory sauce",
+          "portions": [
+            { "portionSize": "Half", "price": 140 },
+            { "portionSize": "Full", "price": 150 }
+          ]
+        },
+        {
+          "title": "Crispy Vegetables",
+          "subTitle": "Assorted batter fried vegetables wok-tossed in seasonings",
           "price": 160
         }
       ]
     },
     {
-      "category": "Tiffin Items",
+      "category": "Fried Rice",
       "items": [
         {
-          "title": "Masala Dosa",
-          "subTitle": "Crispy dosa with potato masala",
-          "price": 55
+          "title": "Veg. Fried Rice",
+          "subTitle": "Fragrant rice stir-fried with finely chopped mixed vegetables",
+          "price": 150
         },
         {
-          "title": "Idli (3 pcs)",
-          "subTitle": "Soft idlis with sambar and chutney",
-          "price": 35
+          "title": "Egg Fried Rice",
+          "subTitle": "Wok-fried rice tossed with scrambled egg and onions",
+          "price": 160
+        },
+        {
+          "title": "Chicken Fried Rice",
+          "subTitle": "Classic street-style chicken piece loaded fried rice",
+          "price": 170
+        },
+        {
+          "title": "Mixed Fried Rice",
+          "subTitle": "Combo fried rice featuring chicken, meat, and egg bits",
+          "price": 190
+        }
+      ]
+    },
+    {
+      "category": "Schezwan Rice",
+      "items": [
+        {
+          "title": "Veg. Schezwan Rice",
+          "subTitle": "Spicy Schezwan sauce tossed mixed vegetable rice",
+          "price": 160
+        },
+        {
+          "title": "Egg Schezwan Rice",
+          "subTitle": "Fiery wok-tossed rice with scrambled eggs and spicy paste",
+          "price": 170
+        },
+        {
+          "title": "Chicken Schezwan Rice",
+          "subTitle": "Hot and zesty fried rice with shredded chicken pieces",
+          "price": 180
+        },
+        {
+          "title": "Mixed Schezwan Rice",
+          "subTitle": "Ultimate spicy loaded rice with assorted meats and eggs",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "category": "Noodles",
+      "items": [
+        {
+          "title": "Veg. Noodles",
+          "subTitle": "Stir-fried Hakka style noodles loaded with crunchy julienned veg",
+          "price": 150
+        },
+        {
+          "title": "Egg Noodles",
+          "subTitle": "Wok-tossed noodles mixed clean with savory scrambled eggs",
+          "price": 170
+        },
+        {
+          "title": "Chicken Noodles",
+          "subTitle": "Delicious classic noodles tossed with seasoned shredded chicken",
+          "price": 180
+        },
+        {
+          "title": "Mixed Noodles",
+          "subTitle": "Premium stir-fried noodles containing various meats and eggs",
+          "price": 190
+        }
+      ]
+    },
+    {
+      "category": "Schezwan Noodles",
+      "items": [
+        {
+          "title": "Veg. Schezwan Noodles",
+          "subTitle": "Fiery hot stir-fried noodles loaded with mixed vegetables",
+          "price": 160
+        },
+        {
+          "title": "Egg Schezwan Noodles",
+          "subTitle": "Spicy wok-tossed savory noodles packed with scrambled egg layers",
+          "price": 170
+        },
+        {
+          "title": "Chicken Schezwan Noodles",
+          "subTitle": "Sharp Schezwan pepper seasoned noodles with seasoned chicken strips",
+          "price": 190
+        },
+        {
+          "title": "Mixed Schezwan Noodles",
+          "subTitle": "All-in-one spicy noodle experience with shredded chicken, meats, and eggs",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "category": "Special Dishes",
+      "items": [
+        {
+          "title": "Mutton Biriyani",
+          "subTitle": "Richly spiced aromatic long grain rice cooked with tender mutton",
+          "price": 380
+        },
+        {
+          "title": "Paal Kappa",
+          "subTitle": "Mashed tapioca cooked rich with seasoned coconut milk extract",
+          "price": 70
+        },
+        {
+          "title": "Kappa Biriyani",
+          "subTitle": "Traditional Kerala dish blending mashed tapioca with spicy beef cuts",
+          "price": 150
+        },
+        {
+          "title": "Pidi Chicken Curry",
+          "subTitle": "Traditional rice dumplings served immersed in thick authentic chicken gravy",
+          "price": 230
+        },
+        {
+          "title": "Duck Roast",
+          "subTitle": "Rich and deeply spiced slow-roasted duck prepared in thick Kerala gravy",
+          "price": 210
+        },
+        {
+          "title": "Kada Fry",
+          "subTitle": "Crispy deep-fried quail marinated in hot local spice rubs",
+          "price": 150
+        }
+      ]
+    },
+    {
+      "category": "Soups",
+      "items": [
+        {
+          "title": "Sweet Corn Soup",
+          "subTitle": "Comforting creamy corn soup preparation",
+          "portions": [
+            { "portionSize": "Veg", "price": 100 },
+            { "portionSize": "Chicken", "price": 120 }
+          ]
+        },
+        {
+          "title": "Hot & Sour Soup",
+          "subTitle": "Spicy and tangy comforting Asian broth",
+          "portions": [
+            { "portionSize": "Veg", "price": 100 },
+            { "portionSize": "Chicken", "price": 120 }
+          ]
+        },
+        {
+          "title": "Tomato Soup",
+          "subTitle": "Classic smooth slow-cooked cream of fresh tomato soup",
+          "price": 180
+        },
+        {
+          "title": "Mushroom Soup",
+          "subTitle": "Earthy and rustic thick creamed forest mushroom soup",
+          "price": 100
+        }
+      ]
+    },
+    {
+      "category": "Salads",
+      "items": [
+        {
+          "title": "Green Salad",
+          "subTitle": "Crisp sliced garden fresh onions, cucumbers, carrots, and green chilies",
+          "price": 100
+        },
+        {
+          "title": "Veg. Salad",
+          "subTitle": "Assorted chopped vegetables dressed cleanly in classic seasoning",
+          "price": 100
+        }
+      ]
+    },
+    {
+      "category": "Starters",
+      "items": [
+        {
+          "title": "Chicken 65",
+          "subTitle": "Deep fried spicy chicken starter marinated with regional spices",
+          "portions": [
+            { "portionSize": "With Bone", "price": 160 },
+            { "portionSize": "Boneless", "price": 200 }
+          ]
+        },
+        {
+          "title": "Chicken Lollipop",
+          "subTitle": "Crispy fried chicken winglets shaped into lollipops tossed in hot sauces",
+          "price": 220
+        },
+        {
+          "title": "Dragon Chicken",
+          "subTitle": "Batter fried thin chicken strips tossed in spicy, sweet, crunchy cashew sauce",
+          "price": 230
+        },
+        {
+          "title": "Beef Dry Fry",
+          "subTitle": "Traditional Kerala style slow roasted dark spicy beef chunks with coconut slices",
+          "price": 190
+        },
+        {
+          "title": "Gobi 65",
+          "subTitle": "Spicy deep fried cauliflower florets marinated in southern Indian batter mix",
+          "price": 130
+        },
+        {
+          "title": "Paneer 65",
+          "subTitle": "Deep fried cubed cottage cheese seasoned with direct chili curry leaves dressing",
+          "price": 150
+        },
+        {
+          "title": "Mushroom 65",
+          "subTitle": "Crisp button mushrooms prepared in southern hot spice batter coat",
+          "price": 180
+        }
+      ]
+    },
+    {
+      "category": "Biryani",
+      "items": [
+        {
+          "title": "Chicken Biriyani",
+          "subTitle": "Fragrant short grain Kaima rice layered with slow cooked spiced chicken masala",
+          "price": 160
+        },
+        {
+          "title": "Beef Biriyani",
+          "subTitle": "Traditional Malabar style aromatic rice dish featuring tender spiced beef cuts",
+          "price": 180
+        },
+        {
+          "title": "Fish Biriyani",
+          "subTitle": "Premium fish steak cooked in rich masala and steam layered with scented rice",
+          "price": 0
+        },
+        {
+          "title": "Egg Biriyani",
+          "subTitle": "Aromatic rice paired perfectly with rich boiled eggs wrapped in specialized gravy",
+          "price": 150
+        },
+        {
+          "title": "Veg. Biriyani",
+          "subTitle": "Fragrant layered rice cooked with seasoned garden fresh vegetables and nuts",
+          "price": 140
+        },
+        {
+          "title": "Kerala Meals (with Fish curry)",
+          "subTitle": "Traditional Kerala parboiled rice served with fish curry and assorted sides",
+          "price": 150
+        },
+        {
+          "title": "Special Chatty Chooru",
+          "subTitle": "Traditional pot meal blending parboiled rice, meats, fried fish, and gravies together",
+          "price": 250
+        }
+      ]
+    },
+    {
+      "category": "Chicken Items",
+      "items": [
+        {
+          "title": "Nadan Chicken Curry",
+          "subTitle": "Authentic local style chicken curry cooked in toasted spiced coconut milk gravy",
+          "price": 160
+        },
+        {
+          "title": "Chicken Roast",
+          "subTitle": "Semi-dry semi-gravy chicken dish thick with caramelized onions and dry spices",
+          "price": 170
+        },
+        {
+          "title": "Chicken Kondattam",
+          "subTitle": "Spicy, slightly sweet and sour dry fried chicken starter layered with sun-dried chili",
+          "price": 180
+        },
+        {
+          "title": "Chicken Mulakittathu",
+          "subTitle": "Fiery hot traditional Kerala red chili based chicken curry dish without coconut",
+          "price": 190
+        },
+        {
+          "title": "Kadai Chicken",
+          "subTitle": "North Indian recipe chicken tossed with block bell peppers and thick kadai masala",
+          "price": 160
+        },
+        {
+          "title": "Pepper Chicken",
+          "subTitle": "Hot and pungent chicken preparation dominated by heavy black pepper tones",
+          "price": 180
+        },
+        {
+          "title": "Butter Chicken",
+          "subTitle": "Mildly spiced velvety sweet cream tomato sauce pairing tender tandoor chicken pieces",
+          "price": 200
+        },
+        {
+          "title": "Chicken Masala",
+          "subTitle": "Standard rich egg onion tomato gravy based chicken preparation",
+          "price": 170
+        }
+      ]
+    },
+    {
+      "category": "Beef Items",
+      "items": [
+        {
+          "title": "Nadan Beef Curry",
+          "subTitle": "Traditional local home style beef curry dense with dark roasted Kerala spices",
+          "price": 190
+        },
+        {
+          "title": "Beef Coconut Fry",
+          "subTitle": "Classic beef strips dry fried with roasted coconut shards and black pepper",
+          "price": 180
+        },
+        {
+          "title": "Beef Roast",
+          "subTitle": "Thick onion tomato masala coated semi-dry cooked beef preparation",
+          "price": 170
+        },
+        {
+          "title": "Beef Curry",
+          "subTitle": "Standard hot spiced runny beef curry perfect for parotta matching",
+          "price": 160
+        },
+        {
+          "title": "Beef Kondattam",
+          "subTitle": "Crispy fried marinated beef glazed in spicy and sweet hot chili seasoning",
+          "price": 180
+        },
+        {
+          "title": "Chilly Beef",
+          "subTitle": "Semi-dry wok-fried beef spiced up directly with green chili and bell pepper cuts",
+          "price": 190
+        }
+      ]
+    },
+    {
+      "category": "Fish Items",
+      "items": [
+        {
+          "title": "Mulakitta Meen Curry",
+          "subTitle": "Traditional authentic red hot fish curry simmered with sour gambooge",
+          "price": 80
+        },
+        {
+          "title": "Fish Fry",
+          "subTitle": "Pan fried fresh fish steak coated in stone ground local chili garlic paste",
+          "price": 0
+        },
+        {
+          "title": "Prawn Roast",
+          "subTitle": "Succulent shrimp slow cooked in dry aromatic local masala mixture",
+          "price": 250
+        },
+        {
+          "title": "Fish Masala",
+          "subTitle": "Fried fish steak immersed inside savory dense onion tomato thick curry base",
+          "price": 120
+        },
+        {
+          "title": "Koonthal Roast",
+          "subTitle": "Squid rings stir fried in hot spicy onion and ground pepper masala gravy",
+          "price": 250
+        }
+      ]
+    },
+    {
+      "category": "Egg Items",
+      "items": [
+        {
+          "title": "Egg Curry",
+          "subTitle": "Boiled eggs cooked cleanly in classic light onion tomato gravy",
+          "price": 40
+        },
+        {
+          "title": "Boiled Egg",
+          "subTitle": "Plain hard boiled farm fresh chicken egg",
+          "price": 12
+        },
+        {
+          "title": "Egg Masala",
+          "subTitle": "Eggs cooked inside highly concentrated caramelized onion spicy semi-gravy",
+          "price": 90
+        },
+        {
+          "title": "Egg Roast",
+          "subTitle": "Traditional Kerala style egg dish prepared inside thick onion dry roast layers",
+          "price": 80
+        },
+        {
+          "title": "Egg Omlet",
+          "subTitle": "Classic pan fried egg beaten well with chopped onions, green chilies, and pepper",
+          "price": 30
+        },
+        {
+          "title": "Egg Bulls eye",
+          "subTitle": "Single fried egg with runny central yellow yolk and set white exterior",
+          "price": 15
+        }
+      ]
+    },
+    {
+      "category": "Veg Items",
+      "items": [
+        {
+          "title": "Kadala curry",
+          "subTitle": "Traditional black chickpeas cooked inside authentic toasted coconut gravy",
+          "price": 40
+        },
+        {
+          "title": "Veg. Kurma",
+          "subTitle": "Assorted direct vegetables simmered smoothly in mild coconut cashew nut paste",
+          "price": 40
+        },
+        {
+          "title": "Mushroom Masala",
+          "subTitle": "Button mushrooms cooked inside savory spiced northern Indian thick gravy",
+          "price": 160
+        },
+        {
+          "title": "Kadai Paneer",
+          "subTitle": "Cottage cheese pieces wok tossed alongside diced bell peppers and spicy base",
+          "price": 180
+        },
+        {
+          "title": "Kadai Veg.",
+          "subTitle": "Fresh hand-cut vegetables prepared cleanly in spicy coriander and chili kadai paste",
+          "price": 160
+        },
+        {
+          "title": "Tomato Curry",
+          "subTitle": "Runny savory dish highlighting slow cooked tomatoes with basic local tempering",
+          "price": 0
+        },
+        {
+          "title": "Paneer Butter Masala",
+          "subTitle": "Soft paneer cubes inside classic smooth sweet creamed rich orange tomato gravy",
+          "price": 170
+        },
+        {
+          "title": "Chezwan Paneer",
+          "subTitle": "Spicy stir-fried paneer cubes coated heavily in hot Schezwan glaze sauce",
+          "price": 190
+        },
+        {
+          "title": "Chilly Paneer",
+          "subTitle": "Indo-Chinese starter fusing fried paneer blocks with green chili and soy sauce",
+          "price": 170
+        },
+        {
+          "title": "Chilly Mashroom",
+          "subTitle": "Fresh whole button mushrooms tossed inside basic spicy savory sweet garlic chili mix",
+          "price": 170
+        }
+      ]
+    },
+    {
+      "category": "Breads",
+      "items": [
+        {
+          "title": "Appam",
+          "subTitle": "Lacy fermented rice and coconut milk thin local crepe pancake",
+          "price": 12
+        },
+        {
+          "title": "Puttu",
+          "subTitle": "Steamed cylinders of ground rice layered cleanly with scraped coconut flakes",
+          "price": 15
+        },
+        {
+          "title": "Idi Appam",
+          "subTitle": "Delicate steamed rice noodles pressed into rounded string hopper shapes",
+          "price": 12
+        },
+        {
+          "title": "Parotta (Kerala)",
+          "subTitle": "Classic layered flaky spiral flatbread made using refined wheat dough",
+          "price": 12
+        },
+        {
+          "title": "Chappathi",
+          "subTitle": "Healthy unleavened flatbread prepared whole wheat style on flat tawa",
+          "price": 12
         },
         {
           "title": "Poori Masala",
-          "subTitle": "Fried poori with potato masala",
-          "price": 50
+          "subTitle": "Deep fried puffed fluffy bread served alongside classic seasoned smashed potato mash",
+          "price": 80
         },
         {
-          "title": "Vellayappam",
-          "subTitle": "Soft rice hoppers",
+          "title": "Masala Dosa",
+          "subTitle": "Crispy thin fermented rice crepe wrapper encasing seasoned savory potato stuffing",
+          "price": 80
+        },
+        {
+          "title": "Ghee Roast",
+          "subTitle": "Large paper thin crispy golden dosa roasted premium with clarified butter",
+          "price": 70
+        },
+        {
+          "title": "Podi Dosa",
+          "subTitle": "Crispy savory dosa layout dusted inside with coarse roasted dry lentil chili spice powder",
+          "price": 15
+        },
+        {
+          "title": "Idly",
+          "subTitle": "Steamed savory soft cakes prepared using healthy fermented black lentil rice batter",
+          "price": 15
+        }
+      ]
+    },
+    {
+      "category": "Hot Beverages",
+      "items": [
+        {
+          "title": "Classic Tea",
+          "subTitle": "Traditional freshly brewed milk tea with local dust profile",
+          "price": 12
+        },
+        {
+          "title": "Coffee",
+          "subTitle": "Rich frothed warm instant chicory coffee blend with hot milk",
+          "price": 20
+        },
+        {
+          "title": "Black Tea",
+          "subTitle": "Clean unsweetened freshly steeped local black tea infusion",
+          "price": 10
+        },
+        {
+          "title": "Boost",
+          "subTitle": "Sweet warm nutritious chocolate malt beverage frothed in creamy milk",
+          "price": 30
+        },
+        {
+          "title": "Horlicks",
+          "subTitle": "Classic comforting hot malted cereal dairy beverage mix",
+          "price": 30
+        },
+        {
+          "title": "Warm Milk",
+          "subTitle": "Plain steaming cup of sweetened fresh cow milk",
+          "price": 15
+        }
+      ]
+    },
+    {
+      "category": "Juice",
+      "items": [
+        {
+          "title": "APPLE",
+          "subTitle": "Freshly extracted pure sweet apple juice run",
+          "price": 100
+        },
+        {
+          "title": "PINEAPPLE",
+          "subTitle": "Tangy sweet clear juice pressed from fresh tropical pineapples",
+          "price": 80
+        },
+        {
+          "title": "ORANGE",
+          "subTitle": "Bright freshly squeezed classic pulpy citrus orange juice",
+          "price": 80
+        },
+        {
+          "title": "GRAPES",
+          "subTitle": "Sweet concentrated juice extracted straight from fresh dark seeded grapes",
+          "price": 80
+        },
+        {
+          "title": "POMEGRANATE",
+          "subTitle": "Antioxidant rich ruby red sweet fresh pomegranate seed press juice",
+          "price": 120
+        },
+        {
+          "title": "MUSAMBI",
+          "subTitle": "Classic Indian sweet lime fresh juice cold pressed directly",
+          "price": 80
+        },
+        {
+          "title": "WATERMELON",
+          "subTitle": "Incredibly hydrating simple sweet red watermelon flesh squeeze juice",
+          "price": 120
+        },
+        {
+          "title": "AVACADO",
+          "subTitle": "Super thick rich creamy buttery blended avocado pulp layout",
+          "price": 120
+        },
+        {
+          "title": "ABC (Apple, Carrot, Betroot)",
+          "subTitle": "Healthy wellness juice blend combining fresh apple, carrot, and beetroot extracts",
+          "price": 120
+        },
+        {
+          "title": "FRESH LIME",
+          "subTitle": "Classic iced cold water mixed with clean lime squeeze",
+          "price": 30
+        },
+        {
+          "title": "MINT LIME",
+          "subTitle": "Zesty cold fresh lime juice muddled inside crushed mint leaf layout",
           "price": 40
+        }
+      ]
+    },
+    {
+      "category": "Shakes",
+      "items": [
+        {
+          "title": "VANILLA",
+          "subTitle": "Classic smooth sweet premium aromatic vanilla bean cream shake",
+          "price": 80
+        },
+        {
+          "title": "CHOCOLATE",
+          "subTitle": "Thick cold cocoa heavy dairy blend topped with syrup lines",
+          "price": 100
+        },
+        {
+          "title": "BUTTERSCOTCH",
+          "subTitle": "Sweet buttery caramelized crunch toffee flavored thick milk shake",
+          "price": 100
+        },
+        {
+          "title": "SHARJAH",
+          "subTitle": "Authentic regional thick banana shake enriched with malt powder and frozen milk blocks",
+          "price": 80
+        },
+        {
+          "title": "SAUDI",
+          "subTitle": "Rich specialized local milk shake variant featuring sweet dates and nut hints",
+          "price": 80
+        },
+        {
+          "title": "STRAWBERRY",
+          "subTitle": "Luscious pink milkshake blending real sweet strawberry fruit profiles",
+          "price": 80
+        },
+        {
+          "title": "BLACK CURRENT",
+          "subTitle": "Tangy sweet dark berry profile blended creamy ice cream shake",
+          "price": 100
+        },
+        {
+          "title": "BADAM",
+          "subTitle": "Traditional rich milk mix featuring crushed almonds and saffron yellow hues",
+          "price": 120
+        },
+        {
+          "title": "MANGO",
+          "subTitle": "Thick seasonal mango pulp cream shake composition",
+          "price": 80
+        },
+        {
+          "title": "OREO SHAKE",
+          "subTitle": "Decadent crunchy cookie shake loaded with blended chocolate sandwich biscuits",
+          "price": 120
+        }
+      ]
+    },
+    {
+      "category": "Sweet Corner",
+      "items": [
+        {
+          "title": "COLD COFFEE",
+          "subTitle": "Perfect sweet chilled coffee blend crowned with vanilla cream scoop",
+          "price": 80
+        },
+        {
+          "title": "ROSE MILK",
+          "subTitle": "Refreshing classic pink milk cooler scented with sweet aromatic rose petal syrup",
+          "price": 80
+        },
+        {
+          "title": "FRUIT SALAD",
+          "subTitle": "Medley of seasonal cut fresh fruits nestled under custard or cream layers",
+          "price": 100
+        },
+        {
+          "title": "AVIL MILK",
+          "subTitle": "Famous malabar street dessert drink layering roasted rice flakes, mashed bananas, milk, and nuts",
+          "price": 100
+        },
+        {
+          "title": "FALOODA",
+          "subTitle": "Ultimate dessert drink layering rose syrup, basil seeds, vermicelli, milk, ice cream, and dry fruits",
+          "price": 150
         }
       ]
     }

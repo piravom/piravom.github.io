@@ -99,7 +99,7 @@ permalink: '/restaurants/{% if pagination.pageNumber > 0 %}page/{{ pagination.pa
 
           <!-- Info Row (attractions style) -->
           <div
-            class="grid grid-cols-4 items-center border-t border-gray-100 dark:border-gray-700 pt-4 mt-auto text-sm"
+            class="grid grid-cols-5 items-center border-t border-gray-100 dark:border-gray-700 pt-4 mt-auto text-sm"
           >
             <!-- Distance from Bus Stand -->
             <span
@@ -137,6 +137,17 @@ permalink: '/restaurants/{% if pagination.pageNumber > 0 %}page/{{ pagination.pa
               dark:fill-amber-400 shrink-0" %} {% else %}
               <span class="text-sm text-gray-300 dark:text-gray-600">-</span>
               {% endif %}
+            </span>
+
+            <!-- Menu -->
+            <span class="flex justify-center">
+              <a
+                href="{{ restaurant.url }}"
+                class="rounded-lg p-1.5 text-gray-400 dark:text-gray-500 transition hover:bg-orange-50 dark:hover:bg-orange-900/30 hover:text-orange-700 dark:hover:text-orange-400"
+                title="View menu"
+              >
+                {% lucide "utensils-crossed", "h-5 w-5" %}
+              </a>
             </span>
 
             <!-- Navigate to Maps -->
