@@ -74,7 +74,7 @@ permalink: '/events/'
           <h2 class="text-2xl font-bold text-gray-900">Upcoming Events</h2>
         </div>
 
-        <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3" id="eventsGrid">
+        <div class="grid gap-6 md:grid-cols-2" id="eventsGrid">
           {% for event in upcoming %}
           <div
             class="event-card rounded-3xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 shadow-sm flex flex-col"
@@ -97,41 +97,56 @@ permalink: '/events/'
                 >
               </div>
               <div class="flex-1 min-w-0">
-                <h3 class="text-lg font-bold text-gray-900 truncate">{{ event.data.title }}</h3>
-                <span
-                  class="inline-block mt-1 rounded-full bg-gray-100 px-2.5 py-0.5 text-xs font-medium text-gray-600"
-                  >{{ event.data.category }}</span
-                >
+                <div class="flex items-start justify-between gap-2 mb-1.5">
+                  <a
+                    href="{{ event.url }}"
+                    class="text-lg font-bold leading-tight text-gray-900 dark:text-gray-100 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
+                    >{{ event.data.title }}</a
+                  >
+                  <span
+                    class="shrink-0 rounded-full bg-gray-100 dark:bg-gray-800 px-2.5 py-0.5 text-xs font-medium text-gray-600 dark:text-gray-300"
+                    >{{ event.data.category }}</span
+                  >
+                </div>
               </div>
             </div>
 
             <!-- Details -->
             <div class="flex-1 px-6 py-4 space-y-3">
-              <p class="text-sm text-gray-600 line-clamp-2">{{ event.data.description }}</p>
-              <div class="flex items-center gap-2 text-xs text-gray-500">
+              <p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">
+                {{ event.data.description }}
+              </p>
+              <div class="flex items-center gap-2 text-xs text-gray-500 dark:text-gray-400">
                 {% lucide "map-pin", "h-3.5 w-3.5 flex-shrink-0" %}
                 <span class="truncate">{{ event.data.location }}</span>
               </div>
-              <div class="flex items-center gap-2 text-xs text-gray-500">
+              <div class="flex items-center gap-2 text-xs text-gray-500 dark:text-gray-400">
                 {% lucide "clock", "h-3.5 w-3.5 flex-shrink-0" %}
                 <span>{{ event.data.time }}</span>
               </div>
             </div>
 
             <!-- Footer -->
-            <div class="flex items-center justify-between border-t border-gray-100 px-6 py-3">
-              {% if event.data.organizer %}
-              <span class="text-xs text-gray-400">by {{ event.data.organizer }}</span>
-              {% else %}
-              <span></span>
-              {% endif %} {% if event.data.mapLink %}
+            <div
+              class="flex items-center justify-between border-t border-gray-100 dark:border-gray-700 px-6 py-3"
+            >
+              <span class="text-xs text-gray-400 dark:text-gray-500">
+                {%- if event.data.organizer %}by {{ event.data.organizer }}{% endif %}
+              </span>
+              <a
+                href="{{ event.url }}"
+                class="flex items-center gap-1 rounded-lg px-3 py-1.5 text-xs font-medium text-indigo-600 dark:text-indigo-400 transition hover:bg-indigo-50 dark:hover:bg-indigo-900/30"
+              >
+                {% lucide "eye", "h-3.5 w-3.5" %} View Event
+              </a>
+              {% if event.data.mapLink %}
               <a
                 href="{{ event.data.mapLink }}"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="flex items-center gap-1 rounded-lg px-3 py-1.5 text-xs font-medium text-gray-500 transition hover:bg-gray-100 hover:text-gray-700"
+                class="flex items-center gap-1 rounded-lg px-3 py-1.5 text-xs font-medium text-gray-500 dark:text-gray-400 transition hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-gray-700 dark:hover:text-gray-300"
               >
-                {% lucide "external-link", "h-3.5 w-3.5" %} View Map
+                {% lucide "external-link", "h-3.5 w-3.5" %} Map
               </a>
               {% endif %}
             </div>
@@ -172,21 +187,41 @@ permalink: '/events/'
                 >
               </div>
               <div class="flex-1 min-w-0">
-                <h3 class="text-lg font-bold text-gray-700 truncate">{{ event.data.title }}</h3>
-                <span
-                  class="inline-block mt-1 rounded-full bg-gray-100 px-2.5 py-0.5 text-xs font-medium text-gray-500"
-                  >{{ event.data.category }}</span
-                >
+                <div class="flex items-start justify-between gap-2 mb-1.5">
+                  <a
+                    href="{{ event.url }}"
+                    class="text-lg font-bold leading-tight text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
+                    >{{ event.data.title }}</a
+                  >
+                  <span
+                    class="shrink-0 rounded-full bg-gray-100 dark:bg-gray-800 px-2.5 py-0.5 text-xs font-medium text-gray-500 dark:text-gray-400"
+                    >{{ event.data.category }}</span
+                  >
+                </div>
               </div>
             </div>
 
             <!-- Details -->
             <div class="flex-1 px-6 py-4 space-y-3">
-              <p class="text-sm text-gray-500 line-clamp-2">{{ event.data.description }}</p>
-              <div class="flex items-center gap-2 text-xs text-gray-400">
+              <p class="text-sm text-gray-500 dark:text-gray-400 line-clamp-2">
+                {{ event.data.description }}
+              </p>
+              <div class="flex items-center gap-2 text-xs text-gray-400 dark:text-gray-500">
                 {% lucide "map-pin", "h-3.5 w-3.5 flex-shrink-0" %}
                 <span class="truncate">{{ event.data.location }}</span>
               </div>
+            </div>
+
+            <!-- Footer -->
+            <div
+              class="flex items-center justify-end border-t border-gray-100 dark:border-gray-700 px-6 py-3"
+            >
+              <a
+                href="{{ event.url }}"
+                class="flex items-center gap-1 rounded-lg px-3 py-1.5 text-xs font-medium text-indigo-600 dark:text-indigo-400 transition hover:bg-indigo-50 dark:hover:bg-indigo-900/30"
+              >
+                {% lucide "eye", "h-3.5 w-3.5" %} View Event
+              </a>
             </div>
           </div>
           {% endfor %}
