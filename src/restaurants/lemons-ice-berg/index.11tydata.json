@@ -8,7 +8,37 @@
     "instagramUrl": "https://www.instagram.com/explore/tags/lemons-ice-berg",
     "mapUrl": "https://www.google.com/maps/@9.8735,76.4868,15z",
     "distanceFromBusStand": "350m",
-    "rating": "4.2"
+    "rating": "4.2",
+    "openingHours": {
+      "thursday": {
+        "open": "10:00",
+        "close": "23:00"
+      },
+      "friday": {
+        "open": "10:00",
+        "close": "23:00"
+      },
+      "saturday": {
+        "open": "10:00",
+        "close": "23:00"
+      },
+      "sunday": {
+        "open": "10:00",
+        "close": "23:00"
+      },
+      "monday": {
+        "open": "10:00",
+        "close": "23:00"
+      },
+      "tuesday": {
+        "open": "10:00",
+        "close": "23:00"
+      },
+      "wednesday": {
+        "open": "10:00",
+        "close": "23:00"
+      }
+    }
   },
   "menuList": [
     {

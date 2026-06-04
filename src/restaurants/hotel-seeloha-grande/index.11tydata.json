@@ -6,7 +6,37 @@
     "phone": "+914852265666",
     "distanceFromBusStand": "2.3km",
     "rating": "3.2",
-    "directionsUrl": "https://www.google.com/maps/dir/Piravom+Private+Bus+Stand/Hotel+Seeloha+Grande,+PIRAVOM"
+    "directionsUrl": "https://www.google.com/maps/dir/Piravom+Private+Bus+Stand/Hotel+Seeloha+Grande,+PIRAVOM",
+    "openingHours": {
+      "thursday": {
+        "open": "07:30",
+        "close": "22:00"
+      },
+      "friday": {
+        "open": "07:30",
+        "close": "22:00"
+      },
+      "saturday": {
+        "open": "07:30",
+        "close": "22:00"
+      },
+      "sunday": {
+        "open": "08:00",
+        "close": "22:00"
+      },
+      "monday": {
+        "open": "07:30",
+        "close": "22:00"
+      },
+      "tuesday": {
+        "open": "07:30",
+        "close": "22:00"
+      },
+      "wednesday": {
+        "open": "07:30",
+        "close": "22:00"
+      }
+    }
   },
   "menuList": []
 }

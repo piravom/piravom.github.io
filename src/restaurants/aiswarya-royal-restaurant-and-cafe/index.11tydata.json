@@ -5,31 +5,31 @@
     "cuisines": ["Indian", "Arabian", "Chinese", "South Indian", "Juices & Shakes"],
     "openingHours": {
       "sunday": {
-        "open": "11:00",
+        "open": "07:00",
         "close": "23:00"
       },
       "monday": {
-        "open": "11:00",
+        "open": "07:00",
         "close": "23:00"
       },
       "tuesday": {
-        "open": "11:00",
+        "open": "07:00",
         "close": "23:00"
       },
       "wednesday": {
-        "open": "11:00",
+        "open": "07:00",
         "close": "23:00"
       },
       "thursday": {
-        "open": "11:00",
+        "open": "07:00",
         "close": "23:00"
       },
       "friday": {
-        "open": "11:00",
+        "open": "07:00",
         "close": "23:00"
       },
       "saturday": {
-        "open": "11:00",
+        "open": "07:00",
         "close": "23:00"
       }
     },

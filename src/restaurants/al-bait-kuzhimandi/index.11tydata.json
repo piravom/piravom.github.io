@@ -6,7 +6,37 @@
     "phone": "+919778242003",
     "distanceFromBusStand": "1.4km",
     "rating": "4.0",
-    "directionsUrl": "https://www.google.com/maps/dir/Piravom+Private+Bus+Stand/Al-Bait+Kuzhimandi,+PIRAVOM"
+    "directionsUrl": "https://www.google.com/maps/dir/Piravom+Private+Bus+Stand/Al-Bait+Kuzhimandi,+PIRAVOM",
+    "openingHours": {
+      "thursday": {
+        "open": "12:00",
+        "close": "22:30"
+      },
+      "friday": {
+        "open": "12:00",
+        "close": "22:30"
+      },
+      "saturday": {
+        "open": "12:00",
+        "close": "22:30"
+      },
+      "sunday": {
+        "open": "12:00",
+        "close": "22:30"
+      },
+      "monday": {
+        "open": "12:00",
+        "close": "22:30"
+      },
+      "tuesday": {
+        "open": "12:00",
+        "close": "22:30"
+      },
+      "wednesday": {
+        "open": "12:00",
+        "close": "22:30"
+      }
+    }
   },
   "menuList": []
 }

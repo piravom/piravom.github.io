@@ -5,7 +5,37 @@
     "description": "Multi-cuisine dining with a variety of flavorful options.",
     "distanceFromBusStand": "1.1km",
     "rating": "3.8",
-    "directionsUrl": "https://www.google.com/maps/dir/Piravom+Private+Bus+Stand/Mandhi+Souk,+PIRAVOM"
+    "directionsUrl": "https://www.google.com/maps/dir/Piravom+Private+Bus+Stand/Mandhi+Souk,+PIRAVOM",
+    "openingHours": {
+      "thursday": {
+        "open": "12:00",
+        "close": "22:00"
+      },
+      "friday": {
+        "open": "12:00",
+        "close": "22:00"
+      },
+      "saturday": {
+        "open": "12:00",
+        "close": "22:00"
+      },
+      "sunday": {
+        "open": "12:00",
+        "close": "22:00"
+      },
+      "monday": {
+        "open": "12:00",
+        "close": "22:00"
+      },
+      "tuesday": {
+        "open": "12:00",
+        "close": "22:00"
+      },
+      "wednesday": {
+        "open": "12:00",
+        "close": "22:00"
+      }
+    }
   },
   "menuList": []
 }

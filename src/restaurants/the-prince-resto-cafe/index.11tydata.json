@@ -4,11 +4,55 @@
     "description": "A stylish resto-cafe located near the Piravom bus stand on Old Market Road. Known for its diverse menu, great coffee, fast food options, and casual dining atmosphere.",
     "logo": "https://img3.restaurantguru.com/rb0d-Prince-Resto-Cafe-design.jpg",
     "cuisines": ["Cafe", "Multi-Cuisine", "Beverages", "Fast Food"],
-    "phone": "+919961134611",
+    "phone": "+919961194988",
     "instagramUrl": "https://www.instagram.com/explore/tags/prince-resto-cafe",
     "mapUrl": "https://www.google.com/maps/@9.8743,76.4869,15z",
     "distanceFromBusStand": "280m",
-    "rating": "4.5"
+    "rating": "4.5",
+    "openingHours": {
+      "thursday": {
+        "open": "00:00",
+        "close": "10:00",
+        "open2": "10:30",
+        "close2": "00:00"
+      },
+      "friday": {
+        "open": "00:00",
+        "close": "10:00",
+        "open2": "10:30",
+        "close2": "00:00"
+      },
+      "saturday": {
+        "open": "00:00",
+        "close": "10:00",
+        "open2": "10:30",
+        "close2": "00:00"
+      },
+      "sunday": {
+        "open": "00:00",
+        "close": "10:00",
+        "open2": "11:30",
+        "close2": "00:00"
+      },
+      "monday": {
+        "open": "00:00",
+        "close": "10:00",
+        "open2": "10:30",
+        "close2": "00:00"
+      },
+      "tuesday": {
+        "open": "00:00",
+        "close": "10:00",
+        "open2": "10:30",
+        "close2": "00:00"
+      },
+      "wednesday": {
+        "open": "00:00",
+        "close": "10:00",
+        "open2": "10:30",
+        "close2": "00:00"
+      }
+    }
   },
   "menuList": [
     {

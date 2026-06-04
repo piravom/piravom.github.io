@@ -9,32 +9,32 @@
     "mapUrl": "https://www.google.com/maps/@9.8750,76.4881,15z",
     "openingHours": {
       "sunday": {
-        "open": "09:00",
-        "close": "22:00"
+        "open": "11:00",
+        "close": "01:00"
       },
       "monday": {
-        "open": "09:00",
-        "close": "22:00"
+        "open": "11:00",
+        "close": "01:00"
       },
       "tuesday": {
-        "open": "09:00",
-        "close": "22:00"
+        "open": "11:00",
+        "close": "01:00"
       },
       "wednesday": {
-        "open": "09:00",
-        "close": "22:00"
+        "open": "11:00",
+        "close": "01:00"
       },
       "thursday": {
-        "open": "09:00",
-        "close": "22:00"
+        "open": "11:00",
+        "close": "01:00"
       },
       "friday": {
-        "open": "09:00",
-        "close": "22:00"
+        "open": "11:00",
+        "close": "01:00"
       },
       "saturday": {
-        "open": "09:00",
-        "close": "22:00"
+        "open": "11:00",
+        "close": "01:00"
       }
     },
     "distanceFromBusStand": "350m",

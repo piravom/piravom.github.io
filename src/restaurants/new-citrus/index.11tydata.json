@@ -6,7 +6,37 @@
     "phone": "+919946300468",
     "distanceFromBusStand": "350m",
     "rating": "3.7",
-    "directionsUrl": "https://www.google.com/maps/dir/Piravom+Private+Bus+Stand/New+Citrus,+PIRAVOM"
+    "directionsUrl": "https://www.google.com/maps/dir/Piravom+Private+Bus+Stand/New+Citrus,+PIRAVOM",
+    "openingHours": {
+      "thursday": {
+        "open": "06:30",
+        "close": "22:00"
+      },
+      "friday": {
+        "open": "06:30",
+        "close": "22:00"
+      },
+      "saturday": {
+        "open": "06:30",
+        "close": "22:00"
+      },
+      "sunday": {
+        "open": "06:30",
+        "close": "22:00"
+      },
+      "monday": {
+        "open": "06:30",
+        "close": "22:00"
+      },
+      "tuesday": {
+        "open": "06:30",
+        "close": "22:00"
+      },
+      "wednesday": {
+        "open": "06:30",
+        "close": "22:00"
+      }
+    }
   },
   "menuList": []
 }

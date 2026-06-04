@@ -8,7 +8,37 @@
     "instagramUrl": "https://www.instagram.com/explore/tags/porch-grill-piravom",
     "mapUrl": "https://www.google.com/maps/@9.8715,76.4890,15z",
     "distanceFromBusStand": "300m",
-    "rating": "4.1"
+    "rating": "4.1",
+    "openingHours": {
+      "thursday": {
+        "open": "12:00",
+        "close": "00:00"
+      },
+      "friday": {
+        "open": "12:00",
+        "close": "00:00"
+      },
+      "saturday": {
+        "open": "12:00",
+        "close": "00:00"
+      },
+      "sunday": {
+        "open": "12:00",
+        "close": "00:00"
+      },
+      "monday": {
+        "open": "12:00",
+        "close": "00:00"
+      },
+      "tuesday": {
+        "open": "12:00",
+        "close": "00:00"
+      },
+      "wednesday": {
+        "open": "12:00",
+        "close": "00:00"
+      }
+    }
   },
   "menuList": [
     {

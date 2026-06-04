@@ -8,7 +8,37 @@
     "instagramUrl": "https://www.instagram.com/explore/tags/kraves-resto-cafe",
     "mapUrl": "https://www.google.com/maps/@9.8720,76.4885,15z",
     "distanceFromBusStand": "550m",
-    "rating": "4.3"
+    "rating": "4.3",
+    "openingHours": {
+      "thursday": {
+        "open": "11:00",
+        "close": "23:30"
+      },
+      "friday": {
+        "open": "11:00",
+        "close": "23:30"
+      },
+      "saturday": {
+        "open": "11:00",
+        "close": "23:30"
+      },
+      "sunday": {
+        "open": "10:00",
+        "close": "23:30"
+      },
+      "monday": {
+        "open": "11:00",
+        "close": "23:30"
+      },
+      "tuesday": {
+        "open": "11:00",
+        "close": "23:30"
+      },
+      "wednesday": {
+        "open": "11:00",
+        "close": "23:30"
+      }
+    }
   },
   "menuList": [
     {
