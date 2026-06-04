@@ -234,6 +234,13 @@ permalink: '/about/'
  </p>
  </div>
 
+ <!-- Disclaimer -->
+ <div class="mt-8 rounded-3xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 p-8 shadow-sm">
+ <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-center">
+ Please read our <a href="/disclaimer" class="text-indigo-600 dark:text-indigo-400 hover:underline font-semibold">Disclaimer</a> for important information about the accuracy and use of the content on this website.
+ </p>
+ </div>
+
  </section>
 
 </main>

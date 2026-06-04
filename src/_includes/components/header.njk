@@ -90,9 +90,9 @@
   var SEARCH_INDEX = [
    {% for item in collections.restaurants %}
    {
-   name: {{ item.data.title | json | safe }},
+   name: {{ ((item.data.restaurant and item.data.restaurant.title) or item.data.title) | json | safe }},
    url: {{ item.url | json | safe }},
-   description: {{ item.data.description | json | safe }},
+   description: {{ ((item.data.restaurant and item.data.restaurant.description) or item.data.description) | json | safe }},
    type: "Restaurant",
    icon: "🍽️"
    },

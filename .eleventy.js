@@ -25,8 +25,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addNunjucksFilter('sortByDistance', function (arr) {
     if (!arr || !Array.isArray(arr)) return [];
     var sorted = arr.slice().sort(function (a, b) {
-      var dA = parseDistance(a.data && a.data.distanceFromBusStand);
-      var dB = parseDistance(b.data && b.data.distanceFromBusStand);
+      var dA = parseDistance(a.data && (a.data.distanceFromBusStand || a.data.restaurant && a.data.restaurant.distanceFromBusStand));
+      var dB = parseDistance(b.data && (b.data.distanceFromBusStand || b.data.restaurant && b.data.restaurant.distanceFromBusStand));
       return dA - dB;
     });
     return sorted;

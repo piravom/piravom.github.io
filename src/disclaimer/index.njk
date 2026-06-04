@@ -1,0 +1,166 @@
+---
+layout: layouts/base.njk
+title: Disclaimer
+description: Important disclaimer about the accuracy and reliability of information on Piravom website.
+permalink: '/disclaimer/'
+---
+
+<main class="mx-auto max-w-7xl px-4 py-8">
+  {% from "components/page-hero.njk" import pageHero %} {{ pageHero(title, description) }}
+
+  <section class="mx-auto max-w-4xl space-y-6">
+    <!-- Main Content Card -->
+    <div
+      class="rounded-3xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 overflow-hidden shadow-sm"
+    >
+      <!-- Header Section -->
+      <div
+        class="border-b border-gray-100 dark:border-gray-800 bg-gradient-to-r from-indigo-50 to-white dark:from-indigo-950/30 dark:to-gray-900 px-8 py-6"
+      >
+        <h1 class="text-2xl font-bold text-gray-900 dark:text-gray-100">Disclaimer</h1>
+        <p class="mt-2 text-sm text-gray-500 dark:text-gray-400">Last updated: June 2026</p>
+      </div>
+
+      <!-- Content Body -->
+      <div class="px-8 py-8 space-y-6 text-base leading-relaxed text-gray-700 dark:text-gray-300">
+        <p>
+          This website is a community-driven effort to help visitors discover
+          <a
+            href="/restaurants"
+            class="text-indigo-600 dark:text-indigo-400 hover:underline font-semibold"
+            >restaurants</a
+          >,
+          <a
+            href="/services"
+            class="text-indigo-600 dark:text-indigo-400 hover:underline font-semibold"
+            >services</a
+          >,
+          <a
+            href="/stores"
+            class="text-indigo-600 dark:text-indigo-400 hover:underline font-semibold"
+            >stores</a
+          >,
+          <a
+            href="/attractions"
+            class="text-indigo-600 dark:text-indigo-400 hover:underline font-semibold"
+            >attractions</a
+          >,
+          <a
+            href="/phonebook"
+            class="text-indigo-600 dark:text-indigo-400 hover:underline font-semibold"
+            >important contact numbers</a
+          >, and other local information.
+        </p>
+
+        <p>
+          While we strive to provide useful and up-to-date information, we do not independently
+          verify the accuracy, completeness, reliability, or availability of any information
+          published on this platform. The content may be submitted by users, gathered from publicly
+          available sources, or collected from various parts of the internet.
+        </p>
+
+        <!-- Key Points List -->
+        <div
+          class="rounded-2xl border border-red-100 dark:border-red-900/40 bg-red-50/50 dark:bg-red-950/20 p-6"
+        >
+          <p
+            class="mb-3 text-sm font-semibold uppercase tracking-wider text-red-700 dark:text-red-400"
+          >
+            As a result:
+          </p>
+          <ul class="space-y-3">
+            <li class="flex items-start gap-3">
+              <span
+                class="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-red-100 dark:bg-red-900/40 text-red-600 dark:text-red-400 text-xs font-bold"
+                >✕</span
+              >
+              <span
+                >Information may be outdated, incomplete, inaccurate, or subject to change without
+                notice.</span
+              >
+            </li>
+            <li class="flex items-start gap-3">
+              <span
+                class="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-red-100 dark:bg-red-900/40 text-red-600 dark:text-red-400 text-xs font-bold"
+                >✕</span
+              >
+              <span
+                >Business details, operating hours, contact numbers, prices, locations, services,
+                and other information should be independently verified before making decisions or
+                taking action.</span
+              >
+            </li>
+            <li class="flex items-start gap-3">
+              <span
+                class="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-red-100 dark:bg-red-900/40 text-red-600 dark:text-red-400 text-xs font-bold"
+                >✕</span
+              >
+              <span
+                >We do not endorse, recommend, or guarantee any business, service, organization, or
+                individual listed on this website.</span
+              >
+            </li>
+            <li class="flex items-start gap-3">
+              <span
+                class="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-red-100 dark:bg-red-900/40 text-red-600 dark:text-red-400 text-xs font-bold"
+                >✕</span
+              >
+              <span
+                >Your use of any information on this platform is entirely at your own risk.</span
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- Liability Section -->
+        <div
+          class="rounded-2xl border border-amber-100 dark:border-amber-900/40 bg-amber-50/50 dark:bg-amber-950/20 p-6"
+        >
+          <div class="flex items-start gap-3">
+            <span class="mt-0.5 text-lg">⚖️</span>
+            <div>
+              <p class="font-semibold text-gray-900 dark:text-gray-100">Limitation of Liability</p>
+              <p class="mt-2 text-gray-700 dark:text-gray-300 leading-relaxed">
+                The contributors to this website shall not be held responsible or liable for any
+                loss, damage, inconvenience, injury, or consequences arising from the use of,
+                reliance on, or inability to use information provided on this platform.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Acknowledgment Section -->
+        <div
+          class="rounded-2xl border border-emerald-100 dark:border-emerald-900/40 bg-emerald-50/50 dark:bg-emerald-950/20 p-6"
+        >
+          <div class="flex items-start gap-3">
+            <span class="mt-0.5 text-lg">📝</span>
+            <div>
+              <p class="font-semibold text-gray-900 dark:text-gray-100">Your Acknowledgment</p>
+              <p class="mt-2 text-gray-700 dark:text-gray-300 leading-relaxed">
+                By using this website, you acknowledge and agree that you are responsible for
+                verifying information and exercising your own judgment before acting upon it.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact CTA -->
+        <div
+          class="rounded-2xl border border-indigo-100 dark:border-indigo-900/40 bg-indigo-50/50 dark:bg-indigo-950/20 p-6 text-center"
+        >
+          <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+            If you believe any information on this website is incorrect or requires updating, we
+            encourage you to
+            <a
+              href="/phonebook"
+              class="text-indigo-600 dark:text-indigo-400 hover:underline font-semibold"
+              >contact us</a
+            >
+            so that we can review and improve the content.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>

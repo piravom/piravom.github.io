@@ -4,7 +4,9 @@ layout: layouts/base.njk
 
 {% set cuisineList = restaurant.cuisines or cuisine %} {% set phoneNumber = contact or
 restaurant.phone or "" %} {% set desc = restaurant.description or description %} {% set logoUrl =
-restaurant.logo or "" %}
+restaurant.logo or "" %} {% set title = title or restaurant.title %} {% set distanceFromBusStand =
+distanceFromBusStand or restaurant.distanceFromBusStand %} {% set directionsUrl = directionsUrl or
+restaurant.directionsUrl %} {% set rating = rating or restaurant.rating %}
 
 <script type="application/ld+json">
   {

@@ -40,12 +40,12 @@ permalink: '/restaurants/{% if pagination.pageNumber > 0 %}page/{{ pagination.pa
     var RESTAURANT_INDEX = [
     {% for restaurant in pagination.items %}
     {
-    name: {{ restaurant.data.title | json | safe }},
+    name: {{ restaurant.data.restaurant.title | json | safe }},
     url: {{ restaurant.url | json | safe }},
-    cuisine: {{ restaurant.data.cuisine | json | safe }},
-    rating: {{ restaurant.data.rating | json | safe }},
-    distance: {{ restaurant.data.distanceFromBusStand | json | safe }},
-    description: {{ restaurant.data.description | json | safe }},
+    cuisine: {{ restaurant.data.restaurant.cuisines | json | safe }},
+    rating: {{ restaurant.data.restaurant.rating | json | safe }},
+    distance: {{ restaurant.data.restaurant.distanceFromBusStand | json | safe }},
+    description: {{ restaurant.data.restaurant.description | json | safe }},
     menuItems: [
     {% if restaurant.data.menuList %}
     {% for section in restaurant.data.menuList %}
@@ -80,10 +80,10 @@ permalink: '/restaurants/{% if pagination.pageNumber > 0 %}page/{{ pagination.pa
               <a
                 href="{{ restaurant.url }}"
                 class="text-xl font-bold leading-tight text-gray-900 dark:text-gray-100 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
-                >{{ restaurant.data.title }}</a
+                >{{ restaurant.data.restaurant.title }}</a
               >
             </div>
-            {% set cuisineList = restaurant.data.cuisine | split %}
+            {% set cuisineList = restaurant.data.restaurant.cuisines %}
             <div class="flex flex-wrap gap-1.5 mb-3">
               {% for c in cuisineList %}
               <span
@@ -93,7 +93,7 @@ permalink: '/restaurants/{% if pagination.pageNumber > 0 %}page/{{ pagination.pa
               {% endfor %}
             </div>
             <p class="text-sm leading-relaxed text-gray-600 dark:text-gray-400 mb-6">
-              {{ restaurant.data.description }}
+              {{ restaurant.data.restaurant.description }}
             </p>
           </div>
 
@@ -106,16 +106,16 @@ permalink: '/restaurants/{% if pagination.pageNumber > 0 %}page/{{ pagination.pa
               class="text-center font-medium text-indigo-600 dark:text-indigo-400"
               title="Distance from Piravom Bus Stand"
             >
-              {{ restaurant.data.distanceFromBusStand or "-" }}
+              {{ restaurant.data.restaurant.distanceFromBusStand or "-" }}
             </span>
 
             <!-- Phone -->
             <span class="flex justify-center">
-              {% if restaurant.data.contact %}
+              {% if restaurant.data.restaurant.phone %}
               <a
-                href="tel:{{ restaurant.data.contact | replace(' ', '') }}"
+                href="tel:{{ restaurant.data.restaurant.phone | replace(' ', '') }}"
                 class="rounded-lg p-1.5 text-gray-400 dark:text-gray-500 transition hover:bg-green-50 dark:hover:bg-green-900/30 hover:text-green-700 dark:hover:text-green-400"
-                title="{{ restaurant.data.contact }}"
+                title="{{ restaurant.data.restaurant.phone }}"
               >
                 {% lucide "phone", "h-5 w-5" %}
               </a>
@@ -127,11 +127,11 @@ permalink: '/restaurants/{% if pagination.pageNumber > 0 %}page/{{ pagination.pa
             <!-- Star Rating -->
             <span
               class="flex items-center justify-center gap-1"
-              title="Rating: {{ restaurant.data.rating }} out of 5"
+              title="Rating: {{ restaurant.data.restaurant.rating }} out of 5"
             >
-              {% if restaurant.data.rating %}
+              {% if restaurant.data.restaurant.rating %}
               <span class="font-bold text-amber-600 dark:text-amber-400"
-                >{{ restaurant.data.rating }}</span
+                >{{ restaurant.data.restaurant.rating }}</span
               >
               {% lucide "star", "h-4 w-4 text-amber-500 dark:text-amber-400 fill-amber-500
               dark:fill-amber-400 shrink-0" %} {% else %}
@@ -153,7 +153,7 @@ permalink: '/restaurants/{% if pagination.pageNumber > 0 %}page/{{ pagination.pa
             <!-- Navigate to Maps -->
             <span class="flex justify-center">
               <a
-                href="https://maps.google.com/?q={{ restaurant.data.title | replace(' ', '+') }}+Piravom"
+                href="https://maps.google.com/?q={{ restaurant.data.restaurant.title | replace(' ', '+') }}+Piravom"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="rounded-lg p-1.5 text-gray-400 dark:text-gray-500 transition hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-gray-700 dark:hover:text-gray-300"
