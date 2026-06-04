@@ -6,7 +6,9 @@
     "cuisines": ["Kerala", "Indian", "Chinese", "Continental"],
     "phone": "+919947842701",
     "instagramUrl": "https://www.instagram.com/explore/tags/sylvia-hotel-restaurant",
-    "locationUrl": "https://www.google.com/maps/@9.8742,76.4867,15z"
+    "mapUrl": "https://www.google.com/maps/@9.8742,76.4867,15z",
+    "distanceFromBusStand": "350m",
+    "rating": "3.4"
   },
   "menuList": [
     {

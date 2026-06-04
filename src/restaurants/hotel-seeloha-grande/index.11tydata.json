@@ -1,0 +1,12 @@
+{
+  "restaurant": {
+    "cuisines": ["Biryani", "Indian"],
+    "title": "Hotel Seeloha Grande",
+    "description": "Known for aromatic biryani and authentic Indian dishes.",
+    "phone": "+914852265666",
+    "distanceFromBusStand": "2.3km",
+    "rating": "3.2",
+    "directionsUrl": "https://www.google.com/maps/dir/Piravom+Private+Bus+Stand/Hotel+Seeloha+Grande,+PIRAVOM"
+  },
+  "menuList": []
+}

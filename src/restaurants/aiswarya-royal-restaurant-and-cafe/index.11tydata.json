@@ -4,14 +4,38 @@
     "description": "Authentic multi-cuisine family restaurant serving Mandhi, Barbeque, Biryani, Chinese dishes, juices, and premium shakes in Piravom. Established since 1985.",
     "cuisines": ["Indian", "Arabian", "Chinese", "South Indian", "Juices & Shakes"],
     "openingHours": {
-      "sunday": { "open": "11:00", "close": "23:00" },
-      "monday": { "open": "11:00", "close": "23:00" },
-      "tuesday": { "open": "11:00", "close": "23:00" },
-      "wednesday": { "open": "11:00", "close": "23:00" },
-      "thursday": { "open": "11:00", "close": "23:00" },
-      "friday": { "open": "11:00", "close": "23:00" },
-      "saturday": { "open": "11:00", "close": "23:00" }
-    }
+      "sunday": {
+        "open": "11:00",
+        "close": "23:00"
+      },
+      "monday": {
+        "open": "11:00",
+        "close": "23:00"
+      },
+      "tuesday": {
+        "open": "11:00",
+        "close": "23:00"
+      },
+      "wednesday": {
+        "open": "11:00",
+        "close": "23:00"
+      },
+      "thursday": {
+        "open": "11:00",
+        "close": "23:00"
+      },
+      "friday": {
+        "open": "11:00",
+        "close": "23:00"
+      },
+      "saturday": {
+        "open": "11:00",
+        "close": "23:00"
+      }
+    },
+    "phone": "+919497224868",
+    "distanceFromBusStand": "850m",
+    "rating": "3.2"
   },
   "menuList": [
     {
@@ -21,8 +45,14 @@
           "title": "Shawarma",
           "subTitle": "Classic grilled shawarma meat preparation",
           "portions": [
-            { "portionSize": "Normal", "price": 110 },
-            { "portionSize": "Plate", "price": 180 }
+            {
+              "portionSize": "Normal",
+              "price": 110
+            },
+            {
+              "portionSize": "Plate",
+              "price": 180
+            }
           ]
         },
         {
@@ -49,36 +79,72 @@
           "title": "Alfam Mandhi",
           "subTitle": "Traditional mandi rice topped with smoky alfam grilled chicken",
           "portions": [
-            { "portionSize": "Quarter", "price": 210 },
-            { "portionSize": "Half", "price": 420 },
-            { "portionSize": "Full", "price": 800 }
+            {
+              "portionSize": "Quarter",
+              "price": 210
+            },
+            {
+              "portionSize": "Half",
+              "price": 420
+            },
+            {
+              "portionSize": "Full",
+              "price": 800
+            }
           ]
         },
         {
           "title": "Peri Peri Mandhi",
           "subTitle": "Spicy peri-peri seasoned chicken paired with aromatic rice",
           "portions": [
-            { "portionSize": "Quarter", "price": 220 },
-            { "portionSize": "Half", "price": 440 },
-            { "portionSize": "Full", "price": 890 }
+            {
+              "portionSize": "Quarter",
+              "price": 220
+            },
+            {
+              "portionSize": "Half",
+              "price": 440
+            },
+            {
+              "portionSize": "Full",
+              "price": 890
+            }
           ]
         },
         {
           "title": "Pepper Mandhi",
           "subTitle": "Mandi rice served with robust black pepper crusted chicken",
           "portions": [
-            { "portionSize": "Quarter", "price": 250 },
-            { "portionSize": "Half", "price": 480 },
-            { "portionSize": "Full", "price": 980 }
+            {
+              "portionSize": "Quarter",
+              "price": 250
+            },
+            {
+              "portionSize": "Half",
+              "price": 480
+            },
+            {
+              "portionSize": "Full",
+              "price": 980
+            }
           ]
         },
         {
           "title": "Honey Chilly Mandhi",
           "subTitle": "Unique sweet and hot glazed chicken over mandi rice",
           "portions": [
-            { "portionSize": "Quarter", "price": 260 },
-            { "portionSize": "Half", "price": 500 },
-            { "portionSize": "Full", "price": 960 }
+            {
+              "portionSize": "Quarter",
+              "price": 260
+            },
+            {
+              "portionSize": "Half",
+              "price": 500
+            },
+            {
+              "portionSize": "Full",
+              "price": 960
+            }
           ]
         }
       ]
@@ -90,18 +156,36 @@
           "title": "Shawai",
           "subTitle": "Traditional Arabian spit-roasted chicken",
           "portions": [
-            { "portionSize": "Quarter", "price": 160 },
-            { "portionSize": "Half", "price": 300 },
-            { "portionSize": "Full", "price": 600 }
+            {
+              "portionSize": "Quarter",
+              "price": 160
+            },
+            {
+              "portionSize": "Half",
+              "price": 300
+            },
+            {
+              "portionSize": "Full",
+              "price": 600
+            }
           ]
         },
         {
           "title": "Masala Shawai",
           "subTitle": "Spit-roasted chicken coated in rich spicy local masala",
           "portions": [
-            { "portionSize": "Quarter", "price": 180 },
-            { "portionSize": "Half", "price": 350 },
-            { "portionSize": "Full", "price": 700 }
+            {
+              "portionSize": "Quarter",
+              "price": 180
+            },
+            {
+              "portionSize": "Half",
+              "price": 350
+            },
+            {
+              "portionSize": "Full",
+              "price": 700
+            }
           ]
         }
       ]
@@ -113,45 +197,90 @@
           "title": "Pepper Alfam",
           "subTitle": "Charcoal grilled chicken marinated with crushed black pepper",
           "portions": [
-            { "portionSize": "Quarter", "price": 150 },
-            { "portionSize": "Half", "price": 280 },
-            { "portionSize": "Full", "price": 530 }
+            {
+              "portionSize": "Quarter",
+              "price": 150
+            },
+            {
+              "portionSize": "Half",
+              "price": 280
+            },
+            {
+              "portionSize": "Full",
+              "price": 530
+            }
           ]
         },
         {
           "title": "Peri Peri Alfam",
           "subTitle": "Fiery hot African bird's eye chili spiced grilled chicken",
           "portions": [
-            { "portionSize": "Quarter", "price": 170 },
-            { "portionSize": "Half", "price": 330 },
-            { "portionSize": "Full", "price": 640 }
+            {
+              "portionSize": "Quarter",
+              "price": 170
+            },
+            {
+              "portionSize": "Half",
+              "price": 330
+            },
+            {
+              "portionSize": "Full",
+              "price": 640
+            }
           ]
         },
         {
           "title": "Honey Chilly Alfam",
           "subTitle": "Sweet honey combined with fiery red chili grilled glaze",
           "portions": [
-            { "portionSize": "Quarter", "price": 180 },
-            { "portionSize": "Half", "price": 340 },
-            { "portionSize": "Full", "price": 640 }
+            {
+              "portionSize": "Quarter",
+              "price": 180
+            },
+            {
+              "portionSize": "Half",
+              "price": 340
+            },
+            {
+              "portionSize": "Full",
+              "price": 640
+            }
           ]
         },
         {
           "title": "BBQ Alfam",
           "subTitle": "Smoky sweet American style barbecue sauce grilled chicken",
           "portions": [
-            { "portionSize": "Quarter", "price": 190 },
-            { "portionSize": "Half", "price": 360 },
-            { "portionSize": "Full", "price": 680 }
+            {
+              "portionSize": "Quarter",
+              "price": 190
+            },
+            {
+              "portionSize": "Half",
+              "price": 360
+            },
+            {
+              "portionSize": "Full",
+              "price": 680
+            }
           ]
         },
         {
           "title": "Regular Alfam",
           "subTitle": "Classic Arabian herb and spice marinated charcoal grilled chicken",
           "portions": [
-            { "portionSize": "Quarter", "price": 160 },
-            { "portionSize": "Half", "price": 310 },
-            { "portionSize": "Full", "price": 600 }
+            {
+              "portionSize": "Quarter",
+              "price": 160
+            },
+            {
+              "portionSize": "Half",
+              "price": 310
+            },
+            {
+              "portionSize": "Full",
+              "price": 600
+            }
           ]
         }
       ]
@@ -204,21 +333,37 @@
           "subTitle": "Spicy sliced beef cooked in bold Schezwan sauce",
           "price": 180
         },
-        { "title": "Beef", "subTitle": "Classic Chinese style stir-fried beef dish", "price": 190 },
+        {
+          "title": "Beef",
+          "subTitle": "Classic Chinese style stir-fried beef dish",
+          "price": 190
+        },
         {
           "title": "Chilly Gobi",
           "subTitle": "Crispy fried cauliflower florets in spicy chili sauce",
           "portions": [
-            { "portionSize": "Half", "price": 130 },
-            { "portionSize": "Full", "price": 140 }
+            {
+              "portionSize": "Half",
+              "price": 130
+            },
+            {
+              "portionSize": "Full",
+              "price": 140
+            }
           ]
         },
         {
           "title": "Manchurian Gobi",
           "subTitle": "Fried cauliflower tossed in dark sweet, tangy, and savory sauce",
           "portions": [
-            { "portionSize": "Half", "price": 140 },
-            { "portionSize": "Full", "price": 150 }
+            {
+              "portionSize": "Half",
+              "price": 140
+            },
+            {
+              "portionSize": "Full",
+              "price": 150
+            }
           ]
         },
         {
@@ -370,16 +515,28 @@
           "title": "Sweet Corn Soup",
           "subTitle": "Comforting creamy corn soup preparation",
           "portions": [
-            { "portionSize": "Veg", "price": 100 },
-            { "portionSize": "Chicken", "price": 120 }
+            {
+              "portionSize": "Veg",
+              "price": 100
+            },
+            {
+              "portionSize": "Chicken",
+              "price": 120
+            }
           ]
         },
         {
           "title": "Hot & Sour Soup",
           "subTitle": "Spicy and tangy comforting Asian broth",
           "portions": [
-            { "portionSize": "Veg", "price": 100 },
-            { "portionSize": "Chicken", "price": 120 }
+            {
+              "portionSize": "Veg",
+              "price": 100
+            },
+            {
+              "portionSize": "Chicken",
+              "price": 120
+            }
           ]
         },
         {
@@ -416,8 +573,14 @@
           "title": "Chicken 65",
           "subTitle": "Deep fried spicy chicken starter marinated with regional spices",
           "portions": [
-            { "portionSize": "With Bone", "price": 160 },
-            { "portionSize": "Boneless", "price": 200 }
+            {
+              "portionSize": "With Bone",
+              "price": 160
+            },
+            {
+              "portionSize": "Boneless",
+              "price": 200
+            }
           ]
         },
         {

@@ -1,0 +1,12 @@
+{
+  "restaurant": {
+    "cuisines": ["Middle Eastern", "Arabian"],
+    "title": "Al-Bait Kuzhimandi",
+    "description": "Traditional Middle Eastern and Arabian dishes in a cozy setting.",
+    "phone": "+919778242003",
+    "distanceFromBusStand": "1.4km",
+    "rating": "4.0",
+    "directionsUrl": "https://www.google.com/maps/dir/Piravom+Private+Bus+Stand/Al-Bait+Kuzhimandi,+PIRAVOM"
+  },
+  "menuList": []
+}

@@ -6,14 +6,38 @@
     "cuisines": ["Fast Food", "Fried Chicken", "Burgers"],
     "instagramUrl": "https://www.instagram.com/kfcindia_official",
     "openingHours": {
-      "sunday": { "open": "11:00", "close": "23:00" },
-      "monday": { "open": "11:00", "close": "23:00" },
-      "tuesday": { "open": "11:00", "close": "23:00" },
-      "wednesday": { "open": "11:00", "close": "23:00" },
-      "thursday": { "open": "11:00", "close": "23:00" },
-      "friday": { "open": "11:00", "close": "23:00" },
-      "saturday": { "open": "11:00", "close": "23:00" }
-    }
+      "sunday": {
+        "open": "11:00",
+        "close": "23:00"
+      },
+      "monday": {
+        "open": "11:00",
+        "close": "23:00"
+      },
+      "tuesday": {
+        "open": "11:00",
+        "close": "23:00"
+      },
+      "wednesday": {
+        "open": "11:00",
+        "close": "23:00"
+      },
+      "thursday": {
+        "open": "11:00",
+        "close": "23:00"
+      },
+      "friday": {
+        "open": "11:00",
+        "close": "23:00"
+      },
+      "saturday": {
+        "open": "11:00",
+        "close": "23:00"
+      }
+    },
+    "distanceFromBusStand": "1.0km",
+    "rating": "3.6",
+    "directionsUrl": "https://www.google.com/maps/dir/Piravom+Private+Bus+Stand/KFC,+PIRAVOM"
   },
   "menuList": [
     {

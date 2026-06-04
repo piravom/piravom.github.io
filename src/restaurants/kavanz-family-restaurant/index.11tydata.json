@@ -1,0 +1,12 @@
+{
+  "restaurant": {
+    "cuisines": ["Multi-Cuisine"],
+    "title": "Kavanz Family Restaurant",
+    "description": "Family-friendly restaurant serving a wide range of cuisines.",
+    "phone": "+919544667898",
+    "distanceFromBusStand": "4.1km",
+    "rating": "4.0",
+    "directionsUrl": "https://www.google.com/maps/dir/Piravom+Private+Bus+Stand/Kavanz+Family+Restaurant,+PIRAVOM"
+  },
+  "menuList": []
+}

@@ -1,0 +1,11 @@
+{
+  "restaurant": {
+    "cuisines": ["Multi-Cuisine"],
+    "title": "Mandhi Souk",
+    "description": "Multi-cuisine dining with a variety of flavorful options.",
+    "distanceFromBusStand": "1.1km",
+    "rating": "3.8",
+    "directionsUrl": "https://www.google.com/maps/dir/Piravom+Private+Bus+Stand/Mandhi+Souk,+PIRAVOM"
+  },
+  "menuList": []
+}

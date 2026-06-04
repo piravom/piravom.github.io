@@ -1,0 +1,11 @@
+{
+  "restaurant": {
+    "cuisines": ["Bar", "Continental"],
+    "title": "Forum Resto Bar",
+    "description": "Bar and continental dining with a lively atmosphere.",
+    "distanceFromBusStand": "450m",
+    "rating": "3.9",
+    "directionsUrl": "https://www.google.com/maps/dir/Piravom+Private+Bus+Stand/Forum+Resto+Bar,+PIRAVOM"
+  },
+  "menuList": []
+}

@@ -6,7 +6,9 @@
     "cuisines": ["Kerala", "Indian", "Chinese", "North Indian"],
     "phone": "+919990000000",
     "instagramUrl": "https://www.instagram.com/explore/tags/maharani-restaurant-bar",
-    "locationUrl": "https://www.google.com/maps/@9.8740,76.4865,15z"
+    "mapUrl": "https://www.google.com/maps/@9.8740,76.4865,15z",
+    "distanceFromBusStand": "140m",
+    "rating": "3.8"
   },
   "menuList": [
     {

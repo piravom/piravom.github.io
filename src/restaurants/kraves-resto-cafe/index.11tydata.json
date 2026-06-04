@@ -6,7 +6,9 @@
     "cuisines": ["Cafe", "Multi-Cuisine", "Beverages", "Fast Food"],
     "phone": "+919778446467",
     "instagramUrl": "https://www.instagram.com/explore/tags/kraves-resto-cafe",
-    "locationUrl": "https://www.google.com/maps/@9.8720,76.4885,15z"
+    "mapUrl": "https://www.google.com/maps/@9.8720,76.4885,15z",
+    "distanceFromBusStand": "550m",
+    "rating": "4.3"
   },
   "menuList": [
     {

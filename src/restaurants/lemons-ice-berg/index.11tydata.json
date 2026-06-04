@@ -6,7 +6,9 @@
     "cuisines": ["Ice Cream", "Desserts", "Shakes", "Beverages"],
     "phone": "+914852243655",
     "instagramUrl": "https://www.instagram.com/explore/tags/lemons-ice-berg",
-    "locationUrl": "https://www.google.com/maps/@9.8735,76.4868,15z"
+    "mapUrl": "https://www.google.com/maps/@9.8735,76.4868,15z",
+    "distanceFromBusStand": "350m",
+    "rating": "4.2"
   },
   "menuList": [
     {

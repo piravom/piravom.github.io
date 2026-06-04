@@ -6,7 +6,9 @@
     "cuisines": ["Cafe", "Multi-Cuisine", "Beverages", "Fast Food"],
     "phone": "+919961134611",
     "instagramUrl": "https://www.instagram.com/explore/tags/prince-resto-cafe",
-    "locationUrl": "https://www.google.com/maps/@9.8743,76.4869,15z"
+    "mapUrl": "https://www.google.com/maps/@9.8743,76.4869,15z",
+    "distanceFromBusStand": "280m",
+    "rating": "4.5"
   },
   "menuList": [
     {

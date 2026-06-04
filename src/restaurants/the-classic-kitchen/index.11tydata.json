@@ -1,0 +1,11 @@
+{
+  "restaurant": {
+    "cuisines": ["Multi-Cuisine"],
+    "title": "The Classic Kitchen",
+    "description": "Classic multi-cuisine dining with a variety of flavorful dishes.",
+    "distanceFromBusStand": "350m",
+    "rating": "3.5",
+    "directionsUrl": "https://www.google.com/maps/dir/Piravom+Private+Bus+Stand/The+Classic+Kitchen,+PIRAVOM"
+  },
+  "menuList": []
+}

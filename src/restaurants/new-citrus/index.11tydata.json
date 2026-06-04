@@ -1,0 +1,12 @@
+{
+  "restaurant": {
+    "cuisines": ["Multi-Cuisine"],
+    "title": "New Citrus",
+    "description": "Multi-cuisine eatery offering fresh and tasty dishes.",
+    "phone": "+919946300468",
+    "distanceFromBusStand": "350m",
+    "rating": "3.7",
+    "directionsUrl": "https://www.google.com/maps/dir/Piravom+Private+Bus+Stand/New+Citrus,+PIRAVOM"
+  },
+  "menuList": []
+}

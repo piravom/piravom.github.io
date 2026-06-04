@@ -6,7 +6,9 @@
     "cuisines": ["Multi-Cuisine", "Continental", "Grill", "Indian"],
     "phone": "+919778446467",
     "instagramUrl": "https://www.instagram.com/explore/tags/porch-grill-piravom",
-    "locationUrl": "https://www.google.com/maps/@9.8715,76.4890,15z"
+    "mapUrl": "https://www.google.com/maps/@9.8715,76.4890,15z",
+    "distanceFromBusStand": "300m",
+    "rating": "4.1"
   },
   "menuList": [
     {

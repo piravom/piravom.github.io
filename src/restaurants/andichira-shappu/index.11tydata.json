@@ -1,0 +1,12 @@
+{
+  "restaurant": {
+    "cuisines": ["Multi-Cuisine"],
+    "title": "Andichira Shappu",
+    "description": "Multi-cuisine dining offering a variety of flavorful dishes.",
+    "phone": "+919495336293",
+    "distanceFromBusStand": "8.1km",
+    "rating": "4.0",
+    "directionsUrl": "https://www.google.com/maps/dir/Piravom+Private+Bus+Stand/Andichira+Shappu,+PIRAVOM"
+  },
+  "menuList": []
+}

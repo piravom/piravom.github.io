@@ -1,0 +1,10 @@
+{
+  "restaurant": {
+    "cuisines": ["Fast Food"],
+    "title": "Aone Porotta",
+    "description": "Famous for fresh, flaky porotta and tasty fast food.",
+    "distanceFromBusStand": "240m",
+    "rating": "4.2"
+  },
+  "menuList": []
+}

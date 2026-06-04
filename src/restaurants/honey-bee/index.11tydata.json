@@ -6,7 +6,7 @@
     "cuisines": ["Chinese", "Arabian", "South Indian", "Continental", "Beverages"],
     "phone": "+919876543210",
     "instagramUrl": "https://instagram.com",
-    "locationUrl": "https://www.google.com/maps/@9.8750,76.4881,15z",
+    "mapUrl": "https://www.google.com/maps/@9.8750,76.4881,15z",
     "openingHours": {
       "sunday": {
         "open": "09:00",
@@ -36,7 +36,9 @@
         "open": "09:00",
         "close": "22:00"
       }
-    }
+    },
+    "distanceFromBusStand": "350m",
+    "rating": "3.7"
   },
   "menuList": [
     {

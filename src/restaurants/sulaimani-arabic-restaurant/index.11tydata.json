@@ -1,0 +1,11 @@
+{
+  "restaurant": {
+    "cuisines": ["Family", "Multi-Cuisine"],
+    "title": "Sulaimani Arabic Restaurant",
+    "description": "Arabic and multi-cuisine dishes in a family-friendly setting.",
+    "distanceFromBusStand": "7.2km",
+    "rating": "3.8",
+    "directionsUrl": "https://www.google.com/maps/dir/Piravom+Private+Bus+Stand/Sulaimani+Arabic+Restaurant,+PIRAVOM"
+  },
+  "menuList": []
+}

@@ -1,0 +1,12 @@
+{
+  "restaurant": {
+    "cuisines": ["Vegetarian", "South Indian"],
+    "title": "Sree Annapoorna Vegetarian Hotel",
+    "description": "Pure vegetarian hotel with traditional South Indian meals.",
+    "phone": "+918157073008",
+    "distanceFromBusStand": "1.6km",
+    "rating": "4.0",
+    "directionsUrl": "https://www.google.com/maps/dir/Piravom+Private+Bus+Stand/Sree+Annapoorna+Vegetarian+Hotel,+PIRAVOM"
+  },
+  "menuList": []
+}

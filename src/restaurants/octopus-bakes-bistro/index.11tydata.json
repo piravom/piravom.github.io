@@ -6,7 +6,9 @@
     "cuisines": ["Bakery", "Bistro", "Continental", "Indian"],
     "phone": "+919961000908",
     "instagramUrl": "https://www.instagram.com/explore/tags/octopus-bakes-bistro",
-    "locationUrl": "https://www.google.com/maps/@9.8755,76.4878,15z"
+    "mapUrl": "https://www.google.com/maps/@9.8755,76.4878,15z",
+    "distanceFromBusStand": "270m",
+    "rating": "4.0"
   },
   "menuList": [
     {
