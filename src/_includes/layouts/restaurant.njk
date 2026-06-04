@@ -66,6 +66,7 @@ restaurant.directionsUrl %} {% set rating = rating or restaurant.rating %}
         </p>
       </div>
       <div class="flex flex-col gap-3">
+        {% if restaurant.openingHours %}
         <div
           class="rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 p-4"
         >
@@ -76,7 +77,7 @@ restaurant.directionsUrl %} {% set rating = rating or restaurant.rating %}
             {{ status }}
           </p>
         </div>
-        {% if distanceFromBusStand %}
+        {% endif %} {% if distanceFromBusStand %}
         <div
           class="rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 p-4"
         >
@@ -97,7 +98,7 @@ restaurant.directionsUrl %} {% set rating = rating or restaurant.rating %}
     <div class="mt-6 flex flex-wrap items-center gap-2 text-sm text-gray-500 dark:text-gray-400">
       {% for cuisine in restaurant.cuisines %}
       <span
-        class="rounded-full bg-indigo-50 dark:bg-indigo-900/30 px-3 py-1 text-xs font-medium text-indigo-700 dark:text-indigo-300"
+        class="rounded-full bg-theme-50 dark:bg-theme-900/30 px-3 py-1 text-xs font-medium text-theme-700 dark:text-theme-300"
       >
         {{ cuisine }}
       </span>

@@ -11,7 +11,7 @@ description: Find restaurants, attractions, stores, and more near Piravom
   >
     <div class="mx-auto max-w-4xl px-6 py-16 sm:px-8 sm:py-20 text-center">
       <h1 class="text-4xl font-bold text-gray-900 dark:text-gray-100 sm:text-5xl">
-        Welcome to&nbsp;<span class="text-indigo-600 dark:text-indigo-400">{{ site.name }}</span>
+        Welcome to&nbsp;<span class="text-theme-600 dark:text-theme-400">{{ site.name }}</span>
       </h1>
       <p
         class="mx-auto mt-4 max-w-2xl text-base text-gray-700 dark:text-gray-300 sm:text-lg/relaxed"
@@ -25,7 +25,7 @@ description: Find restaurants, attractions, stores, and more near Piravom
               .querySelector('.hero-jumbo')
               .nextElementSibling.scrollIntoView({ behavior: 'smooth' })
           "
-          class="rounded-full bg-indigo-600 px-10 py-3.5 text-sm font-semibold text-white shadow-sm transition hover:bg-indigo-700 hover:shadow-md cursor-pointer"
+          class="rounded-full bg-theme-600 px-10 py-3.5 text-sm font-semibold text-white shadow-sm transition hover:bg-theme-700 hover:shadow-md cursor-pointer"
         >
           Explore
         </button>
@@ -41,9 +41,9 @@ description: Find restaurants, attractions, stores, and more near Piravom
         class="rounded-3xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 p-6 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
       >
         <div class="flex items-start gap-4">
-          {% lucide "store", "w-10 h-10 text-indigo-500 dark:text-indigo-400 shrink-0" %}
+          {% lucide "store", "w-10 h-10 text-theme-500 dark:text-theme-400 shrink-0" %}
           <div>
-            <h3 class="text-2xl font-bold text-indigo-600 dark:text-indigo-400">
+            <h3 class="text-2xl font-bold text-theme-600 dark:text-theme-400">
               {{ collections.stores.length }}
             </h3>
             <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">
@@ -58,9 +58,9 @@ description: Find restaurants, attractions, stores, and more near Piravom
         class="rounded-3xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 p-6 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
       >
         <div class="flex items-start gap-4">
-          {% lucide "mountain", "w-10 h-10 text-green-500 dark:text-green-400 shrink-0" %}
+          {% lucide "mountain", "w-10 h-10 text-theme-500 dark:text-theme-400 shrink-0" %}
           <div>
-            <h3 class="text-2xl font-bold text-green-600 dark:text-green-400">
+            <h3 class="text-2xl font-bold text-theme-600 dark:text-theme-400">
               {{ collections.attractions.length }}
             </h3>
             <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Places to visit nearby</p>
@@ -73,9 +73,9 @@ description: Find restaurants, attractions, stores, and more near Piravom
         class="rounded-3xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 p-6 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
       >
         <div class="flex items-start gap-4">
-          {% lucide "utensils", "w-10 h-10 text-orange-500 dark:text-orange-400 shrink-0" %}
+          {% lucide "utensils", "w-10 h-10 text-theme-500 dark:text-theme-400 shrink-0" %}
           <div>
-            <h3 class="text-2xl font-bold text-orange-600 dark:text-orange-400">
+            <h3 class="text-2xl font-bold text-theme-600 dark:text-theme-400">
               {{ collections.restaurants.length }}
             </h3>
             <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Dining &amp; food spots</p>
@@ -88,9 +88,9 @@ description: Find restaurants, attractions, stores, and more near Piravom
         class="rounded-3xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 p-6 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
       >
         <div class="flex items-start gap-4">
-          {% lucide "wrench", "w-10 h-10 text-blue-500 dark:text-blue-400 shrink-0" %}
+          {% lucide "wrench", "w-10 h-10 text-theme-500 dark:text-theme-400 shrink-0" %}
           <div>
-            <h3 class="text-2xl font-bold text-blue-600 dark:text-blue-400">
+            <h3 class="text-2xl font-bold text-theme-600 dark:text-theme-400">
               {{ collections.services.length }}
             </h3>
             <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Local service providers</p>
@@ -141,7 +141,7 @@ description: Find restaurants, attractions, stores, and more near Piravom
             >
               <!-- Column 1: Distance -->
               <div
-                class="text-sm font-medium text-indigo-600 dark:text-indigo-400 cursor-help text-center"
+                class="text-sm font-medium text-theme-600 dark:text-theme-400 cursor-help text-center"
                 title="Distance from Piravom Town"
               >
                 {{ attraction.data.distanceFromBusStand or "-" }}
@@ -270,7 +270,7 @@ description: Find restaurants, attractions, stores, and more near Piravom
           <a href="/weather/" class="flex items-center gap-3 mb-5 no-underline">
             <div
               id="weatherWidgetIcon"
-              class="flex items-center justify-center w-12 h-12 text-indigo-500 dark:text-indigo-400 shrink-0"
+              class="flex items-center justify-center w-12 h-12 text-theme-500 dark:text-theme-400 shrink-0"
               aria-hidden="true"
             ></div>
             <div class="flex-1 min-w-0">
@@ -414,31 +414,40 @@ description: Find restaurants, attractions, stores, and more near Piravom
 
         <div class="space-y-4">
           {% for restaurant in collections.restaurants.slice(0, 3) %}
-          <a
-            href="{{ restaurant.url }}"
+          <div
             class="flex items-center justify-between rounded-2xl border border-gray-100 dark:border-gray-700 p-4 transition hover:bg-gray-50 dark:hover:bg-gray-800/50"
           >
-            <div>
+            <div class="min-w-0 flex-1">
               <h3 class="font-semibold dark:text-gray-100">
                 {{ restaurant.data.restaurant.title }}
               </h3>
               <div class="flex flex-wrap gap-1 mt-0.5">
                 {% for c in restaurant.data.restaurant.cuisines %}
                 <span
-                  class="rounded-full bg-indigo-50 dark:bg-indigo-900/30 px-2 py-0.5 text-xs font-medium text-indigo-700 dark:text-indigo-300"
+                  class="rounded-full bg-theme-50 dark:bg-theme-900/30 px-2 py-0.5 text-xs font-medium text-theme-700 dark:text-theme-300"
                   >{{ c }}</span
                 >
                 {% endfor %}
               </div>
             </div>
 
-            <span
-              class="restaurant-status text-sm font-medium text-gray-500"
-              data-opening-hours="{{ restaurant.data.restaurant.openingHours | json | safe }}"
-            >
-              Checking...
-            </span>
-          </a>
+            <div class="flex items-center gap-2 shrink-0 ml-3">
+              <a
+                href="{{ restaurant.url }}"
+                class="flex items-center gap-1 rounded-xl bg-theme-50 dark:bg-theme-900/30 px-3 py-1.5 text-xs font-medium text-theme-600 dark:text-theme-400 transition hover:bg-theme-100 dark:hover:bg-theme-900/50"
+              >
+                {% lucide "utensils-crossed", "h-3.5 w-3.5" %} Menu
+              </a>
+              <a
+                href="https://maps.google.com/maps?q={{ restaurant.data.restaurant.title | replace(' ', '+') }}+Piravom"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="flex items-center gap-1 rounded-xl border border-gray-200 dark:border-gray-700 px-3 py-1.5 text-xs font-medium text-gray-500 dark:text-gray-400 transition hover:bg-gray-100 dark:hover:bg-gray-800"
+              >
+                {% lucide "map-pin", "h-3.5 w-3.5" %} Navigate
+              </a>
+            </div>
+          </div>
           {% endfor %}
         </div>
       </div>
@@ -465,7 +474,7 @@ description: Find restaurants, attractions, stores, and more near Piravom
           class="rounded-2xl border border-gray-100 dark:border-gray-700 p-6 transition hover:bg-gray-50 dark:hover:bg-gray-800/50 group"
         >
           <h3
-            class="font-semibold dark:text-gray-100 group-hover:text-indigo-600 dark:group-hover:text-indigo-400"
+            class="font-semibold dark:text-gray-100 group-hover:text-theme-600 dark:group-hover:text-theme-400"
           >
             Attractions
           </h3>
@@ -477,7 +486,7 @@ description: Find restaurants, attractions, stores, and more near Piravom
           class="rounded-2xl border border-gray-100 dark:border-gray-700 p-6 transition hover:bg-gray-50 dark:hover:bg-gray-800/50 group"
         >
           <h3
-            class="font-semibold dark:text-gray-100 group-hover:text-indigo-600 dark:group-hover:text-indigo-400"
+            class="font-semibold dark:text-gray-100 group-hover:text-theme-600 dark:group-hover:text-theme-400"
           >
             Hospitals
           </h3>
@@ -489,7 +498,7 @@ description: Find restaurants, attractions, stores, and more near Piravom
           class="rounded-2xl border border-gray-100 dark:border-gray-700 p-6 transition hover:bg-gray-50 dark:hover:bg-gray-800/50 group"
         >
           <h3
-            class="font-semibold dark:text-gray-100 group-hover:text-indigo-600 dark:group-hover:text-indigo-400"
+            class="font-semibold dark:text-gray-100 group-hover:text-theme-600 dark:group-hover:text-theme-400"
           >
             Weather
           </h3>
@@ -501,7 +510,7 @@ description: Find restaurants, attractions, stores, and more near Piravom
           class="rounded-2xl border border-gray-100 dark:border-gray-700 p-6 transition hover:bg-gray-50 dark:hover:bg-gray-800/50 group"
         >
           <h3
-            class="font-semibold dark:text-gray-100 group-hover:text-indigo-600 dark:group-hover:text-indigo-400"
+            class="font-semibold dark:text-gray-100 group-hover:text-theme-600 dark:group-hover:text-theme-400"
           >
             Houses of Worship
           </h3>
@@ -515,92 +524,6 @@ description: Find restaurants, attractions, stores, and more near Piravom
 
 <script>
   (function () {
-    const dayNames = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'];
-    const openClass = 'text-green-600';
-    const closeClass = 'text-red-600';
-
-    function timeToMinutes(time) {
-      if (!time || !time.includes(':')) {
-        return null;
-      }
-
-      const [hours, minutes] = time.split(':').map(Number);
-
-      if (Number.isNaN(hours) || Number.isNaN(minutes)) {
-        return null;
-      }
-
-      return hours * 60 + minutes;
-    }
-
-    function isOpenToday(hours, currentMinutes) {
-      if (!hours || hours.closed) {
-        return false;
-      }
-
-      const openMinutes = timeToMinutes(hours.open);
-      const closeMinutes = timeToMinutes(hours.close);
-
-      if (openMinutes === null || closeMinutes === null) {
-        return false;
-      }
-
-      if (openMinutes === closeMinutes) {
-        return true;
-      }
-
-      if (closeMinutes > openMinutes) {
-        return currentMinutes >= openMinutes && currentMinutes < closeMinutes;
-      }
-
-      return currentMinutes >= openMinutes;
-    }
-
-    function isRestaurantOpen(openingHours, now) {
-      if (!openingHours) {
-        return false;
-      }
-
-      const todayIndex = now.getDay();
-      const currentMinutes = now.getHours() * 60 + now.getMinutes();
-      const today = openingHours[dayNames[todayIndex]];
-      const yesterday = openingHours[dayNames[(todayIndex + 6) % 7]];
-
-      if (isOpenToday(today, currentMinutes)) {
-        return true;
-      }
-
-      if (!yesterday || yesterday.closed) {
-        return false;
-      }
-
-      const yesterdayOpen = timeToMinutes(yesterday.open);
-      const yesterdayClose = timeToMinutes(yesterday.close);
-
-      return (
-        yesterdayOpen !== null &&
-        yesterdayClose !== null &&
-        yesterdayClose <= yesterdayOpen &&
-        currentMinutes < yesterdayClose
-      );
-    }
-
-    document.querySelectorAll('.restaurant-status').forEach(function (statusElement) {
-      let openingHours = null;
-
-      try {
-        openingHours = JSON.parse(statusElement.dataset.openingHours || 'null');
-      } catch (error) {
-        openingHours = null;
-      }
-
-      const isOpen = isRestaurantOpen(openingHours, new Date());
-
-      statusElement.textContent = isOpen ? 'Open' : 'Closed';
-      statusElement.classList.remove('text-gray-500', openClass, closeClass);
-      statusElement.classList.add(isOpen ? openClass : closeClass);
-    });
-
     // Weather Widget
     (function () {
       var loading = document.getElementById('weatherWidgetLoading');
@@ -801,7 +724,7 @@ description: Find restaurants, attractions, stores, and more near Piravom
             iconTd.className = 'py-1.5 text-center w-6';
             iconTd.setAttribute('aria-hidden', 'true');
             var iconWrap = document.createElement('div');
-            iconWrap.className = 'w-4 h-4 mx-auto text-indigo-400 dark:text-indigo-400';
+            iconWrap.className = 'w-4 h-4 mx-auto text-theme-400 dark:text-theme-400';
             iconWrap.appendChild(makeIcon(dayIcon));
             iconTd.appendChild(iconWrap);
             row.appendChild(iconTd);

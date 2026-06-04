@@ -36,7 +36,7 @@ layout: layouts/base.njk
       <div class="max-w-2xl">
         <h1 class="text-4xl font-bold tracking-tight md:text-6xl">{{ title }}</h1>
         {% if section %}
-        <p class="mt-1 text-sm font-medium text-indigo-600">{{ section }}</p>
+        <p class="mt-1 text-sm font-medium text-theme-600">{{ section }}</p>
         {% endif %}
         <p class="mt-4 text-lg leading-relaxed text-gray-600">{{ description }}</p>
       </div>
@@ -52,7 +52,7 @@ layout: layouts/base.njk
     {% if categories %}
     <div class="mt-6 flex flex-wrap items-center gap-2">
       {% for cat in categories %}
-      <span class="rounded-full bg-indigo-50 px-3 py-1 text-xs font-medium text-indigo-700">
+      <span class="rounded-full bg-theme-50 px-3 py-1 text-xs font-medium text-theme-700">
         {{ cat }}
       </span>
       {% endfor %}
@@ -74,7 +74,7 @@ layout: layouts/base.njk
         href="{{ directionsUrl }}"
         target="_blank"
         rel="noopener noreferrer"
-        class="inline-flex items-center gap-2 rounded-xl bg-indigo-600 px-5 py-2.5 text-sm font-medium text-white transition hover:bg-indigo-700"
+        class="inline-flex items-center gap-2 rounded-xl bg-theme-600 px-5 py-2.5 text-sm font-medium text-white transition hover:bg-theme-700"
       >
         {% lucide "map-pin", "h-4 w-4" %}
         <span>Open in Google Maps</span>

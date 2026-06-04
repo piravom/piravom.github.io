@@ -1,6 +1,6 @@
 ---
 layout: layouts/base.njk
-title: Weather in Piravom
+title: Weather
 description: Get the current weather conditions and 3-day forecast for Piravom, Kerala — temperature, humidity, wind speed, and precipitation updates.
 permalink: '/weather/'
 ---
@@ -80,7 +80,7 @@ permalink: '/weather/'
     <!-- Loading State -->
     <div id="weatherLoading" role="status" aria-live="polite" class="text-center py-16">
       <div
-        class="inline-block h-10 w-10 animate-spin rounded-full border-4 border-indigo-200 border-t-indigo-600"
+        class="inline-block h-10 w-10 animate-spin rounded-full border-4 border-theme-200 border-t-theme-600"
         aria-hidden="true"
       ></div>
       <p class="mt-4 text-gray-500 dark:text-gray-400">Loading weather data...</p>
@@ -97,7 +97,7 @@ permalink: '/weather/'
       </p>
       <button
         onclick="fetchWeather()"
-        class="mt-4 rounded-xl bg-indigo-600 px-6 py-2 text-sm font-semibold text-white transition hover:bg-indigo-700"
+        class="mt-4 rounded-xl bg-theme-600 px-6 py-2 text-sm font-semibold text-white transition hover:bg-theme-700"
       >
         Retry
       </button>
@@ -122,7 +122,7 @@ permalink: '/weather/'
             <!-- Weather Icon (Lucide SVG injected by JS) -->
             <div
               id="currentIcon"
-              class="w-20 h-20 shrink-0 text-indigo-500 dark:text-indigo-400"
+              class="w-20 h-20 shrink-0 text-theme-500 dark:text-theme-400"
               aria-hidden="true"
             ></div>
 
@@ -460,7 +460,7 @@ permalink: '/weather/'
       card.setAttribute('itemtype', 'https://schema.org/WeatherForecast');
 
       var iconWrap = document.createElement('div');
-      iconWrap.className = 'w-12 h-12 mx-auto mb-3 text-indigo-500 dark:text-indigo-400';
+      iconWrap.className = 'w-12 h-12 mx-auto mb-3 text-theme-500 dark:text-theme-400';
       iconWrap.setAttribute('aria-hidden', 'true');
       iconWrap.appendChild(createLucideIcon(dayIconName, 'w-full h-full'));
 

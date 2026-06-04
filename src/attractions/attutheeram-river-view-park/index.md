@@ -5,4 +5,5 @@ categories:
   - Viewpoint
 description: A serene riverside destination ideal for morning or evening visits.
 distanceFromBusStand: 2.9km
+image: 'attutheeram-river-view-park.jpg'
 ---

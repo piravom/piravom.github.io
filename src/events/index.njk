@@ -18,7 +18,7 @@ permalink: '/events/'
   <div class="lg:hidden -mx-4 px-4 mb-6 overflow-x-auto scrollbar-hide">
     <nav class="flex gap-2 whitespace-nowrap pb-2">
       <button
-        class="filter-btn flex items-center gap-1.5 rounded-full border border-indigo-200 bg-indigo-50 px-4 py-2 text-sm font-medium text-indigo-700 shadow-sm transition"
+        class="filter-btn flex items-center gap-1.5 rounded-full border border-theme-200 bg-theme-50 px-4 py-2 text-sm font-medium text-theme-700 shadow-sm transition"
         data-filter="all"
       >
         <span>{{ categoryEmojis["All"] or "📋" }}</span>
@@ -26,7 +26,7 @@ permalink: '/events/'
       </button>
       {% for cat in categories %}
       <button
-        class="filter-btn flex items-center gap-1.5 rounded-full border border-gray-200 bg-white px-4 py-2 text-sm font-medium text-gray-600 shadow-sm transition hover:border-indigo-200 hover:bg-indigo-50 hover:text-indigo-700"
+        class="filter-btn flex items-center gap-1.5 rounded-full border border-gray-200 bg-white px-4 py-2 text-sm font-medium text-gray-600 shadow-sm transition hover:border-theme-200 hover:bg-theme-50 hover:text-theme-700"
         data-filter="{{ cat | lower }}"
       >
         <span>{{ categoryEmojis[cat] or "📌" }}</span>
@@ -44,7 +44,7 @@ permalink: '/events/'
           Filter by Category
         </p>
         <button
-          class="filter-btn flex w-full items-center gap-2 rounded-xl px-3 py-2 text-sm font-medium text-indigo-700 bg-indigo-50 transition hover:bg-indigo-50 hover:text-indigo-700"
+          class="filter-btn flex w-full items-center gap-2 rounded-xl px-3 py-2 text-sm font-medium text-theme-700 bg-theme-50 transition hover:bg-theme-50 hover:text-theme-700"
           data-filter="all"
         >
           <span>{{ categoryEmojis["All"] or "📋" }}</span>
@@ -52,7 +52,7 @@ permalink: '/events/'
         </button>
         {% for cat in categories %}
         <button
-          class="filter-btn flex w-full items-center gap-2 rounded-xl px-3 py-2 text-sm font-medium text-gray-600 transition hover:bg-indigo-50 hover:text-indigo-700"
+          class="filter-btn flex w-full items-center gap-2 rounded-xl px-3 py-2 text-sm font-medium text-gray-600 transition hover:bg-theme-50 hover:text-theme-700"
           data-filter="{{ cat | lower }}"
         >
           <span>{{ categoryEmojis[cat] or "📌" }}</span>
@@ -85,14 +85,14 @@ permalink: '/events/'
               class="flex items-center gap-4 border-b border-gray-100 dark:border-gray-700 px-6 py-4"
             >
               <div
-                class="flex w-14 flex-col items-center rounded-xl bg-indigo-50 dark:bg-indigo-900/30 py-2"
+                class="flex w-14 flex-col items-center rounded-xl bg-theme-50 dark:bg-theme-900/30 py-2"
               >
                 <span
-                  class="text-xs font-bold uppercase tracking-wide text-indigo-600 dark:text-indigo-400"
+                  class="text-xs font-bold uppercase tracking-wide text-theme-600 dark:text-theme-400"
                   >{{ event.data.date | humanDateShortMonth }}</span
                 >
                 <span
-                  class="text-2xl font-bold text-indigo-700 dark:text-indigo-300 leading-none mt-0.5"
+                  class="text-2xl font-bold text-theme-700 dark:text-theme-300 leading-none mt-0.5"
                   >{{ event.data.date | humanDateDay }}</span
                 >
               </div>
@@ -100,7 +100,7 @@ permalink: '/events/'
                 <div class="flex items-start justify-between gap-2 mb-1.5">
                   <a
                     href="{{ event.url }}"
-                    class="text-lg font-bold leading-tight text-gray-900 dark:text-gray-100 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
+                    class="text-lg font-bold leading-tight text-gray-900 dark:text-gray-100 hover:text-theme-600 dark:hover:text-theme-400 transition-colors"
                     >{{ event.data.title }}</a
                   >
                   <span
@@ -135,7 +135,7 @@ permalink: '/events/'
               </span>
               <a
                 href="{{ event.url }}"
-                class="flex items-center gap-1 rounded-lg px-3 py-1.5 text-xs font-medium text-indigo-600 dark:text-indigo-400 transition hover:bg-indigo-50 dark:hover:bg-indigo-900/30"
+                class="flex items-center gap-1 rounded-lg px-3 py-1.5 text-xs font-medium text-theme-600 dark:text-theme-400 transition hover:bg-theme-50 dark:hover:bg-theme-900/30"
               >
                 {% lucide "eye", "h-3.5 w-3.5" %} View Event
               </a>
@@ -190,7 +190,7 @@ permalink: '/events/'
                 <div class="flex items-start justify-between gap-2 mb-1.5">
                   <a
                     href="{{ event.url }}"
-                    class="text-lg font-bold leading-tight text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
+                    class="text-lg font-bold leading-tight text-gray-700 dark:text-gray-300 hover:text-theme-600 dark:hover:text-theme-400 transition-colors"
                     >{{ event.data.title }}</a
                   >
                   <span
@@ -218,7 +218,7 @@ permalink: '/events/'
             >
               <a
                 href="{{ event.url }}"
-                class="flex items-center gap-1 rounded-lg px-3 py-1.5 text-xs font-medium text-indigo-600 dark:text-indigo-400 transition hover:bg-indigo-50 dark:hover:bg-indigo-900/30"
+                class="flex items-center gap-1 rounded-lg px-3 py-1.5 text-xs font-medium text-theme-600 dark:text-theme-400 transition hover:bg-theme-50 dark:hover:bg-theme-900/30"
               >
                 {% lucide "eye", "h-3.5 w-3.5" %} View Event
               </a>
@@ -255,11 +255,11 @@ permalink: '/events/'
         const filter = this.dataset.filter;
 
         filterButtons.forEach(function (b) {
-          b.classList.remove('bg-indigo-50', 'text-indigo-700');
+          b.classList.remove('bg-theme-50', 'text-theme-700');
           b.classList.add('text-gray-600');
         });
         this.classList.remove('text-gray-600');
-        this.classList.add('bg-indigo-50', 'text-indigo-700');
+        this.classList.add('bg-theme-50', 'text-theme-700');
 
         eventCards.forEach(function (card) {
           if (filter === 'all' || card.dataset.category === filter) {

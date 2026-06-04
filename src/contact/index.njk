@@ -1,0 +1,180 @@
+---
+layout: layouts/base.njk
+title: Contact Us
+description: Get in touch with the Piravom team. Share your feedback, suggestions, or report missing information about local businesses and services.
+permalink: '/contact/'
+---
+
+<main class="mx-auto max-w-7xl px-4 py-8">
+  {% from "components/page-hero.njk" import pageHero %} {{ pageHero("Contact Us", "Have a
+  suggestion, feedback, or something we missed? Drop us a message and we'll get back to you.") }}
+
+  <div class="mx-auto max-w-3xl">
+    <div
+      class="rounded-3xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 p-8 sm:p-10 shadow-sm"
+    >
+      <!-- Success message (hidden by default) -->
+      <div id="formSuccess" class="hidden text-center py-8">
+        <div
+          class="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-theme-50 dark:bg-theme-900/30 mb-4"
+        >
+          {% lucide "check-circle", "h-8 w-8 text-theme-600" %}
+        </div>
+        <h2 class="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-2">Message Sent!</h2>
+        <p class="text-gray-600 dark:text-gray-400">
+          Thank you for reaching out. We'll review your message and get back to you at the earliest.
+        </p>
+        <button
+          onclick="
+            document.getElementById('contactForm').reset();
+            document.getElementById('formSuccess').classList.add('hidden');
+            document.getElementById('formFields').classList.remove('hidden');
+          "
+          class="mt-6 inline-flex items-center gap-2 rounded-xl border border-gray-200 dark:border-gray-700 px-5 py-2.5 text-sm font-medium text-gray-600 dark:text-gray-400 transition hover:bg-gray-50 dark:hover:bg-gray-800"
+        >
+          {% lucide "pen-line", "h-4 w-4" %} Send Another Message
+        </button>
+      </div>
+
+      <!-- Form fields -->
+      <div id="formFields">
+        <form id="contactForm" onsubmit="return handleContactSubmit(event);" novalidate>
+          <!-- Name -->
+          <div class="mb-6">
+            <label
+              for="name"
+              class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+            >
+              Your Name <span class="text-red-500">*</span>
+            </label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              required
+              placeholder="Enter your name"
+              class="w-full rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 px-4 py-3 text-sm text-gray-900 dark:text-gray-100 placeholder-gray-400 dark:placeholder-gray-500 transition focus:border-theme-500 focus:ring-2 focus:ring-theme-500/20 focus:outline-none"
+            />
+          </div>
+
+          <!-- Contact (email or phone) -->
+          <div class="mb-6">
+            <label
+              for="contact"
+              class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+            >
+              Email or Phone <span class="text-red-500">*</span>
+            </label>
+            <input
+              type="text"
+              id="contact"
+              name="contact"
+              required
+              placeholder="email@example.com or +91 98765 43210"
+              class="w-full rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 px-4 py-3 text-sm text-gray-900 dark:text-gray-100 placeholder-gray-400 dark:placeholder-gray-500 transition focus:border-theme-500 focus:ring-2 focus:ring-theme-500/20 focus:outline-none"
+            />
+          </div>
+
+          <!-- Message -->
+          <div class="mb-6">
+            <label
+              for="message"
+              class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+            >
+              Your Message <span class="text-red-500">*</span>
+            </label>
+            <textarea
+              id="message"
+              name="message"
+              required
+              rows="5"
+              placeholder="Tell us what's on your mind..."
+              class="w-full rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 px-4 py-3 text-sm text-gray-900 dark:text-gray-100 placeholder-gray-400 dark:placeholder-gray-500 transition focus:border-theme-500 focus:ring-2 focus:ring-theme-500/20 focus:outline-none resize-y"
+            ></textarea>
+          </div>
+
+          <!-- Submit -->
+          <button
+            type="submit"
+            id="submitBtn"
+            class="w-full inline-flex items-center justify-center gap-2 rounded-xl bg-theme-600 px-6 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-theme-700 focus:outline-none focus:ring-2 focus:ring-theme-500 focus:ring-offset-2 dark:focus:ring-offset-gray-900"
+          >
+            {% lucide "send", "h-4 w-4" %}
+            <span id="submitText">Send Message</span>
+            <span id="submitSpinner" class="hidden">
+              <svg
+                class="animate-spin h-4 w-4"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <circle
+                  class="opacity-25"
+                  cx="12"
+                  cy="12"
+                  r="10"
+                  stroke="currentColor"
+                  stroke-width="4"
+                ></circle>
+                <path
+                  class="opacity-75"
+                  fill="currentColor"
+                  d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"
+                ></path>
+              </svg>
+            </span>
+          </button>
+        </form>
+
+        <!-- Alternative contact -->
+        <div class="mt-8 pt-6 border-t border-gray-100 dark:border-gray-700">
+          <p class="text-center text-sm text-gray-500 dark:text-gray-400">
+            Prefer email? Write to us at
+            <a
+              href="mailto:{{ site.email }}"
+              class="font-medium text-theme-600 hover:text-theme-700 transition"
+              >{{ site.email }}</a
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<script>
+  function handleContactSubmit(event) {
+    event.preventDefault();
+
+    var name = document.getElementById('name').value.trim();
+    var contact = document.getElementById('contact').value.trim();
+    var message = document.getElementById('message').value.trim();
+    var submitBtn = document.getElementById('submitBtn');
+    var submitText = document.getElementById('submitText');
+    var submitSpinner = document.getElementById('submitSpinner');
+
+    if (!name || !contact || !message) {
+      return false;
+    }
+
+    // Show loading state
+    submitText.classList.add('hidden');
+    submitSpinner.classList.remove('hidden');
+    submitBtn.disabled = true;
+    submitBtn.classList.add('opacity-75', 'cursor-not-allowed');
+
+    // Simulate sending (1.5s delay for UX)
+    setTimeout(function () {
+      submitText.classList.remove('hidden');
+      submitSpinner.classList.add('hidden');
+      submitBtn.disabled = false;
+      submitBtn.classList.remove('opacity-75', 'cursor-not-allowed');
+
+      // Show success
+      document.getElementById('formFields').classList.add('hidden');
+      document.getElementById('formSuccess').classList.remove('hidden');
+    }, 1500);
+
+    return false;
+  }
+</script>

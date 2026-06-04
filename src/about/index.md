@@ -16,7 +16,7 @@ permalink: '/about/'
  <section class="mx-auto max-w-4xl">
 
  <div class="rounded-3xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 overflow-hidden shadow-sm">
- <div class="aspect-[21/9] w-full bg-gradient-to-br from-indigo-100 to-blue-200 dark:from-indigo-950 dark:to-blue-950 overflow-hidden">
+ <div class="aspect-[21/9] w-full bg-gradient-to-br from-theme-100 to-blue-200 dark:from-theme-950 dark:to-blue-950 overflow-hidden">
  <img
  src="./piravom-river-view.jpg"
  alt="Piravom town view"
@@ -65,17 +65,17 @@ permalink: '/about/'
  <div class="mt-6 grid gap-4 sm:grid-cols-3">
  <div class="rounded-xl bg-gray-50 dark:bg-gray-800/50 p-4">
  <p class="text-sm font-semibold text-gray-500 dark:text-gray-400">Kochi (Cochin)</p>
- <p class="text-xl font-bold text-indigo-600 dark:text-indigo-400">20 km</p>
+ <p class="text-xl font-bold text-theme-600 dark:text-theme-400">20 km</p>
  <p class="text-xs text-gray-400 dark:text-gray-500">North-West</p>
  </div>
  <div class="rounded-xl bg-gray-50 dark:bg-gray-800/50 p-4">
  <p class="text-sm font-semibold text-gray-500 dark:text-gray-400">Kottayam</p>
- <p class="text-xl font-bold text-indigo-600 dark:text-indigo-400">32 km</p>
+ <p class="text-xl font-bold text-theme-600 dark:text-theme-400">32 km</p>
  <p class="text-xs text-gray-400 dark:text-gray-500">South-East</p>
  </div>
  <div class="rounded-xl bg-gray-50 dark:bg-gray-800/50 p-4">
  <p class="text-sm font-semibold text-gray-500 dark:text-gray-400">Munnar</p>
- <p class="text-xl font-bold text-indigo-600 dark:text-indigo-400">90 km</p>
+ <p class="text-xl font-bold text-theme-600 dark:text-theme-400">90 km</p>
  <p class="text-xs text-gray-400 dark:text-gray-500">East</p>
  </div>
  </div>
@@ -110,10 +110,10 @@ permalink: '/about/'
  the district.
  </p>
  <div class="mt-6 flex flex-wrap gap-3">
- <span class="rounded-full bg-indigo-50 dark:bg-indigo-900/30 px-4 py-2 text-sm font-medium text-indigo-700 dark:text-indigo-300">Malayalam</span>
- <span class="rounded-full bg-indigo-50 dark:bg-indigo-900/30 px-4 py-2 text-sm font-medium text-indigo-700 dark:text-indigo-300">English</span>
- <span class="rounded-full bg-indigo-50 dark:bg-indigo-900/30 px-4 py-2 text-sm font-medium text-indigo-700 dark:text-indigo-300">Hindi</span>
- <span class="rounded-full bg-indigo-50 dark:bg-indigo-900/30 px-4 py-2 text-sm font-medium text-indigo-700 dark:text-indigo-300">Tamil</span>
+ <span class="rounded-full bg-theme-50 dark:bg-theme-900/30 px-4 py-2 text-sm font-medium text-theme-700 dark:text-theme-300">Malayalam</span>
+ <span class="rounded-full bg-theme-50 dark:bg-theme-900/30 px-4 py-2 text-sm font-medium text-theme-700 dark:text-theme-300">English</span>
+ <span class="rounded-full bg-theme-50 dark:bg-theme-900/30 px-4 py-2 text-sm font-medium text-theme-700 dark:text-theme-300">Hindi</span>
+ <span class="rounded-full bg-theme-50 dark:bg-theme-900/30 px-4 py-2 text-sm font-medium text-theme-700 dark:text-theme-300">Tamil</span>
  </div>
  </div>
 
@@ -193,7 +193,7 @@ permalink: '/about/'
  </div>
  </div>
  <div class="mt-6">
- <a href="/attractions/" class="inline-flex items-center gap-2 rounded-xl bg-indigo-600 dark:bg-indigo-700 px-5 py-3 text-sm font-semibold text-white transition hover:bg-indigo-700 dark:hover:bg-indigo-600">
+ <a href="/attractions/" class="inline-flex items-center gap-2 rounded-xl bg-theme-600 dark:bg-theme-700 px-5 py-3 text-sm font-semibold text-white transition hover:bg-theme-700 dark:hover:bg-theme-600">
  Explore All Attractions
  {% lucide "arrow-right", "h-4 w-4" %}
  </a>
@@ -237,7 +237,7 @@ permalink: '/about/'
  <!-- Disclaimer -->
  <div class="mt-8 rounded-3xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 p-8 shadow-sm">
  <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-center">
- Please read our <a href="/disclaimer" class="text-indigo-600 dark:text-indigo-400 hover:underline font-semibold">Disclaimer</a> for important information about the accuracy and use of the content on this website.
+ Please read our <a href="/disclaimer" class="text-theme-600 dark:text-theme-400 hover:underline font-semibold">Disclaimer</a> for important information about the accuracy and use of the content on this website.
  </p>
  </div>
 

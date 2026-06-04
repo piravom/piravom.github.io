@@ -18,7 +18,7 @@ permalink: '/attractions/'
       {% for category in categories %} {% set catId = category | lower %}
       <a
         href="#{{ catId }}"
-        class="flex items-center gap-1.5 rounded-full border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 px-4 py-2 text-sm font-medium text-gray-600 dark:text-gray-400 shadow-sm transition hover:border-indigo-200 dark:hover:border-indigo-700 hover:bg-indigo-50 dark:hover:bg-indigo-900/30 hover:text-indigo-700 dark:hover:text-indigo-300"
+        class="flex items-center gap-1.5 rounded-full border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 px-4 py-2 text-sm font-medium text-gray-600 dark:text-gray-400 shadow-sm transition hover:border-theme-200 dark:hover:border-theme-700 hover:bg-theme-50 dark:hover:bg-theme-900/30 hover:text-theme-700 dark:hover:text-theme-300"
       >
         <span>{{ categoryIcons[category] }}</span>
         <span>{{ category }}</span>
@@ -39,7 +39,7 @@ permalink: '/attractions/'
         {% for category in categories %} {% set catId = category | lower %}
         <a
           href="#{{ catId }}"
-          class="flex items-center gap-2 rounded-xl px-3 py-2 text-sm font-medium text-gray-600 dark:text-gray-400 transition hover:bg-indigo-50 dark:hover:bg-indigo-900/30 hover:text-indigo-700 dark:hover:text-indigo-300"
+          class="flex items-center gap-2 rounded-xl px-3 py-2 text-sm font-medium text-gray-600 dark:text-gray-400 transition hover:bg-theme-50 dark:hover:bg-theme-900/30 hover:text-theme-700 dark:hover:text-theme-300"
         >
           <span>{{ categoryIcons[category] }}</span>
           <span>{{ category }}</span>
@@ -90,7 +90,7 @@ permalink: '/attractions/'
               >
                 <!-- Distance -->
                 <span
-                  class="text-center font-medium text-indigo-600 dark:text-indigo-400"
+                  class="text-center font-medium text-theme-600 dark:text-theme-400"
                   title="Distance from Piravom Town"
                 >
                   {{ attraction.data.distanceFromBusStand or "-" }}

@@ -4,7 +4,7 @@ module.exports = {
   url: 'https://piravom.in',
   author: 'Contributors',
   phone: '+91 9876543210',
-  email: 'hello@piravom.in',
+  email: 'mailpiravom@gmail.com',
   social: {
     instagram: 'https://instagram.com/piravom',
     facebook: 'https://facebook.com/piravom',

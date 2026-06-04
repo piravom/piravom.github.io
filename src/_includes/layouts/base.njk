@@ -30,8 +30,16 @@
     />
     <meta name="twitter:description" content="{{ description or site.description }}" />
 
+    <!-- Favicon & App Icons -->
+    <link rel="icon" type="image/svg+xml" href="/assets/img/logo.svg" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16x16.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.png" />
+    <link rel="icon" type="image/x-icon" href="/assets/img/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png" />
+    <link rel="manifest" crossorigin="use-credentials" href="/assets/img/site.webmanifest" />
+
     <!-- Theme / Dark Mode -->
-    <meta name="theme-color" content="#4f46e5" />
+    <meta name="theme-color" content="#15803d" />
     <meta name="color-scheme" content="light dark" />
 
     <!-- Apply dark mode BEFORE first paint to prevent white flash -->
@@ -60,6 +68,8 @@
         darkMode: 'class',
       };
     </script>
+
+    <link rel="stylesheet" href="/assets/css/theme.css" />
 
     <!-- MS Analytics -->
     {% include "components/analytics.njk" %}
@@ -97,9 +107,9 @@
           if (href && path.startsWith(href)) {
             link.classList.remove('text-gray-600', 'dark:text-gray-400');
             if (isDark) {
-              link.classList.add('text-indigo-400', 'bg-indigo-900/30');
+              link.classList.add('text-theme-400', 'bg-theme-900/30');
             } else {
-              link.classList.add('text-indigo-600', 'bg-indigo-50');
+              link.classList.add('text-theme-600', 'bg-theme-50');
             }
           }
         });
