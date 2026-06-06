@@ -5,37 +5,37 @@ description: Find restaurants, attractions, stores, and more near Piravom
 ---
 
 <main>
-  <!-- Jumbo Hero -->
-  <section
-    class="hero-jumbo mx-auto mt-8 max-w-7xl flex items-center justify-center overflow-hidden rounded-[2.5rem] border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 shadow-sm"
-  >
-    <div class="mx-auto max-w-4xl px-6 py-16 sm:px-8 sm:py-20 text-center">
-      <h1 class="text-4xl font-bold text-gray-900 dark:text-gray-100 sm:text-5xl">
-        Welcome to&nbsp;<span class="text-theme-600 dark:text-theme-400">{{ site.name }}</span>
-      </h1>
-      <p
-        class="mx-auto mt-4 max-w-2xl text-base text-gray-700 dark:text-gray-300 sm:text-lg/relaxed"
-      >
-        {{ description }}
-      </p>
-      <div class="mt-10 flex items-center justify-center">
-        <button
-          onclick="
-            document
-              .querySelector('.hero-jumbo')
-              .nextElementSibling.scrollIntoView({ behavior: 'smooth' })
-          "
-          class="rounded-full bg-theme-600 px-10 py-3.5 text-sm font-semibold text-white shadow-sm transition hover:bg-theme-700 hover:shadow-md cursor-pointer"
-        >
-          Explore
-        </button>
-      </div>
-    </div>
-  </section>
-
   <div class="mx-auto max-w-7xl px-4 py-8">
+    <!-- Jumbo Hero -->
+    <section
+      class="hero-jumbo mt-8 flex items-center justify-center overflow-hidden rounded-[2.5rem] border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 shadow-sm"
+    >
+      <div class="mx-auto max-w-4xl px-6 py-16 sm:px-8 sm:py-20 text-center">
+        <h1 class="text-4xl font-bold text-gray-900 dark:text-gray-100 sm:text-5xl">
+          Welcome to&nbsp;<span class="text-theme-600 dark:text-theme-400">{{ site.name }}</span>
+        </h1>
+        <p
+          class="mx-auto mt-4 max-w-2xl text-base text-gray-700 dark:text-gray-300 sm:text-lg/relaxed"
+        >
+          {{ description }}
+        </p>
+        <div class="mt-10 flex items-center justify-center">
+          <button
+            onclick="
+              document
+                .querySelector('.hero-jumbo')
+                .nextElementSibling.scrollIntoView({ behavior: 'smooth' })
+            "
+            class="rounded-full bg-theme-600 px-10 py-3.5 text-sm font-semibold text-white shadow-sm transition hover:bg-theme-700 hover:shadow-md cursor-pointer"
+          >
+            Explore
+          </button>
+        </div>
+      </div>
+    </section>
+
     <!-- Status Cards -->
-    <section class="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+    <section class="grid gap-4 sm:grid-cols-2 xl:grid-cols-4 mt-8">
       <a
         href="/stores/"
         class="rounded-3xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 p-6 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
