@@ -10,51 +10,5 @@
     "distanceFromBusStand": "350m",
     "rating": "3.4"
   },
-  "menuList": [
-    {
-      "category": "Indian Main Course",
-      "items": [
-        {
-          "title": "Kerala Meals",
-          "subTitle": "Traditional Kerala meals",
-          "price": 120
-        },
-        {
-          "title": "Chicken Biriyani",
-          "subTitle": "Spiced chicken biriyani",
-          "price": 160
-        },
-        {
-          "title": "Kerala Porotta & Beef",
-          "subTitle": "Porotta with beef curry",
-          "price": 120
-        },
-        {
-          "title": "Fish Moilee & Appam",
-          "subTitle": "Fish in coconut milk with appams",
-          "price": 160
-        }
-      ]
-    },
-    {
-      "category": "Chinese",
-      "items": [
-        {
-          "title": "Chicken Fried Rice",
-          "subTitle": "Chicken fried rice",
-          "price": 130
-        },
-        {
-          "title": "Gobi Manchurian",
-          "subTitle": "Cauliflower Manchurian",
-          "price": 90
-        },
-        {
-          "title": "Noodles",
-          "subTitle": "Vegetable hakka noodles",
-          "price": 100
-        }
-      ]
-    }
-  ]
+  "menuList": []
 }

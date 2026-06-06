@@ -10,56 +10,5 @@
     "distanceFromBusStand": "140m",
     "rating": "3.8"
   },
-  "menuList": [
-    {
-      "category": "Bar Bites",
-      "items": [
-        {
-          "title": "Chicken 65",
-          "subTitle": "Spicy deep-fried chicken",
-          "price": 150
-        },
-        {
-          "title": "Fish Fry",
-          "subTitle": "Crispy fried fish",
-          "price": 160
-        },
-        {
-          "title": "Chicken Pakora",
-          "subTitle": "Battered and fried chicken pieces",
-          "price": 120
-        },
-        {
-          "title": "Pepper Dry Chicken",
-          "subTitle": "Dry pepper chicken",
-          "price": 160
-        }
-      ]
-    },
-    {
-      "category": "Main Course",
-      "items": [
-        {
-          "title": "Chicken Biriyani",
-          "subTitle": "Fragrant chicken biriyani with raita",
-          "price": 170
-        },
-        {
-          "title": "Kerala Meals",
-          "subTitle": "Full Kerala meals on banana leaf",
-          "price": 130
-        },
-        {
-          "title": "Beef Fry & Porotta",
-          "subTitle": "Kerala beef fry with porotta (2 pcs)",
-          "price": 120
-        },
-        {
-          "title": "Fish Curry & Rice",
-          "subTitle": "Traditional fish curry with rice",
-          "price": 140
-        }
-      ]
-    }
-  ]
+  "menuList": []
 }
