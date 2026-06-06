@@ -144,6 +144,15 @@
    icon: "📅"
    },
    {% endfor %}
+   {% for item in collections.blogs %}
+   {
+   name: {{ item.data.title | json | safe }},
+   url: {{ item.url | json | safe }},
+   description: {{ item.data.description | json | safe }},
+   type: "Blog",
+   icon: "📝"
+   },
+   {% endfor %}
    {% for category in phone_numbers %}
    {% for contact in category.contacts %}
    {

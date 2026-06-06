@@ -9,6 +9,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy('src/restaurants/**/*.{jpg,png}');
   eleventyConfig.addPassthroughCopy('src/attractions/**/*.{jpg,png}');
   eleventyConfig.addPassthroughCopy('src/about/**/*.{jpg,png}');
+  eleventyConfig.addPassthroughCopy('src/blogs/**/*.{jpg,png,webp,svg}');
 
   // Filters
   // Convert distance string like "350m" or "1.2km" to numeric meters
@@ -93,6 +94,11 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addNunjucksFilter('toDate', function (str) {
     return new Date(str);
+  });
+
+  eleventyConfig.addNunjucksFilter('uniq', function (arr) {
+    if (!arr || !Array.isArray(arr)) return [];
+    return [...new Set(arr)];
   });
 
   eleventyConfig.addNunjucksFilter('dateFormat', function (date, fmt) {

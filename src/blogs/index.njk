@@ -1,0 +1,543 @@
+---
+layout: layouts/base.njk
+title: Blog
+description: News, stories, heritage pieces, and community updates from Piravom and the surrounding area.
+eleventyExcludeFromCollections: true
+
+pagination:
+  data: collections.blogs
+  size: 6
+  reverse: true
+  alias: posts
+permalink: "/blog/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber + 1 }}/{% endif %}"
+---
+
+<main class="mx-auto max-w-7xl px-4 py-8">
+  <!-- Hero -->
+  {% from "components/page-hero.njk" import pageHero %} {{ pageHero(title, description) }}
+  {% set allBlogs = collections.blogs | reverse %}
+
+  {% set allCategories = [] %}
+  {% set allTags = [] %}
+  {% for post in allBlogs %}
+    {% if post.data.categories %}
+      {% for cat in post.data.categories %}
+        {% set allCategories = (allCategories.push(cat), allCategories) %}
+      {% endfor %}
+    {% endif %}
+    {% if post.data.tags %}
+      {% for tag in post.data.tags %}
+        {% set tagStr = tag | string %}
+        {% if tagStr != "blogs" and tagStr != "all" and tagStr != "post" and tagStr != "posts" %}
+          {% set allTags = (allTags.push(tagStr), allTags) %}
+        {% endif %}
+      {% endfor %}
+    {% endif %}
+  {% endfor %}
+  {% set uniqueCategories = allCategories | uniq | sort %}
+  {% set uniqueTags = allTags | uniq | sort %}
+
+  <div class="flex flex-col lg:flex-row lg:gap-8">
+    <!-- Sidebar Filters -->
+    <aside class="lg:w-64 shrink-0">
+      <div class="lg:sticky lg:top-28 space-y-6">
+        <!-- Categories -->
+        <div>
+          <p class="text-xs font-semibold uppercase tracking-wide text-gray-400 mb-3">
+            Categories
+          </p>
+          <div class="flex flex-wrap gap-2 lg:flex-col">
+            <button
+              class="filter-btn filter-cat flex items-center gap-2 rounded-xl px-3 py-2 text-sm font-medium text-theme-700 bg-theme-50 dark:text-theme-300 dark:bg-theme-900/30 transition w-full text-left"
+              data-filter="all"
+            >
+              {% lucide "layout-grid", "h-4 w-4 shrink-0" %}
+              All Posts
+            </button>
+            {% for cat in uniqueCategories %}
+            <button
+              class="filter-btn filter-cat flex items-center gap-2 rounded-xl px-3 py-2 text-sm font-medium text-gray-600 dark:text-gray-400 transition hover:bg-theme-50 dark:hover:bg-theme-900/30 hover:text-theme-700 dark:hover:text-theme-300 w-full text-left"
+              data-filter="cat:{{ cat | lower }}"
+            >
+              {% lucide "tag", "h-4 w-4 shrink-0" %}
+              {{ cat }}
+            </button>
+            {% endfor %}
+          </div>
+        </div>
+
+        <!-- Tags -->
+        <div>
+          <p class="text-xs font-semibold uppercase tracking-wide text-gray-400 mb-3">
+            Tags
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <button
+              class="filter-btn filter-tag rounded-lg border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 px-3 py-1.5 text-xs font-medium text-theme-700 dark:text-theme-300 transition active"
+              data-filter="all"
+            >
+              All
+            </button>
+            {% for tag in uniqueTags %}
+            <button
+              class="filter-btn filter-tag rounded-lg border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 px-3 py-1.5 text-xs font-medium text-gray-600 dark:text-gray-400 transition hover:border-theme-300 dark:hover:border-theme-600 hover:text-theme-700 dark:hover:text-theme-300 hover:bg-theme-50 dark:hover:bg-theme-900/30"
+              data-filter="tag:{{ tag | lower }}"
+            >
+              #{{ tag }}
+            </button>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Content -->
+    <div class="flex-1 min-w-0 mt-8 lg:mt-0">
+      <!-- Page heading with count -->
+      <div class="mb-6 flex items-center justify-between">
+        <p class="text-sm text-gray-500 dark:text-gray-400" id="postCount">
+          {{ allBlogs.length }} post{{ "s" if allBlogs.length != 1 }}
+        </p>
+        {% if pagination.pageNumber > 0 %}
+        <p class="text-sm text-gray-500 dark:text-gray-400">
+          Page {{ pagination.pageNumber + 1 }} of {{ pagination.pages.length }}
+        </p>
+        {% endif %}
+      </div>
+
+      <!-- Posts Grid -->
+      <div class="grid gap-6 md:grid-cols-2" id="postsGrid">
+        {% for post in posts %}
+        <article
+          class="post-card rounded-3xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 shadow-sm flex flex-col overflow-hidden group transition hover:-translate-y-0.5 hover:shadow-md"
+          data-categories="{% if post.data.categories %}{{ post.data.categories | join(',') | lower }}{% endif %}"
+          data-tags="{% if post.data.tags %}{% set ptags = [] %}{% for pt in post.data.tags %}{% if pt != "blogs" and pt != "all" and pt != "post" and pt != "posts" %}{% set ptags = (ptags.push(pt), ptags) %}{% endif %}{% endfor %}{{ ptags | join(',') | lower }}{% endif %}"
+        >
+          {% if post.data.thumbnail %}
+          <a href="{{ post.url }}" class="aspect-video w-full bg-gray-100 dark:bg-gray-800 overflow-hidden">
+            <img
+              src="{{ post.data.thumbnail }}"
+              alt="{{ post.data.title }}"
+              class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+              loading="lazy"
+            />
+          </a>
+          {% endif %}
+
+          <div class="p-6 flex flex-col flex-1">
+            <!-- Categories -->
+            {% if post.data.categories %}
+            <div class="mb-3 flex flex-wrap gap-1.5">
+              {% for cat in post.data.categories %}
+              <span
+                class="rounded-full bg-theme-50 dark:bg-theme-900/30 px-2.5 py-0.5 text-xs font-medium text-theme-700 dark:text-theme-300"
+              >
+                {{ cat }}
+              </span>
+              {% endfor %}
+            </div>
+            {% endif %}
+
+            <!-- Title -->
+            <h2 class="text-lg font-bold leading-tight">
+              <a
+                href="{{ post.url }}"
+                class="text-gray-900 dark:text-gray-100 hover:text-theme-600 dark:hover:text-theme-400 transition-colors"
+              >
+                {{ post.data.title }}
+              </a>
+            </h2>
+
+            <!-- Description -->
+            <p class="mt-2 text-sm text-gray-600 dark:text-gray-400 line-clamp-2 flex-1">
+              {{ post.data.description }}
+            </p>
+
+            <!-- Meta Footer -->
+            <div class="mt-4 flex items-center justify-between border-t border-gray-100 dark:border-gray-700 pt-4">
+              <div class="flex items-center gap-3 text-xs text-gray-500 dark:text-gray-400">
+                {% if post.data.date %}
+                <span class="flex items-center gap-1">
+                  {% lucide "calendar", "h-3.5 w-3.5" %}
+                  {{ post.data.date | dateToISO | toDate | dateFormat("MMM d, yyyy") }}
+                </span>
+                {% endif %}
+                {% if post.data.author %}
+                <span class="flex items-center gap-1">
+                  {% lucide "user", "h-3.5 w-3.5" %}
+                  {{ post.data.author.name }}
+                </span>
+                {% endif %}
+              </div>
+
+              <a
+                href="{{ post.url }}"
+                class="flex items-center gap-1 rounded-lg px-3 py-1.5 text-xs font-medium text-theme-600 dark:text-theme-400 transition hover:bg-theme-50 dark:hover:bg-theme-900/30"
+              >
+                Read {% lucide "arrow-right", "h-3.5 w-3.5" %}
+              </a>
+            </div>
+          </div>
+        </article>
+        {% endfor %}
+      </div>
+
+      <!-- Empty State -->
+      <div id="emptyState" class="hidden text-center py-16">
+        <div class="rounded-3xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 p-12 shadow-sm">
+          <span class="text-4xl">📝</span>
+          <h2 class="mt-4 text-xl font-bold text-gray-900 dark:text-gray-100">No posts found</h2>
+          <p class="mt-2 text-sm text-gray-500 dark:text-gray-400">
+            Try adjusting your filters to see more posts.
+          </p>
+          <button
+            onclick="resetFilters()"
+            class="mt-4 inline-flex items-center gap-1.5 rounded-xl bg-theme-600 px-5 py-2.5 text-sm font-medium text-white transition hover:bg-theme-700"
+          >
+            {% lucide "refresh-cw", "h-4 w-4" %}
+            Reset Filters
+          </button>
+        </div>
+      </div>
+
+      <!-- Pagination -->
+      {% if pagination.pages.length > 1 %}
+      <nav class="mt-10 flex items-center justify-center gap-2" id="pagination">
+        {% if pagination.href.previous %}
+        <a
+          href="{{ pagination.href.previous }}"
+          class="flex items-center gap-1 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 px-4 py-2 text-sm font-medium text-gray-600 dark:text-gray-400 transition hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-gray-100"
+        >
+          {% lucide "chevron-left", "h-4 w-4" %}
+          Previous
+        </a>
+        {% endif %}
+
+        <div class="flex items-center gap-1">
+          {% for pageEntry in pagination.pages %}
+            {% set pageNum = loop.index %}
+            {% set href = pagination.hrefs[loop.index0] %}
+            {% if pageNum == pagination.pageNumber + 1 %}
+            <span
+              class="flex h-9 w-9 items-center justify-center rounded-xl bg-theme-600 text-sm font-bold text-white"
+            >
+              {{ pageNum }}
+            </span>
+            {% else %}
+            <a
+              href="{{ href }}"
+              class="flex h-9 w-9 items-center justify-center rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 text-sm font-medium text-gray-600 dark:text-gray-400 transition hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-gray-100"
+            >
+              {{ pageNum }}
+            </a>
+            {% endif %}
+          {% endfor %}
+        </div>
+
+        {% if pagination.href.next %}
+        <a
+          href="{{ pagination.href.next }}"
+          class="flex items-center gap-1 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 px-4 py-2 text-sm font-medium text-gray-600 dark:text-gray-400 transition hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-gray-100"
+        >
+          Next
+          {% lucide "chevron-right", "h-4 w-4" %}
+        </a>
+        {% endif %}
+      </nav>
+      {% endif %}
+    </div>
+  </div>
+</main>
+
+<script>
+  (function () {
+    // Store all posts data for client-side filtering across pages
+    var ALL_POSTS = [
+      {% for post in allBlogs %}
+      {
+        url: {{ post.url | json | safe }},
+        title: {{ post.data.title | json | safe }},
+        description: {{ post.data.description | json | safe }},
+        date: {{ (post.data.date | dateToISO) | json | safe }},
+        author: {{ (post.data.author and post.data.author.name) | json | safe }},
+        categories: {{ (post.data.categories or []) | json | safe }},
+        tags: {{ (post.data.tags or []) | json | safe }},
+        thumbnail: {{ (post.data.thumbnail or null) | json | safe }}
+      },
+      {% endfor %}
+    ];
+
+    var POSTS_PER_PAGE = 6;
+    var currentPage = {{ pagination.pageNumber }};
+    var totalPages = {{ pagination.pages.length }};
+    var activeCategory = 'all';
+    var activeTag = 'all';
+
+    var grid = document.getElementById('postsGrid');
+    var emptyState = document.getElementById('emptyState');
+    var paginationEl = document.getElementById('pagination');
+    var postCount = document.getElementById('postCount');
+
+    function normalize(str) {
+      return (str || '').toLowerCase().trim();
+    }
+
+    function getFilteredPosts() {
+      return ALL_POSTS.filter(function (post) {
+        // Category filter
+        if (activeCategory !== 'all') {
+          var cats = (post.categories || []).map(function (c) { return normalize(c); });
+          if (cats.indexOf(activeCategory.replace('cat:', '')) === -1) return false;
+        }
+        // Tag filter
+        if (activeTag !== 'all') {
+          var tags = (post.tags || []).map(function (t) { return normalize(t); });
+          if (tags.indexOf(activeTag.replace('tag:', '')) === -1) return false;
+        }
+        return true;
+      });
+    }
+
+    function renderPage(posts, page) {
+      var start = page * POSTS_PER_PAGE;
+      var end = start + POSTS_PER_PAGE;
+      var pagePosts = posts.slice(start, end);
+
+      grid.innerHTML = '';
+
+      if (pagePosts.length === 0) {
+        grid.classList.add('hidden');
+        emptyState.classList.remove('hidden');
+        if (paginationEl) paginationEl.classList.add('hidden');
+        postCount.textContent = posts.length + ' post' + (posts.length !== 1 ? 's' : '') + ' (0 on this page)';
+        return;
+      }
+
+      grid.classList.remove('hidden');
+      emptyState.classList.add('hidden');
+
+      pagePosts.forEach(function (post) {
+        var card = document.createElement('article');
+        card.className = 'post-card rounded-3xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 shadow-sm flex flex-col overflow-hidden group transition hover:-translate-y-0.5 hover:shadow-md';
+
+        var html = '';
+
+        // Thumbnail
+        if (post.thumbnail) {
+          html += '<a href="' + post.url + '" class="aspect-video w-full bg-gray-100 dark:bg-gray-800 overflow-hidden">' +
+            '<img src="' + post.thumbnail + '" alt="' + post.title.replace(/"/g, '&quot;') + '" class="h-full w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy" />' +
+            '</a>';
+        }
+
+        html += '<div class="p-6 flex flex-col flex-1">';
+
+        // Categories
+        if (post.categories && post.categories.length) {
+          html += '<div class="mb-3 flex flex-wrap gap-1.5">';
+          post.categories.forEach(function (cat) {
+            html += '<span class="rounded-full bg-theme-50 dark:bg-theme-900/30 px-2.5 py-0.5 text-xs font-medium text-theme-700 dark:text-theme-300">' + escapeHtml(cat) + '</span>';
+          });
+          html += '</div>';
+        }
+
+        // Title
+        html += '<h2 class="text-lg font-bold leading-tight">' +
+          '<a href="' + post.url + '" class="text-gray-900 dark:text-gray-100 hover:text-theme-600 dark:hover:text-theme-400 transition-colors">' +
+          escapeHtml(post.title) +
+          '</a></h2>';
+
+        // Description
+        html += '<p class="mt-2 text-sm text-gray-600 dark:text-gray-400 line-clamp-2 flex-1">' +
+          escapeHtml(post.description || '') +
+          '</p>';
+
+        // Footer
+        html += '<div class="mt-4 flex items-center justify-between border-t border-gray-100 dark:border-gray-700 pt-4">' +
+          '<div class="flex items-center gap-3 text-xs text-gray-500 dark:text-gray-400">';
+
+        if (post.date) {
+          var d = new Date(post.date + 'T12:00:00');
+          var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+          var dateStr = months[d.getMonth()] + ' ' + d.getDate() + ', ' + d.getFullYear();
+          html += '<span class="flex items-center gap-1">' +
+            iconSvg('calendar', 'h-3.5 w-3.5') + ' ' + dateStr +
+            '</span>';
+        }
+        if (post.author) {
+          html += '<span class="flex items-center gap-1">' +
+            iconSvg('user', 'h-3.5 w-3.5') + ' ' + escapeHtml(post.author) +
+            '</span>';
+        }
+
+        html += '</div>' +
+          '<a href="' + post.url + '" class="flex items-center gap-1 rounded-lg px-3 py-1.5 text-xs font-medium text-theme-600 dark:text-theme-400 transition hover:bg-theme-50 dark:hover:bg-theme-900/30">' +
+          'Read ' + iconSvg('arrow-right', 'h-3.5 w-3.5') +
+          '</a>' +
+          '</div></div>';
+
+        card.innerHTML = html;
+        grid.appendChild(card);
+      });
+
+      // Update pagination
+      var newTotalPages = Math.ceil(posts.length / POSTS_PER_PAGE) || 1;
+      renderPagination(posts, page, newTotalPages);
+
+      // Update count
+      postCount.textContent = posts.length + ' post' + (posts.length !== 1 ? 's' : '') +
+        ' (showing ' + (start + 1) + '–' + Math.min(end, posts.length) + ')';
+    }
+
+    function renderPagination(posts, page, newTotalPages) {
+      if (!paginationEl) return;
+      if (newTotalPages <= 1) {
+        paginationEl.classList.add('hidden');
+        return;
+      }
+      paginationEl.classList.remove('hidden');
+
+      var baseUrl = window.location.pathname.replace(/\/\d+\/$/, '/').replace(/\/$/, '') || '/blog';
+
+      var html = '';
+
+      // Previous
+      if (page > 0) {
+        var prevUrl = page === 1 ? baseUrl + '/' : baseUrl + '/' + page + '/';
+        html += '<a href="' + prevUrl + '" class="flex items-center gap-1 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 px-4 py-2 text-sm font-medium text-gray-600 dark:text-gray-400 transition hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-gray-100">' +
+          iconSvg('chevron-left', 'h-4 w-4') + ' Previous' +
+          '</a>';
+      }
+
+      // Page numbers
+      html += '<div class="flex items-center gap-1">';
+      for (var i = 0; i < newTotalPages; i++) {
+        var pageNum = i + 1;
+        var href = i === 0 ? baseUrl + '/' : baseUrl + '/' + pageNum + '/';
+        if (i === page) {
+          html += '<span class="flex h-9 w-9 items-center justify-center rounded-xl bg-theme-600 text-sm font-bold text-white">' + pageNum + '</span>';
+        } else {
+          html += '<a href="' + href + '" class="flex h-9 w-9 items-center justify-center rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 text-sm font-medium text-gray-600 dark:text-gray-400 transition hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-gray-100">' + pageNum + '</a>';
+        }
+      }
+      html += '</div>';
+
+      // Next
+      if (page < newTotalPages - 1) {
+        var nextUrl = page + 2 === 1 ? baseUrl + '/' : baseUrl + '/' + (page + 2) + '/';
+        html += '<a href="' + nextUrl + '" class="flex items-center gap-1 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 px-4 py-2 text-sm font-medium text-gray-600 dark:text-gray-400 transition hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-gray-100">' +
+          'Next ' + iconSvg('chevron-right', 'h-4 w-4') +
+          '</a>';
+      }
+
+      paginationEl.innerHTML = html;
+    }
+
+    function escapeHtml(str) {
+      if (!str) return '';
+      return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+    }
+
+    function iconSvg(name, className) {
+      // Simple SVG icon snippets for common icons used in cards
+      var icons = {
+        'calendar': '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="' + className + '" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>',
+        'user': '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="' + className + '" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>',
+        'arrow-right': '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="' + className + '" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>',
+        'chevron-left': '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="' + className + '" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>',
+        'chevron-right': '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="' + className + '" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>',
+      };
+      return icons[name] || '';
+    }
+
+    // Filter buttons
+    var catButtons = document.querySelectorAll('.filter-cat');
+    var tagButtons = document.querySelectorAll('.filter-tag');
+
+    catButtons.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var filter = this.dataset.filter;
+        activeCategory = filter;
+
+        catButtons.forEach(function (b) {
+          b.classList.remove('bg-theme-50', 'dark:bg-theme-900/30', 'text-theme-700', 'dark:text-theme-300');
+          b.classList.add('text-gray-600', 'dark:text-gray-400');
+        });
+        this.classList.remove('text-gray-600', 'dark:text-gray-400');
+        this.classList.add('bg-theme-50', 'dark:bg-theme-900/30', 'text-theme-700', 'dark:text-theme-300');
+
+        var filtered = getFilteredPosts();
+        currentPage = 0;
+        renderPage(filtered, 0);
+      });
+    });
+
+    tagButtons.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var filter = this.dataset.filter;
+        activeTag = filter;
+
+        tagButtons.forEach(function (b) {
+          b.classList.remove('text-theme-700', 'dark:text-theme-300', 'border-theme-300', 'dark:border-theme-600', 'bg-theme-50', 'dark:bg-theme-900/30');
+          b.classList.add('text-gray-600', 'dark:text-gray-400');
+        });
+        this.classList.remove('text-gray-600', 'dark:text-gray-400');
+        this.classList.add('text-theme-700', 'dark:text-theme-300', 'bg-theme-50', 'dark:bg-theme-900/30');
+
+        var filtered = getFilteredPosts();
+        currentPage = 0;
+        renderPage(filtered, 0);
+      });
+    });
+
+    window.resetFilters = function () {
+      activeCategory = 'all';
+      activeTag = 'all';
+
+      catButtons.forEach(function (b) {
+        b.classList.remove('bg-theme-50', 'dark:bg-theme-900/30', 'text-theme-700', 'dark:text-theme-300');
+        b.classList.add('text-gray-600', 'dark:text-gray-400');
+        if (b.dataset.filter === 'all') {
+          b.classList.remove('text-gray-600', 'dark:text-gray-400');
+          b.classList.add('bg-theme-50', 'dark:bg-theme-900/30', 'text-theme-700', 'dark:text-theme-300');
+        }
+      });
+
+      tagButtons.forEach(function (b) {
+        b.classList.remove('text-theme-700', 'dark:text-theme-300', 'bg-theme-50', 'dark:bg-theme-900/30');
+        b.classList.add('text-gray-600', 'dark:text-gray-400');
+        if (b.dataset.filter === 'all') {
+          b.classList.remove('text-gray-600', 'dark:text-gray-400');
+          b.classList.add('text-theme-700', 'dark:text-theme-300', 'bg-theme-50', 'dark:bg-theme-900/30');
+        }
+      });
+
+      currentPage = 0;
+      renderPage(ALL_POSTS, 0);
+    };
+
+    // Check URL for category or tag query params on load
+    (function () {
+      var params = new URLSearchParams(window.location.search);
+      var catParam = params.get('category');
+      var tagParam = params.get('tag');
+
+      if (catParam) {
+        var targetCat = 'cat:' + normalize(catParam);
+        catButtons.forEach(function (b) {
+          if (b.dataset.filter === targetCat) {
+            b.click();
+          }
+        });
+      }
+
+      if (tagParam) {
+        var targetTag = 'tag:' + normalize(tagParam);
+        tagButtons.forEach(function (b) {
+          if (b.dataset.filter === targetTag) {
+            b.click();
+          }
+        });
+      }
+    })();
+  })();
+</script>
