@@ -55,21 +55,26 @@
       })();
     </script>
 
+    <!-- Preconnect for Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Load Google Fonts async (non-render-blocking) -->
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
       rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
     />
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet"
+      />
+    </noscript>
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        darkMode: 'class',
-      };
-    </script>
-
-    <link rel="stylesheet" href="/assets/css/theme.css" />
+    <!-- Tailwind CSS (built locally via CLI) ~10 KB gzipped -->
+    <link rel="stylesheet" href="/assets/css/style.css" />
 
     <!-- MS Analytics -->
     {% include "components/analytics.njk" %}
@@ -78,8 +83,6 @@
       body {
         font-family: Inter, ui-sans-serif, system-ui, sans-serif;
       }
-
-      /* Dark mode is handled via Tailwind `dark:` classes in HTML */
     </style>
   </head>
 
