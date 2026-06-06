@@ -453,6 +453,94 @@ description: Find restaurants, attractions, stores, and more near Piravom
       </div>
     </section>
 
+    <!-- Blog + FAQ Grid -->
+    <section class="mt-8 grid gap-6 lg:grid-cols-2">
+      <!-- Recent Blog Posts -->
+      <div
+        class="rounded-3xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 p-6 shadow-sm"
+      >
+        <div class="mb-6 flex items-center justify-between">
+          <h2 class="text-2xl font-bold dark:text-gray-100">Recent Blog Posts</h2>
+          <a
+            href="/blog/"
+            class="text-sm text-gray-500 dark:text-gray-400 hover:text-black dark:hover:text-gray-100 transition"
+          >
+            View all
+          </a>
+        </div>
+
+        <div class="space-y-4">
+          {% for post in collections.blogs.slice(0, 3) %}
+          <a
+            href="{{ post.url }}"
+            class="block rounded-2xl border border-gray-100 dark:border-gray-700 p-4 transition hover:bg-gray-50 dark:hover:bg-gray-800/50"
+          >
+            <div class="flex items-start gap-4">
+              {% if post.data.thumbnail %}
+              <div
+                class="w-16 h-16 shrink-0 rounded-xl overflow-hidden bg-gray-100 dark:bg-gray-800"
+              >
+                <img
+                  src="{{ post.url }}{{ post.data.thumbnail }}"
+                  alt=""
+                  class="h-full w-full object-cover"
+                  loading="lazy"
+                />
+              </div>
+              {% endif %}
+              <div class="min-w-0 flex-1">
+                <h3 class="font-semibold dark:text-gray-100 line-clamp-2">{{ post.data.title }}</h3>
+                <p class="mt-1 text-xs text-gray-500 dark:text-gray-400">
+                  {{ post.date | dateFormat("MMM dd, yyyy") }} · {{ post.data.author.name or
+                  "Piravom Team" }}
+                </p>
+                <p class="mt-1 text-sm text-gray-600 dark:text-gray-400 line-clamp-2">
+                  {{ post.data.description }}
+                </p>
+              </div>
+            </div>
+          </a>
+          {% endfor %}
+        </div>
+      </div>
+
+      <!-- Frequently Asked Questions -->
+      <div
+        class="rounded-3xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 p-6 shadow-sm"
+      >
+        <div class="mb-6 flex items-center justify-between">
+          <h2 class="text-2xl font-bold dark:text-gray-100">Frequently Asked Questions</h2>
+          <a
+            href="/faq/"
+            class="text-sm text-gray-500 dark:text-gray-400 hover:text-black dark:hover:text-gray-100 transition"
+          >
+            View all
+          </a>
+        </div>
+
+        <div class="space-y-3">
+          {% for faq in collections.faqs.slice(0, 4) %}
+          <details
+            class="group rounded-xl border border-gray-100 dark:border-gray-700 overflow-hidden transition hover:bg-gray-50 dark:hover:bg-gray-800/50"
+          >
+            <summary
+              class="flex cursor-pointer items-center justify-between gap-2 px-4 py-3 text-sm font-medium text-gray-900 dark:text-gray-100"
+            >
+              <span class="flex-1">{{ faq.data.title | replace(" | Piravom FAQ", "") }}</span>
+              {% lucide "chevron-down", "h-4 w-4 shrink-0 text-gray-400 transition
+              group-open:rotate-180" %}
+            </summary>
+            <div
+              class="px-4 pb-4 text-sm text-gray-600 dark:text-gray-400 leading-relaxed prose prose-sm prose-gray dark:prose-invert max-w-none"
+            >
+              {{ faq.templateContent | safe }}
+            </div>
+          </details>
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+
     <!-- Explore -->
     <section
       class="mt-8 rounded-3xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 p-6"
