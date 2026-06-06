@@ -20,16 +20,13 @@ description: Find restaurants, attractions, stores, and more near Piravom
           {{ description }}
         </p>
         <div class="mt-10 flex items-center justify-center">
-          <button
-            onclick="
-              document
-                .querySelector('.hero-jumbo')
-                .nextElementSibling.scrollIntoView({ behavior: 'smooth' })
-            "
-            class="rounded-full bg-theme-600 px-10 py-3.5 text-sm font-semibold text-white shadow-sm transition hover:bg-theme-700 hover:shadow-md cursor-pointer"
+          <a
+            href="/about/"
+            class="rounded-full bg-theme-600 px-10 py-3.5 text-sm font-semibold text-white shadow-sm transition hover:bg-theme-700 hover:shadow-md cursor-pointer inline-block"
+            title="Explore {{ site.name }}"
           >
             Explore
-          </button>
+          </a>
         </div>
       </div>
     </section>
