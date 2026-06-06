@@ -1,0 +1,188 @@
+---
+eleventyExcludeFromCollections: true
+permalink: '/faq/'
+layout: layouts/base.njk
+title: Frequently Asked Questions
+description: Frequently asked questions about Piravom — find answers about transportation, local services, events, businesses, and more.
+---
+
+<main class="mx-auto max-w-4xl px-4 py-8">
+  <!-- Hero -->
+  {% from "components/page-hero.njk" import pageHero %} {{ pageHero(title, description) }} {% set
+  allFaqs = collections.faqs | reverse %}
+
+  <!-- Collect unique categories -->
+  {% set allCategories = [] %} {% for faq in allFaqs %} {% if faq.data.category %} {% set
+  allCategories = (allCategories.push(faq.data.category), allCategories) %} {% endif %} {% endfor %}
+  {% set uniqueCategories = allCategories | uniq | sort %}
+
+  <!-- Search and Filters -->
+  <div class="mb-8 space-y-4">
+    <div class="relative">
+      {% lucide "search", "absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-400" %}
+      <input
+        type="text"
+        id="faqSearch"
+        placeholder="Search FAQs…"
+        class="w-full rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 py-3 pl-10 pr-4 text-sm text-gray-900 dark:text-gray-100 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-theme-400 dark:focus:ring-theme-600 transition"
+        oninput="filterFaq()"
+      />
+    </div>
+
+    {% if uniqueCategories.length %}
+    <div class="flex flex-wrap gap-2">
+      <button
+        class="cat-btn rounded-full border border-gray-200 dark:border-gray-700 px-3 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 transition hover:bg-theme-50 dark:hover:bg-theme-900/30 hover:text-theme-600 dark:hover:text-theme-400 active-cat"
+        data-cat="all"
+        onclick="filterFaqCat(this)"
+      >
+        All
+      </button>
+      {% for cat in uniqueCategories %}
+      <button
+        class="cat-btn rounded-full border border-gray-200 dark:border-gray-700 px-3 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 transition hover:bg-theme-50 dark:hover:bg-theme-900/30 hover:text-theme-600 dark:hover:text-theme-400"
+        data-cat="{{ cat | lower }}"
+        onclick="filterFaqCat(this)"
+      >
+        {{ cat }}
+      </button>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </div>
+
+  <!-- FAQ Accordion List -->
+  <section class="space-y-3" id="faqList" itemscope="" itemtype="https://schema.org/FAQPage">
+    {% for faq in allFaqs %} {% set faqId = "faq-" + loop.index %}
+    <div
+      class="faq-item rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 shadow-sm transition hover:shadow-md"
+      data-category="{% if faq.data.category %}{{ faq.data.category | lower }}{% endif %}"
+      itemprop="mainEntity"
+      itemscope=""
+      itemtype="https://schema.org/Question"
+    >
+      <details class="group">
+        <summary
+          class="flex cursor-pointer items-center justify-between gap-4 px-6 py-4 text-sm font-semibold text-gray-900 dark:text-gray-100 list-none transition hover:text-theme-600 dark:hover:text-theme-400 [&::-webkit-details-marker]:hidden"
+        >
+          <span itemprop="name">{{ faq.data.title }}</span>
+          <span class="shrink-0 text-gray-400 transition group-open:rotate-180">
+            {% lucide "chevron-down", "h-4 w-4" %}
+          </span>
+        </summary>
+        <div
+          class="px-6 pb-4 pt-0"
+          itemprop="acceptedAnswer"
+          itemscope=""
+          itemtype="https://schema.org/Answer"
+        >
+          <div itemprop="text" class="prose prose-sm prose-gray dark:prose-invert max-w-none">
+            {{ faq.templateContent | safe }}
+          </div>
+          <a
+            href="{{ faq.url }}"
+            class="mt-2 inline-block text-xs font-medium text-theme-600 dark:text-theme-400 hover:underline"
+          >
+            Permalink
+          </a>
+        </div>
+      </details>
+    </div>
+    {% endfor %}
+  </section>
+
+  <!-- Empty State -->
+  <div
+    id="faqEmpty"
+    class="hidden mt-8 rounded-2xl border border-dashed border-gray-300 dark:border-gray-700 p-10 text-center"
+  >
+    <p class="text-lg font-medium text-gray-500 dark:text-gray-400">No FAQs match your search.</p>
+    <p class="mt-1 text-sm text-gray-400 dark:text-gray-500">
+      Try a different keyword or
+      <a href="/contact" class="text-theme-600 dark:text-theme-400 hover:underline"
+        >ask us directly</a
+      >.
+    </p>
+  </div>
+
+  <!-- Schema.org structured data (JSON-LD) -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {% for faq in allFaqs %}
+        {
+          "@type": "Question",
+          "name": {{ faq.data.title | json | safe }},
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": {{ faq.data.description | json | safe }}
+          }
+        }{% if not loop.last %},{% endif %}
+        {% endfor %}
+      ]
+    }
+  </script>
+</main>
+
+<script>
+  function filterFaq() {
+    var query = (document.getElementById('faqSearch').value || '').toLowerCase().trim();
+    applyFilters(query, getActiveCategory());
+  }
+
+  function filterFaqCat(btn) {
+    document.querySelectorAll('.cat-btn').forEach(function (b) {
+      b.classList.remove(
+        'active-cat',
+        'bg-theme-100',
+        'dark:bg-theme-900/30',
+        'text-theme-700',
+        'dark:text-theme-300',
+        'border-theme-400',
+        'dark:border-theme-600',
+      );
+    });
+    btn.classList.add(
+      'active-cat',
+      'bg-theme-100',
+      'dark:bg-theme-900/30',
+      'text-theme-700',
+      'dark:text-theme-300',
+      'border-theme-400',
+      'dark:border-theme-600',
+    );
+    applyFilters(getSearchQuery(), btn.getAttribute('data-cat'));
+  }
+
+  function getSearchQuery() {
+    return (document.getElementById('faqSearch').value || '').toLowerCase().trim();
+  }
+
+  function getActiveCategory() {
+    var active = document.querySelector('.cat-btn.active-cat');
+    return active ? active.getAttribute('data-cat') : 'all';
+  }
+
+  function applyFilters(query, cat) {
+    var items = document.querySelectorAll('.faq-item');
+    var visibleCount = 0;
+    items.forEach(function (item) {
+      var matchCat = cat === 'all' || item.getAttribute('data-category') === cat;
+      var summary = item.querySelector('summary span');
+      var matchQuery =
+        !query ||
+        (summary && summary.textContent.toLowerCase().indexOf(query) !== -1) ||
+        (item.querySelector('[itemprop="text"]') &&
+          item.querySelector('[itemprop="text"]').textContent.toLowerCase().indexOf(query) !== -1);
+      if (matchCat && matchQuery) {
+        item.style.display = '';
+        visibleCount++;
+      } else {
+        item.style.display = 'none';
+      }
+    });
+    document.getElementById('faqEmpty').classList.toggle('hidden', visibleCount > 0);
+  }
+</script>
