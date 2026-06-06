@@ -10,7 +10,11 @@
     </div>
 
     <p class="text-xs text-gray-400 dark:text-gray-500">
-      &copy; {{ site.name }} - {{ site.author }}
+      &copy; {{ site.name }} - {% for author in site.author -%} {% if author.url %}<a
+        href="{{ author.url }}"
+        class="hover:text-gray-600 dark:hover:text-gray-300 transition"
+        >{% endif %} {{- author.name -}} {% if author.url %}</a
+      >{% endif %} {%- if not loop.last %}, {% endif %} {%- endfor %}
     </p>
   </div>
 </footer>
