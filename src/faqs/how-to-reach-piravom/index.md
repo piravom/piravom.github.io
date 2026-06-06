@@ -17,17 +17,17 @@ Piravom is well-connected and easy to reach from all major towns in Kerala.
 
 - **From Ernakulam (Kochi):** KSRTC and private buses run every 15–20 minutes. The journey takes about 45 minutes via the Muvattupuzha road.
 - **From Kottayam:** Direct buses are available via the Ettumanoor route, taking about 40 minutes.
-- **From Muvattupuzha:** Only 12 km away — frequent buses and autos.
+- **From Muvattupuzha:** Only 12 km away - frequent buses and autos.
 - **By car:** Take National Highway 85 (formerly NH 49) and turn off at the Piravom junction.
 
 ## By Rail
 
 The nearest railway stations are:
 
-- **Ernakulam South / Ernakulam Junction** — 34 km (major station, all trains)
-- **Ernakulam North / Ernakulam Town** — 36 km
-- **Kottayam Railway Station** — 38 km
-- **Aluva Railway Station** — 28 km (convenient if coming from the north)
+- **Ernakulam South / Ernakulam Junction** - 34 km (major station, all trains)
+- **Ernakulam North / Ernakulam Town** - 36 km
+- **Kottayam Railway Station** - 38 km
+- **Aluva Railway Station** - 28 km (convenient if coming from the north)
 
 From any station, take a bus or taxi to Piravom.
 
