@@ -1,6 +1,9 @@
 # Eleventy output
 _site/
 
+# Tailwind build output (generated from input.css)
+src/assets/css/style.css
+
 # Dependencies
 node_modules/
 
