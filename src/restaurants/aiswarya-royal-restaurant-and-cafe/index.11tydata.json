@@ -2,7 +2,7 @@
   "restaurant": {
     "title": "Aiswarya Royal Cafe",
     "description": "Authentic multi-cuisine family restaurant serving Mandhi, Barbeque, Biryani, Chinese dishes, juices, and premium shakes in Piravom. Established since 1985.",
-    "cuisines": ["Indian", "Arabian", "Chinese", "South Indian", "Juices & Shakes"],
+    "cuisines": ["Indian", "Chinese", "South Indian"],
     "openingHours": {
       "sunday": {
         "open": "07:00",
