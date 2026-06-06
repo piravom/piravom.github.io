@@ -10,9 +10,6 @@ categories:
   - 'Announcements'
 tags:
   - 'welcome'
-  - 'introduction'
-  - 'piravom'
-  - 'blog'
 ---
 
 We're thrilled to launch the **Piravom Town Blog** — a dedicated space to share news, stories, heritage pieces, and community updates from our beloved town on the banks of the Muvattupuzha River.
