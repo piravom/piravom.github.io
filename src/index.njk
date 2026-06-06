@@ -432,12 +432,14 @@ description: Find restaurants, attractions, stores, and more near Piravom
             </div>
 
             <div class="flex items-center gap-2 shrink-0 ml-3">
+              {% if restaurant.data.menuList.length %}
               <a
                 href="{{ restaurant.url }}"
                 class="flex items-center gap-1 rounded-xl bg-theme-50 dark:bg-theme-900/30 px-3 py-1.5 text-xs font-medium text-theme-600 dark:text-theme-400 transition hover:bg-theme-100 dark:hover:bg-theme-900/50"
               >
                 {% lucide "utensils-crossed", "h-3.5 w-3.5" %} Menu
               </a>
+              {% endif %}
               <a
                 href="https://maps.google.com/maps?q={{ restaurant.data.restaurant.title | replace(' ', '+') }}+Piravom"
                 target="_blank"

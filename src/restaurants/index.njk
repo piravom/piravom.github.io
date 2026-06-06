@@ -141,6 +141,7 @@ permalink: '/restaurants/{% if pagination.pageNumber > 0 %}page/{{ pagination.pa
 
             <!-- Menu -->
             <span class="flex justify-center">
+              {% if restaurant.data.menuList.length %}
               <a
                 href="{{ restaurant.url }}"
                 class="rounded-lg p-1.5 text-gray-400 dark:text-gray-500 transition hover:bg-orange-50 dark:hover:bg-orange-900/30 hover:text-orange-700 dark:hover:text-orange-400"
@@ -148,6 +149,7 @@ permalink: '/restaurants/{% if pagination.pageNumber > 0 %}page/{{ pagination.pa
               >
                 {% lucide "utensils-crossed", "h-5 w-5" %}
               </a>
+              {% endif %}
             </span>
 
             <!-- Navigate to Maps -->
