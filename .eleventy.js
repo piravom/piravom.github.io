@@ -10,6 +10,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy('src/attractions/**/*.{jpg,png}');
   eleventyConfig.addPassthroughCopy('src/about/**/*.{jpg,png}');
   eleventyConfig.addPassthroughCopy('src/blogs/**/*.{jpg,png,webp,svg}');
+  eleventyConfig.addPassthroughCopy('src/_headers');
+  eleventyConfig.addPassthroughCopy('src/_redirects');
 
   // Filters
   // Convert distance string like "350m" or "1.2km" to numeric meters
