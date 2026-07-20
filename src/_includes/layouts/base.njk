@@ -83,7 +83,9 @@
     {% include "components/analytics.njk" %}
   </head>
 
-  <body class="bg-[#fafafa] dark:bg-gray-950 text-[#111111] dark:text-gray-100">
+  <body
+    class="flex min-h-screen flex-col bg-[#fafafa] dark:bg-gray-950 text-[#111111] dark:text-gray-100"
+  >
     <!-- Header -->
     {% include "components/header.njk" %}
 
@@ -178,7 +180,7 @@
     </div>
 
     <!-- Main -->
-    {{ content | safe }}
+    <div class="grow">{{ content | safe }}</div>
 
     <!-- Footer -->
     {% include "components/footer.njk" %}
